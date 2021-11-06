@@ -154,6 +154,11 @@ export default {
       font-size: 40px;
     }
 
+    .link {
+      text-decoration: underline;
+      color: var(--accent-text-color);
+    }
+
     .medium {
       font-size: 20px;
       font-family: Georgia, Cambria, "Times New Roman", Times, serif;

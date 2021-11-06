@@ -1,7 +1,7 @@
 {
   "bio": [
     "Hey there, welcome to my personal site!",
-    "I'm Kenneth Sun, a student, tinkerer, musician, and writer. Not everyhing fits in a resume, and this site aims to fill in some of those gaps.",
+    "I'm Kenneth Sun, a student, tinkerer, musician, and writer. Not everything fits in a resume, and this site aims to fill in some of those gaps.",
     "I built this site mostly from scratch with Vue/Nuxt. The source code, as well as the site itself, are both hosted on <a class='link external' href='https://github.com/spesthecat/spesthecat.github.io' target='_blank'>Github</a> (Github pages).",
     "Nothing is ever perfect. If you find a bug, have suggestions, or just want to talk, feel free to <a class='link' href='about#contact'>contact me</a>.",
     ""
@@ -13,7 +13,7 @@
     },
     {
       "name": "writing",
-      "desc": "Writing is a great way to express ideas, bothh to other people and to myself. Maybe this site will have a blog section one day."
+      "desc": "Writing is a great way to express ideas, both to other people and to myself. Maybe this site will have a blog section one day."
     },
     {
       "name": "music",

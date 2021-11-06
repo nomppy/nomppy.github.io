@@ -75,10 +75,6 @@ export default {
       border-bottom: 2px solid var(--primary-text-color);
     }
     
-    .link {
-      text-decoration: underline;
-      color: var(--accent-text-color);
-    }
 
     .external::after {
       content: '';

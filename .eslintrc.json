@@ -6,6 +6,11 @@
         "es2021": true,
         "node": true
     },
+    "ignorePatterns": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/dist/**"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:nuxt/recommended",
