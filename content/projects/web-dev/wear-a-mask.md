@@ -26,7 +26,7 @@ As for the backend, we used Flask to build a simple, RESTful server that could h
 
 ### Satisfying loading animation
 
-![loading-animation](./load.gif)
+![loading-animation](/projects/load.gif)
 
 Pretty neat, right? 
 This was achieved using just a `setInterval` for the timing and a style binding for the effect `clip-path`. 
@@ -43,7 +43,7 @@ Apparently mapbox's loading slows the entire stack, so the loading time of the a
 
 ### An equally satisfying transition
 
-![transition](./marker.gif)
+![transition](/projects/marker.gif)
 
 To get this transition, the marker used everywhere else on the map is scaled up and positioned, and the `::after` psuedo-element which contains text is visible.
 ```js

@@ -44,7 +44,7 @@
 
           <div
             class="text medium"
-            v-html="item.desc"
+            v-html="item.desc.join()"
           />
         </div>
       </div>

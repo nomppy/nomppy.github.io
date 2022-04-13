@@ -16,7 +16,7 @@
             Last Updated
           </div>
           <div class="date">
-            {{ project.updatedAt.slice(0, 10) }}
+            {{ project.updatedAt.slice(0, 10) || '-' }}
           </div>
         </div>
 
@@ -46,7 +46,7 @@ export default {
       params.id)
       .fetch()
       .catch(() => {
-        return redirect('/projects/home');
+        return redirect('/projects');
       });
 
     return { project };

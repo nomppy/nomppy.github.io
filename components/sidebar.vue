@@ -159,7 +159,7 @@ export default {
   top: 1em;
   left: 5px;
   border: 1px solid var(--primary-bg-color);
-  height: calc(100% + 25px);
+  height: calc(100% + 15px);
   opacity: 0.8;
 }
 

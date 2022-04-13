@@ -9,15 +9,14 @@
   "hobbies": [
     {
       "name": "programming",
-      "desc": "Both a pleasure and a pain, always. Nothing but <a class='link' href='projects'>hands-on learning</a> for this."
+      "desc": ["I like learning about new languages and tools. I've done a bit of web development and computer networking,",
+               "and I'm currently trying to learn Lisp for writing software."]
+      
     },
     {
       "name": "writing",
-      "desc": "Writing is a great way to express ideas, both to other people and to myself. Maybe this site will have a blog section one day."
-    },
-    {
-      "name": "music",
-      "desc": "I sing too much, waayyy too much. And I practice the piano way too little."
+      "desc": ["I find writing really useful in clarifying my thinking, and for recording them to my future self.",
+               "I write reflectively in my private journal, but I make some writings public on my <a class='link' href='/blog'>blog.</a>"]
     }
   ],
   "experience": [
