@@ -9,7 +9,7 @@ export default {
   },
   methods: {
     home () {
-      this.$router.replace('/projects/home/home');
+      this.$router.replace('/projects/general/about-this-site');
     },
   }, 
 };

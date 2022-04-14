@@ -21,7 +21,8 @@
         </div>
 
         <img 
-          :src="require(`~/assets/projects/${project.slug}.png`)"
+        alt=''
+        :src="require(`~/assets/projects/${project.slug}.png`)"
         >
       </div>
 
@@ -142,7 +143,9 @@ export default {
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.5;
+
     width: 60%;
     min-height: 70vh;
     position: relative;

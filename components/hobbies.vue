@@ -28,17 +28,9 @@
         >
           <!-- :style="{'grid-row': `${index+1} / span 2`}"> -->
 
-          <div 
-            class="bg" 
-            :style="{'background-image': `url(${item.name}.jpg)`}" 
-            loading="lazy"
-          >
-            <div
-              class="preview"
-              :style="{'background-image': `url(${item.name}-preview.jpg)`}"
-              loading="lazy"
-            />
-          </div>
+          <hobby-background
+            :item="item"
+            loading="lazy" />
 
           <div class="stem" />
 
@@ -53,6 +45,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Hobbies',
   props: [
@@ -146,7 +139,7 @@ export default {
   // align-items: flex-end;
 }
 
-.item {
+.item::v-deep {
   position: relative;
   width: 40%;
   flex: 0 1 auto;
@@ -177,7 +170,6 @@ export default {
       filter: blur(4px) brightness(0.4);
       -webkit-filter: blur(4px) brightness(0.4);
     }
-
   }
 
   .text {
@@ -222,7 +214,7 @@ export default {
   -webkit-animation: none;
 }
 
-.left {
+.left::v-deep {
   align-self: flex-start;
   transform-origin: right;
 
@@ -244,7 +236,7 @@ export default {
   }
 }
 
-.right {
+.right::v-deep {
   align-self: flex-end;
   transform-origin: left;
 
@@ -274,7 +266,7 @@ export default {
   }
 }
 
-.show {
+.show::v-deep {
   opacity: 1;
 
   .bg, .text {

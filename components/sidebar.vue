@@ -50,6 +50,7 @@ export default {
     };
   },
   async fetch() {
+    this.catalog = [];
   
     const { categories } = await this.$content('projects/categories').fetch();
     

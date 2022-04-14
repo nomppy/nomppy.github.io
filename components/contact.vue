@@ -1,5 +1,5 @@
 <template>
-  <div class="contacts">
+  <div id="contact">
     <a
       class="social-link"
       href="https://github.com/spesthecat"
@@ -24,7 +24,7 @@
     </a>
     <a
       class="social-link"
-      href="mailto:spesthecat@gmail.com"
+      href="mailto:kenhtsun@gmail.com"
       target="_blank"
     >
       <img
@@ -39,7 +39,7 @@
 
 <style scoped>
 
-.contacts {
+#contact {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
