@@ -21,10 +21,11 @@
         </div>
         
         <div
-          v-for="(item, index) in data"
-          :key="index"
-          class="item hidden"
-          :class="{right: index%2===1, left: index%2===0}"
+        tabindex="0"
+        v-for="(item, index) in data"
+        :key="index"
+        class="item hidden"
+        :class="{right: index%2===1, left: index%2===0}"
         >
           <!-- :style="{'grid-row': `${index+1} / span 2`}"> -->
 
@@ -35,8 +36,8 @@
           <div class="stem" />
 
           <div
-            class="text medium"
-            v-html="item.desc.join()"
+          class="text medium"
+          v-html="item.desc.join('&nbsp;')"
           />
         </div>
       </div>
@@ -156,6 +157,7 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
+    overflow: hidden; // contain scaled blurry bg
     background-size: cover;
     background-position: center;
 
@@ -169,6 +171,7 @@ export default {
 
       filter: blur(4px) brightness(0.4);
       -webkit-filter: blur(4px) brightness(0.4);
+      transform: scale(1.05);
     }
   }
 
@@ -177,7 +180,7 @@ export default {
     transition: opacity 2s ease;
     position: relative;
     transition: inherit;
-    width: 60%;
+    width: 90%;
     font-size: 16px !important;
     margin: 1em 0;
   }
@@ -186,14 +189,15 @@ export default {
     transform-origin: inherit;
   }
 
-  &.reveal {
+  &.reveal, &:hover, &:focus {
+    outline: none;
 
     .bg, .text {
       transform: scale(1.2);
     }
 
     .bg .preview {
-      width: 65%;
+      width: 100%;
     }
 
     .text {
@@ -276,7 +280,6 @@ export default {
   .stem {
     width: 20%;
   }
-
 }
 
 .vert-line {

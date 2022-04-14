@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content">
-      <div class="title container">
+      <div class="title flex-c-con">
         <p>
           bio
         </p>
@@ -16,15 +16,15 @@
         />
       </div>
 
-      <div 
-        class="scroll-down container"
-        @click="next"
+      <button
+      class="scroll-down flex-c-con"
+      @click="next"
       >
         <div>
           <!-- add jump to the below element with nuxt -->
           <backarrow :disabled="true" /> 
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </template>
@@ -55,7 +55,7 @@ export default {
   position: relative;
   min-height: 100vh;
 
-  .container {
+  .flex-c-con {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;

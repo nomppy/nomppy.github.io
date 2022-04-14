@@ -26,6 +26,19 @@ html {
   -webkit-scrollbar: none
 }
 
+button, button:focus {
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+
+}
+
+button:active {
+  outline: none;
+  background: transparent;
+  border: 1px solid grey;
+}
+
 #__nuxt {
   overflow-y: auto;
   overflow-x: hidden;
