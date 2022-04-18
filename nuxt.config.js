@@ -1,3 +1,5 @@
+import getRoutes from './utils/getRoutes';
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -66,6 +68,20 @@ export default {
   },
 
   generate: {
+    crawler: true,
     dir: 'generate',
+    async routes () {
+      const { $content } = require('@nuxt/content');
+      const files = await $content({ deep: true }).only(['path']).fetch();
+
+      return files.map(file => file.path === '/index' ? '/' : file.path);
+    }
   },
+
+  sitemap: {
+    hostname: 'https://spesthecat.github.io',
+    routes() {
+      return getRoutes();
+    }
+  }
 };

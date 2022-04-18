@@ -7,6 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "deploy": "push-dir --dir=generate --branch=gh-pages",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },
@@ -14,6 +15,7 @@
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },
