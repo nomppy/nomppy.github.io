@@ -1,0 +1,4 @@
+- custom 404 file
+- page for writings
+- add more things to /projects
+- make better system for /projects redirect <-- crawler doesn't work because /projects just redirects somewhere else -- duh!
