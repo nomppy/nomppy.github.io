@@ -83,5 +83,5 @@ export default {
     routes() {
       return getRoutes();
     }
-  }
+  },
 };
