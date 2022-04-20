@@ -5,12 +5,17 @@
 <style lang="scss">
 
 :root {
-  --primary-text-color: #ddd;
+  --primary-text-color: #ccc;
   --accent-text-color: #1998DB;
+  --link-color: #1998DB;
+  --link-hover-color: #136fa0;
   --secondary-text-color: rgb(92, 108, 255);
   --primary-bg-color: #171717;
   --secondary-bg-color: rgba(88,88,88,0.601);
   --tertiary-bg-color: rgb(255, 250, 240);
+
+  --serif-font-stack: "Average", "EB Garamond", "Libre Baskerville", "Times New Roman", "Times", serif;
+  --sans-serif-font-stack: "Source Sans Pro", "Montserrat", "Roboto", "Open Sans", "Helvetica", sans-serif;
   
   --white: white;
   --black: black;
@@ -23,7 +28,16 @@
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  -webkit-scrollbar: none
+  -webkit-scrollbar: none;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--serif-font-stack);
+}
+
+@media only screen and (max-width: 649px) {
+  html {
+      font-size: 18px;
+  }
 }
 
 button, button:focus {

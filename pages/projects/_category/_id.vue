@@ -140,10 +140,10 @@ export default {
 
     z-index: 2;
     color: var(--primary-text-color);
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: var(--serif-font-stack);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 18px;
     line-height: 1.5;
 
     width: 60%;
@@ -151,13 +151,19 @@ export default {
     position: relative;
     left: 20%;
     margin-top: 100px;
-    white-space: pre-wrap;
 
     p {
+      + p {
+        text-indent: 2.5em;
+      }
 
       a {
         text-decoration: none;
-        color: var(--accent-text-color);
+        color: var(--link-color);
+
+        &:hover, &:visited, &:active {
+          color: var(--link-hover-color);
+        }
       }
 
       img {
@@ -173,7 +179,6 @@ export default {
         left: -20%;
         position: relative;
       }
-
     }
 
     iframe {
@@ -190,6 +195,7 @@ export default {
     h1, h2 {
       padding-bottom: 15px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+
       a::before {
         content: '#';
         cursor: pointer;
@@ -200,6 +206,9 @@ export default {
       }
     }
 
+    h3 {
+      font-size: 1.2em;
+    }
 }
 
 </style>

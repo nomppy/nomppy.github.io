@@ -7,6 +7,7 @@
     >
       <div class="arrow-left" />
     </nuxt-link>
+
     <div
       v-if="disabled"
       class="arrow-left"

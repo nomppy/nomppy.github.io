@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="nav">
-      <div class="actual-nav">
+    <div class="sidebar-grid">
+      <div class='nav-back'>
+        <nuxt-link class='link' :to="'/'">home</nuxt-link>
+      </div>
+
+      <div class="links-nav">
         <ul class="list">
           <li
             v-for="(cat, ind) of catalog"
@@ -30,20 +34,15 @@
           </li>
         </ul>
       </div>
-
-      <div class="back">
-        <backarrow
-          id="goback"
-          :link="'/'"
-        />
-      </div>
     </div>
   </div>
 </template> 
 
 <script>
+import backarrow from './backarrow.vue';
 
 export default {
+  components: { backarrow },
   data() {
     return {
       catalog: [],
@@ -81,15 +80,15 @@ export default {
   color: var(--primary-bg-color);
 }
 
-.nav {
+.sidebar-grid {
   display: grid;
-  grid-template-rows: auto 100px;
+  grid-template-rows: 100px auto;
   height: 100%;
   overflow: hidden;
 }
 
-.actual-nav {
-  grid-row: 1;
+.links-nav {
+  // grid-row: 1;
   overflow: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -111,14 +110,22 @@ export default {
   border-radius: 10px;
 }
 
-.back {
-  grid-row: 2;
-}
-
-#goback {
+.nav-back {
   position: relative;
-  left: calc(50% - 10px);
   top: 40%;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bolder;
+
+
+  .link {
+    text-decoration: none;
+    color: var(--accent-text-color);
+
+    &:hover, &:active {
+      color: var(--link-hover-color);
+    }
+  }
 }
 
 .title {
