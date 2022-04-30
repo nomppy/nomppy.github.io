@@ -158,7 +158,6 @@ export default {
       }
 
       a {
-        text-decoration: none;
         color: var(--link-color);
 
         &:hover, &:visited, &:active {
@@ -193,8 +192,9 @@ export default {
     }
 
     h1, h2 {
-      padding-bottom: 15px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+      border-bottom: 2px dotted var(--primary-text-color);
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
 
       a::before {
         content: '#';

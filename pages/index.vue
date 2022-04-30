@@ -4,7 +4,7 @@
       <div class="rain" />
       <navlinks id="menu-nav" />
       <hero id="hero" />
-      <person id="person" />
+      <!-- <person id="person" /> -->
     </div>
 
     <contact

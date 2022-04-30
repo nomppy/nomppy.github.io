@@ -1,11 +1,16 @@
 <template>
-  <Nuxt id="main-view" />
+ <div>
+  <Nuxt id="main-view">
+  </Nuxt>
+
+  <navlinks id="menu-nav" />
+</div>
 </template>
 
 <style lang="scss">
 
 :root {
-  --primary-text-color: #ccc;
+  --primary-text-color: #fff;
   --accent-text-color: #1998DB;
   --link-color: #1998DB;
   --link-hover-color: #136fa0;
