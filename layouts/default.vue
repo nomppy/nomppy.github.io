@@ -1,9 +1,7 @@
 <template>
- <div>
+<div>
   <Nuxt id="main-view">
   </Nuxt>
-
-  <navlinks id="menu-nav" />
 </div>
 </template>
 

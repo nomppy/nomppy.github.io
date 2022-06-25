@@ -1,31 +1,27 @@
 <template>
   <div>
-    <div class="project-container">
-      <div class="header">
-        <!-- :style="{'background-image': `url(~assets/projects/${project.slug}.png)`}"> -->
-        <div class="meta">
-          <div class="type">
-            {{ project.category }}
-          </div>
-          <div class="title">
-            {{ project.title }}
-          </div>
-          <div class="updated">
-            Last Updated
-          </div>
-          <div class="date">
-            {{ project.updatedAt.slice(0, 10) || '-' }}
-          </div>
-        </div>
+    <div class="site-nav">
+      <nuxt-link to="/">home</nuxt-link>
+      <nuxt-link to="/about">about</nuxt-link>
+      <nuxt-link to="/contact">contact</nuxt-link>
+      <nuxt-link to="/posts">posts</nuxt-link>
+    </div>
 
-        <img 
-        alt=''
-        :src="require(`~/assets/projects/${project.slug}.png`)"
-        >
+    <div class="post-container">
+      <div class="meta">
+        <div class="type">
+          {{ post.category }}
+        </div>
+        <div class="title">
+          {{ post.title }}
+        </div>
+        <div class="date">
+          {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end|| post.updatedAt).slice(0, 10) }}
+        </div>
       </div>
 
       <nuxt-content 
-        :document="project"
+        :document="post"
       />
       
       <contact class="footer" />
@@ -39,54 +35,58 @@ export default {
 
   async asyncData({ $content, params, redirect }) {
 
-    const project = await $content(
-      'projects',
-      params.category,
-      params.id)
+    const post = await $content('posts', params.id)
       .fetch()
       .catch(() => {
-        return redirect('/projects');
+        return redirect('/posts');
       });
 
-    return { project };
+    return { post };
   },
 };
 </script>
 
 <style lang='scss' scoped>
-.header {
-  position: relative;
-  display: block;
+.site-nav {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-variant: petite-caps;
+
+    &:hover {
+      text-decoration-color: var(--link-hover-color);
+      text-decoration-line: underline;
+      text-decoration-thickness: 3px;
+    }
+  }
+}
+.meta {
   width: 100%;
-  height: 30vh;
-  
-  .meta {
-    z-index: 3;
+  height: 100%;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  color: white;
+
+  .type, .updated {
+    // margin-bottom: 10px;
+    font-weight: 700;
+    // color: #7a7a8c;
+    color: var(--accent-text-color);
+  }
+
+  .title {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    background: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.308), #100f13d2);
-    padding: 50px 50px;
-    box-sizing: border-box;
-
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    font-variant: petite-caps;
     color: white;
-    font-family: Ringside Regular A,Ringside Regular B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
-
-    .type, .updated {
-      // margin-bottom: 10px;
-      font-weight: 700;
-      // color: #7a7a8c;
-      color: var(--accent-text-color);
-    }
-
-    .title {
-      width: 100%;
-      font-weight: bold;
-      font-size: 34px;
-      color: white;
-      margin-bottom: 20px;
-    }
-
+    margin-bottom: 20px;
   }
 
   img {
@@ -124,7 +124,6 @@ export default {
 <style lang='scss'>
 
 .nuxt-content {
-
     z-index: 2;
     color: var(--primary-text-color);
     // font-family: 'Open Sans', sans-serif;
@@ -197,5 +196,4 @@ export default {
       font-size: 1.2em;
     }
 }
-
 </style>
