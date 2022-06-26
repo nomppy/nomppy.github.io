@@ -9,13 +9,16 @@
 
 :root {
   --primary-text-color: #fff;
+  --secondary-text-color: #8EC7D2;
+  --tertiary-text-color: #DBA507;
   --accent-text-color: #1998DB;
-  --link-color: #1998DB;
-  --link-hover-color: #136fa0;
-  --secondary-text-color: rgb(92, 108, 255);
+
+  --link-color: #136fa0;
+  --link-hover-color: #5c6cff;
+
   --primary-bg-color: #171717;
-  --secondary-bg-color: rgba(88,88,88,0.601);
-  --tertiary-bg-color: rgb(255, 250, 240);
+  --secondary-bg-color: rgba(89, 89, 89, 0.6);
+  --tertiary-bg-color: #fffaf0;
 
   --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
   --sans-serif-font-stack: "Montserrat", "Source Sans Pro", "Roboto", "Helvetica", sans-serif;

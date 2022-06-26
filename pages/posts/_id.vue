@@ -50,7 +50,6 @@
           {{ post.description }}
         </div>
       </div>
-      {{ post.content }}
 
       <nuxt-content :document="post" />
       
@@ -103,7 +102,7 @@ export default {
     font-variant: small-caps;
 
     &:hover {
-      text-decoration-color: var(--link-hover-color);
+      text-decoration-color: var(--accent-text-color);
       text-decoration-line: underline;
       text-decoration-thickness: 3px;
     }
@@ -113,8 +112,13 @@ export default {
     margin: 0 5px;
     list-style-type: none;
 
-    &:not(:first-child) a.nuxt-link-active {
-      color: var(--accent-text-color);
+    &:not(:first-child) {
+      a.nuxt-link-active {
+        color: var(--tertiary-text-color);
+      }
+      a.nuxt-link-exact-active {
+        color: var(--accent-text-color);
+      }
     }
   }
 }
@@ -126,14 +130,8 @@ export default {
   box-sizing: border-box;
   font-family: var(--sans-serif-font-stack);
   line-height: 1.5;
-  font-size: 0.95;
-  color: white;
-
-  .category {
-    font-weight: 700;
-    color: var(--accent-text-color);
-    text-transform: capitalize;
-  }
+  font-size: 0.95em;
+  color: var(--white);
 
   .meta-tags {
     font-style: italic;
@@ -164,14 +162,14 @@ export default {
   }
 }
 
-..footer {
+.footer {
   z-index: 1;
   margin-top: 70px;
   width: 100%;
   position: relative;
   overflow: hidden;
   height: 70px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 </style>
@@ -226,7 +224,7 @@ export default {
     }
 
     h1, h2 {
-      border-bottom: 2px dotted var(--primary-text-color);
+      border-bottom: 2px dotted var(--secondary-text-color);
       margin-top: 1.5em;
       margin-bottom: 0.8em;
 
@@ -243,5 +241,33 @@ export default {
     h3 {
       font-size: 1.2em;
     }
+}
+
+#contents {
+  margin-top: 1em;
+  color: var(--accent-text-color);
+
+  + ul {
+    list-style-type: none;
+    padding: 0;
+    
+    > li {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+      font-weight: normal;
+    }
+
+    a {
+      color: var(--secondary-text-color);
+
+      &:hover {
+        color: var(--link-hover-color);
+      }
+    }
+  }
 }
 </style>

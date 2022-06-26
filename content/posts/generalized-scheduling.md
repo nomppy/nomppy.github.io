@@ -12,7 +12,7 @@ pretend that this is an intro blurb that gets you interested in the post. copy p
 pretend that this is an intro blurb that gets you interested in the post. 
 pretend that this is an intro blurb that gets you interested in the post.
 
-**Contents**
+### Contents
 - [where it all began](#where-it-all-began)
   - [testing h2](#testing-h2)
 - [things to schedule](#things-to-schedule)
