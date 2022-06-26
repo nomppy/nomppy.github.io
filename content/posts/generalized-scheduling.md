@@ -8,6 +8,16 @@ status: draft
 start: 2022-06-23
 end:
 ---
+pretend that this is an intro blurb that gets you interested in the post. copy paste it a couple of times pretend that this is an intro blurb that gets you interested in the post. 
+pretend that this is an intro blurb that gets you interested in the post. 
+pretend that this is an intro blurb that gets you interested in the post.
+
+**Contents**
+- [where it all began](#where-it-all-began)
+  - [testing h2](#testing-h2)
+- [things to schedule](#things-to-schedule)
+
+# where it all began
 i really need to journal. i cant even remember the last time i seriously reflected. nearly a month deep into summer now, i find myself interacting with only a small selection of friends. im not meeting new people and im not deepening existing relationships, either, with the exception of an influx of french people who i quickly grew tired of texting.
 
 texting is no way to grow relationships. it’s half decent for maintaining already-close ones, but it gets boring and trivial for not so intimate relationships.
@@ -18,6 +28,7 @@ one reason could be that i have enough close social interactions and any more wo
 
 i have a problem with setting aside a task and picking it up later. when planning my schedule, i send an email and frequently check to see if theres been a response. when suggesting plans to friends, i constantly check to see if they have responded.
 
+## testing h2
 needless to say, this is obtrusive to productivity, though i’ve formed such a habit of it that i would need conscious effort to stop. i like finishing one thing before moving on to the next, but that shouldn’t stop me from doing other things while waiting for input from other people.
 
 a good question to ask, then, is when i should check for emails or texts, and a good reminder for me is that the vast majority of things are not urgent to the day. by that i mean nothing changes if i see it a day or even days later. the whole advantage of planning ahead is the leisurely pace it affords you, compared to last minute scrambling, so why waste that time being pointlessly frantic? almost all messages can wait at least 8 hours. there is no sense in deliberately checking unless you anticipate something time sensitive, like meeting a friend or something. 
@@ -32,8 +43,7 @@ i struggled with understanding the derivation of the lorentz transformations, so
 
 alas, i still feel like i’m not doing enough. relative to all the personal things i wanted to do this summer, my current progress looks small in comparison. let’s look at what i want to do and maybe set some goals.
 
----
-
+# things to schedule
 **writing -** other than reflective journaling and emotion dumping (which i call poems), what else is there to write? i occasionally use writing to explore some thoughts, but at the moment there is nothing consistent to write about or for on the daily. this is part of the reason i want to complete my website to accomodate writing pieces. then i could do things like screenwriting, playwriting, short stories, poems, etc.
 
 if an outlet is what im missing, then i need to set a goal for myself to have that finished and actively work on it.
@@ -120,7 +130,7 @@ et voila! a schedule to easily and effectively juggle time usage between many in
 
 ## experimental:
 
-one can conceivably create any desired focus distribution and fine-tune the total expenditure of an item by creating many rotations of different levels. an important thing to note is that slots need not be filled — blank spots are perfectly acceptable. they will just create days of differing workload which is probably preferable anyway.
+one can conceivably create any desired focus distribution and fine-tune the total expenditure of an item by creating many rotations of different levels. an important thing to note is that slots need not be filled — blank spots are perfectly acceptable. they will just create days of differing workload which is probably preferable anyway.[^1]
 
 an example is shown:
 
@@ -132,3 +142,5 @@ an example is shown:
 | invariant focus | reading | writing → reading | reading | reading | reading | writing → reading |
 
 physics is now a primary focus in 1/2 of days, while
+
+[^1]: footnote 1

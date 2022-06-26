@@ -1,11 +1,19 @@
 <template>
   <div>
-    <div class="site-nav">
-      <nuxt-link to="/">home</nuxt-link>
-      <nuxt-link to="/about">about</nuxt-link>
-      <nuxt-link to="/contact">contact</nuxt-link>
-      <nuxt-link to="/posts">posts</nuxt-link>
-    </div>
+    <ul class="site-nav">
+      <li>
+        <nuxt-link to="/">home</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/about">about</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/contact">contact</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/posts">posts</nuxt-link>
+      </li>
+    </ul>
 
     <div class="post-container">
       <div class="meta-block">
@@ -42,10 +50,9 @@
           {{ post.description }}
         </div>
       </div>
+      {{ post.content }}
 
-      <nuxt-content 
-        :document="post"
-      />
+      <nuxt-content :document="post" />
       
       <contact class="footer" />
     </div>
@@ -55,7 +62,6 @@
 <script>
 
 export default {
-
   async asyncData({ $content, params, redirect }) {
 
     const post = await $content('posts', params.id)
@@ -66,32 +72,51 @@ export default {
 
     return { post };
   },
+  head() {
+    return {
+      title: this.post.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.post.description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: this.post.title },
+        { hid: 'og:description', property: 'og:description', content: this.post.description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.post.description }
+      ]
+    };
+  }
 };
 </script>
 
 <style lang='scss' scoped>
 .site-nav {
+  padding: 0;
   margin: 20px;
   display: flex;
   justify-content: center;
   font-family: var(--sans-serif-font-stack);
 
   a {
-    margin: 0 5px;
     text-decoration: none;
     color: var(--primary-text-color);
-    font-variant: petite-caps;
+    font-variant: small-caps;
 
     &:hover {
       text-decoration-color: var(--link-hover-color);
       text-decoration-line: underline;
       text-decoration-thickness: 3px;
     }
-    &:not(:first-child).nuxt-link-active {
+  }
+
+  li {
+    margin: 0 5px;
+    list-style-type: none;
+
+    &:not(:first-child) a.nuxt-link-active {
       color: var(--accent-text-color);
     }
   }
-
 }
 
 .post-container {
@@ -101,6 +126,7 @@ export default {
   box-sizing: border-box;
   font-family: var(--sans-serif-font-stack);
   line-height: 1.5;
+  font-size: 0.95;
   color: white;
 
   .category {
@@ -138,7 +164,7 @@ export default {
   }
 }
 
-.footer {
+..footer {
   z-index: 1;
   margin-top: 70px;
   width: 100%;
