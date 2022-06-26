@@ -2,6 +2,7 @@
 title: Generalized Scheduling
 description: A potentially better way of time management when you have a lot of things to do in different areas.
 category: productivity
+tags: ['time management']
 confidence: speculation
 status: draft
 start: 2022-06-23

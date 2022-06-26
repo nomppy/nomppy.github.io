@@ -8,15 +8,38 @@
     </div>
 
     <div class="post-container">
-      <div class="meta">
-        <div class="type">
-          {{ post.category }}
-        </div>
-        <div class="title">
+      <div class="meta-block">
+        <h1 class="title">
           {{ post.title }}
+        </h1>
+
+        <div class="meta-tags-block">
+          <span class="meta-tags">
+            {{ post.category }}
+          </span>
+          <span v-for="tag in post.tags" :key="tag" class="meta-tags">
+            {{ tag }}
+          </span>
+          <span 
+          title="When this post was created, followed by when it was last updated."
+          class="meta-tags">
+            {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end|| post.updatedAt).slice(0, 10) }}
+          </span>
+          <span 
+          title="Completion status. Ranges 'notes', 'draft', 'in-progress', 'finished'."
+          class="meta-tags">
+            {{ post.status }}
+          </span>
+          <span
+          title=
+          "How confident I am that what I've written is correct. Ranges 'log', 'fiction', 'emotional', 'impossible', 'not believed', 'speculation', 'believed', 'certain'."
+          class="meta-tags">
+            {{ post.confidence }}
+          </span>
         </div>
-        <div class="date">
-          {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end|| post.updatedAt).slice(0, 10) }}
+
+        <div class="description">
+          {{ post.description }}
         </div>
       </div>
 
@@ -48,9 +71,10 @@ export default {
 
 <style lang='scss' scoped>
 .site-nav {
-  margin: 10px;
+  margin: 20px;
   display: flex;
   justify-content: center;
+  font-family: var(--sans-serif-font-stack);
 
   a {
     margin: 0 5px;
@@ -63,50 +87,55 @@ export default {
       text-decoration-line: underline;
       text-decoration-thickness: 3px;
     }
+    &:not(:first-child).nuxt-link-active {
+      color: var(--accent-text-color);
+    }
   }
+
 }
-.meta {
-  width: 100%;
-  height: 100%;
-  padding: 30px 30px;
+
+.post-container {
+  margin: 0 1.5em;
+}
+.meta-block {
   box-sizing: border-box;
+  font-family: var(--sans-serif-font-stack);
+  line-height: 1.5;
   color: white;
 
-  .type, .updated {
-    // margin-bottom: 10px;
+  .category {
     font-weight: 700;
-    // color: #7a7a8c;
     color: var(--accent-text-color);
+    text-transform: capitalize;
+  }
+
+  .meta-tags {
+    font-style: italic;
+    white-space: nowrap;
+
+    &:not(:last-of-type)::after {
+      content: '\00B7';
+      font-weight: bold;
+      margin: 0 0.3em;
+    }
+  }
+
+  .description {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-style: italic;
+    text-align: justify;
   }
 
   .title {
-    width: 100%;
     text-align: center;
-    font-weight: bold;
-    font-size: 2em;
+    font-family: var(--serif-font-stack);
+    font-weight: 600;
+    font-size: 3em;
     font-variant: petite-caps;
-    color: white;
+    line-height: 1.15;
     margin-bottom: 20px;
   }
-
-  img {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-}
-
-.project-container {
-  position: relative;
-}
-
-.background {
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  overflow: hidden;
 }
 
 .footer {
@@ -126,17 +155,10 @@ export default {
 .nuxt-content {
     z-index: 2;
     color: var(--primary-text-color);
-    // font-family: 'Open Sans', sans-serif;
     font-family: var(--serif-font-stack);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.5;
-
-    width: 60%;
-    min-height: 70vh;
     position: relative;
-    left: 20%;
-    margin-top: 100px;
 
     p {
       + p {

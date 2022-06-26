@@ -17,8 +17,8 @@
   --secondary-bg-color: rgba(88,88,88,0.601);
   --tertiary-bg-color: rgb(255, 250, 240);
 
-  --serif-font-stack: "Average", "EB Garamond", "Libre Baskerville", "Times New Roman", "Times", serif;
-  --sans-serif-font-stack: "Source Sans Pro", "Montserrat", "Roboto", "Open Sans", "Helvetica", sans-serif;
+  --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
+  --sans-serif-font-stack: "Montserrat", "Source Sans Pro", "Roboto", "Helvetica", sans-serif;
   
   --white: white;
   --black: black;
@@ -34,20 +34,18 @@ html {
   -webkit-scrollbar: none;
   font-size: 20px;
   font-weight: 400;
+  line-height: 1.5;
   font-family: var(--serif-font-stack);
 }
 
 @media only screen and (max-width: 649px) {
-  html {
-      font-size: 18px;
-  }
+
 }
 
 button, button:focus {
   outline: none;
   background: transparent;
   border: 1px solid transparent;
-
 }
 
 button:active {
@@ -62,7 +60,6 @@ button:active {
 }
 
 #__layout {
-  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary-bg-color);
@@ -71,7 +68,7 @@ button:active {
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
- }
+}
 
 #main-view {
   position: relative;

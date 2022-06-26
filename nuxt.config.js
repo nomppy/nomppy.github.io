@@ -21,6 +21,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Average&family=Libre+Baskerville&family=Montserrat&family=Roboto&family=Source+Sans+Pro&family=Zilla+Slab&display=swap' }
     ],
   },
 
