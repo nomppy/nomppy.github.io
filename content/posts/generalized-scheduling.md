@@ -132,7 +132,7 @@ et voila! a schedule to easily and effectively juggle time usage between many in
 
 ## experimental:
 
-one can conceivably create any desired focus distribution and fine-tune the total expenditure of an item by creating many rotations of different levels. an important thing to note is that slots need not be filled — blank spots are perfectly acceptable. they will just create days of differing workload which is probably preferable anyway.[^1]
+one can conceivably create any desired focus distribution and fine-tune the total expenditure of an item by creating many rotations of different levels. an important thing to note is that slots need not be filled — blank spots are perfectly acceptable. they will just create days of differing workload which is probably preferable anyway[^1].
 
 an example is shown:
 

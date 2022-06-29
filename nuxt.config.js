@@ -60,6 +60,7 @@ export default {
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {
     markdown: {
+      remarkPlugins: ['remark-gfm'],
       prism: {
         theme: '~/assets/styles/prism-nord.css',
       },
@@ -68,6 +69,9 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: [
+      'remark-gfm',
+    ],
   },
 
   generate: {
