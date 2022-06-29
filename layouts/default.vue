@@ -8,8 +8,8 @@
 <style lang="scss">
 
 :root {
-  --primary-text-color: #fff;
-  --secondary-text-color: #8EC7D2;
+  --primary-text-color: var(--white);
+  --secondary-text-color: #ddd;
   --tertiary-text-color: #DBA507;
   --accent-text-color: #1998DB;
 
@@ -39,10 +39,6 @@ html {
   font-weight: 400;
   line-height: 1.5;
   font-family: var(--serif-font-stack);
-}
-
-@media only screen and (max-width: 649px) {
-
 }
 
 button, button:focus {

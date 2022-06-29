@@ -16,6 +16,10 @@ pretend that this is an intro blurb that gets you interested in the post.
 - [where it all began](#where-it-all-began)
   - [testing h2](#testing-h2)
 - [things to schedule](#things-to-schedule)
+- [how]()
+- [does]()
+- [it look]()
+- [with more links?]()
 
 # where it all began
 i really need to journal. i cant even remember the last time i seriously reflected. nearly a month deep into summer now, i find myself interacting with only a small selection of friends. im not meeting new people and im not deepening existing relationships, either, with the exception of an influx of french people who i quickly grew tired of texting.
@@ -125,8 +129,6 @@ i still need to assign reading and journaling, but actually i think they have si
 | invariant focus | reading | writing → reading | reading | reading | reading | writing → reading |
 
 et voila! a schedule to easily and effectively juggle time usage between many interests — without creating a daily schedule that is difficult to follow. 
-
----
 
 ## experimental:
 

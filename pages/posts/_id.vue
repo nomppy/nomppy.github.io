@@ -53,7 +53,6 @@
 
       <nuxt-content :document="post" />
       
-      <contact class="footer" />
     </div>
   </div>
 </template>
@@ -124,18 +123,20 @@ export default {
 }
 
 .post-container {
-  margin: 0 1.5em;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0 1.5em;
 }
 .meta-block {
   box-sizing: border-box;
   font-family: var(--sans-serif-font-stack);
   line-height: 1.5;
-  font-size: 0.95em;
-  color: var(--white);
+  color: var(--secondary-text-color);
 
   .meta-tags {
     font-style: italic;
     white-space: nowrap;
+    font-size: 0.9em;
 
     &:not(:last-of-type)::after {
       content: '\00B7';
@@ -145,6 +146,7 @@ export default {
   }
 
   .description {
+    font-size: 0.9em;
     margin-top: 1em;
     margin-bottom: 3em;
     font-style: italic;
@@ -152,6 +154,7 @@ export default {
   }
 
   .title {
+    color: var(--white);
     text-align: center;
     font-family: var(--serif-font-stack);
     font-weight: 600;
@@ -185,8 +188,11 @@ export default {
     position: relative;
 
     p {
-      + p {
-        text-indent: 2.5em;
+      color: var(--secondary-text-color);
+      margin: 0.75em 0;
+
+      strong {
+        color: var(--primary-text-color);
       }
 
       a {
@@ -224,7 +230,7 @@ export default {
     }
 
     h1, h2 {
-      border-bottom: 2px dotted var(--secondary-text-color);
+      border-bottom: 2px solid var(--tertiary-text-color);
       margin-top: 1.5em;
       margin-bottom: 0.8em;
 
@@ -238,18 +244,50 @@ export default {
       }
     }
 
+    h2 {
+      border-bottom-style: dotted;
+    }
+
     h3 {
       font-size: 1.2em;
+    }
+
+    table {
+      display: block;
+      overflow-x: scroll;
+      border-collapse: collapse;
+      padding: 0.75em 0;
+    }
+
+    td, th {
+      border: 1px solid var(--secondary-text-color);
+      padding: 0.3em 0.5em;
+    }
+
+    th {
+      background-color: var(--secondary-bg-color);
+      font-weight: 800;
+      color: var(--primary-text-color);
+    }
+
+    td {
+      color: var(--secondary-text-color);
     }
 }
 
 #contents {
   margin-top: 1em;
   color: var(--accent-text-color);
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 1.5em;
 
   + ul {
     list-style-type: none;
     padding: 0;
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
     
     > li {
       font-weight: bold;
@@ -262,12 +300,33 @@ export default {
     }
 
     a {
-      color: var(--secondary-text-color);
+      color: var(--link-color);
 
       &:hover {
-        color: var(--link-hover-color);
+        text-decoration-color: var(--accent-text-color);
       }
     }
   }
+
 }
+
+@media screen and (max-width: 660px) {
+  .post-container {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .post-container {
+    max-width: 800px !important;
+  }
+
+  .site-nav {
+    position: fixed;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin: 0 20px;
+  }
+}
+
 </style>
