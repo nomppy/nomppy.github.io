@@ -2,15 +2,10 @@
   <div>
     <div class="site-wrapper">
       <div class="rain" />
-      <navlinks id="menu-nav" />
+      <sidenav />
       <hero id="hero" />
       <!-- <person id="person" /> -->
     </div>
-
-    <contact
-      id="contact"
-      class="footer"
-    />
   </div>
 </template>
 

@@ -1,8 +1,6 @@
 <template>
-<div>
-  <Nuxt id="main-view">
+  <Nuxt>
   </Nuxt>
-</div>
 </template>
 
 <style lang="scss">
@@ -91,4 +89,152 @@ button:active {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+.nuxt-content {
+    z-index: 2;
+    color: var(--primary-text-color);
+    font-family: var(--serif-font-stack);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+
+    p {
+      color: var(--secondary-text-color);
+      margin: 0.75em 0;
+
+      strong {
+        color: var(--primary-text-color);
+      }
+
+      a {
+        color: var(--link-color);
+
+        &:hover, &:visited, &:active {
+          color: var(--link-hover-color);
+        }
+      }
+
+      img {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: block;
+      }
+
+      &.img-wrapper {
+        width: 140%;
+        left: -20%;
+        position: relative;
+      }
+    }
+
+    iframe {
+      position: relative;
+      height: 30vh;
+      width: 100%;
+      display: block;
+    }
+
+    pre {
+      overflow-x: scroll;
+    }
+
+    h1, h2 {
+      border-bottom: 2px solid var(--tertiary-text-color);
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
+
+      a::before {
+        content: '#';
+        cursor: pointer;
+        position: absolute;
+        left: -25px;
+        font-weight: normal;
+        color: var(--accent-text-color);
+      }
+    }
+
+    h2 {
+      border-bottom-style: dotted;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    table {
+      display: block;
+      overflow-x: scroll;
+      border-collapse: collapse;
+      padding: 0.75em 0;
+    }
+
+    td, th {
+      border: 1px solid var(--secondary-text-color);
+      padding: 0.3em 0.5em;
+    }
+
+    th {
+      background-color: var(--secondary-bg-color);
+      font-weight: 800;
+      color: var(--primary-text-color);
+    }
+
+    td {
+      color: var(--secondary-text-color);
+    }
+}
+
+#contents {
+  margin-top: 1em;
+  color: var(--accent-text-color);
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 1.5em;
+
+  + ul {
+    list-style-type: none;
+    padding: 0;
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    > li {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+      font-weight: normal;
+    }
+
+    a {
+      color: var(--link-color);
+
+      &:hover {
+        text-decoration-color: var(--accent-text-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .post-container, .page-container {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .post-container, .page-container {
+    max-width: 800px;
+  }
+
+  .site-nav {
+    position: fixed;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin: 0 20px;
+  }
+}
 </style>
