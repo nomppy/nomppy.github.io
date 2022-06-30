@@ -147,7 +147,7 @@ export default {
   position: absolute;
   left: -2px;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: width 0.5s ease;
   border-right: 2px solid white;
 }

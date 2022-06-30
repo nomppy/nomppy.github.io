@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sidenav />
-
-    <div class="post-container">
+    <div class="center-container">
       <div class="meta-block">
         <h1 class="title">
           {{ post.title }}
@@ -74,11 +72,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.post-container {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 0 1.5em;
-}
 .meta-block {
   box-sizing: border-box;
   font-family: var(--sans-serif-font-stack);
@@ -116,15 +109,4 @@ export default {
     margin-bottom: 20px;
   }
 }
-
-.footer {
-  z-index: 1;
-  margin-top: 70px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  height: 70px;
-  background-color: var(--white);
-}
-
 </style>

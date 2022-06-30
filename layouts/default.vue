@@ -1,6 +1,8 @@
 <template>
-  <Nuxt>
-  </Nuxt>
+  <div>
+    <sidenav></sidenav>
+    <Nuxt></Nuxt>
+  </div>
 </template>
 
 <style lang="scss">
@@ -33,6 +35,7 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-scrollbar: none;
+
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
@@ -63,20 +66,9 @@ button:active {
   color: var(--primary-text-color);
   position: relative;
   width: 100%;
+  min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-#main-view {
-  position: relative;
-  overflow: hidden;
-  // scrollbar-width: none;
-  // -ms-overflow-style: none;
-  // -webkit-scrollbar: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .noselect {
@@ -87,6 +79,12 @@ button:active {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.center-container {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0 1.5em;
 }
 
 .nuxt-content {
@@ -220,13 +218,13 @@ button:active {
 }
 
 @media screen and (max-width: 660px) {
-  .post-container, .page-container {
+  .center-container {
     font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1070px) {
-  .post-container, .page-container {
+  .center-container {
     max-width: 800px;
   }
 

@@ -43,9 +43,9 @@
       a.nuxt-link-active {
         color: var(--tertiary-text-color);
       }
-      a.nuxt-link-exact-active {
-        color: var(--accent-text-color);
-      }
+    }
+    a.nuxt-link-exact-active {
+      color: var(--accent-text-color) !important;
     }
   }
 }

@@ -2,9 +2,7 @@
   <div>
     <div class="site-wrapper">
       <div class="rain" />
-      <sidenav />
       <hero id="hero" />
-      <!-- <person id="person" /> -->
     </div>
   </div>
 </template>
@@ -46,46 +44,20 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+
+#__layout {
+  overflow-y: hidden;
+  height: 100vh;
+}
 
 .site-wrapper {
-	min-height: 100vh;
 	position: relative;
-}
-
-.footer, .site-wrapper:after {
-	height: 8%;
-	overflow: hidden;
-}
-
-.footer {
-	z-index: 2;
-	background: white;
-	position: relative;
-}
-
-#menu-nav {
-	z-index: 2;
-	position: absolute;
-	top: 15px;
-	right: 30px;
 }
 
 #hero {
 	position: relative;
 	width: 100%;
-}
-
-#person {
-  position: absolute;
-  height: 30%;
-  width: 100%;
-  bottom: 0;
-  right: 10%;
-}
-
-#contact {
-  height: 7vh;
 }
 
 .rain {
@@ -119,10 +91,10 @@ export default {
 		transform: translateY(0vh);
 	}
 	75% {
-		transform: translateY(100vh);
+		transform: translateY(90vh);
 	}
 	100% {
-		transform: translateY(100vh);
+		transform: translateY(90vh);
 	}
 }
 

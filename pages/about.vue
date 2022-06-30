@@ -1,8 +1,6 @@
 <template>
   <div>
-    <sidenav />
-
-    <div class="page-container">
+    <div class="center-container">
       <h1 class="title">
         {{ about.title }}
       </h1>
@@ -28,13 +26,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.page-container {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 0 1.5em;
-  min-height: 100vh;
-}
-
 .title {
   color: var(--white);
   text-align: center;
