@@ -95,37 +95,15 @@ export default {
 <style lang='scss' scoped>
 
 #hero {
-  position: fixed;
 	transition: transform .2s ease;
   z-index: 0;
 }
 
 .name-container {
-	position: absolute;
-	left: 20%;
-	top: 150px;
 	background: transparent;
-	transform: scale(2.6);
-}
-
-.editor {
-  color: white;
-  z-index: 4;
-
-  .words {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .word:hover {
-    text-decoration: line-through;
-    cursor: pointer;
-  }
-
 }
 
 /* animated headline */
-
 
 .last {
   display: flex;
@@ -169,43 +147,37 @@ export default {
   opacity: 0;
 }
 
-@media screen and (max-width: 1300px) {
-	.name-container{
-		transition: transform 0.2s ease;
-		transform: scale(2);
-	}
+// @media screen and (max-width: 1300px) {
+// 	.name-container{
+// 		transition: transform 0.2s ease;
+// 	}
 
-	.last {
-		top: 200px;
-	}
-}
+// 	.last {
+// 		top: 200px;
+// 	}
+// }
 
-@media screen and (max-width: 920px) {
-	#hero {
-		width: 100%;
-		display: flex;
-		align-items: baseline;
-		flex-flow: column nowrap;
-	}
+// @media screen and (max-width: 920px) {
+// 	#hero {
+// 		width: 100%;
+// 		display: flex;
+// 		align-items: baseline;
+// 		flex-flow: column nowrap;
+// 	}
 
-	#hero > div {
-		display: block;
-		margin: 40px auto 0 auto;
-		position: static;
-	}
+// 	#hero > div {
+// 		display: block;
+// 		margin: 40px auto 0 auto;
+// 		position: static;
+// 	}
 
-	.headline-clip {
-		position: absolute;
-		left: -42px;
-		transition: transform 0.2s ease;
-		transform: scale(0.4);
-	}
-
-	.name-container {
-		transform: scale(1.5);
-	}
-
-}
+// 	.headline-clip {
+// 		position: absolute;
+// 		left: -42px;
+// 		transition: transform 0.2s ease;
+// 		transform: scale(0.4);
+// 	}
+// }
 
 
 

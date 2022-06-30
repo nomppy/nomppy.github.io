@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="center-container">
-      <h1 class="title">
-        {{ about.title }}
-      </h1>
-  
+      <home />
+
       <nuxt-content :document="about" />
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <ul class="site-nav">
     <li>
-      <nuxt-link to="/">home</nuxt-link>
+      <nuxt-link to="/home">home</nuxt-link>
     </li>
     <li>
       <nuxt-link to="/about">about</nuxt-link>
@@ -39,13 +39,12 @@
     margin: 0 5px;
     list-style-type: none;
 
-    &:not(:first-child) {
-      a.nuxt-link-active {
-        color: var(--tertiary-text-color);
-      }
+    a.nuxt-link-active {
+      color: var(--tertiary-text-color);
     }
+
     a.nuxt-link-exact-active {
-      color: var(--accent-text-color) !important;
+      color: var(--accent-text-color);
     }
   }
 }
