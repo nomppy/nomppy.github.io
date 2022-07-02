@@ -12,12 +12,14 @@
       </div>
     </div>
 
-    <div class="name-container last">
+    <div class="name-container with-clip">
       <div class="letters">
+        <span />
         <span class="letter">s</span>
         <span class="letter">u</span>
         <span class="letter">n</span>
       </div>
+
       <div class="headline-clip">
         <span
           class="headline-wrapper"
@@ -32,6 +34,13 @@
             {{ word }}
           </p>
         </span>
+      </div>
+
+      <div class="letters dummy">
+        <span />
+        <span class="letter">s</span>
+        <span class="letter">u</span>
+        <span class="letter">n</span>
       </div>
     </div>
   </div>
@@ -97,27 +106,28 @@ export default {
 #hero {
 	transition: transform .2s ease;
   z-index: 0;
+  font-size: 2.5em;
 }
 
-.name-container {
-	background: transparent;
+.dummy {
+  visibility: hidden;
 }
 
 /* animated headline */
 
-.last {
+.name-container {
+  background: transparent;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  top: 250px;
+  justify-content: center;
 }
 
 .headline-clip {
   display: inline-block;
-  height: 4em;
+  position: relative;
+  height: 1em;
   border-left: 2px solid white;
-  transform: scale(0.4);
-  /* top: 13.8em; */
 }
 
 .headline-wrapper{
@@ -125,7 +135,7 @@ export default {
   position: absolute;
   left: -2px;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: width 0.5s ease;
   border-right: 2px solid white;
 }
@@ -133,8 +143,7 @@ export default {
 .headline-clip p {
   position: absolute;
   color: #1f98b1;
-  font-size: 4em;
-  line-height: 90%;
+  line-height: 0.9em;
   padding: 0 10px;
   white-space: nowrap;
 }
@@ -186,18 +195,22 @@ export default {
 
 
 .letter {
-  width: 24px;
+  // width: 24px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
   overflow: hidden;
   margin: 0 0;
   font-family: sans-serif;
-  font-size: 24px;
+  // font-size: 24px;
   font-weight: 600;
-  line-height: 24px;
+  // line-height: 24px;
   text-transform: uppercase;
   color: #eee;
+
+  width: 1em;
+  font-size: 1em;
+  line-height: 1em;
 }
 
 .letter:before {
@@ -227,7 +240,8 @@ export default {
     margin-top: -120px;
   }
   to {
-    margin-top: 24px;
+    // margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -236,16 +250,17 @@ export default {
     margin-top: -120px;
   }
   to {
-    margin-top: 24px;
+    // margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(2):before {
   content: "fjakjylajdvmqjoidaf";
-  margin-top: -168px;
+  // margin-top: -7em;
   -webkit-animation-name: letter2;
           animation-name: letter2;
-  -webkit-animation-duration: 0.875s;
-          animation-duration: 0.875s;
+  -webkit-animation-duration: 1.875s;
+          animation-duration: 1.875s;
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
   -webkit-animation-fill-mode: forwards;
@@ -254,28 +269,28 @@ export default {
 
 @-webkit-keyframes letter2 {
   from {
-    margin-top: -168px;
+    margin-top: -7em;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
 @keyframes letter2 {
   from {
-    margin-top: -168px;
+    margin-top: -7em;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(3):before {
   content: "lfo1f36adfageadf28fa";
-  margin-top: -120px;
+  // margin-top: -120px;
   -webkit-animation-name: letter3;
           animation-name: letter3;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-delay: 0.91s;
           animation-delay: 0.91s;
   -webkit-animation-fill-mode: forwards;
@@ -284,19 +299,19 @@ export default {
 
 @-webkit-keyframes letter3 {
   from {
-    margin-top: -120px;
+    margin-top: -3em;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
 @keyframes letter3 {
   from {
-    margin-top: -120px;
+    margin-top: -3em;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(4):before {
@@ -317,7 +332,7 @@ export default {
     margin-top: -144px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -326,7 +341,7 @@ export default {
     margin-top: -144px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(5):before {
@@ -344,10 +359,10 @@ export default {
 
 @-webkit-keyframes letter5 {
   from {
-    margin-top: 0px;
+    margin-top: 2px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -356,7 +371,7 @@ export default {
     margin-top: 0px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(6):before {
@@ -377,7 +392,7 @@ export default {
     margin-top: 0px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -386,7 +401,7 @@ export default {
     margin-top: 0px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(7):before {
@@ -407,7 +422,7 @@ export default {
     margin-top: -168px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -416,7 +431,7 @@ export default {
     margin-top: -168px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(8):before {
@@ -437,7 +452,7 @@ export default {
     margin-top: -192px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -446,7 +461,7 @@ export default {
     margin-top: -192px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(9):before {
@@ -467,7 +482,7 @@ export default {
     margin-top: -96px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -476,7 +491,7 @@ export default {
     margin-top: -96px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(10):before {
@@ -497,7 +512,7 @@ export default {
     margin-top: -96px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -506,7 +521,7 @@ export default {
     margin-top: -96px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(11):before {
@@ -527,7 +542,7 @@ export default {
     margin-top: -168px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -536,7 +551,7 @@ export default {
     margin-top: -168px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(12):before {
@@ -557,7 +572,7 @@ export default {
     margin-top: 0px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -566,7 +581,7 @@ export default {
     margin-top: 0px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(13):before {
@@ -587,7 +602,7 @@ export default {
     margin-top: -48px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -596,7 +611,7 @@ export default {
     margin-top: -48px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(14):before {
@@ -617,7 +632,7 @@ export default {
     margin-top: -120px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -626,7 +641,7 @@ export default {
     margin-top: -120px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(15):before {
@@ -647,7 +662,7 @@ export default {
     margin-top: -96px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -656,7 +671,7 @@ export default {
     margin-top: -96px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 .letter:nth-child(16):before {
@@ -677,7 +692,7 @@ export default {
     margin-top: -120px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 
@@ -686,7 +701,7 @@ export default {
     margin-top: -120px;
   }
   to {
-    margin-top: 24px;
+    margin-top: 1em;
   }
 }
 

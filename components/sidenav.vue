@@ -17,8 +17,7 @@
 
 <style lang="scss" scoped>
 .site-nav {
-  padding: 0;
-  margin: 20px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   font-family: var(--sans-serif-font-stack);
