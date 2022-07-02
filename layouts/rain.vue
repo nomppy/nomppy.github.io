@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="rain"></div>
-    <sidenav></sidenav>
+    <sitenav></sitenav>
     <Nuxt></Nuxt>
   </div>
 </template>
@@ -62,10 +62,10 @@ export default {
 		transform: translateY(0vh);
 	}
 	75% {
-		transform: translateY(100vh);
+		transform: translateY(90vh);
 	}
 	100% {
-		transform: translateY(100vh);
+		transform: translateY(90vh);
 	}
 }
 
