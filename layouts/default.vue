@@ -87,6 +87,17 @@ button:active {
   padding: 0 1.5em;
 }
 
+.title {
+  color: var(--white);
+  text-align: center;
+  font-family: var(--serif-font-stack);
+  font-weight: 600;
+  font-size: 3em;
+  font-variant: petite-caps;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
 .nuxt-content {
     z-index: 2;
     color: var(--primary-text-color);
@@ -157,7 +168,8 @@ button:active {
     }
 
     h3 {
-      font-size: 1.2em;
+      margin-top: 1em;
+      font-size: 1.3em;
     }
 
     table {

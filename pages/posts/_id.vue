@@ -98,15 +98,5 @@ export default {
     text-align: justify;
   }
 
-  .title {
-    color: var(--white);
-    text-align: center;
-    font-family: var(--serif-font-stack);
-    font-weight: 600;
-    font-size: 3em;
-    font-variant: petite-caps;
-    line-height: 1.15;
-    margin-bottom: 20px;
-  }
 }
 </style>

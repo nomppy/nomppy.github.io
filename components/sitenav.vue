@@ -1,10 +1,7 @@
 <template>
   <ul class="site-nav">
     <li>
-      <nuxt-link to="/home">home</nuxt-link>
-    </li>
-    <li>
-      <nuxt-link to="/contact">contact</nuxt-link>
+      <nuxt-link to="/">welcome</nuxt-link>
     </li>
     <li>
       <nuxt-link to="/posts">posts</nuxt-link>
@@ -35,7 +32,7 @@
     margin: 0 5px;
     list-style-type: none;
 
-    a.nuxt-link-active {
+    a.nuxt-link-active:not(:first-child) { // excludes the root route
       color: var(--tertiary-text-color);
     }
 

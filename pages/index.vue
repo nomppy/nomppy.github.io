@@ -1,16 +1,30 @@
+<template>
+  <div id="home">
+
+    <div class="center-container">
+      <hero id="hero" />
+
+      <nuxt-content :document="page" />
+    </div>
+  </div>
+</template>
+
 <script>
+
 export default {
-  async asyncData({ redirect }) {
-    return redirect('/home');
+  layout: 'rain',
+  async asyncData({ $content }) {
+    const page = await $content('about').fetch();
+    return { page };
   },
-  // async asyncData({ $content }) {
-
-  //   const posts = await $content('posts')
-  //     .only(['title', 'slug', 'category'])
-  //     .sortBy('updatedAt', 'asc')
-  //     .fetch();
-
-  //   return { posts };
-  // },
 };
 </script>
+
+<style lang="scss" scoped>
+
+#hero {
+	position: relative;
+	width: 100%;
+}
+
+</style>
