@@ -32,12 +32,12 @@
     margin: 0 5px;
     list-style-type: none;
 
-    a.nuxt-link-active:not(:first-child) { // excludes the root route
+    a.nuxt-link-active:not([href="/"]) { // excludes the root route
       color: var(--tertiary-text-color);
     }
 
     a.nuxt-link-exact-active {
-      color: var(--accent-text-color);
+      color: var(--accent-text-color) !important; // overrides above
     }
   }
 }

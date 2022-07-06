@@ -83,7 +83,7 @@ button:active {
 
 .center-container {
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 700px;
   padding: 0 1.5em;
 }
 
@@ -236,10 +236,6 @@ button:active {
 }
 
 @media screen and (min-width: 1070px) {
-  .center-container {
-    max-width: 800px;
-  }
-
   .site-nav {
     position: fixed;
     flex-flow: column nowrap;
