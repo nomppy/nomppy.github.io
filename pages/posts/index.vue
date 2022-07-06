@@ -1,5 +1,5 @@
 <template>
-  <div class="center-container post-categories">
+  <div class="center-container post-categories nuxt-content">
     <!-- create a section for each category-->
     <section 
     class="post-category"
@@ -45,6 +45,12 @@ export default {
   > ul {
     margin: 1em 3em 0 0;
     padding: 0 0 0 1.375em;
+  }
+
+  > h2 {
+    margin: 0;
+    font-variant: small-caps;
+    text-transform: capitalize;
   }
 }
 
