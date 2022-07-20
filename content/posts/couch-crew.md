@@ -4,7 +4,7 @@ description: A step-by-step guide on using my website for the Incubator as a tem
 category: misc.
 tags: ['web', 'guide']
 confidence: certain
-status: draft
+status: notes 
 start:
 end:
 ---

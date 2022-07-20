@@ -80,6 +80,7 @@ export default {
   generate: {
     crawler: true,
     dir: 'generate',
+    fallback: '404.html',
     // async routes () {
     //   const { $content } = require('@nuxt/content');
     //   const files = await $content({ deep: true }).only(['path']).fetch();

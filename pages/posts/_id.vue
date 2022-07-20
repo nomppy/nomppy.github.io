@@ -44,12 +44,12 @@
 <script>
 
 export default {
-  async asyncData({ $content, params, redirect }) {
+  async asyncData({ $content, params, error }) {
 
     const post = await $content('posts', params.id)
       .fetch()
       .catch(() => {
-        return redirect('/posts');
+        error({ statusCode: 404 });
       });
 
     return { post };
