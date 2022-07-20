@@ -1,11 +1,11 @@
 export default async () => {
   const { $content } = require('@nuxt/content');
-  const files = await $content({ deep: true })
+  const files = await $content('posts')
     .only(['path', 'updatedAt'])
     .fetch();
   return files.map((file) => {
     return {
-      url: 'projects/' + file.path.replace('index', ''),
+      url: 'posts/' + file.path.replace('index', ''),
       lastmod: Date.parse(file.updatedAt),
     };
   });

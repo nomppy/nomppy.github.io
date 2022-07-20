@@ -89,7 +89,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://spesthecat.github.io',
+    hostname: 'http://kennethsun.net/',
     routes() {
       return getRoutes();
     }
