@@ -55,6 +55,8 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://sitemap.nuxtjs.org/
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -89,10 +91,13 @@ export default {
     // }
   },
 
-  sitemap: {
-    hostname: 'http://kennethsun.net/',
-    routes() {
-      return getRoutes();
+  hooks: {
+    'generate:done': (context) => {
+      this.default.sitemap.routes = [...context.generatedRoutes];
     }
+  },
+
+  sitemap: {
+    hostname: 'http://kennethsun.net',
   },
 };
