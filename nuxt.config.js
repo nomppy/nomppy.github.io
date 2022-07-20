@@ -17,7 +17,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Personal website of Kenneth Sun' },
+      { hid: 'og:description', property: 'og:description', content: 'Personal website of Kenneth Sun' },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Kenneth Sun' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'kennethsun.net' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

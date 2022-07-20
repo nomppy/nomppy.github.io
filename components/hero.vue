@@ -156,6 +156,11 @@ export default {
   opacity: 0;
 }
 
+@media screen and (max-width: 435px) {
+  #hero {
+    font-size: 2em;
+  }
+}
 // @media screen and (max-width: 1300px) {
 // 	.name-container{
 // 		transition: transform 0.2s ease;

@@ -22,7 +22,7 @@ export default {
       .only(['title', 'slug', 'category', 'createdAt'])
       .sortBy('updatedAt', 'asc')
       .fetch();
-
+ 
     // group posts by category
     const grouped = posts.reduce((acc, post) => {
       if (!acc[post.category]) {
@@ -33,6 +33,14 @@ export default {
     }, {});
 
     return { posts, grouped };
+  },
+  head() {
+    return {
+      title: 'Posts | Kenneth Sun',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: 'Posts' },
+      ],
+    };
   },
 };
 </script>

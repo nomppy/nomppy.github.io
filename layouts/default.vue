@@ -105,6 +105,15 @@ button:active {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
+    padding-bottom: 4em;
+
+    a {
+      color: var(--link-color);
+
+      &:hover, &:visited, &:active {
+        color: var(--link-hover-color);
+      }
+    }
 
     p {
       color: var(--secondary-text-color);
@@ -112,14 +121,6 @@ button:active {
 
       strong {
         color: var(--primary-text-color);
-      }
-
-      a {
-        color: var(--link-color);
-
-        &:hover, &:visited, &:active {
-          color: var(--link-hover-color);
-        }
       }
 
       img {
@@ -146,6 +147,10 @@ button:active {
 
     pre {
       overflow-x: scroll;
+    }
+
+    code {
+      font-size: 0.9em;
     }
 
     h1, h2 {

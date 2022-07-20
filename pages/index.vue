@@ -17,6 +17,14 @@ export default {
     const page = await $content('about').fetch();
     return { page };
   },
+  head() {
+    return {
+      title: 'Kenneth Sun',
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: 'Welcome' },
+      ],
+    };
+  },
 };
 </script>
 
