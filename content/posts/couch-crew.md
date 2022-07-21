@@ -21,7 +21,7 @@ It is this organization/repository hosting structure that makes Couch Crew easy 
 The organization I've created on Github is called "Couch-Crew", which gives us the `couch-crew` subdomain. Each repository, named according to the year of the class, e.g. 21-22, 22-23... then gets an URL corresponding to their name. This means that creating a new class page is as simple as duplicating the existing `21-22` repo and swapping out the pictures and images.
 
 ## structure of the repo
-If you're going to build off my work, it would be helpful to know how it works. If you navigated to the (21-22 repo)[https://github.com/couch-crew/21-22], this is the file directory that you would see:
+If you're going to build off my work, it would be helpful to know how it works. If you navigated to the [21-22 repo](https://github.com/couch-crew/21-22), this is the file directory that you would see:
 ```
 .
 ├── .bundle/
