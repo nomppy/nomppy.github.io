@@ -41,4 +41,4 @@ and every new splinter becomes a part of the beautiful mosaic that is your soul.
 
 ---
 
-*Thanks to Paula Alejo for reading a draft of this poem.*
+*Thanks to Paula Alejo for inspiriting a rewrite of this.*
