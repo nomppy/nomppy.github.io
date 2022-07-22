@@ -17,7 +17,7 @@ A few weeks later, someone else leaves
 with a part of your soul that they weren’t supposed to keep.  
 You chase after them — because of course you do — it’s a cliché,  
 but running after a person is like trying to catch a breeze.  
-When “It’s not the end of the world” sounds more like a threat than a reassurance,  
+They make “It’s not the end of the world” sounds more like a threat than a reassurance,  
 and you curse the sun for rising when it should come crashing down with the rest of the sky.
 
 But then, you remember.  
@@ -41,4 +41,4 @@ and every new splinter becomes a part of the beautiful mosaic that is your soul.
 
 ---
 
-*Thanks to Paula Alejo for inspiriting a rewrite of this.*
+*Thanks to Paula Alejo for inspiriting a rewrite of this, and to draft readers Khushi Gooroochurn.
