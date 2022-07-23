@@ -19,8 +19,8 @@ export default {
   async asyncData({ $content }) {
 
     const posts = await $content('posts')
-      .only(['title', 'slug', 'category', 'createdAt'])
-      .sortBy('updatedAt', 'asc')
+      .only(['title', 'slug', 'category', 'updatedAt', 'end'])
+      .sortBy('updatedAt', 'desc')
       .fetch();
  
     // group posts by category

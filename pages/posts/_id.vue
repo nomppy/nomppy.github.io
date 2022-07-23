@@ -16,7 +16,7 @@
           <span 
           title="When this post was created, followed by when it was last updated."
           class="meta-tags">
-            {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end|| post.updatedAt).slice(0, 10) }}
+            {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end || post.updatedAt).slice(0, 10) }}
           </span>
           <span 
           title="Completion status. Ranges 'notes', 'draft', 'in-progress', 'finished'."

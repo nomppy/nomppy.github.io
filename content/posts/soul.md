@@ -4,6 +4,7 @@ category: poetry
 tags: []
 confidence: believed
 status: finished
+end: 2021-01-01
 ---
 
 Some people, when you lose them,  
@@ -41,4 +42,4 @@ and every new splinter becomes a part of the beautiful mosaic that is your soul.
 
 ---
 
-*Thanks to Paula Alejo for inspiriting a rewrite of this, and to draft readers Khushi Gooroochurn.
+*Thanks to Paula Alejo for inspiriting a rewrite of this, and to draft reader Khushi Gooroochurn.*
