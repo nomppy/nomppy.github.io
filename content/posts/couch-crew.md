@@ -38,6 +38,7 @@ If you're going to build off my work, it would be helpful to know how it works. 
 ├── _config.yml
 └── index.html
 ```
+
 Let's briefly go through what each of these directories and files do:
 - **index.html**: This is what is displayed by the browser when we navigate to `couch-crew.github.io/21-22`.
 - **_includes/**: Contains snippets of HTML code that can be reused throughout the site. [Jekyll documentation](https://jekyllrb.com/docs/includes/).
@@ -46,3 +47,9 @@ Let's briefly go through what each of these directories and files do:
 - **assets/**: Stores documents like class pictures, student project logos, and other media files that the site might need to use.
 - **css/**: Holds CSS files, which are code that change how elements on a website look.
 
+For the purposes of replicating this project, we will only be working with `_projects/` and `assets/`. The following section delves a little deeper on each of those subdirectories.
+
+# Adding projects
+Every project consists of 3 parts:
+1. A Markdown file, containing written responses, project description, etc. 
+2. A 
