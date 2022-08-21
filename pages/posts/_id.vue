@@ -14,16 +14,19 @@
             {{ tag }}
           </span>
           <span 
+          v-if="post.start || post.end"
           title="When this post was created, followed by when it was last updated."
           class="meta-tags">
             {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end || post.updatedAt).slice(0, 10) }}
           </span>
           <span 
+          v-if="post.status"
           title="Completion status. Ranges 'notes', 'draft', 'in-progress', 'finished'."
           class="meta-tags">
             {{ post.status }}
           </span>
           <span
+          v-if="post.confidence"
           title=
           "How confident I am that what I've written is correct. Ranges 'log', 'fiction', 'emotional', 'impossible', 'not believed', 'speculation', 'believed', 'certain'."
           class="meta-tags">
@@ -31,7 +34,7 @@
           </span>
         </div>
 
-        <div class="description">
+        <div v-if="post.description" class="description">
           {{ post.description }}
         </div>
       </div>
@@ -77,6 +80,7 @@ export default {
   font-family: var(--sans-serif-font-stack);
   line-height: 1.5;
   color: var(--secondary-text-color);
+  margin-bottom: 3em;
 
   .meta-tags {
     font-style: italic;
@@ -97,6 +101,5 @@ export default {
     font-style: italic;
     text-align: justify;
   }
-
 }
 </style>
