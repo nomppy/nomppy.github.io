@@ -8,7 +8,7 @@ start: 2022-06-04
 end: 2022-06-04
 ---
 
-*A newer version of this poem can be found here: [How A Soul Is Made (optimistic)](/posts/soul). I wrote the updated version to reflect my new beliefs.*
+*A newer version of this poem can be found here: [How A Soul Is Made (optimistic)](/posts/soul). This is kept for posterity.*
 
 ---
 
