@@ -1,5 +1,5 @@
 ---
-title: How A Soul Is Made (optimistic)
+title: How A Soul Is Made
 category: poetry
 tags: []
 status: finished

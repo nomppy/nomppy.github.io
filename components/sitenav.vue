@@ -4,9 +4,6 @@
       <nuxt-link to="/">welcome</nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/reading">reading</nuxt-link>
-    </li>
-    <li>
       <nuxt-link to="/posts">posts</nuxt-link>
     </li>
   </ul>
