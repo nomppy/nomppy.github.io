@@ -7,7 +7,7 @@ confidence: speculation
 start: 
 ---
 
-If you know me at all, then you know that I'm quite extraverted. If you know me well, then you know that that hasn't always been the case.
+If you know me at all, then you know that I'm quite extroverted. If you know me well, then you know that that hasn't always been the case.
 
 when i was younger, merely a couple years younger, i never would've considered myself a leader, or even someone with the potential to be a leader. leader, to me, meant someone who was in charge of things. i didnt like being in charge of things. it seemed tedious and bothersome to me, and people in charge seemed to either hate being in charge, which was bad, or loved being in charge, which was also bad because they were often bad at it.
 

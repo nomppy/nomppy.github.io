@@ -3,6 +3,8 @@ title: How A Soul Is Made
 category: poetry
 tags: []
 status: finished
+start: 2022-06-04
+end: 2022-09-22
 ---
 
 Some people, when you lose them,  
