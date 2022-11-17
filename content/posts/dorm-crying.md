@@ -18,7 +18,7 @@ on the floor of the kitchen
 (if you're really going through it).   
                                       
 But when you live in a college dorm    
-if you needed to cry, you'd just       
+if you need to cry, you'd just       
 have to pick between crying            
 inside, or crying outside.             
                                       
