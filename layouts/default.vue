@@ -9,12 +9,12 @@
 
 :root {
   --primary-text-color: var(--white);
-  --secondary-text-color: #ddd;
+  --secondary-text-color: #eee;
   --tertiary-text-color: #DBA507;
   --accent-text-color: #1998DB;
 
-  --link-color: #136fa0;
-  --link-hover-color: #5c6cff;
+  --link-color: #3ebee9;
+  --link-hover-color: #8F9AFF;
 
   --primary-bg-color: #171717;
   --secondary-bg-color: rgba(89, 89, 89, 0.6);
@@ -36,7 +36,7 @@ html {
   -ms-overflow-style: none;
   -webkit-scrollbar: none;
 
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
   font-family: var(--serif-font-stack);
