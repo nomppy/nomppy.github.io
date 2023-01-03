@@ -103,3 +103,23 @@ Don't be afraid to post on public forums like Stack Exchange or Reddit. Do your 
 Here are some sources to help you ask good questions:
 [How do I ask a good question?](https://stackoverflow.com/help/how-to-ask), [XY Problem](https://xyproblem.info), [No Hello](https://nohello.net/en/), [How to ask smart questions](http://catb.org/~esr/faqs/smart-questions.html).
 
+## Don't write what you know
+"Write what you know" is advice commonly directed at aspiring writers who don't know what to write about. 
+This is boring. Don't do this. 
+
+In writing as in general creativity, you should aim to create what you yourself want to see. Write the blog you want to read, not one that merely regurgitates what you already know.
+"Write what you know" is unhelpful on two counts. One, it's easy for you to get bored recording what you already know (it's like writing documentation for code, a task nobody envies). Two, any requirements you impose on your ideas blocks a big chunk of the **idea space**. 
+
+Some restrictions are necessary and beneficial to creativity. It's why people write books without certain letters. But this is not one of them.
+
+## Restrictions force creativity
+If computers were fast enough to do extremely large matrix multiplications, I'm talking billions by billions matrices, as is common in nuclear and subatomic physics research, we'd do just that. But we can't even store that much data, let along compute it. So, people have to get clever, optimizing the computation in numerous ways to make it feasible. 
+
+You don't have to solve physics problems, of course, but the underlying principle remains. The surest way of guaranteeing a creative solution is to have a problem so difficult that you couldn't do it any regular way, with many restricting factors forcing you to make something new. 
+
+## Follow your vision
+Having a good idea is hard. In fact, it might be the hardest part of the whole process. 
+So when you have a good idea, you should stick to it. Do whatever it takes, learn whatever you need to, to make your vision come true. 
+You learn so much along the way, and though an unyielding stubborness to your idea will bring many difficulties, they are precisely what will force you to be creative.
+
+
