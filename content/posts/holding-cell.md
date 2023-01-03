@@ -1,7 +1,8 @@
 ---
 title: Half Past Midnight In My Holding Cell
+description: A pantoum poem
 category: poetry
-status: in-progress
+status: finished
 start: 2022-09-04
 ---
 ### Half Past Midnight In My Holding Cell

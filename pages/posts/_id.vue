@@ -68,12 +68,17 @@ export default {
         // Twitter Card
         { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.post.description }
-      ]
+      ],
+      link: [
+        { rel: 'stylesheet', href: '~/assets/styles/avenir-white.css' },
+      ],
     };
-  }
+  },
+  css: [
+  ]
 };
 </script>
-
+<style src="~/assets/styles/avenir-white.css" />
 <style lang='scss' scoped>
 .meta-block {
   box-sizing: border-box;

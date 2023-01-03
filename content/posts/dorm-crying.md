@@ -1,5 +1,6 @@
 ---
 title: there is no dignified way to cry in a college dorm
+description: A poem about crying in a college dorm
 category: poetry
 start: 2022-11-04
 end: 2022-11-04

@@ -12,6 +12,7 @@
   --secondary-text-color: #eee;
   --tertiary-text-color: #DBA507;
   --accent-text-color: #1998DB;
+  --italics-text-color: #647ee8;
 
   --link-color: #3ebee9;
   --link-hover-color: #8F9AFF;
@@ -119,6 +120,10 @@ button:active {
       color: var(--secondary-text-color);
       margin: 0.75em 0;
 
+      em {
+        color: var(--italics-text-color);
+      }
+
       strong {
         color: var(--primary-text-color);
       }
@@ -202,7 +207,6 @@ button:active {
 
 #contents {
   margin-top: 1em;
-  color: var(--accent-text-color);
   text-align: center;
   font-variant: small-caps;
   font-size: 1.5em;
@@ -219,17 +223,9 @@ button:active {
     }
 
     ul {
-      list-style-type: none;
+      // list-style-type: none;
       padding-left: 1em;
       font-weight: normal;
-    }
-
-    a {
-      color: var(--link-color);
-
-      &:hover {
-        text-decoration-color: var(--accent-text-color);
-      }
     }
   }
 }

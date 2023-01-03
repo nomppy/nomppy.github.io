@@ -1,7 +1,7 @@
 ---
 title: How A Soul Is Made
+description: A poem about loss and growth
 category: poetry
-tags: []
 status: finished
 start: 2022-06-04
 end: 2022-09-22
