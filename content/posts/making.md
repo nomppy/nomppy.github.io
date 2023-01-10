@@ -7,18 +7,22 @@ status: draft
 ---
 
 ### Contents
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+- [Contents](#contents)
 - [Bracelet making](#bracelet-making)
 - [Skills accumulating](#skills-accumulating)
 - [Making (and giving)](#making-and-giving)
 - [How to be creative](#how-to-be-creative)
-  - [Doing > planning](#doing--planning)
-  - [Know how to get help](#know-how-to-get-help)
+    - [Doing > Planning](#doing--planning)
+    - [Know how to get help](#know-how-to-get-help)
+    - [Don't write what you know](#dont-write-what-you-know)
+    - [Restrictions force creativity](#restrictions-force-creativity)
+    - [Follow your vision](#follow-your-vision)
+
+<!-- markdown-toc end -->
 
 # Bracelet making
-<!-- Every holiday season, I feel a little guilty that my mom buys me things that I want, but I rarely ever give anything back in return. -->
-<!-- Yesterday, I decided that this year would be different. I scoped around all the usual places for potential gifts, texted friends for ideas, and eventually came across a blog post of homemade gift ideas.  -->
-
-<!-- They had some pics and guides for cute bracelets, and I thought, "Oh yea, I can make bracelets!... I can make my mom and stepdad matching bracelets!"  -->
 Sometimes an idea hits you so hard and becomes so obvious that you wonder why it took you so long to stumble on it, but when you _do_ stumble on it, you get the satisfying feeling of watching everything click into place. In retrospect, this idea felt so natural because it was everything I wanted in a gift — inexpensive, original, and fun to make. I went out to the nearest craft store to get materials (it was a Michael's. I had to look it up because I've never been to one before). The guides I saw looked pretty simple: get some cords, get some beads, string the beads onto the cords and tie it up — done! 
 
 The guides didn't tell me that there were so many different options for every conceivable part, nor did they mention the various types of "findings" I'd need to connect cording to endcaps and endcaps to closures. 
@@ -57,7 +61,7 @@ I later made a small improvement to make it look better, which incidentally remo
 Maybe none at all, or maybe it'll manifest in some insight towards knot theory sometime in the future, but more likely its effect, if any, will be many times removed from what I know now that I can't possibly make an accurate prediction.
 When I was in middle school, I wanted to make Minecraft videos on YouTube, and I thus learned to use Photoshop, Premiere Pro, and After Effects. Video and image editing has since presented themselves as useful tools in projects ranging from classwork to personal montages.
 
-As a rarer example, I learned a good chunk of computer networking through building a second router for my home network, as well as miscellanous UNIX things and virtualization. Later, I was able to use what I learned of computer networking to (cleverly) rickroll dozens of my friends at a campsite.
+As a rarer example, I learned a good chunk of computer networking through building a second router for my home network, as well as miscellaneous UNIX things and virtualization. Later, I was able to use what I learned of computer networking to (cleverly) rickroll dozens of my friends at a campsite.
 These cases go on and on. I learned to write code by writing a discord bot. I learned to write websites by making my own. On occasion, I'm put up to a task and, to my pleasure, I realize that the project fits my skill set perfectly. 
 
 Just like how making a bracelet felt natural for subconscious reasons that only surfaced later, after some analyzing, so too is the usefulness of certain skills hidden from the present. 
@@ -88,7 +92,6 @@ Let me preface this section by saying that I am by no means the most credible so
 Your aim shouldn't be anything other than pure. It's okay to make things for fun instead of for your resume, the latter part will come naturally.
 
 ## Doing > Planning
-
 > Planning is indispensable. Plans are shit.
 
 Plan out what you want to make, the parts involved, how everything will fit/work together, but know that your project will likely die unless your plan evolves.
