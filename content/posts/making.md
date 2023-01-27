@@ -3,7 +3,7 @@ title: The Joy of Making (and giving)
 description: A semi-coherent blog on the point of making things. 
 category: blog
 start: 2022-12-23
-status: draft
+status: in-progress
 ---
 
 ### Contents
@@ -110,10 +110,10 @@ Here are some sources to help you ask good questions:
 "Write what you know" is advice commonly directed at aspiring writers who don't know what to write about. 
 This is boring. Don't do this. 
 
-In writing as in general creativity, you should aim to create what you yourself want to see. Write the blog you want to read, not one that merely regurgitates what you already know.
+In writing as in general creativity, you should aim to create what you yourself want to see. Write the blog you want to read, not one that merely regurgitates what you already know. 
 "Write what you know" is unhelpful on two counts. One, it's easy for you to get bored recording what you already know (it's like writing documentation for code, a task nobody envies). Two, any requirements you impose on your ideas blocks a big chunk of the **idea space**. 
 
-Some restrictions are necessary and beneficial to creativity. It's why people write books without certain letters. But this is not one of them.
+When you stumble on an idea you want to explore, don't let the fact that you don't know enough about the topic to deter you. The internet is at your fingertips. Writing is sometimes a research activity. Some restrictions are necessary and beneficial to creativity. It's why people write books without certain letters. But writing only what you know is not one of them.
 
 ## Restrictions force creativity
 If computers were fast enough to do extremely large matrix multiplications, I'm talking billions by billions matrices, as is common in nuclear and subatomic physics research, we'd do just that. But we can't even store that much data, let alone compute it. So, people have to get clever, optimizing the computation in numerous ways to make it feasible. 

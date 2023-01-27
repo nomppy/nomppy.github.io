@@ -1,10 +1,12 @@
 ---
 title: Half Past Midnight In My Holding Cell
-description: A pantoum poem
+description: "A pantoum poem; Content desc. death, suicide"
 category: poetry
 status: finished
 start: 2022-09-04
+end: 2022-11-07
 ---
+
 ### Half Past Midnight In My Holding Cell
 
 *Do it.*  
@@ -17,30 +19,30 @@ My hands are trembling.
 He's begging for mercy.  
 *Please, don't kill me.*  
 
-I hesitate — *should I?*  
-I nudge the door to a gentle stop.  
+I hesitate — *make it quick!*  
+I close the door.  
 *Please don't kill me. I have a family.*  
 I feel the cold blade between my fingers.  
 
-The door shuts. A slab of wood  
-between me and the living world.  
-I feel the razor's graze, its icy gleam  
-whispering the melody of a lonely moon.  
+I shut the bathroom door  
+over his calls for help.  
+I feel the razor's graze, its icy gleam cuts  
+how a lullaby cuts through nightmares.  
 
-He's called out to the living world.  
+He's tried calling out for help.  
 He's done everything he could.  
-I hum the lullaby of a dying moon  
-to quiet his fear, to silence his doubt.  
+I sing him a lullaby  
+to quiet his fears.  
 
-I'm doing everything I could  
+I'm doing everything I can  
 to make it painless for myself.  
 I quiet my fears. I silence my doubts.  
-I forget all those who I've ever cared about.  
+I forget all those I've ever cared about.  
 
-To make it easy and painless for myself,   
-I pretend I'm executing someone else.      
-Not anyone I've ever cared about,          
-just a stranger and nobody else.           
+To make it easy and painless for myself,  
+I pretend I'm executing someone else.  
+Not anyone I've ever cared about,  
+just a stranger and nobody else.  
 
 I pretend to execute someone else.  
 *Do it.*  
