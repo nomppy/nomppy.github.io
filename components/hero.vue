@@ -61,7 +61,7 @@ export default {
     };
   },
   async mounted() {
-    this.animateHeadline(4500);
+    this.animateHeadline(6700);
   },
   methods: {
     showWord(id) {
@@ -81,12 +81,11 @@ export default {
       this.interval = setInterval(() => {
         setTimeout(() => {
           this.wrapWidth = 0;
-        }, 500);
+        }, 1000);
 
         setTimeout(() => {
           this.wordId = this.randomID();
-        }, 1000);
-        
+        }, 2000);
 
         setTimeout(() => {
           try {
@@ -94,7 +93,7 @@ export default {
           } catch (e) {
             return;
           }
-        }, 1200);
+        }, 2400);
       }, wait);
     },
   },
