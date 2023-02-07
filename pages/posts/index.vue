@@ -18,11 +18,14 @@
 export default {
   async asyncData({ $content }) {
 
-    const posts = await $content('posts')
+    let posts = await $content('posts')
       .only(['title', 'slug', 'category', 'updatedAt', 'end'])
-      .sortBy('updatedAt', 'desc')
+      .sortBy('end', 'desc')
       .fetch();
  
+    // move posts with no end to the front of the list
+    posts = posts.filter(post => !post.end).concat(posts.filter(post => post.end));
+
     // group posts by category
     const grouped = posts.reduce((acc, post) => {
       if (!acc[post.category]) {
