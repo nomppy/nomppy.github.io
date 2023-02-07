@@ -6,7 +6,7 @@ start: 2023-01-21
 ---
 
 
-rachmaninoff's [c sharp minor prelude](https://www.youtube.com/watch?v=ZcG-DnGdWRw) is one of my favorite pieces to play, because beyond fulfilling that urge that all piano players have to smash the keys every once in a while, it is also a piece that changes form depending on my mood when i play it. we say that an actor has range if they can convincingly play a broad set of characters. well, the c minor prelude has range.
+rachmaninoff's [c sharp minor prelude](https://www.youtube.com/watch?v=ZcG-DnGdWRw) is one of my favorite pieces to play[^1], because beyond fulfilling that urge that all piano players have to smash the keys every once in a while, it is also a piece that changes form depending on my mood when i play it. we say that an actor has range if they can convincingly play a broad set of characters. well, the c minor prelude has range.
 
 it starts like an alarm. 3 octaves of c minor in fortissimo is sure to wake up any audience member dozing off in the concert hall. then, the way the second note is played sets the tone for the remaining sentence (but notably, not the entire piece). am i feeling mournful? or enraged? calm and collected, or do anxious signals already leak in from the second half?
 
@@ -44,3 +44,4 @@ i tend to play the ending with a touch of bitter resignation, as if all of the p
 in the end, the words are thoughts in my head and the emotions are chords on the keys. 
 
  
+[^1]: and ironically, one of rach's least favorites. he wrote it when he was 19 and grew to hate playing it after being asked by audiences to play it wherever he went.
