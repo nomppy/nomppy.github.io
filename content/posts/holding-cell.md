@@ -1,6 +1,6 @@
 ---
 title: Half Past Midnight In My Holding Cell
-description: "A pantoum poem; Content desc. death, suicide"
+description: whose holding cell? 
 category: poetry
 status: finished
 start: 2022-09-04

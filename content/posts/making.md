@@ -1,8 +1,9 @@
 ---
 title: The Joy of Making (and giving)
-description: A semi-coherent blog on the point of making things. 
+description: why I love making things and you should too
 category: blog
 start: 2022-12-23
+end: 2023-01-01
 status: in-progress
 ---
 
