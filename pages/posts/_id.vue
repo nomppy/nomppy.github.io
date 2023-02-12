@@ -14,7 +14,6 @@
             {{ tag }}
           </span>
           <span 
-          v-if="post.start || post.end"
           title="When this post was created, followed by when it was last updated."
           class="meta-tags">
             {{ (post.start || post.createdAt).slice(0, 10) }}&ndash;{{ (post.end || post.updatedAt).slice(0, 10) }}
@@ -28,7 +27,7 @@
           <span
           v-if="post.confidence"
           title=
-          "How confident I am that what I've written is correct. Ranges 'log', 'fiction', 'emotional', 'impossible', 'not believed', 'speculation', 'believed', 'certain'."
+          "How confident I am in what I've written. Ranges 'log', 'fiction', '0', 'impossible', 'not believed', 'speculation', 'believed', 'certain'."
           class="meta-tags">
             {{ post.confidence }}
           </span>

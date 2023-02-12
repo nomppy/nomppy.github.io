@@ -1,11 +1,15 @@
 ---
 title: How A Soul Is Made
-description: posterity.
+description: An early poem. Loss & Grief.
 category: poetry
 status: finished
+confidence: 0
 start: 2022-06-04
 end: 2022-09-22
 ---
+*A reminder that I no longer stand by this poem and only keep it up for posterity.*
+
+### How A Soul Is Made
 
 Some people, when you lose them,  
 it’s like the world has lost its color, the food its taste,  
