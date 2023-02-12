@@ -1,6 +1,6 @@
 ---
 title: Childhood— died
-description: an obituary to childhood
+description: An obituary to childhood. Contains reference to abuse.
 category: poetry
 status: finished
 start: 2022-10-02

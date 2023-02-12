@@ -1,6 +1,6 @@
 ---
 title: The Joy of Making (and giving)
-description: why I love making things and you should too
+description: Why I love making things, what I've learned, how you can make nice things too.
 category: blogs
 start: 2022-12-23
 end: 2023-01-01

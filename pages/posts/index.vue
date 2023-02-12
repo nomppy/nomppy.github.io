@@ -19,12 +19,21 @@ export default {
   async asyncData({ $content }) {
 
     let posts = await $content('posts')
-      .only(['title', 'slug', 'category', 'updatedAt', 'end'])
-      .sortBy('end', 'desc')
+      .only(['title', 'slug', 'category', 'end'])
       .fetch();
  
-    // move posts with no end to the front of the list
-    posts = posts.filter(post => !post.end).concat(posts.filter(post => post.end));
+    // sort posts in place in descending order by end, placing posts with no end at the front
+    posts.sort((a, b) => {
+      if (!a.end && !b.end) {
+        return 0;
+      } else if (!a.end) {
+        return -1;
+      } else if (!b.end) {
+        return 1;
+      } else {
+        return new Date(b.end) - new Date(a.end);
+      }
+    });
 
     // group posts by category
     const grouped = posts.reduce((acc, post) => {
