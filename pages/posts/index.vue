@@ -19,13 +19,16 @@ export default {
   async asyncData({ $content }) {
 
     let posts = await $content('posts')
-      .only(['title', 'slug', 'category', 'end'])
+      .only(['title', 'slug', 'category', 'updatedAt', 'end'])
       .fetch();
  
+    // sort posts in place in descending order by updatedAt, placing posts with no end at the front
+
+
     // sort posts in place in descending order by end, placing posts with no end at the front
     posts.sort((a, b) => {
       if (!a.end && !b.end) {
-        return 0;
+        return new Date(b.updatedAt) - new Date(a.updatedAt);
       } else if (!a.end) {
         return -1;
       } else if (!b.end) {

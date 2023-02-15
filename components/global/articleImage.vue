@@ -17,7 +17,7 @@ export default {
   methods: {
     imgSrc() {
       try {
-        return require(`~/content/images/${this.src}`);
+        return require(`~/assets/images/${this.src}`);
       } catch (error) {
         return null;
       }

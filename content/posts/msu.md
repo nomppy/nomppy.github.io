@@ -1,0 +1,178 @@
+---
+title: MSU, February 13th
+description: On February 13th, 2023, Michigan State University was the target of a mass shooting. This is my reflection on the event as a student.
+category: blogs
+status: draft
+---
+
+### Contents
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+- [the night of](#the-night-of)
+- [the morning after](#the-morning-after)
+- [moving past](#moving-past)
+
+<!-- markdown-toc end -->
+
+For those that are not aware, and for future readers, the date is February 14th, and last night there was a shooting at my school, [Michigan State University](https://en.wikipedia.org/wiki/2023_Michigan_State_University_shooting).
+
+As we recover from this tragedy, I want to remind everyone to be extra compassionate towards each other, and kind. 
+We all have different responses to trauma, and one way is not better or worse than anyone else's. 
+
+**MSU students:** what follows is a description of my experiences during the shooting. If you would like to skip this section, click here — [the morning after](#the-morning-after).
+
+# the night of 
+
+I was doing my PHY 440 - Electronics prelab when I saw texts from friends asking if I was okay and in a safe place. 
+I replied yes, not knowing why they were concerned. 
+Then I saw the alert texts.
+_Oh, there's a shooting somewhere close, it's probably no big deal.[^1]_
+
+But the concerned texts kept pouring in and I realized that the shooting wasn't around campus, it was happening **on** campus. 
+This was not "a shooting has happened". This was a shooting that was taking place, right now, and one that would continue for nearly 4 hours.
+
+I replied to texts from friends saying they were hiding in the library, in the basement of the gym building, in their room holding their breathe frantically texting everyone they know. 
+I got live updates from friends, relaying the suspected location of the shooter. 
+
+Familiar names of buildings that I recognized with ease, friends' dorms, classrooms, dining halls where I ate at only 2 hours before, ceased to represent buildings but instead encroaching dark clouds on my mental map of my school.
+
+
+Why did I have to know this campus so well? 
+
+---
+
+I always liked exploring the campus and prided myself on knowing all of the different resources at our disposal. 
+During the first week of school, I had been to virtually every part of campus, ate at most of the dining halls, and had a pretty good idea where the good food spots, study spots, hiding-from-people spots were. 
+
+It was so much new information. 
+
+I went to so many different club things and activities, got turned around trying to remember where a building was, memorize bus routes, I even biked from my dorm to the student services building (a place very far away) and met the executive board of APASO[^2], stole their food, and later became an intern for them.
+
+---
+
+Those same people were holding an event in the basement of a residence hall, a 10 minute walk at best from where the shooting was first reported. 
+
+_what if the shooter was targetting asians? shit. i know what room they're in. big, glass windows and **zero** shelter._
+
+i downloaded a police scanner app to get more updates. it wasn't hard to find the right channel — it was the most popular one, with over 130,000 listeners. 
+
+i continued hearing names of familiar buildings called out over the radio: my friends' dorms, the dining hall i always ate dinner at. 
+this guy seemed to be everywhere. _there must be multiple shooters._ 
+
+handgun, rifle, hat, beanie, i kept hearing stories of people banging on doors claiming to be fire or police. 
+so many reports from so many different parts of campus, which made it impossible to say where he really was.
+
+it wasn't even clear if there were multiple shooters, since police were only looking for one, but a picture of three men walking down the side walk holding ARs was circulating on snap[^4].
+
+then i noticed that the buildings they were calling out was getting closer and closer to mine.
+
+_shit._ i barricaded my doors (i'd not already done so for some reason) and turned off my lights. 
+in the dark, my laptop screen provided the only lighting as i tapped my pencil on the same prelab question that i've been on for the past half hour. 
+
+_what if they came up to my floor? what would i do?_ i grabbed the only bit of weaponary i owned — a tiny pair of scissors — considered if they were even sharp enough to puncture skin and, concluding that they weren't, set them down on my desk anyway just in case the shooter wanted to play rock-paper-scissors. 
+
+_\*gunshot\*: handgun, maybe revolver. about 300 yards away near the front of the building,_ i thought.
+
+i thought about unbarricading the door so he thinks no one is here, and then climbing up into the storage space about the closet or just into my lofted bed, where he can't see. 
+but then i decided against that, too, as i don't know how many rooms he's gotten into (probably not many, given the casualties at the time) and so would be inclined to search the first room he gets into carefully[^3].
+
+---
+
+A dozen or so police cars pulled up to the residence hall across from my street and a helicopter circled above.
+I was still listening to the police radio and pointing out funny things they say to my friends. 
+
+One cop presumably ran the license plate of a suspicious car and was broadcasting the description, owner information over the radio, "White, Ford something truck valid to a Jacob Jones, blahblah" and the main dispatch lady said really quietly,
+
+"That's one of our East Lansing officers."
+
+At one point, I opened Outlook to find that both my math professor and my physics research mentor had reached out to ask if I was okay. One was titled "r u ok?", folllowed by "Hi Ken, ..."
+
+I couldn't help but start laughing. The juxtaposition of the "r u ok?" and "Hi xxx," really got to me. 
+
+I later replied saying, "Thanks for checking on me. I might not be able to get to our research project tonight." 
+
+I see clearly now that humor is my coping mechanism, except I wouldn't even call it coping — it's just my default, and people resort to their defaults in times like those.
+In almost no situation is it better to be stressed and panicked than calm and relaxed, and I know of no better way to stay relaxed.
+
+I wondered what the best response was in a situation like mine, like ours. Not panicking, that's for sure. 
+Checking up on friends, calming their fears, what else can I do? Check again, send reminders to barricade doors and turn off lights, crack a few silly jokes. 
+
+_Should I let this guy destroy my mental state? Nah. No way. 
+There's no way this short-ass mf is going to have that much power of me.
+And no amount of worry from me is going to help my friends, only make it worse.
+This asshole wants to terrorize us with guns, well, I'm not gonna let him win._
+
+At one point I decided that I wasn't going to make any progress on the prelab, so I closed my laptop and decided I'd try to go to sleep.
+I told a few people that were constantly checking up on me that I was going to sleep, turned off the radio, and closed my eyes to the chopping of the helicopter above me.
+
+As my consciousness drifted away with the rumble of the helicopter, I figured that I was as safe as I could be.
+I vaguely remember seeing that the lockdown was lifted at 12:18 AM, right before I fell asleep. He had shot himself when police approached and was pronounced dead.
+# the morning after
+
+I woke up to this beautiful sunrise, maybe the most beautiful I've ever seen on this campus:
+
+<article-image 
+src="msu_sunrise.jpg" 
+alt="A brilliant sunrise over Michigan State University"> </article-image>
+
+  * [ ] It wasn't raining, dark, or even cloudy. Had last night been a dream? I checked my messages — no — three students were dead, and more injured. It was all too surreal. My school was shot up, students died, and yet the sun trickled over treetops as per usual, that insensitive bastard.
+
+I thought about the students who would not see this sunrise, the certain cancellation of classes and events, people going home for comfort and safety. I counted up the things that were broken overnight: families, friendships, security, and I imagined all the things that were yet to be broken: schedules, plans, normality, mental health, trust, motivation.
+
+The full ramification of last night's events were still beyond us. 
+In the coming weeks, there'll be vigils and protests, release of more information regarding the shooting. 
+Some people will drop out of school, some you'll catch bursting into tears in the middle of the hallway. 
+There will be grief counseling, emails from administration, professors cancelling classes. 
+
+For months and years of our lives, and forever after, we will always think back to this day. 
+Tears rolled down my face as I realized that, in my life and in other peoples lives, there would now always be a before and an after. 
+What we choose to do now, in this part of our lives which is more maleable than most, will shape how we look back on this time in the future.
+
+That is all for later. What I chose to do, in the moment, was read Emily Dickinson. 
+If you're on the MSU snap story, then you might have seen me post this. 
+This is Dickinson's "[I Measure Every Grief I Meet](https://poets.org/poem/i-measure-every-grief-i-meet-561)". 
+I encourage everyone to read it. Dickinson knows everything.
+
+In this moment, we need to have compassion and empathy towards one another. 
+As Master Ooguay said, "Be slow to anger, and quick to understanding."[^5]
+We need to remember, as Dickinson would say, that we're all wearing the same cross.
+
+Our grief is not less than or greater than the griefs of other tragedies. It is not based on how far away you were from the gunshots. How safe you felt.
+It is not ignorable, even if friends and family members ignore it or call you "sensitive" for not doing the same. 
+
+The rest of my day followed uneventfully, as I'm sure it did for most of us. 
+I planned to play Catan with friends, but they already left campus, so we might revert to the old pandemic ways and hop on Discord. 
+Doesn't that sound oddly comforting? To go back to the pandemic ways?
+
+One of the most consistently astonishing things about people is the resilience of the human character and the incredible kindness that we can generate for each other in times of need. 
+We have weathered the pandemic, and we will survive this one idiot's actions.
+
+
+# moving past
+
+I hear worries from friends and strangers alike that they might never recover from this. 
+If you are like me, you might notice that words of common objects slip between the folds of your brain.
+You might stare blankly into space, start crying for no reason, or become hypervigilant about your surroundings.
+That is all normal. 
+
+We each heal on our own timescales, and it is not a race to see who can heal the fastest. 
+Plus, even the people who seem most okay are prone to breaking down in tears at random intervals. 
+
+A question to ask yourself is this: will this be an event that defines the rest of your life, or one of many obstacles that you will overcome? 
+Will this one man dictate the trajectory of your life? 
+
+The answer, I hope, is no. 
+Being strong is a subversion of the killer's wishes to disrupt our lives, and we carry forward in life, in honor of those that could not. 
+
+If you are not already aware of resources available to us, you can find them on ASMSU's Instagram. 
+Feel free to reach out if you have something to add (my contact information is on the [welcome page](/)), or want to talk about anything.
+
+I hope that my post has at least been of some help to you. 
+
+
+[^1]: It's kind of fucked that I'm so insensitized to news about potential shootings, but every two weeks or so we get an alert that there is a potential shooter nearby, so we've learned to ignore them. 
+[^2]: Asian Pacific American Student Organization. And "meeting" them is a euphemism for accidentally barging into their retreat/planning meeting for the year.
+[^3]: we did find out, although this was later, that the guy was short, so maybe he wouldn't have seen me in my bed even if he jumped.
+[^4]: someone later said this was actually the national guard. but i'm not sure of this.
+[^5]: Citation Needed.
+
