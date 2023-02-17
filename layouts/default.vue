@@ -118,7 +118,7 @@ button:active {
 
     p {
       color: var(--secondary-text-color);
-      margin: 0.75em 0;
+      margin: 0 0 0.75em 0;
 
       em {
         color: var(--italics-text-color);
@@ -127,20 +127,21 @@ button:active {
       strong {
         color: var(--primary-text-color);
       }
+    }
 
-      img {
-        position: relative;
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-        display: block;
-      }
+    img {
+      position: relative;
+      max-width: 80%;
+      height: auto;
+      margin: auto;
+      display: block;
+    }
 
-      &.img-wrapper {
-        width: 140%;
-        left: -20%;
-        position: relative;
-      }
+    .img-caption {
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 0.8em;
+      color: var(--secondary-text-color);
     }
 
     iframe {
@@ -158,6 +159,12 @@ button:active {
       font-size: 0.9em;
     }
 
+    hr {
+      width: 50%;
+      margin: 1.5em auto;
+      height: 0.1em;
+    }
+
     h1, h2 {
       border-bottom: 2px solid var(--tertiary-text-color);
       margin-top: 1.5em;
@@ -171,10 +178,6 @@ button:active {
         font-weight: normal;
         color: var(--accent-text-color);
       }
-    }
-
-    h2 {
-      border-bottom-style: dotted;
     }
 
     h3 {
@@ -203,6 +206,11 @@ button:active {
     td {
       color: var(--secondary-text-color);
     }
+
+    .footnotes {
+      font-size: 0.8em;
+      color: var(--secondary-text-color);
+    }
 }
 
 #contents {
@@ -216,7 +224,7 @@ button:active {
     padding: 0;
     width: 70%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0.5em auto 2.5em auto;
     
     > li {
       font-weight: bold;
