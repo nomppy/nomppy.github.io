@@ -10,12 +10,14 @@ status: draft
 
 - [the night of](#the-night-of)
 - [the morning after](#the-morning-after)
+- [wednesday & thursday](#wednesday--thursday)
 - [moving past](#moving-past)
   - [invictus](#invictus)
 
 <!-- markdown-toc end -->
 
 For those that are not aware, and for future readers, the date is February 14th, and last night there was a shooting at my school, [Michigan State University](https://en.wikipedia.org/wiki/2023_Michigan_State_University_shooting).
+This blog will be updated in the coming days as new thoughts and observations arise. 
 
 As we recover from this tragedy, I want to remind everyone to be extra compassionate towards each other, and kind. 
 We all have different responses to trauma, and one way is not better or worse than anyone else's. 
@@ -118,6 +120,7 @@ I told a few people that were constantly checking up on me that I was going to s
 
 As my consciousness drifted away, the roar of the helicopter faded to a whimper.
 I vaguely remember seeing that the lockdown was lifted 12:18 AM, right before I fell asleep. He had shot himself when police approached and was pronounced dead.
+
 # the morning after
 
 I woke up to this beautiful sunrise, maybe the most beautiful I've ever seen on this campus:
@@ -162,6 +165,29 @@ Doesn't that sound oddly comforting? To go back to the pandemic ways?
 One of the most consistently astonishing things about people is the resilience of the human character and the incredible kindness that we can generate for each other in times of need. 
 We have weathered the pandemic, and we will survive this one idiot's actions.
 
+# wednesday & thursday
+
+it's hard to believe that only a couple days had gone by. it feels like much longer.
+
+almost everyone who was able to go home had gone home, and those who stayed, stayed at their friends' places off-campus or in a nearby hotel which is offering free rooms to MSU students.
+
+many local businesses, including ones in nearby towns like novi and traverse city, are offering free or discounted services to msu students. 
+mental health support is everywhere on campus, and i expect will probably remain active for the next couple of months.
+
+it is nice to see the kindness and support from the surrounding community, and to hear other people's stories. 
+at times like these, it can be easy to feel disconnected to other peoples' perceptions of what is happening internally, but those who really care don't hold back on caring.
+
+wednesday was unbelievably windy. and thursday, earlier today, a peaceful snowfall covered the university with a decently-thick blanket of snow.
+with everyone gone and not enough hot water running through the pipes, the sidewalk heating system did not melt off the snow like it usually does. 
+
+as i walked home from my friend's dorm tonight, my boot's soft crunch on the new snow reminded me how happy i was, dancing down the sidewalk during a blizzard back in november, excited about the snow.
+even now, i felt an urge to be happy skidding around on the sidewalk, but the locked doors of a building i tried to pass through reminded me that we are still afraid, and i looked around to make sure no one was around.
+
+_there is no one. i live in a ghost town now._
+
+my steps were the only ones on campus, and my breath the only one in the air. 
+as i became certain that no one was around me, i let my mind sink in to the snow.
+with each step, i became more and more sure that careless joy will return to me someday, when all of this is over.
 
 # moving past
 
@@ -236,6 +262,9 @@ I can think of at least a few actionable things:
 In a couple decades, the youth of today will be the ones in charge of the country. So it seems like, at least on the surface, that this nonsense will end eventually.
 
 If you are part of a project that I could help with, feel free to get in touch and I'd be glad to assist where I can.
+
+
+p.s.: I write regularly (poems and blogs mostly, but also some other stuff) and post them to this website (less regularly). If you enjoy my writing, consider joining my mailing list by shooting me an email. I hope to have a better method for this soon but this is the way for now.
 
 
 [^1]: It's kind of fucked that I'm so insensitized to news about potential shootings, but every two weeks or so we get an alert that there is a potential shooter nearby, so we've learned to ignore them. 

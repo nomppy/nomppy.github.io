@@ -116,6 +116,9 @@ button:active {
       }
     }
 
+    ol, ul {
+      margin-bottom: 0.75em;
+    }
     p {
       color: var(--secondary-text-color);
       margin: 0 0 0.75em 0;
@@ -167,7 +170,7 @@ button:active {
 
     h1, h2 {
       border-bottom: 2px solid var(--tertiary-text-color);
-      margin-top: 1.5em;
+      margin-top: 1.25em;
       margin-bottom: 0.8em;
 
       a::before {
