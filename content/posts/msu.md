@@ -269,8 +269,8 @@ p.s.: I write regularly (poems and blogs mostly, but also some other stuff) and 
 
 [^1]: It's kind of fucked that I'm so insensitized to news about potential shootings, but every two weeks or so we get an alert that there is a potential shooter nearby, so we've learned to ignore them. 
 [^2]: Asian Pacific American Student Organization. And "meeting" them is a euphemism for accidentally barging into their retreat/planning meeting for the year.
-[^3]: we did find out, although this was later, that the guy was short, so maybe he wouldn't have seen me in my bed even if he jumped.
-[^4]: someone later said this was actually the national guard. but i'm not sure of this.
+[^3]: someone later said this was actually the national guard. but i'm not sure of this.
+[^4]: we did find out, although this was later, that the guy was short, so maybe he wouldn't have seen me in my bed even if he jumped.
 [^5]: I would know about insensitive parents. My mom called me during the shooting and started asking if I submitted my transfer applications.
 [^6]: Citation Needed.
 [^7]: Here are some of my epic spotify playlists: [dancing down the sidewalk](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=5d6a74fe23204ff5), [sleepy](https://open.spotify.com/playlist/4ItkEmj3xoKE1X3WwTOem9?si=fb34301bbad14430), [sad](https://open.spotify.com/playlist/6wNJphAVy0JMnc01R4huU1?si=ccddf76cbf754b81), [hype](https://open.spotify.com/playlist/5fBZcVnjUAaXNdgEKvwUPT?si=a4f337af445c408e), [sad again but karoake](https://open.spotify.com/playlist/2PiczkgGSNVrgU47dDLaTW?si=76820bb085e54508) (follow me pls i need the clout). 
