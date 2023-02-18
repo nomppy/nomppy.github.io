@@ -144,6 +144,7 @@ export default {
   color: #1f98b1;
   line-height: 0.9em;
   padding: 0 10px;
+  margin: 0.075em 0;
   white-space: nowrap;
 }
 
