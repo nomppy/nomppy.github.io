@@ -2,7 +2,7 @@
 title: MSU, February 13th
 description: On February 13th, 2023, Michigan State University was the target of a mass shooting. This is my reflection on the event as a student.
 category: blogs
-status: draft
+status: in-progress
 ---
 
 ### Contents
@@ -185,7 +185,7 @@ even now, i felt an urge to be happy skidding around on the sidewalk, but the lo
 
 _there is no one. i live in a ghost town now._
 
-my steps were the only ones on campus, and my breath the only one in the air. 
+my steps were the only ones on campus, and my breath the only ones in the air. 
 as i became certain that no one was around me, i let my mind sink in to the snow.
 with each step, i became more and more sure that careless joy will return to me someday, when all of this is over.
 
@@ -196,7 +196,7 @@ If you are like me, you might notice that words of common objects slip between t
 You might stare blankly into space, start crying for no reason, or become hypervigilant about your surroundings.
 That is all normal. 
 
-This is a message Natalia Khoshnam, offering some [wisdom and advice](https://pastebin.com/2gi21EuJ) from their high school teacher at Columbine.
+This is a message from Natalia Khoshnam, offering some [wisdom and advice](https://pastebin.com/2gi21EuJ) from their high school teacher at Columbine.
 It put into words a lot of the thoughts I wasn't able to articulate clearly, so I hope it helps you as well.
 
 We each heal on our own timescales, and it is not a race to see who can heal the fastest. 

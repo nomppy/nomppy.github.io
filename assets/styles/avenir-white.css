@@ -81,9 +81,9 @@ button, #ws {
 
 code, pre, #ws, #message {
 	font-family: Monaco, monospace;
-	font-size: 10pt;
+	/* font-size: 10pt; */
 	border-radius: 3px;
-	background-color: #F8F8F8;
+	/* background-color: #F8F8F8; */
 	color: inherit;
 }
 
