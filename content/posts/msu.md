@@ -151,10 +151,6 @@ If you're on the MSU snap story, then you might have seen me post this.
 This is Dickinson's "[I Measure Every Grief I Meet](https://poets.org/poem/i-measure-every-grief-i-meet-561)". 
 I encourage everyone to read it. Dickinson knows everything.
 
-In this moment, we need to have compassion and empathy towards one another. 
-As Master Ooguay said, "Be slow to anger, and quick to understanding."[^6]
-We need to remember, as Dickinson would say, that we're all wearing the same cross.
-
 Our grief is not less than or greater than the griefs of other tragedies. It is not based on how far away you were from the gunshots. How safe you felt.
 It is not ignorable, even if friends and family members ignore it or call you "sensitive" for not doing the same. 
 
@@ -272,6 +268,5 @@ p.s.: I write regularly (poems and blogs mostly, but also some other stuff) and 
 [^3]: someone later said this was actually the national guard. but i'm not sure of this.
 [^4]: we did find out, although this was later, that the guy was short, so maybe he wouldn't have seen me in my bed even if he jumped.
 [^5]: I would know about insensitive parents. My mom called me during the shooting and started asking if I submitted my transfer applications.
-[^6]: Citation Needed.
-[^7]: Here are some of my epic spotify playlists: [dancing down the sidewalk](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=5d6a74fe23204ff5), [sleepy](https://open.spotify.com/playlist/4ItkEmj3xoKE1X3WwTOem9?si=fb34301bbad14430), [sad](https://open.spotify.com/playlist/6wNJphAVy0JMnc01R4huU1?si=ccddf76cbf754b81), [hype](https://open.spotify.com/playlist/5fBZcVnjUAaXNdgEKvwUPT?si=a4f337af445c408e), [sad again but karoake](https://open.spotify.com/playlist/2PiczkgGSNVrgU47dDLaTW?si=76820bb085e54508) (follow me pls i need the clout). 
+[^6]: Here are some of my epic spotify playlists: [dancing down the sidewalk](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=5d6a74fe23204ff5), [sleepy](https://open.spotify.com/playlist/4ItkEmj3xoKE1X3WwTOem9?si=fb34301bbad14430), [sad](https://open.spotify.com/playlist/6wNJphAVy0JMnc01R4huU1?si=ccddf76cbf754b81), [hype](https://open.spotify.com/playlist/5fBZcVnjUAaXNdgEKvwUPT?si=a4f337af445c408e), [sad again but karoake](https://open.spotify.com/playlist/2PiczkgGSNVrgU47dDLaTW?si=76820bb085e54508) (follow me pls i need the clout). 
 
