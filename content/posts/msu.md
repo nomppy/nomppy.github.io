@@ -10,9 +10,9 @@ status: in-progress
 
 - [the night of](#the-night-of)
 - [the morning after](#the-morning-after)
-- [wednesday & thursday](#wednesday--thursday)
-- [moving past](#moving-past)
+- [the week after](#the-week-after)
   - [invictus](#invictus)
+- [change](#change)
 
 <!-- markdown-toc end -->
 
@@ -185,7 +185,18 @@ my steps were the only ones on campus, and my breath the only ones in the air.
 as i became certain that no one was around me, i let my mind sink in to the snow.
 with each step, i became more and more sure that careless joy will return to me someday, when all of this is over.
 
-# moving past
+# the week after
+
+when you get knocked down, the hardest part isn't getting back up, it's trying to keep a straight gait afterwards.
+
+for me, the hardest part is separating a normal response from a trauma response. if i skip class, am i just being lazy? or do i necessarily lack some motivation as i subconsciously recover from the a traumatic event? 
+am i just finding an socially acceptable excuse to be lazy?
+
+i struggle to regain the rhythm i worked so hard to build. 
+my already opaque memory trying to remember what things are happening when is a completely futile effort.
+assignments, names, basic facts are like orbeez on a water slide to me — they don't just "slip" through but rather it is a slim chance i'll spot one at all in their super fast descent. 
+
+there's so much ADD that it is a statistical miracle that i can form coherent strands of thought at all. 
 
 I hear worries from friends and strangers alike that they might never recover from this. 
 If you are like me, you might notice that words of common objects slip between the folds of your brain.
@@ -197,14 +208,6 @@ It put into words a lot of the thoughts I wasn't able to articulate clearly, so 
 
 We each heal on our own timescales, and it is not a race to see who can heal the fastest. 
 Plus, even the people who seem most okay are prone to breaking down in tears at random intervals. 
-
-A question to ask yourself is this: will this be an event that defines the rest of your life, or one of many obstacles that you will overcome? 
-Will this one man dictate the trajectory of your life? 
-
-The answer, I hope, is no. 
-Being strong is a subversion of the killer's wishes to disrupt our lives, and we carry forward in life, in honor of those that could not. 
-
-Concretely, my personal advice is to watch comedy (Norm MacDonald is a favorite), read books, get some work done if you feel up to it, hang out with friends, eat good food, watch the sunset, play with pets, listen to music[^7] (my playlists in the footnote), and in general appreciate the small, normal things in life. 
 
 Be kind, especially to yourself. 
 
