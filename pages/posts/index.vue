@@ -4,8 +4,8 @@
     <section 
     class="post-category"
     v-for="(posts, name) in grouped" :key="name">
-      <h2>{{ name }}</h2>
-      <ul>
+      <h2 class="category-name">{{ name }}</h2>
+      <ul class="category-items">
         <li v-for="post in posts" :key="post.slug">
           <nuxt-link :to="'/posts/' + post.slug">{{ post.title }}</nuxt-link>
         </li>
@@ -65,13 +65,14 @@ export default {
   margin-top: 2em;
   margin-bottom: 3em;
 
-  > ul {
+  .category-items {
     margin: 1em 3em 0 0;
     padding: 0 0 0 1.375em;
   }
 
-  > h2 {
+  .category-name {
     margin: 0;
+    font-size: 1.1em;
     font-variant: small-caps;
     text-transform: capitalize;
   }

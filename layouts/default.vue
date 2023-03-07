@@ -18,7 +18,7 @@
   --link-hover-color: #8F9AFF;
 
   --primary-bg-color: #171717;
-  --secondary-bg-color: rgba(89, 89, 89, 0.6);
+  --secondary-bg-color: rgba(119, 51, 51, 0.6);
   --tertiary-bg-color: #fffaf0;
 
   --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
@@ -183,9 +183,17 @@ button:active {
       }
     }
 
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
     h3 {
       margin-top: 1em;
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
 
     table {
