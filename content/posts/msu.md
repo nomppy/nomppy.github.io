@@ -54,7 +54,7 @@ I went to so many different club things and activities, got turned around trying
 
 Those same people were holding an event in the basement of a residence hall, a 10 minute walk at best from where the shooting was first reported. 
 
-_what if the shooter was targetting asians? shit. i know what [room they're in](https://ocat.msu.edu/cores-cultural-rooms/). big, glass windows and **zero** shelter._
+_what if the shooter was targetting asians? shit. i know what [room they're in](https://ocat.msu.edu/cores-cultural-rooms/). glass windows and **zero** shelter._
 
 i downloaded a police scanner app to get more updates. it wasn't hard to find the right channel — it was the most popular one, with over 130,000 listeners. 
 

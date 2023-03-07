@@ -1,79 +1,46 @@
 ---
-title: core of a good blog
-description: no, the answer isn't cat pictures
-category: blogs
+title: but of course you end up being average
+description: 
+category: inadequacy
 status: draft
 ---
 
 # 1
 my backpack felt extra heavy this morning. 
-that's supposed to be a metaphor for something, but i don't think i have the mental capacity to figure out a clever poetic meaning for it right now.
+i think that's supposed to be a metaphor for something, but i don't think i have the mental capacity to figure out a clever poetic meaning for it right now.
 
 i zipped open my bag to investigate the cause for the heaviness, but finding none decided to go forth with my day.
-maybe it was meant to signal physical exhaustion, or emotional baggage (can we start calling that "griefcase"?), or something else like a burning desire to be done with all the things you never wanted to start in the first place.
+maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
 
 in a zoom meeting i had with some research mentors today, i was suddenly and inexplicably overwhelmed with boredom and just complete... disinterest.
 here were two very nice people whom i genuinely respect and like, and they were trying to help me with my research project (not in physics), but as hard as i tried i found myself gradually losing my grip on their words.
 
-i badly wanted to say something, make an excuse and leave, but etiquette prevented me from doing so. it would've been rude and i also didn't want to deal with the follow-ups.
+i badly wanted to say something, make an excuse and leave, but i didn't want to be rude and didn't want to deal with the follow-ups.
 so i stayed, and felt completely disassociated from this meeting and the entire project.
 the more i listened, the more i grew to hate this project and found it pointless. 
 
 i was so relieved when our meeting ended that i immediately took a half-hour nap on the table in the study lounge where i was at.
 then, finding it uncomfortable, went home for another nap.
-i think this is peak bio/neurosci.
-i also think disassociation is total disinterest + being trapped.
+disassociation is total disinterest + being trapped.
 
 # 2 
-anyway, what does a shitty morning have to do with blogging? 
-to be clear, i have no certain idea. 
-what follows is pure speculation on my end.
-
-"good" blogs tend to be sad for whatever reason.
-at least, in my rating of blogs, the good ones usually involve some sort of sad event in life, from which the blogger was able to extract some interesting insight and whatnot.
-
-to me, a good blog takes something from your life that is relatable to others, and offers a new or otherwise interesting perspective to the reader.
+i feel like "good" blogs tend to be sad for whatever reason.
+a good blog takes something from your life that is relatable to others, and offers a new or otherwise interesting perspective to the reader.
 when i read a good blog, i go "wow, that's so true. i've never thought about my life that way before."
 
 maybe it doesn't have to be intrinsically sad, but some of the best i've read have centered around self-development, confronting existential questions, uncertainty, depression, anxiety, etc. etc. 
-
-blogs can, of course, be positive as well.
-in my experience, the good ones usually center around practicality, talk about how nice something is and appreciates it, or are overall-positive reflections containing some hard-earned wisdom. 
+they can, of course, be positive as well, centering around practicality, talk about how nice something is and appreciates it, or are overall-positive reflections containing some hard-earned wisdom. 
 but there are fewer of those in general, and they usually have a stoic tone at best, rather than a happy one.
 
-the reason for this disparity, i think, is simple. 
 it's probably just what sadness was designed to do, after all — tells us that something isn't going quite right and signals us to take corrective action. 
 hence, when you're sad, you become reflective, and those who write start writing.
 
-it's also kind of like [publication bias]() in the sense that a happy-everything-is-great blog would be boring to read, just like how null effect results are almost never published.
+it's also kind of like [publication bias](https://en.wikipedia.org/wiki/Publication_bias) in the sense that a happy-everything-is-great blog would be boring to read, just like how null effect results are almost never published.
 this is almost too obvious, like: everyone has stacks of depression-fueled poetry that have either been burned or will never see the light of day. 
 
+on those days where your spine aches from holding all your guts together, those days when the weight of your responsibilities crushes your motivation to even get out of bed, those days when doing much of anything seems like an insurmountable task, but moving your fingertips over the keyboard seems a good respite, those tend to be good days to write.
+
 # 3
-i think the easiest way to start, for anyone interested in writing, is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it.
-it's not like sadness is in short supply.
-
-one can start with journaling, but not the kind that goes like "today i went to class, failed a quiz, then hung out with some friends". 
-you don't want a diary, diaries are void of emotional vulnerability. 
-you're supposed to meditate on your life and process your emotions from a place of clarity, and then put it on paper with the best words you've got.
-
-once you can journal, blogging and other share-able forms of writing aren't far away. 
-there's not much i can say that hasn't already been said better, so i'll just link a few resources for those interested.
-
-that being said, i think writing something melancholic and sad and depressing and existential is much easier than writing something positive, uplifting, encouraging, or hopeful.
-it is harder to write something positive for the same reason that it is easy to write something sad. 
-in my opinion, those types of writings are better, partially because i feel better having read it, and partially because i intrinsically appreciate more difficult things.
-
-that shouldn't discourage you from writing anything sad. 
-in fact, when you first start writing, your writing is almost certainly going to be sad, both in the tone and in the quality. 
-that's okay and the only effective anecdote i've found is to remember that you are your own primary audience. 
-
-you write for yourself first-and-foremost, and secondly you might share those writings with other people. 
-but when it comes to that i don't think it's helpful to worry too much about the audience. 
-your audience is whoever is coming back to read your stuff regularly, so just send it to a bunch of people and whoever stays, stays.
-
-
-# 4
-on those days where your spine aches from holding all your guts together, those days when the weight of your responsibilities crushes your motivation to even get out of bed, those days when doing much of anything seems like an insurmountable task, but moving your fingertips over the keyboard is a good respite, those tend to be good days to write.
 
 today happens to be one of those days for me. 
 it was supposed to be a restful break from school, but instead i have a pile of psets, research, and grading to do, on top of choosing between internships for the fall and classes for the fall. 
@@ -94,15 +61,63 @@ like if you start walking up a path with 1% grade, you're probably not going to 
 
 personal change is hard to measure because you _can't_ just look back[^1] and see make a visual comparison. 
 even though i can feel that i'm a different person from when i started school, it's hard for me to figure out exactly what is different.
+what's scary about it is that it's also hard to notice if you've actually been going down.
 
-it's the same for other things, too, not just shifts in values and beliefs. 
-have i gotten better at math? how about writing or piano? reading? 
+# 4
+i think the easiest way to start, for anyone interested in writing, is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it.
+after all, it's not like sadness is in short supply.
 
-luckily, writing leaves a paper trail, so with writing it's easier to see where you've been. 
-it's a window into your life not only for yourself, but for your friends as well. 
-blogs are a nice way to stay in touch with people you don't see very often. 
+one can start with journaling, but not the kind that goes like "today i went to class, failed a quiz, then hung out with some friends". 
+you don't want a diary, diaries are void of emotional vulnerability. 
+you're supposed to meditate on your life and process your emotions from a place of clarity, and then put it on paper with the best words you've got.
+
+once you can journal, blogging and other share-able forms of writing aren't far away. 
+there's not much i can say that hasn't already been said better, so i'll just link a few resources for those interested. [remember](), [to](), [link](), [things]().
+
+that being said, i think writing something melancholic and sad and depressing and existential is much easier than writing something positive, uplifting, encouraging, or hopeful.
+it is harder to write something positive for the same reason that it is easy to write something sad. 
+those types of writings are better, partially because i feel better having read it, and partially because i intrinsically appreciate more difficult things.
+
+if you decide to write, you'll probably have a good way to track your past by snapshots.
+and not only you, but your friends and loved ones, too. 
+it's a fun way to stay in touch with people you don't talk to very often anymore.
+
+# 5 
+i woke up before the sun did, and took the car out for a drive on empty roads, in the crescent moon-lit hours before dawn. 
+the sound only of my tires splashing through tiny ponds accumulated through the midnight rain, and light only of the glimmer as my headlights sweep over wet asphalt. 
+
+how unusual it is, to be awake at this hour while everyone else sleeps. 
+it comes with a solemn sense of responsibility, like that of a lamplighter, standing watch against the darkness.
+i have always liked the winter and the night.
+
+i can't see shit. 
+this is what night does, i suppose.
+but even though i can hardly make out what's 10 meters in front of me, my thoughts are clearer than ever.
+in the day, you can see, but in the night you see clearly.
+
+my eye passes over the pools of rain, seeing something different in each one.
+in one i see that i used to be stupidly romantic. 
+stupid. romantic. and stupidly romantic. 
+high school junior me had no idea how to interact with people, yet he wanted a best friend.
+his eyes shone brightly whenever he encountered a sweet, cottoncandy-like friendship in the literary world, but dimmed quickly as envy set in.
+at a time when most social circles had stabilized, i was beginning to learn the most basic of social skills. 
+it seems like an eternity since the tumultuous years of my high school, and i can hardly recognize myself in the reflection.
+my cluelessness and romanticism, those i have kept, but gone was the anxious teenager.
+
+in another pool of light, i saw myself learning to write — really write, not those MLA formatted essays — as a senior.
 
 
+
+it was then that a wobbling car broke me out of my thoughts.
+it, like me, was facing a bout of decision paralysis.
+whereas i could not choose what classes i'd like to take, the driver of the car before me could not choose which lane they wanted to be in, and which blinker to keep on.
+startled, i pulled away and ahead of the wobbly car, but then the puddles have lost their glimmer, leaving me in the dark.
+
+# 6
+
+
+less stupid now but still romantic -> romanticism vs stoicism
+self-perception based on range of people observed; regression towards the mean
 
 
 
