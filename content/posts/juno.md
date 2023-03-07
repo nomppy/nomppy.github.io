@@ -1,9 +1,9 @@
 ---
 title: Juno's ring
-description: Sometimes we're Juno.
+description: Juno needs to get a grip
 category: poetry
 ---
-### Juno's ring
+### Jupyter's ring
 
 I used to worship you,  
 Jupyter,  
@@ -16,8 +16,8 @@ to you nightly
 beside your bed,  
 and called up  
 white lilies  
-for you when  
-you were weeping.  
+for you while  
+you wept.  
 But where were you,  
 Jupyter,  
 when I called  
@@ -28,7 +28,7 @@ ran foul.)
 Still I circle you,  
 Jupyter,  
 my brittle little  
-heart in orbit around
+heart in orbit around  
 the thought of you,  
 this cult of you.  
 Jupyter,  
@@ -40,6 +40,6 @@ saturn's rings.
 Is that why  
 I crushed myself 
 into little pieces,  
-and became  
+to become  
 a simmering ring?
 

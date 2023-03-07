@@ -29,8 +29,6 @@ a good blog takes something from your life that is relatable to others, and offe
 when i read a good blog, i go "wow, that's so true. i've never thought about my life that way before."
 
 maybe it doesn't have to be intrinsically sad, but some of the best i've read have centered around self-development, confronting existential questions, uncertainty, depression, anxiety, etc. etc. 
-they can, of course, be positive as well, centering around practicality, talk about how nice something is and appreciates it, or are overall-positive reflections containing some hard-earned wisdom. 
-but there are fewer of those in general, and they usually have a stoic tone at best, rather than a happy one.
 
 it's probably just what sadness was designed to do, after all — tells us that something isn't going quite right and signals us to take corrective action. 
 hence, when you're sad, you become reflective, and those who write start writing.
@@ -40,13 +38,11 @@ this is almost too obvious, like: everyone has stacks of depression-fueled poetr
 
 on those days where your spine aches from holding all your guts together, those days when the weight of your responsibilities crushes your motivation to even get out of bed, those days when doing much of anything seems like an insurmountable task, but moving your fingertips over the keyboard seems a good respite, those tend to be good days to write.
 
-# 4
 i think the easiest way to start, for anyone interested in writing, is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it.
 after all, it's not like sadness is in short supply.
 
 one can start with journaling, but not the kind that goes like "today i went to class, failed a quiz, then hung out with some friends". 
 you don't want a diary, diaries are void of emotional vulnerability. 
-you're supposed to meditate on your life and process your emotions from a place of clarity, and then put it on paper with the best words you've got.
 
 once you can journal, blogging and other share-able forms of writing aren't far away. 
 there's not much i can say that hasn't already been said better, so i'll just link a few resources for those interested. [remember](), [to](), [link](), [things]().
@@ -55,11 +51,7 @@ that being said, i think writing something melancholic and sad and depressing an
 it is harder to write something positive for the same reason that it is easy to write something sad. 
 those types of writings are better, partially because i feel better having read it, and partially because i intrinsically appreciate more difficult things.
 
-if you decide to write, you'll probably have a good way to track your past by snapshots.
-and not only you, but your friends and loved ones, too. 
-it's a fun way to stay in touch with people you don't talk to very often anymore.
-
-# 5 
+# 3
 i woke up before the sun did, and took the car out for a drive on empty roads, in the crescent moon-lit hours before dawn. 
 the sound only of my tires splashing through tiny ponds accumulated through the midnight rain, and light only of the glimmer as my headlights sweep over wet asphalt. 
 
@@ -79,32 +71,26 @@ high school junior me had no idea how to interact with people, yet he wanted a b
 his eyes shone brightly whenever he encountered a sweet, cottoncandy-like friendship in the literary world, but dimmed quickly as envy set in.
 at a time when most social circles had stabilized, i was beginning to learn the most basic of social skills. 
 it seems like an eternity since the tumultuous years of my high school, and i can hardly recognize myself in the reflection.
-my cluelessness and romanticism, those i have kept, but gone was the anxious teenager.
+my cluelessness and romanticism, those i have kept, but gone was the anxious teenager who lived in a house but was homeless.
 
 in another pool of light, i saw myself learning to write — really write, not those MLA formatted essays — as a senior.
 looking back, though, there's not much i wrote back then that i would still stand by proudly. 
 in truth, there's not much of any part of what i did back then that i would wholly agree with.
-
-
+my fashion sense was undeniably dodgy, and my music taste only marginally better. 
+i usually assumed the moral/philosophical high ground in disagreements between me and my partner.
+and i analyzed the hell out of _everything_.
+this, again, all feels completely foreign to me now. 
+they say that empathy is about understanding another's struggles, but i barely understand my own!
 
 it was then that a wobbling car broke me out of my thoughts.
 it, like me, was facing a bout of decision paralysis.
 whereas i could not choose what classes i'd like to take, the driver of the car before me could not choose which lane they wanted to be in, and which blinker to keep on.
 startled, i pulled away and ahead of the wobbly car, but then the puddles have lost their glimmer, leaving me in the dark.
 
-# 6
-
-# 3
-
-today happens to be one of those days for me. 
-it was supposed to be a restful break from school, but instead i have a pile of psets, research, and grading to do, on top of choosing between internships for the fall and classes for the fall. 
-everything has been way more complicated than i'd ever imagined or read in books as a child, so instead of working, i'd rather sit here and think about how much things have changed in the short span that i can remember.
-
-last year this time, which really isn't that long ago, i was a newly-initiated high school senior who'd just been introduced to the art of not-trying. 
-i skipped my classes a lot, quickly did what was required of me (which wasn't much), and spent my free time playing first-person shooter games or learning how to write. 
-
+# 4
 according to psychology, our personal narratives are selective reconstructions of our memories to fit our current beliefs, and that our personality and the "story of our life" is constantly in flux. 
-i spent a lot of time last year thinking about who i was, what i wanted, and in general a lot of moral and philosophical stuff, but i can hardly remember what i believed last month, much less what i believed a year ago.
+
+i spent a lot of time last year thinking about who  was, what i wanted, and in general a lot of moral and philosophical stuff, but i can hardly remember what i believed last month, much less what i believed a year ago.
 maybe my memory is particularly bad or i'm particularly gullible to new ideas, but i feel like this is true for everyone even if to a lesser degree.
 
 the other remaining possibility is that compared to last year, i really have changed a lot, but i don't remember it very well because it happened gradually and atomically. 
@@ -113,6 +99,10 @@ like if you start walking up a path with 1% grade, you're probably not going to 
 personal change is hard to measure because you _can't_ just look back[^1] and see make a visual comparison. 
 even though i can feel that i'm a different person from when i started school, it's hard for me to figure out exactly what is different.
 what's scary about it is that it's also hard to notice if you've actually been going down.
+
+if you decide to write, though, you'll probably have a good way to track your past by snapshots.
+and not only you, but your friends and loved ones, too. 
+it's a fun way to stay in touch with people you don't talk to very often anymore.
 
 
 less stupid now but still romantic -> romanticism vs stoicism
