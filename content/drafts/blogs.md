@@ -40,29 +40,6 @@ this is almost too obvious, like: everyone has stacks of depression-fueled poetr
 
 on those days where your spine aches from holding all your guts together, those days when the weight of your responsibilities crushes your motivation to even get out of bed, those days when doing much of anything seems like an insurmountable task, but moving your fingertips over the keyboard seems a good respite, those tend to be good days to write.
 
-# 3
-
-today happens to be one of those days for me. 
-it was supposed to be a restful break from school, but instead i have a pile of psets, research, and grading to do, on top of choosing between internships for the fall and classes for the fall. 
-everything has been way more complicated than i'd ever imagined or read in books as a child, so instead of working, i'd rather sit here and think about how much things have changed in the short span that i can remember.
-
-last year this time, which really isn't that long ago, i was a newly-initiated high school senior who'd just been introduced to the art of not-trying. 
-i skipped my classes a lot, quickly did what was required of me (which wasn't much), and spent my free time playing first-person shooter games or learning how to write. 
-
-looking back, though, there's not much i wrote back then that i would still stand by proudly. 
-in truth, there's not much of any part of what i did back then that i would wholly agree with.
-
-according to psychology, our personal narratives are selective reconstructions of our memories to fit our current beliefs, and that our personality and the "story of our life" is constantly in flux. 
-i spent a lot of time last year thinking about who i was, what i wanted, and in general a lot of moral and philosophical stuff, but i can hardly remember what i believed last month, much less what i believed a year ago.
-maybe my memory is particularly bad or i'm particularly gullible to new ideas, but i feel like this is true for everyone even if to a lesser degree.
-
-the other remaining possibility is that compared to last year, i really have changed a lot, but i don't remember it very well because it happened gradually and atomically. 
-like if you start walking up a path with 1% grade, you're probably not going to notice until an hour later when you look back and suddenly realize that you're 150 ft (`50m`) above where you started. 
-
-personal change is hard to measure because you _can't_ just look back[^1] and see make a visual comparison. 
-even though i can feel that i'm a different person from when i started school, it's hard for me to figure out exactly what is different.
-what's scary about it is that it's also hard to notice if you've actually been going down.
-
 # 4
 i think the easiest way to start, for anyone interested in writing, is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it.
 after all, it's not like sadness is in short supply.
@@ -105,6 +82,8 @@ it seems like an eternity since the tumultuous years of my high school, and i ca
 my cluelessness and romanticism, those i have kept, but gone was the anxious teenager.
 
 in another pool of light, i saw myself learning to write — really write, not those MLA formatted essays — as a senior.
+looking back, though, there's not much i wrote back then that i would still stand by proudly. 
+in truth, there's not much of any part of what i did back then that i would wholly agree with.
 
 
 
@@ -114,6 +93,26 @@ whereas i could not choose what classes i'd like to take, the driver of the car 
 startled, i pulled away and ahead of the wobbly car, but then the puddles have lost their glimmer, leaving me in the dark.
 
 # 6
+
+# 3
+
+today happens to be one of those days for me. 
+it was supposed to be a restful break from school, but instead i have a pile of psets, research, and grading to do, on top of choosing between internships for the fall and classes for the fall. 
+everything has been way more complicated than i'd ever imagined or read in books as a child, so instead of working, i'd rather sit here and think about how much things have changed in the short span that i can remember.
+
+last year this time, which really isn't that long ago, i was a newly-initiated high school senior who'd just been introduced to the art of not-trying. 
+i skipped my classes a lot, quickly did what was required of me (which wasn't much), and spent my free time playing first-person shooter games or learning how to write. 
+
+according to psychology, our personal narratives are selective reconstructions of our memories to fit our current beliefs, and that our personality and the "story of our life" is constantly in flux. 
+i spent a lot of time last year thinking about who i was, what i wanted, and in general a lot of moral and philosophical stuff, but i can hardly remember what i believed last month, much less what i believed a year ago.
+maybe my memory is particularly bad or i'm particularly gullible to new ideas, but i feel like this is true for everyone even if to a lesser degree.
+
+the other remaining possibility is that compared to last year, i really have changed a lot, but i don't remember it very well because it happened gradually and atomically. 
+like if you start walking up a path with 1% grade, you're probably not going to notice until an hour later when you look back and suddenly realize that you're 150 ft (`50m`) above where you started. 
+
+personal change is hard to measure because you _can't_ just look back[^1] and see make a visual comparison. 
+even though i can feel that i'm a different person from when i started school, it's hard for me to figure out exactly what is different.
+what's scary about it is that it's also hard to notice if you've actually been going down.
 
 
 less stupid now but still romantic -> romanticism vs stoicism
