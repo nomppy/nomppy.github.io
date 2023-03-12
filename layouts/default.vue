@@ -12,7 +12,7 @@
   --secondary-text-color: #eee;
   --tertiary-text-color: #DBA507;
   --accent-text-color: #1998DB;
-  --italics-text-color: #647ee8;
+  --highlight-text-color: #647ee8;
 
   --link-color: #3ebee9;
   --link-hover-color: #8F9AFF;
@@ -123,8 +123,8 @@ button:active {
       color: var(--secondary-text-color);
       margin: 0 0 0.75em 0;
 
-      em {
-        color: var(--italics-text-color);
+      .hl {
+        color: var(--highlight-text-color);
       }
 
       strong {

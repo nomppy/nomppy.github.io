@@ -35,7 +35,7 @@ But the concerned texts kept pouring in and I realized that the shooting wasn't 
 This was not "a shooting has happened". This was a shooting that was taking place, right now, and one that would continue for nearly 4 hours.
 
 I replied to texts from friends saying they were hiding in the library, in the basement of the gym building, in their room holding their breathe frantically texting everyone they know. 
-I got live updates from friends, relaying the suspected location of the shooter. 
+I got live updates relaying the suspected location of the shooter. 
 
 Familiar names of buildings that I recognized with ease, friends' dorms, classrooms, dining halls where I ate at only 2 hours before, ceased to represent buildings but instead encroaching dark clouds on my mental map of my school.
 
@@ -110,11 +110,6 @@ I later replied saying, "Thanks for checking on me. I might not be able to get t
 I see clearly now that humor is my coping mechanism, except I wouldn't even call it coping — it's just my default, and people resort to their defaults in times like those.
 In almost no situation is it better to be stressed and panicked than calm and relaxed, and I know of no better way to stay relaxed.
 
-_Should I let this guy destroy my mental state? Nah. No way. 
-There's no way this short-ass mf is going to have that much power of me.
-And no amount of worry from me is going to help my friends, only make it worse.
-This asshole wants to terrorize us with guns, well, I'm not gonna let him win._
-
 At one point I decided that I wasn't going to make any progress on the prelab, so I closed my laptop and decided I'd try to go to sleep.
 I told a few people that were constantly checking up on me that I was going to sleep, and turned off the radio.
 
@@ -179,7 +174,7 @@ with everyone gone and not enough hot water running through the pipes, the sidew
 as i walked home from my friend's dorm tonight, my boot's soft crunch on the new snow reminded me how happy i was, dancing down the sidewalk during a blizzard back in november, excited about the snow.
 even now, i felt an urge to be happy skidding around on the sidewalk, but the locked doors of a building i tried to pass through reminded me that we are still afraid, and i looked around to make sure no one was around.
 
-_there is no one. i live in a ghost town now._
+<span class='hl'>_there is no one. i live in a ghost town now._</span>
 
 my steps were the only ones on campus, and my breath the only ones in the air. 
 as i became certain that no one was around me, i let my mind sink in to the snow.
