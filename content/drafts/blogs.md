@@ -30,6 +30,7 @@ my bar for a good blog or story is if it makes me go "wow, that's so true. i've 
 
 ~~a lot of my favorites have also been centered around uncertainty and anxiety, so probably i just like seeing myself.~~
 everyone gets sad, so maybe that's why sad blogs are good[^1].
+heck, there's a reason famous writers are often deranged alcoholics. 
 
 it's also kind of like [publication bias](https://en.wikipedia.org/wiki/Publication_bias) in a way, in the sense that a happy-everything-is-great blog would be boring to read, just like how null effect results are almost never published.
 
@@ -57,7 +58,7 @@ high school junior me had no idea how to interact with people, yet he wanted a b
 his eyes shone brightly whenever he encountered a sweet, cottoncandy-like friendship in the literary world, but dimmed quickly as envy set in.
 at a time when most social circles had stabilized, i was beginning to learn the most basic of social skills. 
 it seems like an eternity since the tumultuous years of my high school, and i can hardly recognize myself in the reflection.
-my cluelessness and romanticism, those i have kept, but gone was the anxious teenager who lived in a house but was homeless.
+my cluelessness and romanticism, those i have kept, but gone was the anxious teenager who lived in a house but felt homeless.
 
 in another pool of light, i saw myself learning to write — really write, not those MLA formatted essays — as a senior.
 looking back, though, there's not much i wrote back then that i would still stand by proudly. 
@@ -85,10 +86,6 @@ like if you start walking up a path with 1% grade, you're probably not going to 
 personal change is hard to measure because you _can't_ just look back[^2] and see make a visual comparison. 
 even though i can feel that i'm a different person from when i started school, it's hard for me to figure out exactly what is different.
 what's scary about it is that it's also hard to notice if you've actually been going down.
-
-if you decide to write, though, you'll probably have a good way to track your past by snapshots.
-and not only you, but your friends and loved ones, too. 
-it's a fun way to stay in touch with people you don't talk to very often anymore, i think.
 
 # 5
 it's only my first week back from springbreak, but it feels like the 5th. 
@@ -135,11 +132,11 @@ but i'd overcompensated: in the fall, i read poems, wrote some too. i went out t
 maybe my world was out of focus, maybe it was enveloped in smoke, but the smoke caught color from the shore and, with every breathe, filled me with it, too.
 i didn't know where i was going or what i was doing, but it felt beautiful.
 now, my world is sharper, sharpened by one definition after another.
-block by block, i transformed the ground under my feet into an n x n grid, and now i'm making measured progress.
+block by block, i transformed the ground under my feet into an n x n grid, and i'm making measured progress.
 the little shore with the colorful lights is gone, and so is the sky,
 yet somehow still the fog remains, a cloud of black and white.
 
-i don't want to make my present situation sound too miserable- i'm having fun, truly, with math and physics. 
+my situation isn't as miserable as it sounds- i'm having fun, truly, with math and physics. 
 despite what most people may think, there is a lot of beauty, exploration, and creativity in math and physics.
 it is not just analytical thinking and problem-solving.
 at a higher level, it creates the same response that art does, but it is a more stoic, enlightening, transcendental kind of beauty, mostly[^4].
@@ -151,15 +148,40 @@ when there's lots to look at, i can't pick out anything in particular, and the h
 how stupid is this!
 
 # 7
-half my life, i've struggled to find a group where i would really fit in. 
+all my life, i've struggled to find a group where i would really fit in. 
+some of it was... circumstantial, but i'd wager a majority chunk of the reason is because i'm picky.
+some people are too much this and others too little that, and i could never find a "just right".
+
+well duh, on two levels:
+duh 1- no one i find is ever going to feel perfect.
+duh 2- (imagine i'm gesturing to weigh these concepts):
+romanticism...stoicism, math...art, focus...color, writing a blog...sleeping before 2am. 
+i hardly know what i'm looking for, so how would i ever find it?
+
+it can be hard, even, to know where you are at. 
+i did not realize how much i'd changed until i wrote [#6](#6).
+without a reference point, it's very easy to lose track of where you are.
+
+we as humans have many wants, probably a literal infinite amount of them. 
+i want to write and i want to sleep and i want to read poems and math books and be good a what i do and enjoy life and be emotional but not sentimental.
+i want to hang out with friends and be active in my communities instead of being that person who is always "too busy".
+i want all of these things and more, but there is only so much time.
+
+# $3^2$
+what do you do if you want to maximize the area of a rectangle?
+
+trick question! 
+you turn it into a circle...
+just kidding, i can't draw circles.
+
+but really, to maximize a product you balance each of the factors. 
+one thing that never hurts is having clear priorities.
+prioritize balance.
 
 
-
-less stupid now but still romantic -> romanticism vs stoicism
-self-perception based on range of people observed; regression towards the mean
 
 
 [^1]: if you or a loved one wants to start writing, all you have to do is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it. it's not like sadness is in short supply.
 [^2]: some people seem to have a much better idea of where they're at relative to their past. if you're one of these supernatural people, i envy you and please tell me how you do it.
 [^3]: for all of high school, i slept around 8-9 hours a day, but i'm gradually trying to reduce my sleep hours to squeeze more time out for work. frankly, if i hadn't slept less this week, i wouldn't have gotten everything done.
-[^4]: there is this really great book called "Mathematics for Human Flourshing", by Francis Su,  which talks about all the ways that math satisfies human needs. one of the chapters is beauty, and in it the author describes four different types of beauty. the sensory, wondrous, insightful, and transcent beauties. 
+[^4]: there is this really great book called "Mathematics for Human Flourshing", by Francis Su,  which talks about all the ways that math satisfies human needs. one of the chapters is beauty, and in it the author describes four different types of beauty. the sensory, wondrous, insightful, and transcent beauties. you should read it, even you think you don't like math. 
