@@ -6,60 +6,46 @@ status: draft
 ---
 
 # 1
-my backpack felt extra heavy this morning. 
-i think that's supposed to be a metaphor for something, but i don't think i have the mental capacity to figure out a clever poetic meaning for it right now.
-
-i zipped open my bag to investigate the cause for the heaviness, but finding none decided to go forth with my day.
+one day, i woke up, and my backpack felt extra heavy.
+i opened my bag to investigate the cause for the heaviness, but finding none decided to go forth with my day.
 maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
 
-in a zoom meeting i had with some research mentors today, i was suddenly and inexplicably overwhelmed with boredom and just complete... disinterest.
-here were two very nice people whom i genuinely respect and like, and they were trying to help me with my research project (not in physics), but as hard as i tried i found myself gradually losing my grip on their words.
+a few minutes later, i hopped on a zoom meeting with my mentors on a research project, but as i stared at my macbook's LCD screen and it stared back, i felt suddenly and inexplicably overwhelmed.
+overwhelmed with how much i have to do, and how truly _bored_ i felt.
+despite every effort i made to manifest an early end to the meeting, it stretched on and on — stretched seconds into hours, stretched my will to live ice-thin.
 
 i badly wanted to say something, make an excuse and leave, but i didn't want to be rude and didn't want to deal with the follow-ups.
 so i stayed, and felt completely disassociated from this meeting and the entire project.
 the more i listened, the more i grew to hate this project and found it pointless. 
 
-i was so relieved when our meeting ended that i immediately took a half-hour nap on the table in the study lounge where i was at.
-then, finding it uncomfortable, went home for another nap.
+i could barely keep my eyes open, and the second we finished, i took a half-hour nap/emotional breakdown on the table in the study lounge where i was just held prisoner.
 disassociation is total disinterest + being trapped.
 
 # 2 
-i feel like "good" blogs tend to be sad for whatever reason.
-a good blog takes something from your life that is relatable to others, and offers a new or otherwise interesting perspective to the reader.
-when i read a good blog, i go "wow, that's so true. i've never thought about my life that way before."
+this blog is going to be a little unusual from what i typically write. 
+i don't usually attempt to write detailed descriptions of events in my life, because 1) i'm bad at it, 2) because i tend to lose focus, and 3) i have a bad memory for events, which makes it hard to write about them.
 
-maybe it doesn't have to be intrinsically sad, but some of the best i've read have centered around self-development, confronting existential questions, uncertainty, depression, anxiety, etc. etc. 
+has anyone else noticed that a lot of good blogs, if they're personal, also tend to be sad?
+my bar for a good blog or story is if it makes me go "wow, that's so true. i've never thought about [random thing/life/great cosmic truth of the universe] that way before."
 
-it's probably just what sadness was designed to do, after all — tells us that something isn't going quite right and signals us to take corrective action. 
-hence, when you're sad, you become reflective, and those who write start writing.
+~~a lot of my favorites have also been centered around uncertainty and anxiety, so probably i just like seeing myself.~~
+everyone gets sad, so maybe that's why sad blogs are good[^1].
 
-it's also kind of like [publication bias](https://en.wikipedia.org/wiki/Publication_bias) in the sense that a happy-everything-is-great blog would be boring to read, just like how null effect results are almost never published.
-this is almost too obvious, like: everyone has stacks of depression-fueled poetry that have either been burned or will never see the light of day. 
-
-on those days where your spine aches from holding all your guts together, those days when the weight of your responsibilities crushes your motivation to even get out of bed, those days when doing much of anything seems like an insurmountable task, but moving your fingertips over the keyboard seems a good respite, those tend to be good days to write.
-
-i think the easiest way to start, for anyone interested in writing, is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it.
-after all, it's not like sadness is in short supply.
-
-one can start with journaling, but not the kind that goes like "today i went to class, failed a quiz, then hung out with some friends". 
-you don't want a diary, diaries are void of emotional vulnerability. 
-
-once you can journal, blogging and other share-able forms of writing aren't far away. 
-there's not much i can say that hasn't already been said better, so i'll just link a few resources for those interested. [remember](), [to](), [link](), [things]().
+it's also kind of like [publication bias](https://en.wikipedia.org/wiki/Publication_bias) in a way, in the sense that a happy-everything-is-great blog would be boring to read, just like how null effect results are almost never published.
 
 that being said, i think writing something melancholic and sad and depressing and existential is much easier than writing something positive, uplifting, encouraging, or hopeful.
 it is harder to write something positive for the same reason that it is easy to write something sad. 
-those types of writings are better, partially because i feel better having read it, and partially because i intrinsically appreciate more difficult things.
+and personally, i think those are better ones to read, and write. but that is not the case here
 
 # 3
-i woke up before the sun did, and took the car out for a drive on empty roads, in the crescent moon-lit hours before dawn. 
-the sound only of my tires splashing through tiny ponds accumulated through the midnight rain, and light only of the glimmer as my headlights sweep over wet asphalt. 
+i woke up before the sun did and took the car out for a drive on empty roads, in the crescent moon-lit hours before dawn. 
+the only sound i hear is of my tires splashing through tiny ponds accumulated through the midnight rain, and the light only of the glimmer as my headlights sweep over wet asphalt. 
 
 how unusual it is, to be awake at this hour while everyone else sleeps. 
 it comes with a solemn sense of responsibility, like that of a lamplighter, standing watch against the darkness.
 i have always liked the winter and the night.
 
-i can't see shit. 
+_i can't see shit._
 this is what night does, i suppose.
 but even though i can hardly make out what's 10 meters in front of me, my thoughts are clearer than ever.
 in the day, you can see, but in the night you see clearly.
@@ -90,24 +76,90 @@ startled, i pulled away and ahead of the wobbly car, but then the puddles have l
 # 4
 according to psychology, our personal narratives are selective reconstructions of our memories to fit our current beliefs, and that our personality and the "story of our life" is constantly in flux. 
 
-i spent a lot of time last year thinking about who  was, what i wanted, and in general a lot of moral and philosophical stuff, but i can hardly remember what i believed last month, much less what i believed a year ago.
+i spent a lot of time last year thinking about who i was, what i wanted, and in general a lot of moral and philosophical stuff, but i can hardly remember what i believed last month, much less what i believed a year ago.
 maybe my memory is particularly bad or i'm particularly gullible to new ideas, but i feel like this is true for everyone even if to a lesser degree.
 
 the other remaining possibility is that compared to last year, i really have changed a lot, but i don't remember it very well because it happened gradually and atomically. 
 like if you start walking up a path with 1% grade, you're probably not going to notice until an hour later when you look back and suddenly realize that you're 150 ft (`50m`) above where you started. 
 
-personal change is hard to measure because you _can't_ just look back[^1] and see make a visual comparison. 
+personal change is hard to measure because you _can't_ just look back[^2] and see make a visual comparison. 
 even though i can feel that i'm a different person from when i started school, it's hard for me to figure out exactly what is different.
 what's scary about it is that it's also hard to notice if you've actually been going down.
 
 if you decide to write, though, you'll probably have a good way to track your past by snapshots.
 and not only you, but your friends and loved ones, too. 
-it's a fun way to stay in touch with people you don't talk to very often anymore.
+it's a fun way to stay in touch with people you don't talk to very often anymore, i think.
+
+# 5
+it's only my first week back from springbreak, but it feels like the 5th. 
+i admittedly did not do much over the break, just read a book and binged netflix, so it is the fruits of my own (dis)labor that i'm reaping.
+
+i've had tests and quizzes and projects and people and research projects and reading — i can't help but remember my fall semester, when i had mostly classes that didn't require much work, compared to now, where i'm consistently working ~15 hours a day[^3]. 
+
+sometimes when you get hungry, you _get hungry_. 
+i get hungry so fast that my fingers start trembling and i can do nothing but search for food — and i'll eat anything. 
+hunger is a wildfire that consumes you unless you consume something else.
+it's weird that doesn't really happen with thirst, isn't it? thirst doesn't come in exponentials. it is mild and timid.
+
+this comes in an intellectual flavor, too. 
+sometimes you hear about an interesting idea, and it's like you just saw an ad for [insert your preferred drink]. 
+all of a sudden your mouth feels dry and you want a sip of what you just heard.
+
+other times, though, other times i'm laying in bed and hunger envelopes me, and you can't resist hunger, so i just do what i must to fill the hole, whether that be in my stomach or in my mind.
+
+it was probably one of those nights last semester that i felt extremely famished and ordered too much.
+now there is too much on my plate and i'm staying up to finish it.
+
+but it tastes so good. in hunger, even the lightest bit of seasoning tastes too good to be legal, like sin.
+and when you have pringles? _uGH-_ 
+
+the burst of discovery when they coincide with your tongue, the crunch of those devious hyperbolic paraboloids, the revelry and joy as you explore its surface, and the savory aftermath in your mouth, wonder and awe. 
+
+# 6
+every time, after i experience art, i see more vividly than theories seem to suggest. 
+it sweeps away the dust and breathes color back into my life, a life made monochromatic by classes and psets and code.
+who knew that grueling computations literally sucked the soul out of you.
+
+in the summer before college, i made the wise choice of enrolling in a creative writing class. 
+the professor wasn't great- she would ramble for a long time without a clear point and teach nothing.
+
+it was a great class, in theory, but for the whole semester i felt like i was thrashing in a pool of fog, and i just wanted to get to the other side and be done.
+sometimes, i'd read something touching, and the fog would lift for a moment and i would see the dazzling shoreline, draped with lights, and the starry sky above.
+but mostly, it was a foggy blur.
+
+that first semester, i had also elected some other courses which i thought would be engaging but turned out to be not.
+all but two of my classes felt like a waste of time, but i found out i enjoyed math, so when i picked my schedule for the current semester, i made sure it was packed with math and physics.
+
+i badly wanted some structure in my life, something reliable to lean on.
+but i'd overcompensated: in the fall, i read poems, wrote some too. i went out to performances with friends and let novelty guide me to any event. 
+maybe my world was out of focus, maybe it was enveloped in smoke, but the smoke caught color from the shore and, with every breathe, filled me with it, too.
+i didn't know where i was going or what i was doing, but it felt beautiful.
+now, my world is sharper, sharpened by one definition after another.
+block by block, i transformed the ground under my feet into an n x n grid, and now i'm making measured progress.
+the little shore with the colorful lights is gone, and so is the sky,
+yet somehow still the fog remains, a cloud of black and white.
+
+i don't want to make my present situation sound too miserable- i'm having fun, truly, with math and physics. 
+despite what most people may think, there is a lot of beauty, exploration, and creativity in math and physics.
+it is not just analytical thinking and problem-solving.
+at a higher level, it creates the same response that art does, but it is a more stoic, enlightening, transcendental kind of beauty, mostly[^4].
+the burning out is real- enjoyment is there, too, but it does not come freely. one must work for it.
+
+the sharpness and saturation of my life are like the position and velocities of heisenberg's uncertainty principle.
+there is a tradeoff, between focus and color, and i can't have 100% of both. 
+when there's lots to look at, i can't pick out anything in particular, and the harder i try to look, the less there is to see.
+how stupid is this!
+
+# 7
+half my life, i've struggled to find a group where i would really fit in. 
+
 
 
 less stupid now but still romantic -> romanticism vs stoicism
 self-perception based on range of people observed; regression towards the mean
 
 
-
-[^1]: some people seem to have a much better idea of where they're at relative to their past. if you're one of these supernatural people, i envy you and please tell me how you do it.
+[^1]: if you or a loved one wants to start writing, all you have to do is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it. it's not like sadness is in short supply.
+[^2]: some people seem to have a much better idea of where they're at relative to their past. if you're one of these supernatural people, i envy you and please tell me how you do it.
+[^3]: for all of high school, i slept around 8-9 hours a day, but i'm gradually trying to reduce my sleep hours to squeeze more time out for work. frankly, if i hadn't slept less this week, i wouldn't have gotten everything done.
+[^4]: there is this really great book called "Mathematics for Human Flourshing", by Francis Su,  which talks about all the ways that math satisfies human needs. one of the chapters is beauty, and in it the author describes four different types of beauty. the sensory, wondrous, insightful, and transcent beauties. 
