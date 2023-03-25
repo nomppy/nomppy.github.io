@@ -180,7 +180,10 @@ it happens automatically without trying.
 hobbies.. research... passions... writing... math.. coding... impostor syndrome comes so easily, from every walk of life.
 if you don't get impostor syndrome from comparing with people in the immediate vicinity, then it's trivial to broaden your scope until everything you've done pales in comparison.
 
-this is obviously a super unhealthy way to motivate myself, but i'm also not really willing to give up ambition.
+she's better than me at math, he's better at writing, or they're just simply better.
+i used to think this wasn't a problem because it kept me humble and motivated to get better.
+
+this is obviously a super unhealthy way to get motivation, but i'm also not really willing to give up ambition.
 it's hard to give up the idiosyncratic bits about ourselves that make us different from others, that makes us stand out.
 surely, there's a balance?
 
