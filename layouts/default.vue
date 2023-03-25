@@ -37,7 +37,7 @@ html {
   -ms-overflow-style: none;
   -webkit-scrollbar: none;
 
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   font-family: var(--serif-font-stack);
@@ -251,7 +251,7 @@ button:active {
 
 @media screen and (max-width: 660px) {
   .center-container {
-    font-size: 18px;
+    font-size: 16;
   }
 }
 
@@ -260,7 +260,7 @@ button:active {
     position: fixed;
     flex-flow: column nowrap;
     height: 100%;
-    margin: 0 20px;
+    margin: 0 18;
   }
 }
 </style>
