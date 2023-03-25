@@ -3,12 +3,13 @@ title: classic impostor syndrome
 description: honestly, i dont even like this blog
 category: impostor syndrome
 status: in-progress
+end: 2023-03-26
 ---
 
 # 1
 one day, i woke up, and my backpack felt extra heavy.
 i opened my bag to investigate the cause for the heaviness, but finding none decided to go forth with my day.
-maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
+maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), maybe the weight of decisions about what i will do in the summer or where i will attend school in the fall, or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
 
 a few minutes later, i hopped on a zoom meeting with my mentors on a research project, but as i stared at my macbook's LCD screen and it stared back, i felt suddenly and inexplicably overwhelmed.
 overwhelmed with how much i have to do, and how truly _bored_ i felt.
@@ -31,7 +32,6 @@ everyone gets sad, so maybe that's why sad blogs are good[^1].
 heck, there's a reason famous writers are often deranged alcoholics. 
 
 that being said, i think writing something melancholic and sad and depressing and existential is much easier than writing something positive, uplifting, encouraging, or hopeful.
-it is harder to write something positive for the same reason that it is easy to write something sad. 
 and personally, i think those are better ones to read, and write. but that won't the case here.
 
 # 3
@@ -64,10 +64,9 @@ one theory of personality psychology divides personality in three broad categori
 at the bottom are traits, like conscientiousness, agreeabless, etc. which are behaviorial tendencies.
 the next level up are values and motivations. 
 whereas traits describe how someone behaves, motivations describe _why_. 
-finally, there is the narrative identity.
+and finally, there is the narrative identity.
 
-narrative identity is how we understand ourselves and each other. 
-we thread events in our past into coherent stories. 
+narrative identity is how we understand ourselves and each other, how we thread events in our past into coherent stories. 
 where we come from, where we are now, and where we see ourselves going. 
 
 our personal narratives are selective reconstructions of our memories to fit our current beliefs.
@@ -154,14 +153,15 @@ duh 2- (imagine i'm gesturing to weigh these concepts):
 romanticism...stoicism, math...art, focus...color, writing a blog...sleeping before 2am. 
 i hardly know what i'm looking for, so how would i ever find it?[^5]
 
-even though this is probably a romantic illusion that doesn't actually exist, i think it illustrates 
+this is just a dumb example meant to illustrate the pain of trying to orient yourself in the world. 
+for the friends thing, though, there is [this blog](https://nicoles.substack.com/p/finding-the-right-people)[^5] which i really like.
 
-it can be hard, even, to know where you are at. 
-i did not realize how much i'd changed until i wrote [#6](#6).
-without a reference point, it's very easy to lose track of where you are.
+it can be hard to know where you are at. 
+like, i didn't realize how much i'd changed until i wrote [#6](#6).
+so it's even harder to choose what you want.
 
 i have many wants, probably a literal infinite amount of them. 
-i want to write and i want to sleep and i want to read poems and math books and be good a what i do and enjoy life and be emotional but not sentimental.
+i want to write and i want to sleep and i want to read poems and math books and be good at what i do and enjoy life and be emotional but not sentimental.
 i want to hang out with friends and be active in my communities instead of being that person who is always "too busy".
 i want all of these things and more, but there is only so much time.
 
@@ -183,14 +183,13 @@ if you don't get impostor syndrome from comparing with people in the immediate v
 she's better than me at math, he's better at writing, or they're just simply better.
 i used to think this wasn't a problem because it kept me humble and motivated to get better.
 
-this is obviously a super unhealthy way to get motivation, but i'm also not really willing to give up ambition.
-it's hard to give up the idiosyncratic bits about ourselves that make us different from others, that makes us stand out.
+but it's obviously a super unhealthy way to get motivation.
+it's hard, though, to give up the idiosyncratic bits about ourselves that make us different from others, that makes us stand out.
 surely, there's a balance?
 
 i tried to curb my guilt by focusing on present things and stop worrying, but ironically, the drive to be [rid of perfectionism](https://www.economist.com/1843/2021/08/10/the-perfectionism-trap) and to optimally balance ones life is in itself a kind of perfectionism. 
 i found myself feeling guilty for making comparisons, critiquing myself for overthinking and worrying too much. 
-there's always something to judge
-the cycle never ends! 
+there's always something to judge and the cycle never ends! 
 
 i asked a highly-regarded physicist at [FRIB](https://frib.msu.edu) for advice on figuring out what i'm interested in. 
 he asked "What are you good at?"
@@ -209,7 +208,7 @@ me? good at coding? i guess i've done some projects here and there, but it's not
 "okay. are you good at analytic stuff? like pencil and paper?"
 
 a blank stare. i recounted all the times in the past semester where i'd given the same stare to an ODE quiz. 
-certainly i was better at coding than algebra.
+certainly i was better at coding than differential equations.
 
 "erm.. no, i wouldn't say i'm talented in that."
 
@@ -230,9 +229,31 @@ or, "who let him become a professor? he's making such little progress on a probl
 this is the crux of the matter: i'm okay with living a normal, peaceful life, but i'm afraid of being seen as mediocre, and giving up my identity(ies).
 classic impostor syndrome.
 
+# 9 (update)
+> Students with a fixed mindset equate talent with doing things easily. 
+> Consequently, they see struggling with problems as evidence that they do not have ability.  
+> -_Francis Su, "Mathematics for Human Flourishing"_
+
+this was actually one of the first things i happened across after sending out the initial post.
+complete coincidence, but it's exactly the source of my impostor syndrome.
+when you're slow to do a problem and someone sitting next to you breezes through like a natural, of course you start feeling inferior.
+
+in the modern era of competition math, physics, CS, which all to some extent emphasize speed, it's hard not to draw the conclusion that speed = talent. 
+"she got his phd in 3 years", "he finished the pset in [borderline unreasonable] minutes" — look around: evidence of our obsession with speed is everywhere.
+
+i felt really validated by what fields medalist [Laurent Schwartz](https://en.wikipedia.org/wiki/Laurent_Schwartz) said:
+
+> In spite of my success, I was deeply uncertain about my own intellectual capacity; I thought I was unintelligent. And it is true that I was, and still am, rather slow. I need time to seize things because I always need to understand them fully.
+
+while i dont agree with su's attribution to a "fixed mindset", because you can believe in malleable intellect and feel stupid at the same time, everything else he said was perfect.
+struggling doesn't mean you're incapable, and being slow doesn't make you less talented.
+
+i am of course assuaging my own worries as much as i want to convince you of them.
+but one thing is certain — struggle builds resilience, and persisting to the end builds confidence.
+if we shift our focus from trying to quantify talent, but rather personal virtues, the fog lifts and everything doesn't seem so bleak anymore. 
 
 [^1]: if you or a loved one wants to start writing, all you have to do is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it. it's not like sadness is in short supply.
 [^2]: some people seem to have a much better idea of where they're at relative to their past. if you're one of these supernatural people, i envy you and please tell me how you do it.
 [^3]: for all of high school, i slept around 8-9 hours a day, but i'm gradually trying to reduce my sleep hours to squeeze more time out for work. frankly, if i hadn't slept less this week, i wouldn't have gotten everything done.
 [^4]: there is this really great book called "Mathematics for Human Flourshing", by Francis Su,  which talks about all the ways that math satisfies human needs. one of the chapters is beauty, and in it the author describes four different types of beauty. the sensory, wondrous, insightful, and transcent beauties. you should read it, even you think you don't like math. 
-[^5]: i recently found [this blog](https://nicoles.substack.com/p/finding-the-right-people) that has a good take on being intentional with your choice of friends. mostly, it suggests choosing to hang out with people who are admirably different from me, "free in ways that you're not", learning small things from each person you admire. 
+[^5]: i like this take on being intentional with your choice of friends. mostly, it suggests choosing to hang out with people who are admirably different from me, "free in ways that you're not", learning small things from each person you admire. 
