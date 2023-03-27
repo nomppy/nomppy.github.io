@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<!-- <style src="~/assets/styles/avenir-white.css" /> -->
+<style src="~/assets/styles/avenir-white.css" />
 <style lang="scss">
 
 .rain {

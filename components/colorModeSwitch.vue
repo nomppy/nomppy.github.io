@@ -1,24 +1,21 @@
 <template>
   <div class="color-mode-switch">
-    <button 
-    v-show="$colorMode.preference === 'light' || $colorMode.value === 'light'"
-    @click="$colorMode.preference = 'dark'">
-      <svg-icon 
-      class='icon' name="light" />
-    </button>
-    <button 
-    v-show="$colorMode.preference === 'dark' || $colorMode.value === 'dark'"
-    @click="$colorMode.preference = 'light'">
-      <svg-icon 
-      class='icon' name="dark" />
-    </button>
-    <!-- <button 
-    v-show="$colorMode.preference === 'system'"
-    @click="onSwitch">
-      <svg-icon 
-      class='icon' name="system" />
-    </button> -->
+    <ColorScheme placeholder="..." tag="span">
 
+      <button 
+      v-show="$colorMode.preference === 'light' || $colorMode.value === 'light'"
+      @click="$colorMode.preference = 'dark'">
+        <svg-icon 
+        class='icon' name="light" />
+      </button>
+      <button 
+      v-show="$colorMode.preference === 'dark' || $colorMode.value === 'dark'"
+      @click="$colorMode.preference = 'light'">
+        <svg-icon 
+        class='icon' name="dark" />
+      </button>
+
+    </ColorScheme>
   </div>
 </template>
 

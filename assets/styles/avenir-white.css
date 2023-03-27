@@ -71,13 +71,13 @@ tr:nth-child(even) {
 	margin:6px 0px;
 }
 
-button, #ws {
+/* button, #ws {
 	font-size: 10pt;
 	padding: 4px 6px;
 	border-radius: 5px;
 	border: 1px solid #bbb;
 	background-color: #eee;
-}
+} */
 
 code, pre, #ws, #message {
 	font-family: Monaco, monospace;
