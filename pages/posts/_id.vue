@@ -77,7 +77,6 @@ export default {
   ]
 };
 </script>
-<style src="~/assets/styles/avenir-white.css" />
 <style lang='scss' scoped>
 .meta-block {
   box-sizing: border-box;

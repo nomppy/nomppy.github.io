@@ -5,9 +5,22 @@
   </div>
 </template>
 
-<style lang="scss">
+<script>
 
+</script>
+
+<!-- <style src="~/assets/styles/avenir-white.css" /> -->
+<style lang="scss">
 :root {
+  --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
+  --sans-serif-font-stack: "Montserrat", "Source Sans Pro", "Roboto", "Helvetica", sans-serif;
+  
+  --white: white;
+  --black: black;
+  --faded-gray: rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode{
   --primary-text-color: var(--white);
   --secondary-text-color: #eee;
   --tertiary-text-color: #DBA507;
@@ -18,14 +31,29 @@
   --link-hover-color: #8F9AFF;
 
   --primary-bg-color: #171717;
-  --secondary-bg-color: rgba(119, 51, 51, 0.6);
+  --secondary-bg-color: #1d1f20;
   --tertiary-bg-color: #fffaf0;
 
-  --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
-  --sans-serif-font-stack: "Montserrat", "Source Sans Pro", "Roboto", "Helvetica", sans-serif;
-  
-  --white: white;
-  --black: black;
+  --rain-stem-base: var(--black);
+  --rain-stem-fade: var(--faded-gray);
+}
+
+.light-mode{
+  --primary-text-color: var(--black);
+  --secondary-text-color: #111;
+  --tertiary-text-color: #DBA507;
+  --accent-text-color: #1998DB;
+  --highlight-text-color: #415296;
+
+  --link-color: #0785ac;
+  --link-hover-color: #454fbb;
+
+  --primary-bg-color: #e8e8e0;
+  --secondary-bg-color: #e9e9e9;
+  --tertiary-bg-color: #fffaf0;
+
+  --rain-stem-base: var(--white);
+  --rain-stem-fade: var(--faded-gray);
 }
 
 * {
@@ -43,27 +71,32 @@ html {
   font-family: var(--serif-font-stack);
 }
 
-button, button:focus {
+button {
   outline: none;
   background: transparent;
   border: 1px solid transparent;
 }
 
-button:active {
+button:focus {
   outline: none;
   background: transparent;
   border: 1px solid grey;
 }
 
+button:active {
+  transform: scale(0.9);
+}
+
 #__nuxt {
   overflow-y: auto;
   overflow-x: hidden;
+  background-color: var(--primary-bg-color);
+  transition: background-color 0.5s;
 }
 
 #__layout {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   position: relative;
   width: 100%;
@@ -89,7 +122,7 @@ button:active {
 }
 
 .title {
-  color: var(--white);
+  color: var(--primary-text-color);
   text-align: center;
   font-family: var(--serif-font-stack);
   font-weight: 600;

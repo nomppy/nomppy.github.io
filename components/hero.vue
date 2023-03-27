@@ -126,7 +126,7 @@ export default {
   display: inline-block;
   position: relative;
   height: 1em;
-  border-left: 2px solid white;
+  border-left: 2px solid var(--primary-text-color);
 }
 
 .headline-wrapper{
@@ -136,12 +136,12 @@ export default {
   height: 100%;
   overflow: hidden;
   transition: width 0.5s ease;
-  border-right: 2px solid white;
+  border-right: 2px solid var(--primary-text-color);
 }
 
 .headline-clip p {
   position: absolute;
-  color: #1f98b1;
+  color: var(--accent-text-color);
   line-height: 0.9em;
   padding: 0 10px;
   margin: 0.075em 0;
@@ -211,7 +211,7 @@ export default {
   font-weight: 600;
   // line-height: 24px;
   text-transform: uppercase;
-  color: #eee;
+  color: var(--secondary-text-color);
 
   width: 1em;
   font-size: 1em;
@@ -224,7 +224,7 @@ export default {
   left: 0;
   width: 100%;
   word-break: break-all;
-  background-color: #1d1f20;
+  background-color: var(--secondary-bg-color);
 }
 
 .letter:nth-child(1):before {

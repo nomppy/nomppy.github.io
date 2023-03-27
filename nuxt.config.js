@@ -12,7 +12,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Kenneth Sun',
+    title: 'Kenneth\'s website',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,6 +44,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -56,8 +58,15 @@ export default {
     '@nuxt/content',
     // https://sitemap.nuxtjs.org/
     '@nuxtjs/sitemap',
+    '@nuxtjs/svg',
   ],
 
+  // color mode configuration
+  // https://color-mode.nuxtjs.org/
+  colorMode: {
+    preference: 'system',
+    fallback: 'dark',
+  },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 

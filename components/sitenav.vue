@@ -6,11 +6,20 @@
     <li>
       <nuxt-link to="/posts">posts</nuxt-link>
     </li>
+
+    <color-mode-switch class="color-mode-switch"/>
   </ul>
 </template>
 
 <style lang="scss" scoped>
+.color-mode-switch {
+  position: fixed;
+  right: 1em;
+  top: 1em;
+}
+
 .site-nav {
+  font-size: 1.2em;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -40,5 +49,6 @@
       color: var(--accent-text-color) !important; // overrides above
     }
   }
+
 }
 </style>

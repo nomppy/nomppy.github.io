@@ -42,6 +42,7 @@ export default {
 };
 </script>
 
+<!-- <style src="~/assets/styles/avenir-white.css" /> -->
 <style lang="scss">
 
 .rain {
@@ -74,7 +75,7 @@ export default {
   height: 60%;
   margin-left: 7px;
   opacity: 20%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+  background: linear-gradient(to bottom, var(--rain-stem-base), var(--rain-stem-fade));
   animation: stem 0.5s linear infinite;
 }
 
