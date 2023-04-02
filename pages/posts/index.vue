@@ -8,6 +8,9 @@
       <ul class="category-items">
         <li v-for="post in posts" :key="post.slug">
           <nuxt-link :to="'/posts/' + post.slug">{{ post.title }}</nuxt-link>
+          <p class="preview-description">
+            {{ post.description }}
+          </p>
         </li>
       </ul>
     </section>
@@ -19,7 +22,7 @@ export default {
   async asyncData({ $content }) {
 
     let posts = await $content('posts')
-      .only(['title', 'slug', 'category', 'updatedAt', 'end'])
+      .only(['title', 'description', 'slug', 'category', 'updatedAt', 'end'])
       .fetch();
  
     // sort posts in place in descending order by updatedAt, placing posts with no end at the front
@@ -66,8 +69,9 @@ export default {
   margin-bottom: 3em;
 
   .category-items {
-    margin: 1em 3em 0 0;
-    padding: 0 0 0 1.375em;
+    margin: 1em 0em 0 0;
+    padding: 0 0 0 0;
+    list-style: none;
   }
 
   .category-name {
@@ -75,6 +79,12 @@ export default {
     font-size: 1.1em;
     font-variant: small-caps;
     text-transform: capitalize;
+  }
+  
+  .preview-description {
+    font-size: 0.75em;
+    line-height: 1em;
+    color: var(--tertiary-text-color);
   }
 }
 

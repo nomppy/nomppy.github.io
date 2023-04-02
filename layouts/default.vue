@@ -23,7 +23,8 @@
 .dark-mode{
   --primary-text-color: var(--white);
   --secondary-text-color: #eee;
-  --tertiary-text-color: #edd58ae0;
+  --tertiary-text-color: #cdc5ade0;
+  // --tertiary-text-color: #846860;
   --accent-text-color: #1998DB;
   --highlight-text-color: #647ee8;
 
@@ -41,7 +42,7 @@
 .light-mode{
   --primary-text-color: var(--black);
   --secondary-text-color: #111;
-  --tertiary-text-color: #6f6549;
+  --tertiary-text-color: #684135;
   --accent-text-color: #1998DB;
   --highlight-text-color: #415296;
 
@@ -177,7 +178,7 @@ button:active {
       text-align: center;
       margin-bottom: 1em;
       font-size: 0.8em;
-      color: var(--secondary-text-color);
+      color: var(--tertiary-text-color);
     }
 
     iframe {

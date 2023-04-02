@@ -14,6 +14,7 @@
 <style lang="scss" scoped>
 .color-mode-switch {
   position: fixed;
+  z-index: 100;
   right: 1em;
   top: 1em;
 }
