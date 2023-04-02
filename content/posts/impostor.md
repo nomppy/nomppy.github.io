@@ -12,7 +12,7 @@ i opened my bag to investigate the cause for the heaviness, but finding none dec
 maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), maybe the weight of decisions about what i will do in the summer or where i will attend school in the fall, or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
 
 a few minutes later, i hopped on a zoom meeting with my mentors on a research project, but as i stared at my macbook's LCD screen and it stared back, i felt suddenly and inexplicably overwhelmed.
-overwhelmed with how much i have to do, and how truly _bored_ i felt.
+overwhelmed with how much i have to do, and how truly _Bored_ i felt.
 despite every effort i made to manifest an early end to the meeting, it stretched on and on — stretched seconds into hours, stretched my will to live ice-thin.
 
 i badly wanted to say something, make an excuse and leave, but i didn't want to be rude and didn't want to deal with the follow-ups.
@@ -126,7 +126,7 @@ all but two of my classes felt like a waste of time, but i found out i enjoyed m
 i badly wanted some structure in my life, something reliable to lean on.
 but i'd overcompensated: in the fall, i read poems, wrote some too. i went out to performances with friends and let novelty guide me to any event. 
 maybe my world was out of focus, maybe it was enveloped in smoke, but the smoke caught color from the shore and, with every breathe, filled me with it, too.
-i didn't know where i was going or what i was doing, but it felt beautiful.
+i didn't know where i was going or what i was doing, but it felt Beautiful.
 now, my world is sharper, sharpened by one definition after another.
 block by block, i transformed the ground under my feet into an n x n grid and i'm making measured progress.
 yet the little shore with the colorful lights is gone, so is the sky,
@@ -143,7 +143,7 @@ when there's lots to look at, i can't pick out anything in particular, and the h
 how stupid is this!
 
 # 7
-all my life, i've struggled to find a group where i would really fit in. 
+all my life, i've struggled to find a group where i would really Fit In. 
 some of it was... circumstantial, but i'd wager a majority chunk of the reason is because i'm picky.
 some people are too much this and others too little that, and i could never find a "just right".
 
@@ -213,7 +213,7 @@ certainly i was better at coding than differential equations.
 "erm.. no, i wouldn't say i'm talented in that."
 
 i've thought about this interaction a lot since it happened. 
-at first, i felt humiliated, not because he meant to interview me on my strengths, but because he'd unwittingly exposed what i was most afraid of— mediocrity.
+at first, i felt humiliated, not because he meant to interview me on my strengths, but because he'd unwittingly exposed what i was most afraid of— Mediocrity.
 
 i am at a crossroad in life where, no matter what i do, i'll be able to construct a personal narrative in the future which rationalizes my choices.
 if i want, the pressure to choose can disappear altogether. 
@@ -222,7 +222,7 @@ or, alternatively, i can conjure up an infinite set of choices and spend all day
 some of these paths are treacherous hikes through grad school, then academia, filled with all the worries i've already spilled in these pages.
 some are happy, stress-free, a life dedicated to joy instead of "impact".
 
-when i picture these worlds, it is always through someone elses' eyes that i look and judge. 
+when i picture these worlds, it is always through someone else's eyes that i look and judge. 
 "here, this guy isn't isn't doing anything useful with his life. he's not good at anything."
 or, "who let him become a professor? he's making such little progress on a problem someone else could probably solve easily."
 

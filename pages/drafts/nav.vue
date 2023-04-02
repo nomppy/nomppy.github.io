@@ -1,5 +1,6 @@
 <template>
   <div class="center-container post-categories nuxt-content">
+
     Drafts, not public yet. Thank you for reading them and your feedback will be appreciated :)
     <!-- create a section for each category-->
     <section 

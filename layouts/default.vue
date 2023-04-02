@@ -23,7 +23,7 @@
 .dark-mode{
   --primary-text-color: var(--white);
   --secondary-text-color: #eee;
-  --tertiary-text-color: #DBA507;
+  --tertiary-text-color: #edd58ae0;
   --accent-text-color: #1998DB;
   --highlight-text-color: #647ee8;
 
@@ -41,15 +41,15 @@
 .light-mode{
   --primary-text-color: var(--black);
   --secondary-text-color: #111;
-  --tertiary-text-color: #DBA507;
+  --tertiary-text-color: #6f6549;
   --accent-text-color: #1998DB;
   --highlight-text-color: #415296;
 
   --link-color: #0785ac;
   --link-hover-color: #454fbb;
 
-  --primary-bg-color: #e8e8e0;
-  --secondary-bg-color: #e9e9e9;
+  --primary-bg-color: #ececec;
+  --secondary-bg-color: #e3e3e3;
   --tertiary-bg-color: #fffaf0;
 
   --rain-stem-base: var(--white);
