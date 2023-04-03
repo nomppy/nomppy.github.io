@@ -4,10 +4,11 @@ description: I swear it's more than keyboard smashing.
 category: blogs
 status: in-progress
 start: 2023-01-21
+end: 2023-01-30
 ---
 
 
-rachmaninoff's [c sharp minor prelude](https://www.youtube.com/watch?v=ZcG-DnGdWRw) is one of my favorite pieces to play[^1], because beyond fulfilling that urge that all piano players have to smash the keys every once in a while, it is also a piece that shifts form depending on the mood of the pianist. we say that an actor has range if they can convincingly play a broad set of characters. well, the c minor prelude has range.
+rachmaninoff's [c sharp minor prelude](https://www.youtube.com/watch?v=ZcG-DnGdWRw)(i _highly recommend_ listening to this if you can) is one of my favorite pieces to play[^1], because beyond fulfilling that urge that all piano players have to smash the keys every once in a while, it is also a piece that shifts form depending on the mood of the pianist. we say that an actor has range if they can convincingly play a broad set of characters. well, the c minor prelude has range.
 
 it starts like an alarm. 3 octaves of fortissimo is sure to wake up any audience member dozing off in the concert hall. then, the second set of chords sets the tone for the remaining sentence (but notably, not the entire piece). am i feeling mournful? or enraged? calm and collected, or are anxious signals already leaking in? the tone and mood can shift from one musical breathe to the next, as if it were actually alive.
 
@@ -31,7 +32,8 @@ i think that rach would've used actual hammers in the piano if he could.
 
 ---
 
-i breathe. maybe that's obvious. but you breathe too, and now you’re aware of it. that’s me whenever i try to confront someone. 
+i breathe. maybe that's obvious. but you breathe too, and now you’re aware of it. 
+that’s basically me whenever i try to confront someone. 
 suddenly it becomes imperative that i devote brain resources to voluntary respiration instead of articulating what i wanted to say. 
 i have the words: i could write them down right now. 
 but as soon as the situation which i've been playing in my head forwards and back starts playing out in real life, the words and emotions realize that there’s no path from the brain to the mouth, and i become mute. 

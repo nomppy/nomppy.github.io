@@ -1,14 +1,13 @@
 ---
-title: classic impostor syndrome
-description: honestly, i dont even like this blog
+title: seasonal impostor syndrome
+description: honestly, i don't even like this blog
 category: impostor syndrome
-status: in-progress
-end: 2023-03-26
+status: finished
+end: 2023-04-03
 ---
 
 # 1
-one day, i woke up, and my backpack felt extra heavy.
-i opened my bag to investigate the cause for the heaviness, but finding none decided to go forth with my day.
+my backpack felt extra heavy one day, so i opened my bag to investigate the cause for the heaviness.
 maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), maybe the weight of decisions about what i will do in the summer or where i will attend school in the fall, or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
 
 a few minutes later, i hopped on a zoom meeting with my mentors on a research project, but as i stared at my macbook's LCD screen and it stared back, i felt suddenly and inexplicably overwhelmed.
@@ -51,8 +50,6 @@ in another pool of light, i saw myself learning to write as a senior.
 looking back, though, there's not much i wrote back then that i would still stand by proudly. 
 in truth, there's not much of any part of what i did back then that i would wholly agree with.
 my fashion sense was undeniably dodgy, and my music taste only marginally better. 
-and i had an annoying tendency to overanalyze interpersonal situations.
-this, again, all felt completely foreign to me.
 
 it was then that a wobbling car broke me out of my thoughts.
 it, like me, was facing a bout of decision paralysis.
@@ -103,7 +100,7 @@ it was probably one of those nights last semester that i felt extremely famished
 now there is too much on my plate and i'm staying up to finish it.
 
 but it tastes so good. in hunger, even the lightest bit of seasoning tastes too good to be legal, like sin.
-and when you have pringles? _uGH-_ 
+and when you have pringles? _oH mY GoD-_ 
 
 the burst of discovery when they coincide with your tongue, the crunch of those devious hyperbolic paraboloids, the revelry and joy as you explore its surface, and the savory aftermath in your mouth. 
 
@@ -132,8 +129,8 @@ block by block, i transformed the ground under my feet into an n x n grid and i'
 yet the little shore with the colorful lights is gone, so is the sky,
 and somehow still the fog remains, a cloud of black and white.
 
-my situation isn't as miserable as it sounds- i'm having fun, truly, with math and physics. 
-despite what most people may think, there is a lot of beauty, exploration, and creativity.
+it isn't as miserable as it sounds- i'm having fun, truly, with math and physics. 
+despite what most people may think, there is a lot of beauty, exploration, and creativity involved.
 it is not just analytical thinking and problem-solving.
 at a higher level, it creates the same response that art does, but it is a more stoic, enlightening, transcendental kind of beauty, mostly[^4].
 the burning out is real- enjoyment is there, too, but it does not come freely. one must work for it.
@@ -142,30 +139,7 @@ it's like there's a minimum error between focus and color, like the [uncertainty
 when there's lots to look at, i can't pick out anything in particular, and the harder i try to look, the less there is to see.
 how stupid is this!
 
-# 7
-all my life, i've struggled to find a group where i would really Fit In. 
-some of it was... circumstantial, but i'd wager a majority chunk of the reason is because i'm picky.
-some people are too much this and others too little that, and i could never find a "just right".
-
-well duh, on two levels:
-duh 1- no one i meet is ever going to feel perfect.
-duh 2- (imagine i'm gesturing to weigh these concepts):
-romanticism...stoicism, math...art, focus...color, writing a blog...sleeping before 2am. 
-i hardly know what i'm looking for, so how would i ever find it?[^5]
-
-this is just a dumb example meant to illustrate the pain of trying to orient yourself in the world. 
-for the friends thing, though, there is [this blog](https://nicoles.substack.com/p/finding-the-right-people)[^5] which i really like.
-
-it can be hard to know where you are at. 
-like, i didn't realize how much i'd changed until i wrote [#6](#6).
-so it's even harder to choose what you want.
-
-i have many wants, probably a literal infinite amount of them. 
-i want to write and i want to sleep and i want to read poems and math books and be good at what i do and enjoy life and be emotional but not sentimental.
-i want to hang out with friends and be active in my communities instead of being that person who is always "too busy".
-i want all of these things and more, but there is only so much time.
-
-# 8 
+# 7 
 > knock, knock.  
 > who's there?  
 > me  
@@ -229,7 +203,7 @@ or, "who let him become a professor? he's making such little progress on a probl
 this is the crux of the matter: i'm okay with living a normal, peaceful life, but i'm afraid of being seen as mediocre, and giving up my identity(ies).
 classic impostor syndrome.
 
-# 9 (update)
+# 8 (update)
 > Students with a fixed mindset equate talent with doing things easily. 
 > Consequently, they see struggling with problems as evidence that they do not have ability.  
 > -_Francis Su, "Mathematics for Human Flourishing"_
@@ -256,4 +230,3 @@ if we shift our focus from trying to quantify talent, but rather personal virtue
 [^2]: some people seem to have a much better idea of where they're at relative to their past. if you're one of these supernatural people, i envy you and please tell me how you do it.
 [^3]: for all of high school, i slept around 8-9 hours a day, but i'm gradually trying to reduce my sleep hours to squeeze more time out for work. frankly, if i hadn't slept less this week, i wouldn't have gotten everything done.
 [^4]: there is this really great book called "Mathematics for Human Flourshing", by Francis Su,  which talks about all the ways that math satisfies human needs. one of the chapters is beauty, and in it the author describes four different types of beauty. the sensory, wondrous, insightful, and transcent beauties. you should read it, even you think you don't like math. 
-[^5]: i like this take on being intentional with your choice of friends. mostly, it suggests choosing to hang out with people who are admirably different from me, "free in ways that you're not", learning small things from each person you admire. 
