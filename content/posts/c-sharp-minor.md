@@ -2,7 +2,7 @@
 title: c sharp minor
 description: I swear it's more than keyboard smashing.
 category: blogs
-status: in-progress
+status: finished
 start: 2023-01-21
 end: 2023-01-30
 ---

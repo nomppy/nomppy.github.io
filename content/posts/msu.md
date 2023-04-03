@@ -2,7 +2,8 @@
 title: MSU, February 13th
 description: On February 13th, 2023, Michigan State University was the target of a mass shooting. These are my thoughts.
 category: blogs
-status: in-progress
+status: finished
+end: 2023-03-12
 ---
 
 ### Contents
