@@ -12,7 +12,7 @@
 <script>
 
 export default {
-  layout: 'rain',
+  layout: 'default',
   async asyncData({ $content }) {
     const page = await $content('about').fetch();
     return { page };

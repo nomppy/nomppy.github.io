@@ -2,6 +2,7 @@
 title: Juno's ring
 description: Juno needs to get a grip
 category: poetry
+end: 2023-03-07
 ---
 ### Jupyter's ring
 
