@@ -32,6 +32,7 @@ Seriously, tell me anything and I'll believe you.
 I'm tired of chasing your secret. 
 With every passing year, I renounce the old ideals in favor of a better truth. 
 I used to believe people were good, then I learned that we are products of circumstance, and now I think I don't care anymore, that what I believe is inconsequential.
+There was an uncountable amount of things that I was unaware of, and im disappointed to say that after much struggle, it is all still very uncountable.
 My fixation, I learned, is like peeling back the layers of an onion: I'm cynical of the grandiose pursuit of fame, of self-delusional belief systems, of fabricated scarcity, but being a few layers deeper doesn't stop me from crying like everyone else.
 
 Enlighten me or give me the power of self-delusion.
