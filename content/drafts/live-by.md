@@ -35,6 +35,16 @@ In this economy, it's impossible to get through a whole day awake anyway.
 The key to taking a good nap is to actually NOT fall asleep - if you fall asleep you spend more time trying to wake up. 
 If you feel sufficiently tired, you can enter [hypnagogia](https://en.wikipedia.org/wiki/Hypnagogia) almost immediately, and wake up in 10 minutes refreshed without falling into deeper sleep.
 
+# Structured procrastination
+Discussed more deeply (and wittily) in [this essay](https://structuredprocrastination.com), structured procrastination is the idea that procrastinators will do anything but the most important, pressing task — including other tasks[^I live this].
+
+Procrastination is an (in my opinion) unavoidable phenomenon, but it's amazing how much we can get done in the process of avoiding something in particular.
+I've helped so many people in the AP students discord server with physics, whilst avoiding writing an unpleasant essay. 
+Where would the world be without procrastinators? 
+Stackexchange practically would not exist.
+
+Love live procrastination.
+
 # [Onelook.com](https://onelook.com)
 _Ack-_ what was that word for "strong hatred" that ends with "ma"?
 

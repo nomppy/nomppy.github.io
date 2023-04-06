@@ -288,6 +288,18 @@ button:active {
   }
 }
 
+@media screen and (max-width: 380px) {
+  .center-container {
+    padding: 0 0.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headline-clip, .letters.dummy {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 660px) {
   .center-container {
     font-size: 16;

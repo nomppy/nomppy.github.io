@@ -133,7 +133,7 @@ export default {
   display: inline-block;
   position: absolute;
   left: -2px;
-  height: 100%;
+  height: 1.25em;
   overflow: hidden;
   transition: width 0.5s ease;
   border-right: 2px solid var(--primary-text-color);
@@ -156,9 +156,10 @@ export default {
   opacity: 0;
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 480px) {
   #hero {
-    font-size: 2em;
+    font-size: 1.75em;
+    min-width: 320px;
   }
 }
 // @media screen and (max-width: 1300px) {
