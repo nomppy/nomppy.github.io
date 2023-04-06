@@ -1,7 +1,7 @@
 ---
 title: Dear Cupid
 description: ~ a sexy tango plays ~
-category: letter
+category: letters
 status: finished
 start: 2022-11-24
 end: 2022-11-30

@@ -166,6 +166,11 @@ button:active {
       }
     }
 
+    small.whisper {
+      color: var(--secondary-text-color);
+      font-size: 0.6em;
+    }
+
     img {
       position: relative;
       max-width: 80%;

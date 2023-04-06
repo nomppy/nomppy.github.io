@@ -1,7 +1,7 @@
 ---
 title: Things I live by
 description: Websites, ideas, tools, etc. that I could not live without, in no particular order.
-category: blog
+category: blogs
 start: 2022-03-29
 status: draft
 ---
@@ -43,6 +43,7 @@ _Ack-_ what was that word for "strong hatred" that ends with "ma"?
 
 # Z-lib
 🏴‍☠️📚: Since the original domain went down, you now need to use [TOR browser](https://www.torproject.org) to access its `.onion` domain (I won't tell you how to do this, but you can look it up).
+<small class='whisper'> (you also would need to create an account, but then you get _all_ of the books) </small>
 
 # Blogs 
 
@@ -84,7 +85,7 @@ There are almost no pop songs in my favorite playlists, because even if I add th
 
 # Poems
 > Tell all the truth but tell it slant.
-> - _Emily Dickinson_
+> -_Emily Dickinson_
 
 - [Invictus](https://poets.org/poem/invictus). This is really definitive of my preferred mentality in life.
 - [The View from Halfway Down](https://www.youtube.com/watch?v=u1_EBSlnDlU). This is a scene from [Bojack](https://en.wikipedia.org/wiki/BoJack_Horseman); contains suicide.
@@ -94,7 +95,7 @@ There are almost no pop songs in my favorite playlists, because even if I add th
 
 # Books
 
-### [The Little Prince](https://en.wikipedia.org/wiki/The_Little_Prince) (ou Le Petit Prince si tu veut)
+### [The Little Prince](https://en.wikipedia.org/wiki/The_Little_Prince) <small class='whisper'> (ou Le Petit Prince si tu veut) </small>
 
 > “And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye.” 
 

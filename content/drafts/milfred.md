@@ -1,6 +1,6 @@
 ---
 title: Dear Milfred
-category: fiction
+category: letters
 status: in-progress
 start: 2022-11-06
 end: 2022-12-13
