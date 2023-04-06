@@ -1,6 +1,10 @@
 ---
 title: Dear Cupid
-category: letters
+description: ~ a sexy tango plays ~
+category: letter
+status: finished
+start: 2022-11-24
+end: 2022-11-30
 ---
 
 Dear Cupid,
@@ -50,5 +54,6 @@ Do you know where love lives and how I could find it?
 
 
 Sincerely,
+Yours
 
 

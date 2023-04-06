@@ -113,7 +113,7 @@ It's about an alien sent to Earth to assassinate a math professor who made a sig
 - “Don’t ever be afraid of telling someone you love them. There are things wrong with your world, but an excess of love is not one.”
 - “As a black hole forms it creates an immense gamma-ray burst, blinding whole galaxies with light and destroying millions of worlds. You could disappear at any second. This one. Or this one. Or this one. Make sure, as often as possible, you are doing something you’d be happy to die doing.”
 
-### [Mathematics for Human Flourishing by Francis Su](https://www.francissu.com/flourishing)
+### [Mathematics for Human Flourishing](https://www.francissu.com/flourishing) by Francis Su
 
 Easy to read, thoughtful, inspiring, and suitable for everyone (even if you think you don't like math). 
 It's a philosophy book written by a math professor, if you will.

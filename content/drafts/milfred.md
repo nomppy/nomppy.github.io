@@ -1,6 +1,9 @@
 ---
-title: Searching for the Astrophyum ornatum
+title: Dear Milfred
 category: fiction
+status: in-progress
+start: 2022-11-06
+end: 2022-12-13
 ---
 
 Dear Milfred, how is school? Will you be back home for Thanksgiving? It's been 5 months since I last saw you. I must be getting forgetful, because today I got up early and filled up the rosecan to water your Astrophyum ornatum, but I couldn't seem to find where I left it. A nice lady at the home later told me that I'd just watered it yesterday anyway, so not to worry.  

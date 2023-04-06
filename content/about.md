@@ -5,7 +5,7 @@
 Hello and welcome to my website.
 I primarily study physics and math, though I am also very interested in psychology, philosophy, and history. 
 
-I also like playing piano, coding, reading[^1], and writing (which [you can read](/posts) if you want to learn more).
+I also like playing piano, coding, reading[^1], and writing (which [you can read](/posts)).
 
 ### Contact
 Feel free to get in touch through email: <a href="mailto:kennett.sun@gmail.com">kennett.sun@gmail.com</a>. 
