@@ -39,11 +39,13 @@
       </div>
 
       <nuxt-content :document="post" />
+      <div class="hover-footnote" v-html="currentFootnote" v-show="showingFootnote" />
     </div>
   </div>
 </template>
 
 <script>
+import $ from 'jquery';
 
 export default {
   async asyncData({ $content, params, error }) {
@@ -73,10 +75,56 @@ export default {
       ],
     };
   },
-  css: [
-  ]
+  data() {
+    return {
+      footnotes: {},
+      currentFootnoteId: null,
+      showingFootnote: false
+    };
+  },
+  computed: {
+    currentFootnote() {
+      if (this.currentFootnoteId && this.footnotes[this.currentFootnoteId]) {
+        return this.footnotes[this.currentFootnoteId];
+      } else {
+        return '';
+      }
+    }
+  },
+  mounted() {
+    // Find all footnote references and attach hover events
+    $('sup[id^="fnref"]').on('mouseenter', this.showFootnote.bind(this));
+    $('sup[id^="fnref"]').on('mouseleave', this.hideFootnote.bind(this));
+
+    // Extract footnotes from content and add to footnotes object
+    const footnoteElements = $('.footnotes li');
+    console.log(footnoteElements);
+    footnoteElements.each((index, element) => {
+      const id = $(element).attr('id');
+      const content = $(element).html();
+      this.footnotes[id] = content;
+    });
+  },
+  methods: {
+    showFootnote(event) {
+      const footnoteId = $(event.target).attr('href').substring(1);
+
+      if (!this.footnotes[footnoteId]) {
+        return;
+      }
+
+      this.currentFootnoteId = footnoteId;
+      this.showingFootnote = true;
+    },
+    hideFootnote() {
+      this.currentFootnoteId = null;
+      this.showingFootnote = false;
+    }
+  },
 };
 </script>
+
+<style src="~/assets/styles/avenir-white.css" />
 <style lang='scss' scoped>
 .meta-block {
   box-sizing: border-box;

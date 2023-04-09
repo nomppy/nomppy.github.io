@@ -6,10 +6,9 @@
 </template>
 
 <script>
-
 </script>
 
-<!-- <style src="~/assets/styles/avenir-white.css" /> -->
+<style src="~/assets/styles/avenir-white.css" />
 <style lang="scss">
 :root {
   --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
@@ -33,7 +32,7 @@
 
   --primary-bg-color: #171717;
   --secondary-bg-color: #1d1f20;
-  --tertiary-bg-color: #fffaf0;
+  --tertiary-bg-color: #2f2f2f;
 
   --rain-stem-base: var(--black);
   --rain-stem-fade: var(--faded-gray);
@@ -288,6 +287,20 @@ button:active {
   }
 }
 
+  
+.hover-footnote {
+  position: fixed;
+  bottom: 1em;
+  max-width: 20em;
+  color: var(--primary-text-color);
+  background-color: var(--tertiary-bg-color);
+  border: 1px solid var(--tertiary-text-color);
+  padding: 0.5rem;
+  left: calc(50% - 10em);
+  font-size: 0.8em;
+  z-index: 999;
+}
+
 @media screen and (max-width: 380px) {
   .center-container {
     padding: 0 0.5em;
@@ -312,6 +325,11 @@ button:active {
     flex-flow: column nowrap;
     height: 100%;
     margin: 0 18;
+  }
+
+  .hover-footnote {
+    left: unset;
+    right: 1em;
   }
 }
 </style>
