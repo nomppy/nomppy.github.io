@@ -25,7 +25,7 @@ Self-evident.
 
 In case you are uninformed, in Outlook, you can write an email and schedule it to be sent the next morning, or if you write emails on the weekend (ew gross i'd never do that), for Monday.
 
-Do I ever remember to use it? No. But I still live by it.
+Do I ever remember to use it? No. But it would be nice if I did.
 
 # Naps
 
@@ -36,14 +36,14 @@ The key to taking a good nap is to actually NOT fall asleep - if you fall asleep
 If you feel sufficiently tired, you can enter [hypnagogia](https://en.wikipedia.org/wiki/Hypnagogia) almost immediately, and wake up in 10 minutes refreshed without falling into deeper sleep.
 
 # Structured procrastination
-Discussed more deeply (and wittily) in [this essay](https://structuredprocrastination.com), structured procrastination is the idea that procrastinators will do anything but the most important, pressing task — including other tasks[^I live this].
+Discussed more deeply (and wittily) in [this essay](https://structuredprocrastination.com), structured procrastination is the idea that procrastinators will do anything but the most important, pressing task — including other tasks.
 
 Procrastination is an (in my opinion) unavoidable phenomenon, but it's amazing how much we can get done in the process of avoiding something in particular.
 I've helped so many people in the AP students discord server with physics, whilst avoiding writing an unpleasant essay. 
 Where would the world be without procrastinators? 
 Stackexchange practically would not exist.
 
-Love live procrastination.
+Long live procrastination.
 
 # [Onelook.com](https://onelook.com)
 _Ack-_ what was that word for "strong hatred" that ends with "ma"?
@@ -85,7 +85,7 @@ Now it's loosely linked to my identity and holds significance in my life.
 
 Plugs (my playlists that you should go like and also follow me on spotify because i need clout):
 
-- [dancing down the sidewalk](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=e0f52fa686f54dd5) (up-beat, mood amplifier)
+- [dancing down the sidewalk](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=e0f52fa686f54dd5) (up-beat, mood amplifier; it is very good)
 - [moppy](https://open.spotify.com/playlist/6wNJphAVy0JMnc01R4huU1?si=d9e08470e34846de); not what it sounds like, more sentimental than mopey.
 - [sad karaoke](https://open.spotify.com/playlist/2PiczkgGSNVrgU47dDLaTW?si=5205a36262124e8a) (exactly what it sounds like)
 
@@ -114,7 +114,7 @@ The Little Prince is a reminder to live.
 
 > “I did not know what to say to him. I felt awkward and blundering. I did not know how I could reach him, where I could overtake him and go on hand in hand with him once more. It is such a secret place, the land of tears.”
 
-### [The Humans by Matt Haig](https://www.amazon.com/Humans-Novel-Matt-Haig/dp/1476730598)
+### [The Humans](https://www.amazon.com/Humans-Novel-Matt-Haig/dp/1476730598) by Matt Haig
 
 This book is just so damn quotable and heartwarming.
 It's about an alien sent to Earth to assassinate a math professor who made a significant discovery.
@@ -128,7 +128,10 @@ It's about an alien sent to Earth to assassinate a math professor who made a sig
 
 Easy to read, thoughtful, inspiring, and suitable for everyone (even if you think you don't like math). 
 It's a philosophy book written by a math professor, if you will.
-There is very little math involved here, and it's very welcoming!
+There is very little math involved here (but fun puzzles!), and it's very welcoming.
+
+The practice of mathematics (and of the mathematical sciences) can feel intimidating to the point of elitism. 
+I also had that impression, but it is in fact a very deeply human pursuit with all sorts of ties to human values and desires.
 
 
 [^1]: to be honest, notion is a more beginner-friendly alternative and probably better suited to you. I've used Notion extensively as well, and it's still definitely a very powerful tool for organization.
