@@ -2,7 +2,7 @@
 title: Dear Existence
 description: knowledge is pain and ignorance is bliss
 category: letters
-status: draft
+status: in-progress
 ---
 
 Dear Existence,

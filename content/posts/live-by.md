@@ -3,7 +3,7 @@ title: Things I live by
 description: Websites, ideas, tools, etc. that I could not live without, in no particular order.
 category: blogs
 start: 2022-03-29
-status: draft
+status: in-progress
 ---
 
 # [Obsidian](https://obsidian.md)
@@ -41,7 +41,10 @@ Discussed more deeply (and wittily) in [this essay](https://structuredprocrastin
 Procrastination is an (in my opinion) unavoidable phenomenon, but it's amazing how much we can get done in the process of avoiding something in particular.
 I've helped so many people in the AP students discord server with physics, whilst avoiding writing an unpleasant essay. 
 Where would the world be without procrastinators? 
-Stackexchange practically would not exist.
+
+Stackexchange would not exist.
+This website would not exist.
+I would not exist.
 
 Long live procrastination.
 
