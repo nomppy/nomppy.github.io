@@ -1,6 +1,6 @@
 ---
 title: Things I live by
-description: Websites, ideas, tools, etc. that I could not live without, in no particular order.
+description: Tools, ideas, tricks, books, etc. that I could not live without, in no particular order.
 category: blogs
 start: 2022-03-29
 status: in-progress
@@ -21,11 +21,32 @@ For instance, using the tags feature, I made a page to aggregate all the quotes 
 
 Self-evident.
 
-# Outlooks's schedule send feature
+# Yabai / skhd 
 
-In case you are uninformed, in Outlook, you can write an email and schedule it to be sent the next morning, or if you write emails on the weekend (ew gross i'd never do that), for Monday.
+[Yabai](https://github.com/koekeishiya/yabai) is a tiling window manager for mac. 
 
-Do I ever remember to use it? No. But it would be nice if I did.
+<article-image src='yabai.png' alt='screenshot of yabai tiling window manager'>
+</article-image>
+<div class='img-caption'> i mean... it's beautiful :sob: (demo from yabai's github) </div>
+
+Macs don't ship with a lot of customizability, but with yabai, your fingers never have to leave the keyboard[^actually...].
+
+Used in conjunction with [skhd](https://github.com/koekeishiya/skhd), I can switch apps like crazy.
+To go somewhere, I press `cmd + backslash`, then pressing `m` takes me to messages, `s` takes me to safari, `c` to visual studio code, etc.
+
+You can also open websites this way. 
+For instance `cmd + backslash - shfit - c` opens google calendar. 
+
+<article-image src='skhd.png' alt='screenshot of keybinds for opening apps'> </article-image>
+<div class='img-caption'> why use trackpad when keyboard do? </div>
+
+I imagine there's a lot of potential for skhd for all kinds of keyboard macro shenanigans, my personal configuration files for these (along with other stuff) is github ([dotfiles repo](https://github.com/spesthecat/dotfiles)).
+
+# The schedule send feature
+
+In case you are uninformed, in Gmail and Outlook, you can write an email and schedule it to be sent the next morning, or if you write emails on the weekend (ew gross i'd never do that), for Monday.
+
+It would be an even better feature if I ever remember to use it.
 
 # Naps
 
@@ -138,4 +159,5 @@ I also had that impression, but it is in fact a very deeply human pursuit with a
 
 
 [^1]: to be honest, notion is a more beginner-friendly alternative and probably better suited to you. I've used Notion extensively as well, and it's still definitely a very powerful tool for organization.
+[^actually...]: for some unknown reason, firefox refuses to be tiled on launch and requires me clicking on it in the dock to fully open. but with that one exception things are good. actually another pain is dealing with long config windows that shouldn't be tiled, but there is always a bind to convert them back to a floating window.
 [^who?]: if you are unaware, he co-founded the YCombinator, which is a start-up incubator which funded things like Airbnb. 

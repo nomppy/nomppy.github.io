@@ -104,7 +104,6 @@ export default {
 
     // Extract footnotes from content and add to footnotes object
     const footnoteElements = $('.footnotes li');
-    console.log(footnoteElements);
     footnoteElements.each((index, element) => {
       const id = $(element).attr('id');
       const content = $(element).html();
