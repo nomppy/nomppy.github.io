@@ -27,18 +27,18 @@ Self-evident.
 
 <article-image src='yabai.png' alt='screenshot of yabai tiling window manager'>
 </article-image>
-<div class='img-caption'> i mean... it's beautiful :sob: (demo from yabai's github) </div>
+<div class='img-caption'> **D O O M**... DON'T PANIC </div>
 
 Macs don't ship with a lot of customizability, but with yabai, your fingers never have to leave the keyboard[^actually...].
 
 Used in conjunction with [skhd](https://github.com/koekeishiya/skhd), I can switch apps like crazy.
 To go somewhere, I press `cmd + backslash`, then pressing `m` takes me to messages, `s` takes me to safari, `c` to visual studio code, etc.
 
-You can also open websites this way. 
-For instance `cmd + backslash - shfit - c` opens google calendar. 
+I can also open websites this way. 
+For instance `cmd + backslash - shift - c` opens google calendar. 
 
-<article-image src='skhd.png' alt='screenshot of keybinds for opening apps'> </article-image>
-<div class='img-caption'> why use trackpad when keyboard do? </div>
+<!-- <article-image src='skhd.png' alt='screenshot of keybinds for opening apps'> </article-image> -->
+<!-- <div class='img-caption'> why use trackpad when keyboard do? </div> -->
 
 I imagine there's a lot of potential for skhd for all kinds of keyboard macro shenanigans, my personal configuration files for these (along with other stuff) is github ([dotfiles repo](https://github.com/spesthecat/dotfiles)).
 

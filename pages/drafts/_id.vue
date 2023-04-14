@@ -100,7 +100,7 @@ export default {
   mounted() {
     // Find all footnote references and attach hover events
     $('sup[id^="fnref"]').on('mouseenter', this.showFootnote.bind(this));
-    $('sup[id^="fnref"]').on('mouseleave', this.hideFootnote.bind(this));
+    window.addEventListener('scroll', this.hideFootnote);
 
     // Extract footnotes from content and add to footnotes object
     const footnoteElements = $('.footnotes li');
@@ -109,6 +109,9 @@ export default {
       const content = $(element).html();
       this.footnotes[id] = content;
     });
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.hideFootnote);
   },
   methods: {
     showFootnote(event) {
