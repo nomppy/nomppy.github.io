@@ -1,5 +1,12 @@
 <template>
   <div class="center-container post-categories nuxt-content">
+    <p 
+    style="grid-column: span 2; font-size: 0.8em;">
+      If you're not sure which to read, try
+      <a href='/posts/c-sharp-minor'> c charp minor</a>,
+      <a href='/posts/existence'> existence </a>, or
+      <a href='/posts/live-by'> Things I live by</a>.
+    </p>
     <!-- create a section for each category-->
     <section 
     :style="'grid-row: span ' + (1+posts.length)"

@@ -20,11 +20,13 @@
 }
 
 .site-nav {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: bolder;
   padding: 20px;
   display: flex;
   justify-content: center;
-  font-family: var(--sans-serif-font-stack);
+  font-family: var(--serif-font-stack);
+  letter-spacing: 1px;
 
   a {
     text-decoration: none;
@@ -39,7 +41,7 @@
   }
 
   li {
-    margin: 0 5px;
+    margin: 0 15px;
     list-style-type: none;
 
     a.nuxt-link-active:not([href="/"]) { // excludes the root route

@@ -1,7 +1,7 @@
 <template>
   <div class="center-container post-categories nuxt-content">
 
-    <p style="grid-column: span 2;">
+    <p style="grid-column: span 2; font-size: 0.8em;">
       Drafts, not public yet. Thank you for reading them and your feedback will be appreciated :)
     </p>
       

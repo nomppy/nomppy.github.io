@@ -284,6 +284,19 @@ button:active {
   }
 }
 
+.footnote-ref{
+  text-decoration: none;
+
+  &::before {
+    content: '[';
+    padding: 0 1px;
+  }
+
+  &::after {
+    content: ']';
+    padding: 0 1px;
+  }
+}
   
 .hover-footnote {
   position: fixed;
