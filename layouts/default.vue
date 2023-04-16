@@ -177,6 +177,8 @@ button:active {
 
     .img-caption {
       text-align: center;
+      max-width: 70%;
+      margin: 0 auto;
       margin-bottom: 1em;
       font-size: 0.8em;
       color: var(--tertiary-text-color);
@@ -377,7 +379,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   .post-categories {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -387,21 +389,6 @@ a {
 
     .post-category {
       margin: 0;
-    }
-  }
-
-  @media only screen and (max-width: 1040px) {
-    .post-categories {
-      grid-template-columns: 1fr;
-    }
-  
-    .post-category > ul {
-      column-count: 2;
-      column-gap: 3em;
-
-      li {
-        break-inside: avoid;
-      }
     }
   }
 }

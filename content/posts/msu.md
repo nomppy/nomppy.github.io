@@ -92,7 +92,7 @@ in the dark, my laptop screen provided the only lighting as i tapped my pencil o
 
 _what if they came up to my floor? what would i do?_ i grabbed the only bit of weaponary i owned — a tiny pair of scissors — considered if they were even sharp enough to puncture skin and, concluding that they weren't, set them down on my desk anyway just in case the shooter wanted to play rock-paper-scissors. 
 
-_\*a gunshot\*: handgun, maybe revolver. about 300 yards away near the front of the building,_ i thought.
+_<em class='hl'>\*a gunshot\*</em>: handgun, maybe revolver. about 300 yards away near the front of the building,_ i thought.
 
 i thought about unbarricading the door so he thinks no one is here, and then climbing up into the storage space about the closet or just into my lofted bed, where he can't see. 
 but then i decided against that, too, as i don't know how many rooms he's gotten into (probably not many, given the casualties at the time) and so would be inclined to search the first room he gets into carefully[^4].

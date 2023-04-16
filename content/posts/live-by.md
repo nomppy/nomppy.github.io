@@ -6,39 +6,54 @@ start: 2022-03-29
 status: in-progress
 ---
 
+This post is sort of loosely organized like this:
+
+1. First there are some basic tools fundamental to my functioning
+2. They get progressively more niche and abstract, moving into websites and blogs
+3. Other stuff like music, poems, and books
+4. Probably only [(2)](#naps) will be useful to you
+
+_I will definitely update this every now and then as I come across new stuff._
+
+
 # [Obsidian](https://obsidian.md)
 
 Like [notion](https://notion.so)[^1], but better. 
 
-I think I have ADD or ADHD or Alzeihmer's or something, because the amount of times I make a useful document in Obsidian and forget that it exists after not using it for a while is _insane_. 
-For instance, using the tags feature, I made a page to aggregate all the quotes I'd gathered. It was a nice feature. Then sometime later I made a separate document where I wrote down a set of quotes...
+Very useful if you can't remember something for more than half an hour. 
  
-<article-image src='obsidian-tasks.jpg' alt='a screenshot of a todo list set up in Obsidian'>
+<article-image src='obsidian-tasks.png' alt='a screenshot of a todo list set up in Obsidian. there are too many tasks'>
 </article-image>
-<div class='img-caption'> so many things... all the time </div>
+<div class='img-caption'> what is time </div>
+
+It's also very good for notes.
+
+<article-image src='obsidian-notes.png' alt='screenshot of a note file in obsidian about a math theorem'> </article-image>
+<div class='img-caption'> it is much organize. </div>
 
 # Google calendar
 
-Self-evident.
+Honestly, if you don't use a calendar these days, how do you even live?
+Tell _me_ if you become such enlightenment.
 
 # Yabai / skhd 
 
 [Yabai](https://github.com/koekeishiya/yabai) is a tiling window manager for mac. 
 
-<article-image src='yabai.png' alt='screenshot of yabai tiling window manager'>
-</article-image>
-<div class='img-caption'> **D O O M**... DON'T PANIC </div>
 
 Macs don't ship with a lot of customizability, but with yabai, your fingers never have to leave the keyboard[^actually...].
 
 Used in conjunction with [skhd](https://github.com/koekeishiya/skhd), I can switch apps like crazy.
-To go somewhere, I press `cmd + backslash`, then pressing `m` takes me to messages, `s` takes me to safari, `c` to visual studio code, etc.
+To go somewhere, I press `cmd + backslash`, which enters app-switch mode, then pressing `m` takes me to messages, `s` takes me to safari, `c` to visual studio code, etc.
 
 I can also open websites this way. 
-For instance `cmd + backslash - shift - c` opens google calendar. 
+For instance `shift - c` opens google calendar. 
 
-<!-- <article-image src='skhd.png' alt='screenshot of keybinds for opening apps'> </article-image> -->
-<!-- <div class='img-caption'> why use trackpad when keyboard do? </div> -->
+`e` takes me to [doom emacs](https://github.com/doomemacs/doomemacs), which is transparent here due to a setting in yabai:
+
+<article-image src='yabai.png' alt='screenshot of semi-transparent doom emacs'>
+</article-image>
+<div class='img-caption'> **D O O M**... DON'T PANIC </div>
 
 I imagine there's a lot of potential for skhd for all kinds of keyboard macro shenanigans, my personal configuration files for these (along with other stuff) is github ([dotfiles repo](https://github.com/spesthecat/dotfiles)).
 
@@ -157,7 +172,22 @@ There is very little math involved here (but fun puzzles!), and it's very welcom
 The practice of mathematics (and of the mathematical sciences) can feel intimidating to the point of elitism. 
 I also had that impression, but it is in fact a very deeply human pursuit with all sorts of ties to human values and desires.
 
+# Youtube channels
+
+- [3b1b](https://www.youtube.com/@3blue1brown) — math visualized to build intuition; soothing voice
+- [CGP Grey](https://www.youtube.com/@CGPGrey/featured) — random tidbits of interesting stuff
+- [ElectroBOOM](https://www.youtube.com/@ElectroBOOM) — _**F U L L L &nbsp;&nbsp;B R I D G E &nbsp;R  &nbsp;E C  &nbsp; T &nbsp;I &nbsp;F &nbsp; I &nbsp; E &nbsp;R RRR!!!!**_
+
+# More content
+
+- [Nicky case](https://ncase.me) — cool indie game dev. 
+[Nutshell](https://ncase.me/nutshell/) (not a game) might be of interest to web developers. 
+[Fun game about news cycle for everyone else](https://ncase.itch.io/wbwwb)
+- [Shrib.com](https://shrib.com) — quick, anonymous note-sharing
+- [ProtectedText.com](https://www.protectedtext.com) — quick, anonymous, _encrypted_ note-sharing
+- [radio.garden](http://radio.garden/) — listen to any radio, anywhere, from your browser
+
 
 [^1]: to be honest, notion is a more beginner-friendly alternative and probably better suited to you. I've used Notion extensively as well, and it's still definitely a very powerful tool for organization.
 [^actually...]: for some unknown reason, firefox refuses to be tiled on launch and requires me clicking on it in the dock to fully open. but with that one exception things are good. actually another pain is dealing with long config windows that shouldn't be tiled, but there is always a bind to convert them back to a floating window.
-[^who?]: if you are unaware, he co-founded the YCombinator, which is a start-up incubator which funded things like Airbnb. 
+[^who?]: if you are unaware, he co-founded the [YCombinator](https://www.ycombinator.com), which is a start-up incubator that funded things like Airbnb. 
