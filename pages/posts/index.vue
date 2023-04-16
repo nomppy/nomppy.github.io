@@ -2,6 +2,7 @@
   <div class="center-container post-categories nuxt-content">
     <!-- create a section for each category-->
     <section 
+    :style="'grid-row: span ' + (1+posts.length)"
     class="post-category"
     v-for="(posts, name) in grouped" :key="name">
       <h2 class="category-name">{{ name }}</h2>
@@ -63,7 +64,7 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<!-- <style lang='scss' scoped>
 .post-category {
   margin-top: 2em;
   margin-bottom: 3em;
@@ -101,7 +102,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2em;
-    grid-row-gap: 3em;
+    grid-row-gap: 2em;
     padding-top: 2em;
 
     .post-category {
@@ -124,4 +125,4 @@ a {
     }
   }
 }
-</style>
+</style> -->

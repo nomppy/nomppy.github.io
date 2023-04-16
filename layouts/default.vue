@@ -5,9 +5,6 @@
   </div>
 </template>
 
-<script>
-</script>
-
 <style src="~/assets/styles/avenir-white.css" />
 <style lang="scss">
 :root {
@@ -330,6 +327,69 @@ button:active {
   .hover-footnote {
     left: unset;
     right: 1em;
+  }
+}
+
+// === POSTS AND DRAFTS===
+
+.post-category {
+  margin-top: 2em;
+  margin-bottom: 3em;
+
+  .category-items {
+    margin: 1em 0em 0 0;
+    padding: 0 0 0 0;
+    list-style: none;
+  }
+
+  .category-name {
+    margin: 0;
+    font-size: 1.1em;
+    font-variant: small-caps;
+    text-transform: capitalize;
+  }
+  
+  .preview-description {
+    font-size: 0.75em;
+    line-height: 1em;
+    color: var(--tertiary-text-color);
+  }
+}
+
+a {
+  color: var(--link-color);
+
+  &:hover, &:visited, &:active {
+    color: var(--link-hover-color);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .post-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    padding-top: 2em;
+
+    .post-category {
+      margin: 0;
+    }
+  }
+
+  @media only screen and (max-width: 1040px) {
+    .post-categories {
+      grid-template-columns: 1fr;
+    }
+  
+    .post-category > ul {
+      column-count: 2;
+      column-gap: 3em;
+
+      li {
+        break-inside: avoid;
+      }
+    }
   }
 }
 </style>
