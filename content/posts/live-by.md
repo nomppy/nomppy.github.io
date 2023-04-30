@@ -13,7 +13,7 @@ This post is sort of loosely organized like this:
 3. Other stuff like music, poems, and books
 4. Probably only [(2)](#naps) will be useful to you
 
-_I will definitely update this every now and then as I come across new stuff._
+_I will definitely update this every now and then as I come across new stuff, so check back later!_
 
 
 # [Obsidian](https://obsidian.md)
@@ -39,7 +39,6 @@ Tell _me_ if you become such enlightenment.
 # Yabai / skhd 
 
 [Yabai](https://github.com/koekeishiya/yabai) is a tiling window manager for mac. 
-
 
 Macs don't ship with a lot of customizability, but with yabai, your fingers never have to leave the keyboard[^actually...].
 
@@ -93,6 +92,19 @@ _Ack-_ what was that word for "strong hatred" that ends with "ma"?
 # Z-lib
 🏴‍☠️📚: Since the original domain went down, you now need to use [TOR browser](https://www.torproject.org) to access its `.onion` domain (I won't tell you how to do this, but you can look it up).
 <small class='whisper'> (you also would need to create an account, but then you get _all_ of the books) </small>
+
+# Writing 
+_Clearly_, I like writing. 
+But it doesn't often come up _why_ I like it so much, or why I make them public for everyone to see.
+
+It boils down to things:
+1. Writing helps me understand my own thinking. Talked about a lot on the internet and by writing teachers, writing helps you think better, and it's as simple as that.
+2. Writing is the act of shouting "Are you guys seeing this?" about the kind of stuff that would be awkward to bring up normally. 
+When you write, you say, "Am I the only one who feels this way?", and sometimes...
+3. It could even help someone else.
+After I posted my blog on [MSU's shooting](/posts/msu) and shared it to the university snap story, a horde of people who I didn't know at all messaged me saying its helped them in one way or another.
+If just one person resonates with what I say, or otherwise got something genuinely useful out of it (even if it is just learning from my mistakes) — if it helps even one person — then it was a worthwhile pursuit.
+This is also true of this post, which I'm writing in the hopes that someone else might come by and find it helpful.
 
 # Blogs 
 

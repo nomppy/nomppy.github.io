@@ -7,7 +7,7 @@ confidence: 0
 start: 2022-06-04
 end: 2022-09-22
 ---
-*A reminder that I no longer stand by this poem and only keep it up for posterity.*
+*A reminder that I don't like this poem and only keep it up for posterity.*
 
 ### How A Soul Is Made
 

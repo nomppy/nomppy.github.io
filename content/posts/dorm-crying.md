@@ -1,6 +1,6 @@
 ---
-title: there is no dignified way to cry in a college dorm
-description: sometimes we all need a good cry
+title: There is no dignified way to cry in a college dorm
+description: sometimes we all need a good cry, sometimes we can't get one
 category: poetry
 start: 2022-11-04
 end: 2022-11-04
@@ -24,6 +24,6 @@ have to pick between crying
 inside, or crying outside.             
                                       
 I once saw a man hunched over,         
-scantly 2 feet off of a forest trail,  
-sobbing into his cupped hands, face hidden.  
+2 feet off of a scanty forest trail, sobbing  
+into his cupped hands, face hidden.  
 What I'd give to trade spots with him. 

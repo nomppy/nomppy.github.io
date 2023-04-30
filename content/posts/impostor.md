@@ -8,7 +8,7 @@ end: 2023-04-03
 
 # 1
 my backpack felt extra heavy one day, so i opened my bag to investigate the cause for the heaviness.
-maybe it was meant to signal physical exhaustion or emotional baggage (can't we start calling that "griefcase"?), maybe the weight of decisions about what i will do in the summer or where i will attend school in the fall, or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
+maybe it was meant to signal physical exhaustion or emotional baggage[^griefcase], maybe the weight of decisions about what i will do in the summer or where i will attend school in the fall, or something else more dire, like a burning desire to be done with all the things you never wanted to start in the first place.
 
 a few minutes later, i hopped on a zoom meeting with my mentors on a research project, but as i stared at my macbook's LCD screen and it stared back, i felt suddenly and inexplicably overwhelmed.
 overwhelmed with how much i have to do, and how truly _Bored_ i felt.
@@ -34,11 +34,14 @@ that being said, i think writing something melancholic and sad and depressing an
 and personally, i think those are better ones to read, and write. but that won't the case here.
 
 # 3
-i woke up before the sun did and took the car out for a drive on empty roads, in the crescent moon-lit hours before dawn. 
-the only sound i hear is of my tires splashing through tiny ponds accumulated through the midnight rain, and the light only of the glimmer as my headlights sweep over wet asphalt. 
+over winter break, i woke up before the sun did and took the car out for a drive, in the crescent moon-lit hours before dawn.
+the roads were completely empty, and
+the only sound i could hear is that of my tires splashing through tiny ponds accumulated through the midnight drizzle,
+and the light only of the shimmer as my headlights swept over wet asphalt. 
 
 how unusual it is, to be awake at this hour while everyone else sleeps. 
 it comes with a solemn sense of responsibility, like that of a lamplighter, standing watch against the darkness.
+
 i have always liked the winter and the night.
 
 my eye passes over the pools of rain, seeing something different in each one.
@@ -226,6 +229,7 @@ i am of course assuaging my own worries as much as i want to convince you of the
 but one thing is certain — struggle builds resilience, and persisting to the end builds confidence.
 if we shift our focus from trying to quantify talent, but rather personal virtues, the fog lifts and everything doesn't seem so bleak anymore. 
 
+[^griefcase]: I once saw a tumblr post lamenting that emotional baggage isn't just called griefcase, and I must agree with their grievance and demand griefcase be used to describe cases of grief. 
 [^1]: if you or a loved one wants to start writing, all you have to do is to get sad and then think deeply about your experience to see if there's anything valuable or interest you can extract from it. it's not like sadness is in short supply.
 [^2]: some people seem to have a much better idea of where they're at relative to their past. if you're one of these supernatural people, i envy you and please tell me how you do it.
 [^3]: for all of high school, i slept around 8-9 hours a day, but i'm gradually trying to reduce my sleep hours to squeeze more time out for work. frankly, if i hadn't slept less this week, i wouldn't have gotten everything done.
