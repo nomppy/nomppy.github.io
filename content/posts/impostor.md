@@ -42,8 +42,6 @@ and the light only of the shimmer as my headlights swept over wet asphalt.
 how unusual it is, to be awake at this hour while everyone else sleeps. 
 it comes with a solemn sense of responsibility, like that of a lamplighter, standing watch against the darkness.
 
-i have always liked the winter and the night.
-
 my eye passes over the pools of rain, seeing something different in each one.
 in one i see that i used to be stupidly romantic. 
 it seems like an eternity since the tumultuous years of my high school, and i can hardly recognize myself in the reflection.
@@ -61,7 +59,7 @@ startled, i pulled away and ahead of the wobbly car, but by then the puddles had
 
 # 4
 one theory of personality psychology divides personality in three broad categories.
-at the bottom are traits, like conscientiousness, agreeabless, etc. which are behaviorial tendencies.
+at the bottom are traits, like conscientiousness, agreeabless, etc. which are behavioral tendencies.
 the next level up are values and motivations. 
 whereas traits describe how someone behaves, motivations describe _why_. 
 and finally, there is the narrative identity.
@@ -200,7 +198,7 @@ some of these paths are treacherous hikes through grad school, then academia, fi
 some are happy, stress-free, a life dedicated to joy instead of "impact".
 
 when i picture these worlds, it is always through someone else's eyes that i look and judge. 
-"here, this guy isn't isn't doing anything useful with his life. he's not good at anything."
+"here, this guy isn't doing anything useful with his life. he's not good at anything."
 or, "who let him become a professor? he's making such little progress on a problem someone else could probably solve easily."
 
 this is the crux of the matter: i'm okay with living a normal, peaceful life, but i'm afraid of being seen as mediocre, and giving up my identity(ies).

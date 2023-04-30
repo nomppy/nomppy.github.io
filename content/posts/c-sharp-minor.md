@@ -54,7 +54,7 @@ rach had _enormous_ hands which could cleanly span a **13th**, or from a C to th
 after approximately 70 seconds of abusing the piano, the abuse ends as quickly as it had started. 
 all the rage dissipated, serenity is restored, the terror and tension fades into nothing (this is where he died and woke up, presumably).
 
-But That, to me, is perhaps the scariest form of anger. 
+But _that_, to me, is perhaps the scariest form of anger. 
 Calm, exponential brewing until it blows up in your face, and then dies away as quickly as it'd came.
 
 when i play this piece, however, i always get the feeling that the resolution is not a result of satisfaction, but one of powerlessness. 
