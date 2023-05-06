@@ -6,6 +6,9 @@
     <li>
       <nuxt-link to="/posts">posts</nuxt-link>
     </li>
+    <li>
+      <nuxt-link to="/newsletters">newsletters</nuxt-link>
+    </li>
 
     <color-mode-switch class="color-mode-switch"/>
   </ul>

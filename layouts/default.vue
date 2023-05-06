@@ -129,14 +129,17 @@ button:active {
   margin-bottom: 20px;
 }
 
-.nuxt-content {
+.nuxt-content-container {
+    padding-bottom: 4em;
     z-index: 2;
+    position: relative;
+}
+
+.nuxt-content {
     color: var(--primary-text-color);
     font-family: var(--serif-font-stack);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    padding-bottom: 4em;
 
     a {
       color: var(--link-color);
