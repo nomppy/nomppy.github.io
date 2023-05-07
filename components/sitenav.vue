@@ -4,10 +4,10 @@
       <nuxt-link to="/">welcome</nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/posts">posts</nuxt-link>
+      <nuxt-link to="/posts/">posts</nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/newsletters">newsletters</nuxt-link>
+      <nuxt-link to="/newsletters/">newsletters</nuxt-link>
     </li>
 
     <color-mode-switch class="color-mode-switch"/>
@@ -55,7 +55,7 @@
       color: var(--accent-text-color) !important; // overrides above
     }
 
-    a[href='/newsletters'] {
+    a[href='/newsletters/'] {
       font-size: 0.8em;
     }
   }
