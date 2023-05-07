@@ -11,7 +11,7 @@
                 <!-- 227649005 -->
                 <!-- 1045781291 -->
                 <h1>Join my mailing list.</h1><br>
-                <p> (They're infrequent; unadd yourself anytime). </p>
+                <p> (you can unadd yourself anytime) </p>
                 <label for="entry.1045781291"></label>
                 <input type="text" placeholder="Email" name="entry.1045781291" id="entry.1045781291">
                 <!-- <label for="entry.881603344"></label> -->
@@ -21,57 +21,22 @@
         </form>
 
         <br>
-        <h2>
-          Past newsletters
-        </h2>
 
-        <div 
-        class="post-category"
-        v-for="n in posts" :key="n.slug">
-          <nuxt-content 
-          style="padding-bottom: 0"
-          :document="n" />
-        </div>
+        <nuxt-content 
+        class="full-post"
+        style="padding-bottom: 0"
+        v-for="n in posts" :key="n.slug"
+        :document="n" />
 
-        <!-- <section 
-        :style="'grid-row: span ' + (1+posts.length)"
-        class="post-category"
-        v-for="(n, name) in posts" :key="name">
-          <h2 class="category-name">{{ name }}</h2>
-          <ul class="category-items">
-            <li v-for="post in posts" :key="post.slug">
-              <nuxt-link :to="'/posts/' + post.slug">{{ post.title }}</nuxt-link>
-              <p class="preview-description">
-                {{ post.description }}
-              </p>
-            </li>
-          </ul>
-        </section>  -->
     </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $content }) {
-
     let posts = await $content('newsletters')
-      // .only(['title', 'description', 'slug', 'category', 'updatedAt', 'end'])
       .sortBy('slug', 'desc')
       .fetch();
-    
- 
-    // sort posts in place in descending order by end, placing posts with no end at the front
-    // posts.sort((a, b) => {
-    //   if (!a.end && !b.end) {
-    //     return new Date(b.updatedAt) - new Date(a.updatedAt);
-    //   } else if (!a.end) {
-    //     return -1;
-    //   } else if (!b.end) {
-    //     return 1;
-    //   } else {
-    //     return new Date(b.end) - new Date(a.end);
-    //   }
-    // });
 
     return { posts };
   },
@@ -82,6 +47,11 @@ export default {
         { hid: 'og:title', property: 'og:title', content: 'Newsletters' },
       ],
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      window.Nutshell.start();
+    });
   },
 };
 </script>

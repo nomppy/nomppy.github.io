@@ -70,9 +70,6 @@ export default {
         { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.post.description }
       ],
-      link: [
-        { rel: 'stylesheet', href: '~/assets/styles/avenir-white.css' },
-      ],
     };
   },
   data() {
@@ -103,6 +100,12 @@ export default {
       const id = $(element).attr('id');
       const content = $(element).html();
       this.footnotes[id] = content;
+    }); 
+    
+    setTimeout(() => {
+      window.Nutshell.start(
+        document.getElementsByClassName('nuxt-content')[0],
+      );
     });
   },
   beforeDestroy () {

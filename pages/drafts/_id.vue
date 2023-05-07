@@ -44,12 +44,6 @@
   </div>
 </template>
 
-<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
-        crossorigin="anonymous">
-</script>
-<script src="jquery-inline-footnotes.js"></script> -->
-
 <script>
 import $ from 'jquery';
 
@@ -75,9 +69,6 @@ export default {
         // Twitter Card
         { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.post.description }
-      ],
-      link: [
-        { rel: 'stylesheet', href: '~/assets/styles/avenir-white.css' },
       ],
     };
   },
@@ -108,6 +99,12 @@ export default {
       const id = $(element).attr('id');
       const content = $(element).html();
       this.footnotes[id] = content;
+    });
+
+    setTimeout(() => {
+      window.Nutshell.start(
+        document.getElementsByClassName('nuxt-content')[0],
+      );
     });
   },
   beforeDestroy () {

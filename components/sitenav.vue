@@ -54,7 +54,10 @@
     a.nuxt-link-exact-active {
       color: var(--accent-text-color) !important; // overrides above
     }
-  }
 
+    a[href='/newsletters'] {
+      font-size: 0.8em;
+    }
+  }
 }
 </style>
