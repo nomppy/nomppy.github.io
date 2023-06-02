@@ -6,19 +6,19 @@ start: 2022-11-06
 end: 2022-12-13
 ---
 
-Dear Milfred, how is school? Will you be back home for Thanksgiving? It's been 5 months since I last saw you. I must be getting forgetful, because today I got up early and filled up the rosecan to water your Astrophyum ornatum, but I couldn't seem to find where I left it. A nice lady at the home later told me that I'd just watered it yesterday anyway, so not to worry.  
+Dear Milfred, how is school? Will you be back home for Thanksgiving? It's been 5 months since I last saw you. I must be getting old, because today I got up early and filled up the rosecan to water your _Astrophyum ornatum_, but I couldn't seem to find where I left it. A nice lady at the home later told me that I'd just watered it yesterday anyway, so not to worry.  
 _Sent 11/04/2013._
 
 Dear Milfred, how is school going? Have you applied for that prestigious scholarship? I have begun preparing a beautiful Thanksgiving feast here, and the staff are very keen on helping me with the knife. Will you come home this year? Your plants are looking as vibrant and healthy as the day you left for school.  
 _Sent 11/02/2012._
 
-Dear Milfred, please will you come home for Thanksgiving this year. It's been over 5 months since you've been gone.  
+Dear Milfred, please will you come home for Thanksgiving this year. It's been over 5 months.  
 _Sent 11/11/2011._
 
-Dear Milfred, I have moved into a very nice place with lots of other people my age. At first, they did not let me bring your plants here, but after I explained your situation to them they told me to not worry and that they would take care of everything for me.  
+Dear Milfred, I have moved into a very nice place with lots of other people my age. At first, they did not let me bring your plants here, but after I explained how important they were to you, they told me to not worry and that they would take care of everything.  
 _Sent 10/20/2010._
 
-Dear Milfred, will you come home soon? Today I saw on the TV an advertisement for a small college. They were bragging about a $60,000 starting salary for graduates. Do you think that's high?  
+Dear Milfred, will you come home soon? Today I saw on the TV an advertisement for a small college. They were bragging about a $60,000 starting salary for graduates. I couldn't help but laugh — do you think that's high?  
 _Sent 9/17/2009._
 
 Dear Milfred, I hope you are well, it's been nearly four months since you've been home. Don't worry about your plants, I am still taking care of them.  
