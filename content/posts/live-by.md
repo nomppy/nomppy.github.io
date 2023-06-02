@@ -136,9 +136,10 @@ Now it's loosely linked to my identity and holds significance in my life.
 
 Plugs (my playlists that you should go like and also follow me on spotify because i need clout):
 
-- [dancing down the sidewalk](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=e0f52fa686f54dd5) (up-beat, mood amplifier; it is very good)
-- [moppy](https://open.spotify.com/playlist/6wNJphAVy0JMnc01R4huU1?si=d9e08470e34846de); not what it sounds like, more sentimental than mopey.
-- [sad karaoke](https://open.spotify.com/playlist/2PiczkgGSNVrgU47dDLaTW?si=5205a36262124e8a) (exactly what it sounds like)
+- [Perform Ejection Manoeuvre](https://open.spotify.com/playlist/0JKgiTGaaXoUpfLvEPd7YM?si=e0f52fa686f54dd5) (up-beat, mood amplifier)
+- [sneaky in c# minor](https://open.spotify.com/playlist/5Pb8bbphE6qBmwzLBCMKxw?si=2a56169b9c804211) (not actually all c# minor)
+- [moppy](https://open.spotify.com/playlist/6wNJphAVy0JMnc01R4huU1?si=d9e08470e34846de) (sentimental songs)
+- [afternoon drizzle w/ no clouds](https://open.spotify.com/playlist/31x7zX0tMb33ImS2FQloMy?si=8e06db6637514be3) (aesthetic chill)
 
 I generally go over my playlists every other month or so to update them (remove vestige songs, make more categories, etc.).
 I think it's interesting how different songs represent different moods, which evolves over time.
@@ -183,6 +184,13 @@ There is very little math involved here (but fun puzzles!), and it's very welcom
 
 The practice of mathematics (and of the mathematical sciences) can feel intimidating to the point of elitism. 
 I also had that impression, but it is in fact a very deeply human pursuit with all sorts of ties to human values and desires.
+
+### [Seveneves](https://en.wikipedia.org/wiki/Seveneves) by Neal Stephenson
+
+This is an incredible and realistic piece of SF (that's science fiction for all you non-nerds).
+Rigorously researched, Stephenson creates an immersive story where the moon mysteriously explodes and humanity has to figure out a way to survive the consequences.
+They take to orbit. They go underground. 
+Visceral imagery and technological realism that are feasible _right now_ are what makes this book so great. 
 
 # Youtube channels
 

@@ -20,7 +20,7 @@
         <span class="letter">n</span>
       </div>
 
-      <div class="headline-clip">
+      <!-- <div class="headline-clip">
         <span
           class="headline-wrapper"
           :style="{width: wrapWidth+'px'}"
@@ -41,7 +41,7 @@
         <span class="letter">s</span>
         <span class="letter">u</span>
         <span class="letter">n</span>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
