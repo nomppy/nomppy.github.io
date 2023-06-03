@@ -192,6 +192,17 @@ Rigorously researched, Stephenson creates an immersive story where the moon myst
 They take to orbit. They go underground. 
 Visceral imagery and technological realism that are feasible _right now_ are what makes this book so great. 
 
+# Shows
+
+### Bojack Horseman
+Amazing show. 
+Dark humor, themes of mental illness, coping, philosophical questions of life. 
+(For Breaking Bad fans, Todd is voiced by Aaron Paul)
+
+### Community
+Super well thought out plotline with many running gags. 
+Lots of big-name [cast members](https://www.imdb.com/title/tt1439629/). 
+
 # Youtube channels
 
 - [3b1b](https://www.youtube.com/@3blue1brown) — math visualized to build intuition; soothing voice

@@ -16,7 +16,8 @@ I'm usually happy to talk about anything and I will try to get back to you as so
 Other profiles: 
 [Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066),
 [LinkedIn](https://www.linkedin.com/in/kenneth-sun-561b42193/),
-[LibraryThing](https://www.librarything.com/profile/kennethsibyl).
+[LibraryThing](https://www.librarything.com/profile/kennethsibyl), 
+[Github](https://github.com/spesthecat).
 
 ### Site
 This site is written using [Nuxt.js](https://nuxtjs.org/) and [Jekyll](https://jekyllrb.com/). 
