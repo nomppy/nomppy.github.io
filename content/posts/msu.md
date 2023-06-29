@@ -172,14 +172,10 @@ at times like these, it can be easy to feel disconnected to other peoples' perce
 wednesday was unbelievably windy. and thursday, earlier today, a peaceful snowfall covered the university with a decently-thick blanket of snow.
 with everyone gone and not enough hot water running through the pipes, the sidewalk heating system did not melt off the snow like it usually does. 
 
-as i walked home from my friend's dorm tonight, my boot's soft crunch on the new snow reminded me how happy i was, dancing down the sidewalk during a blizzard back in november, excited about the snow.
+when i walked home from my friend's dorm tonight, my boot's soft crunch on the new snow reminded me how happy i was, dancing down the sidewalk during a blizzard back in november, excited about the snow.
 even now, i felt an urge to be happy skidding around on the sidewalk, but the locked doors of a building i tried to pass through reminded me that we are still afraid, and i looked around to make sure no one was around.
 
 <span class='hl'>_there is no one. i live in a ghost town now._</span>
-
-my steps were the only ones on campus, and my breath the only ones in the air. 
-as i became certain that no one was around me, i let my mind sink in to the snow.
-with each step, i became more and more sure that careless joy will return to me someday, when all of this is over.
 
 # the week after
 
@@ -257,9 +253,6 @@ I can think of at least a few actionable things:
 In a couple decades, the youth of today will be the ones in charge of the country. So it seems like, at least on the surface, that this nonsense will end eventually.
 
 If you are part of a project that I could help with, feel free to get in touch and I'd be glad to assist where I can.
-
-
-p.s.: I write regularly (poems and blogs mostly, but also some other stuff) and post them to this website (less regularly). If you enjoy my writing, consider joining my mailing list by shooting me an email. I hope to have a better method for this soon but this is the way for now.
 
 
 [^1]: It's kind of fucked that I'm so insensitized to news about potential shootings, but every two weeks or so we get an alert that there is a potential shooter nearby, so we've learned to ignore them. 

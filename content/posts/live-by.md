@@ -18,18 +18,16 @@ _I will definitely update this every now and then as I come across new stuff, so
 
 # [Obsidian](https://obsidian.md)
 
-Like [notion](https://notion.so)[^1], but better. 
+Like [notion](https://notion.so)[^1], but better, more customizable, and more powerful.
 
-Very useful if you can't remember something for more than half an hour. 
+It's meant to function as a "second brain" for you to dump information that is not necessary to store in memory, but which you want quick reference to. The obsidian discord server is chock-full of phd students, researchers, writers, etc. 
+
+Personally, I use it to hold class notes, save articles to read later, notes on papers and books. A list of books to read, class plans for the future, notes about people, document projects. You can do a lot of things with Obsidian, and the format (for those who care) is just Markdown, stored locally on your machine, so no one else has access to it and you don't need Obsidian to edit it.
+for more than half an hour. 
  
 <article-image src='obsidian-tasks.png' alt='a screenshot of a todo list set up in Obsidian. there are too many tasks'>
 </article-image>
 <div class='img-caption'> what is time </div>
-
-It's also very good for notes.
-
-<article-image src='obsidian-notes.png' alt='screenshot of a note file in obsidian about a math theorem'> </article-image>
-<div class='img-caption'> it is much organize. </div>
 
 # Google calendar
 
@@ -52,7 +50,7 @@ For instance `shift - c` opens google calendar.
 
 <article-image src='yabai.png' alt='screenshot of semi-transparent doom emacs'>
 </article-image>
-<div class='img-caption'> **D O O M**... DON'T PANIC </div>
+<div class='img-caption'> **D O O M**... DON'T PANIC // IT SAYS EMACS BUT IT'S VIM BINDINGS SO DON'T PANIC </div>
 
 I imagine there's a lot of potential for skhd for all kinds of keyboard macro shenanigans, my personal configuration files for these (along with other stuff) is github ([dotfiles repo](https://github.com/spesthecat/dotfiles)).
 
@@ -196,7 +194,7 @@ Visceral imagery and technological realism that are feasible _right now_ are wha
 
 ### Bojack Horseman
 Amazing show. 
-Dark humor, themes of mental illness, coping, philosophical questions of life. 
+I love this show because it weaves together existential philosophy and real, current social issues with absurd plotlines and light comedy. 
 (For Breaking Bad fans, Todd is voiced by Aaron Paul)
 
 ### Community
