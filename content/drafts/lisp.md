@@ -79,14 +79,11 @@ And if you don't, then you probably just like some property associated with it, 
 
 -which is fine- I mean, I used to judge people for burdening themselves with things they had no genuine interest in ([:alright, I still do](#still-do)), 
 but I get where they're coming from.
-It really is harder to be happy if you don't have money. 
-But to like a thing purely for the thing itself, even the not-so-sexy parts, is to me one of the greatest pleasures in life.
 
 I don't think you can really grow to like something.
 See it in a different light and thus value it, sure, but then you're liking it for a different reason.
 For instance, A CS student who hates coding is probably not going to enjoy it years down the line, but they might like the organizational aspect of project management. 
 In the same vein, if I ever started liking finance and economics, it would not be because I want to be as rich as possible, but because it's a big, complicated game, and I like playing games. 
-
 
 
 
