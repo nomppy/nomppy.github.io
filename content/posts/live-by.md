@@ -2,8 +2,9 @@
 title: Things I live by
 description: Tools, ideas, tricks, books, etc. that I could not live without, in no particular order.
 category: blogs
-start: 2022-03-29
-status: in-progress
+start: 2023-03-29
+end: 2023-06-20
+status: finished
 ---
 
 This post is sort of loosely organized like this:

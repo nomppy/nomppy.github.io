@@ -1,7 +1,8 @@
 ---
 title: Lisp, and the sexy parts of life
 description: //These are your grandfather's parentheses//
-category: blog
+category: blogs
+end: 2023-07-14
 ---
 
 _This page has [:nutshells](https://ncase.me/nutshell/#WhatIsNutshell)! Click on links prefixed with `:` to expand them._
@@ -54,6 +55,7 @@ The mound of research writers do before and during a piece.
 So how can you tell if you really like something, or just the idea of it?
 
 _Just try it,_ people less cynical than me about the world would say. 
+
 I'm a big advocate for risk-taking, especially the kind that enables you to learn more about what you like and what you don't like. 
 But you can't try everything.
 These risks come attached with opportunity costs, and college, the place where you're supposed to be trying out things, doesn't last long enough for someone to meaningfully explore all their choices without getting too far behind.
@@ -83,7 +85,7 @@ but I get where they're coming from.
 I don't think you can really grow to like something.
 See it in a different light and thus value it, sure, but then you're liking it for a different reason.
 For instance, A CS student who hates coding is probably not going to enjoy it years down the line, but they might like the organizational aspect of project management. 
-In the same vein, if I ever started liking finance and economics, it would not be because I want to be as rich as possible, but because it's a big, complicated game, and I like playing games. 
+In the same vein, if I ever started liking finance and economics, it would not be because I want to be as rich as possible, but because I'd see it as some sort of big, complicated game, and I like playing games. 
 
 
 
