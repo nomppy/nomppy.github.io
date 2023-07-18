@@ -10,7 +10,7 @@
             <div class="fade-out" id="email-entry">
                 <!-- 227649005 -->
                 <!-- 1045781291 -->
-                <h1>Join my mailing list.</h1><br>
+                <h1>get emails from me!</h1><br>
                 <p> (you can unadd yourself anytime) </p>
                 <label for="entry.1045781291"></label>
                 <input type="text" placeholder="Email" name="entry.1045781291" id="entry.1045781291">
