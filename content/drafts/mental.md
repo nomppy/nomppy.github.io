@@ -1,3 +1,7 @@
+---
+title: sick of mental health
+---
+
 Social media has been blamed to death for our generations' problems, but I'd like to add just one more. 
 
 Some time in the past few years it became fashionable to have mental health awareness.
