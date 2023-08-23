@@ -67,8 +67,7 @@ export default {
   // color mode configuration
   // https://color-mode.nuxtjs.org/
   colorMode: {
-    preference: 'system',
-    fallback: 'dark',
+    preference: 'light',
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
