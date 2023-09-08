@@ -1,6 +1,6 @@
 ---
 title: Being Bored
-description: & what to do about it
+description: "& what to do about it"
 category: blogs
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: To Mom and Dad
 category: letters
-end: 2023-07-17
+end: 2023-09-18
 ---
 
 > ### [This Be The Verse](https://www.poetryfoundation.org/poems/48419/this-be-the-verse)  
@@ -23,41 +23,6 @@ end: 2023-07-17
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And don’t have any kids yourself.
 
 
-Sometimes I dislike someone but don't venture to explain why.
-It is because I know too intimately where that icky stuff comes from. 
-And I am afraid it will cover me once again.
-
----
-
-Dear Mom,
-
-You see, strictly logically speaking, I know that I am the center of your world. 
-I sense that hidden amidst all the shaming, and the questioning, and pissing me off, there is — somehow, somewhere, inexplicably — love.
-But I have my own world to attend to, a world disjoint from yours, and in my hubris I dare proclaim myself the sole expert on this subject.
-Yet always, _always_, the underlying implication that I cannot be entrusted to myself. 
-
-"You grow up to be the person you would've felt safe around as a child." — I read once, while scrolling on instagram. 
-If I stare at this long enough, tears start to collect over my eyes.
-
-If I stared at you long enough, I start to cry.
-
-When I look in the mirror, it's me, but it's you. 
-Parts of you, staring back at me, crying, laughing, sneering. 
-I look like you, they say, "Children grow up to be like their parents."
-
-_God... I hope not. I'd hoped to be the person I would've felt safe with as a child._
-
-I get it. You're the big donor to the campaign of my life. 
-Yes, you can choose to meddle in my elections. And yes, there is little I can do about it. 
-Yes, you can kick me, threaten me, and guilt me, and yes, I will probably, eventually, unwillingly submit. 
-But I think I am not alone in wishing that you took some time to ask more questions. 
-Not in the quietly self-assuming way that teachers ask questions, but like a visiting scholar touring some strange lab for the first time.
-Ask me questions that I'd be proud to answer.
-
-Ask me, and I'll tell you everything.
-
----
-
 Sometimes you want someone to know that you became you in spite of them.
 Like, "Look, you had no effect over me. Your influence was nothing to me."
 This is, however, impossible when it comes to parents.
@@ -69,7 +34,8 @@ My friend Lia sent me this today:
 > the nod that says 'i knew you, but i don't think i need to anymore'
 
 Maybe our lives would be sweeter if we imagined our relationship with our parents as a sitcom. 
-It's at least a little bit funny, in the morbid way that the submarine is funny, how the universe insists on having two complete strangers eat food which was cooked on the same stove, in bowls washed by the same hands. 
+
+It's at least a little bit funny, in the morbid way that the titan submarine is funny, how the universe insists on having two complete strangers eat food which was cooked on the same stove, in bowls washed by the same hands. 
 
 ---
 
@@ -116,5 +82,54 @@ _Yes, but how can I tell you? We speak only in metaphors._
 "No, I just dreamed of ice cream."
 
 ---
+
+Sometimes I dislike someone but don't venture to explain why.
+It is because I know too intimately where that icky stuff comes from. 
+And I am afraid that if I think about it too much, talk about it, it would cover me once again.
+
+---
+
+Dear Mom,
+
+You see, strictly logically speaking, I know that I am the center of your world. 
+I sense that hidden amidst all the shaming, and the questioning, and pissing me off, there is — somehow, somewhere, inexplicably — love.
+But I have my own world to attend to, a world disjoint from yours, and in my hubris I dare proclaim myself the sole expert on this subject.
+
+Yet always, _always_, the underlying implication that I cannot be entrusted to myself. 
+
+"You grow up to be the person you would've felt safe around as a child." — I read once, while scrolling on instagram. 
+
+When I look in the mirror, it's me, but it's you. 
+Parts of you, staring back at me, crying, laughing, sneering. 
+I look like you, they say, "Children grow up to be like their parents."
+
+_God... I hope not._
+
+Yet despite my best efforts, I'm never too far away from you. 
+I'm overbearing, just as you are; prideful, confident, indignant when wronged but lack the skills to fix it; liked, but not loved.
+
+I see how you miss me. 
+And I know how much you have done for me.
+
+So then, why don't I feel the same?...
+
+I think I blame you for my faults. 
+And maybe it is your fault (how could it be mine? I was just a child). 
+
+_...\*sigh\*..._
+
+Maybe I'll never forgive you. 
+Maybe if you starting asking me questions without an expectation of what you want the answer to be, I'll forgive you.
+But maybe even if you do that, I still won't. 
+
+It's like there is a wall — no, a canyon — between us. 
+A grand canyon where all my words fall, their meanings warped and lost on the other side.
+And maybe it's neither of our faults.
+The blame seems too heavy for any one person to bear.
+
+How many accountants does it take, to balance the ledger between a mother and her child?
+
+---
+
 
 _Many thanks to Lia and Dustin for draft reading this post._
