@@ -1,3 +1,4 @@
+import getRoutes from './utils/getRoutes';
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target
@@ -102,12 +103,15 @@ export default {
   },
 
   hooks: {
-    'generate:done': (context) => {
-      this.default.sitemap.routes = [...context.generatedRoutes];
-    }
+    //'generate:done': (context) => {
+      //this.default.sitemap.routes = [...context.generatedRoutes];
+    //}
   },
 
   sitemap: {
     hostname: 'http://kennethsun.net',
+    routes() {
+      return getRoutes();
+    }
   },
 };

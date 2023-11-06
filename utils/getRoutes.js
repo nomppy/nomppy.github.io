@@ -1,6 +1,6 @@
 export default async () => {
   const { $content } = require('@nuxt/content');
-  const files = await $content('posts')
+  const files = await $content('posts', { deep: true })
     .only(['path', 'updatedAt'])
     .fetch();
   return files.map((file) => {
