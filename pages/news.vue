@@ -11,7 +11,8 @@
                 <!-- 227649005 -->
                 <!-- 1045781291 -->
                 <h1>get emails from me!</h1><br>
-                <p> (you can unadd yourself anytime) </p>
+                <p>(you can unadd yourself anytime) </p>
+                <p> see past emails below.</p>
                 <label for="entry.1045781291"></label>
                 <input type="text" placeholder="Email" name="entry.1045781291" id="entry.1045781291">
                 <!-- <label for="entry.881603344"></label> -->

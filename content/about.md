@@ -3,10 +3,9 @@
 
 ### Me
 Hello and welcome to my website.
-I primarily study physics and math, though I am also very interested in psychology, sociology, and other random nerdy stuff. 
+I'm a second-year student at UMich, majoring in physics and math with minors in CS and creative writing. 
 
-I enjoy playing piano, coding, messing with computers in general, board games, and I generally enjoy puzzles. 
-Reading and writing are big hobbies of mine, and you can read some of what I write [here](/posts).
+I like poetry, cats, board games/puzzles, pretty shapes, rain, music ([my Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066)). There are some writings at [/posts](/posts), and I also have an author profile on [The Michigan Daily](https://www.michigandaily.com/author/sunken/).
 
 ### Contact
 I offer writing services and tutoring in math, physics, and computer science. 
@@ -14,7 +13,6 @@ Feel free to get in touch through email: <a href="mailto:kennett.sun@gmail.com">
 I'm usually happy to talk about anything and I will try to get back to you as soon as possible.
 
 Other profiles: 
-[Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066),
 [LinkedIn](https://www.linkedin.com/in/kenneth-sun-561b42193/),
 [LibraryThing](https://www.librarything.com/profile/kennethsibyl), 
 [Github](https://github.com/spesthecat).

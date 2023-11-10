@@ -104,7 +104,7 @@ export default {
 
   hooks: {
     //'generate:done': (context) => {
-      //this.default.sitemap.routes = [...context.generatedRoutes];
+    //this.default.sitemap.routes = [...context.generatedRoutes];
     //}
   },
 
