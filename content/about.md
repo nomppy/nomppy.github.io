@@ -15,10 +15,10 @@ I'm usually happy to talk about anything and I will try to get back to you as so
 Other profiles: 
 [LinkedIn](https://www.linkedin.com/in/kenneth-sun-561b42193/),
 [LibraryThing](https://www.librarything.com/profile/kennethsibyl), 
-[Github](https://github.com/spesthecat).
+[Github](https://github.com/nomppy).
 
 ### Site
 This site is written using [Nuxt.js](https://nuxtjs.org/) and [Jekyll](https://jekyllrb.com/). 
 The page is statically hosted with [Github Pages](https://pages.github.com/), and 
-source code for the site can be found on Github ([repo link](https://github.com/spesthecat/spesthecat.github.io)).
+source code for the site can be found on Github ([repo link](https://github.com/nomppy/nomppy.github.io)).
 

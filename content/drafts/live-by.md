@@ -53,7 +53,7 @@ For instance `shift - c` opens google calendar.
 </article-image>
 <div class='img-caption'> **D O O M**... DON'T PANIC // IT SAYS EMACS BUT IT'S VIM BINDINGS SO DON'T PANIC </div>
 
-I imagine there's a lot of potential for skhd for all kinds of keyboard macro shenanigans, my personal configuration files for these (along with other stuff) is github ([dotfiles repo](https://github.com/spesthecat/dotfiles)).
+I imagine there's a lot of potential for skhd for all kinds of keyboard macro shenanigans, my personal configuration files for these (along with other stuff) is github ([dotfiles repo](https://github.com/nomppy/dotfiles)).
 
 # The schedule send feature
 
