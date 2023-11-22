@@ -1,6 +1,6 @@
 ---
-title: c sharp minor
-description: instead of all the things i did not say
+title: C sharp minor
+description: instead of words
 category: blogs
 status: finished
 start: 2023-01-21

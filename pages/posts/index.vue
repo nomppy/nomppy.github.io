@@ -3,7 +3,7 @@
     <p 
     style="grid-column: span 2; font-size: 0.8em;">
       If you're not sure which to read, try
-      <a href='/posts/existence'> Dear existence</a>, or
+      <a href='/posts/c-sharp-minor'> C sharp minor</a>, or
       <a href='/posts/parent'> To Mom and Dad</a>.
     </p>
     <!-- create a section for each category-->
