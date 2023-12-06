@@ -13,7 +13,7 @@ Feel free to get in touch through email: <a href="mailto:kennett.sun@gmail.com">
 I'm usually happy to talk about anything and I will try to get back to you as soon as possible.
 
 Other profiles: 
-[LinkedIn](https://www.linkedin.com/in/kenneth-sun-561b42193/),
+[LinkedIn](https://www.linkedin.com/in/kennethh-sun/),
 [LibraryThing](https://www.librarything.com/profile/kennethsibyl), 
 [Github](https://github.com/nomppy).
 
