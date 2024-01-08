@@ -1,5 +1,5 @@
 ---
-title: Childhood— died
+title: Childhood – died
 description: An obituary to childhood. Contains reference to abuse.
 category: poetry
 status: finished

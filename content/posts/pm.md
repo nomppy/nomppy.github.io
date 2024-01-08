@@ -1,5 +1,5 @@
 ---
-title: When Poetry and Math meet and they get drunk
+title: When Poetry meets Math and they get drunk
 category: blogs
 status: finished
 start: 2023-10-22
@@ -38,11 +38,11 @@ _P(re).S: Mathematics’ name is inspired by [Maryam Mirzakhani](https://en.wiki
 
 **Maryam**: So uh… what do you do?
 
-**Poe**: You know that Netflix show, “The Midnight Gospel?” 
+**Poe**: You know that Netflix show, “The Midnight Gospel”?
 
-**Maryam**: To be honest … no. I don’t really watch TV, or have one. 
+**Maryam**: To be honest… no. I don’t really watch TV, or have one. 
 
-**Poe**: Okay … weird. Well, in the last episode, they talk about meditation as a way to “step out of yourself.” It’s this really beautiful idea of taking a pause on daily life, like entering spectator mode in a video game.
+**Poe**: Okay… weird. Well, in the last episode, they talk about meditation as a way to “step out of yourself.” It’s this really beautiful idea of taking a pause on daily life, like entering spectator mode in a video game.
 
 **Poe**: All of a sudden, you realize that things like grades aren’t _really_ important, but reading, writing, seeing friends — those things are. Poetry is like that. 
 
@@ -64,13 +64,15 @@ _P(re).S: Mathematics’ name is inspired by [Maryam Mirzakhani](https://en.wiki
 </p>
 <br/>
 
-<p style="text-align: justify; width: 18em; margin: auto">
+<div style='overflow-x: scroll;'>
+<p style="text-align: justify; width:16em; margin: auto;">
 If you cut out a rectangle of a perfectly blue sky, no clouds, no wind, no birds, frame it with a blue frame, place it faceup on the floor of an empty museum with an open atrium to the sky, that is grief. 	         
 </p>
 
 <p style="text-align: center">
 — Victoria Chang, <em>Obit</em>.
 </p>
+</div>
 
 <br/>
 
@@ -80,16 +82,18 @@ If you cut out a rectangle of a perfectly blue sky, no clouds, no wind, no birds
 
 <br/>
 
-<p style="margin: 0 6em; white-space: nowrap">
+<div style="overflow-x: scroll;">
+<div style="display: block; white-space: nowrap">
 Someone has to leave first. This is a very old story.
-</p>
-<p style="margin: 0 6em; white-space: nowrap">
+
 There is no other version of this story.
-</p>
+</div>
 
 <p style="text-align: center">
 — Richard Siken, <em>War of the Foxes</em></p>
 </p>
+</div>
+</div>
 
 <br/>
 
@@ -215,7 +219,11 @@ There is no other version of this story.
 
 **Maryam**: It’s very unintuitive, and the proof is quite technical. But actually this is the same theorem which guarantees that when you’re trying to find your way around a large shopping mall and come across a map, that there is a “You are here” label!
 
-_*Poe surprised face.*_
+<p style='text-align: center'>
+<em>
+*Poe surprised face.*
+</em>
+</p>
 
 **Maryam**: In both cases there is a continuous function from an object to itself (the map is just a shrunken down version), and the theorem states that at least one point is fixed by this function. For the wine, that means at least one of the liquid particles is in the same place it was before. For the map, that means there’s at least one point on the map such that the coordinates it marks are exactly its own coordinates. 
 
