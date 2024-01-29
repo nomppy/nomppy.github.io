@@ -152,6 +152,44 @@ button:active {
     ol, ul {
       margin-bottom: 0.75em;
     }
+
+    ol {
+        list-style-type: roman;
+        ol {
+          list-style-type: lower-alpha;
+          ol {
+            list-style-type: lower-roman;
+
+            // li::before {
+            //     list-style-type: lower-roman;
+            //     content: counter(level-1)') ';
+            //     counter-increment: level-1;
+            // }
+          }
+        }
+    }
+
+
+    // ol > li {
+    //     padding-left: 1.0em;
+    //     position: relative;
+    // }
+
+    // ol > ol > li {
+    //     padding-left: 2.0em;
+    //     position: relative;
+    // }
+    // ol > ol > ol > li {
+    //     padding-left: 3.0em;
+    //     position: relative;
+    // }
+    // ol li:before { 
+    //     counter-increment: level-1; 
+    //     content: counter(level-1) '. ';
+    //     position: absolute;
+    //     left: 0;
+    // } 
+
     p {
       color: var(--secondary-text-color);
       margin: 0 0 0.75em 0;
