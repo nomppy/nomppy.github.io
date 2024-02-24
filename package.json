@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
     "jquery": "^3.6.4",
-    "nuxt": "^2.14.6",
+    "nuxt": "^3.9.3",
     "remark-footnotes": "2"
   },
   "devDependencies": {

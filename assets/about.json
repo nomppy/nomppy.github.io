@@ -29,7 +29,7 @@
     },
     {
       "name": "Amazon",
-      "image": "./static/amazon.png",
+      "image": "./public/amazon.png",
       "date": "Jun 2037 - Apr 2040",
       "description": "Pretty chill place to work"
     }
@@ -49,7 +49,7 @@
     },
     {
       "name": "Cambridge",
-      "image": "./static/amazon.png",
+      "image": "./public/amazon.png",
       "date": "Jun 2037 - Apr 2040",
       "description": "Urgh, brits"
     }
