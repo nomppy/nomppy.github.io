@@ -6,6 +6,10 @@
       <template #not-found>
         <not-found />
       </template>
+
+      <template #empty>
+        Uh oh,, there's nothing there!
+      </template>
       
       <template v-slot="{ doc }">
           <div class="meta-block">
@@ -23,7 +27,7 @@
               <span 
               title="When this data was created, followed by when it was last updated."
               class="meta-tags">
-                {{ (doc.start || "Unknown").slice(0, 10) }}&ndash;{{ (doc.end || doc.updatedAt).slice(0, 10) }}
+                {{ (doc.start || "Unknown").slice(0, 10) }}&ndash;{{ (doc.end || "Unknown").slice(0, 10) }}
               </span>
               <span 
               v-if="doc.status"

@@ -15,7 +15,6 @@
 useHead({
   title: '',
 });
-
 </script>
 
 <style lang="scss" scoped>

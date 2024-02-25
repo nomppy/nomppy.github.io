@@ -1,6 +1,7 @@
 ---
 title: To Mom and Dad
-category: letters
+description: false
+category: prose
 end: 2023-09-18
 ---
 

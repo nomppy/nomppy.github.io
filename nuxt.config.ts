@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   site: {
     url: 'https://kennethsun.net',
     name: 'Kenneth Sun',
+    trailingSlash: true,
   },
 
   devtools: {
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/color-mode',
     '@nuxtjs/sitemap',
-    'nuxt-icons',
+    'nuxt-icon',
     "@nuxt/image"
   ],
 

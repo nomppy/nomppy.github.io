@@ -1,7 +1,7 @@
 ---
 title: C sharp minor
 description: instead of words
-category: blogs
+category: prose
 status: finished
 start: 2023-01-21
 end: 2023-01-30

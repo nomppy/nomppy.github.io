@@ -1,7 +1,7 @@
 ---
 title: Dear Jesus
 description: If you were here...
-category: letters
+category: prose
 status: finished
 start: 2022-11-01
 end: 2022-11-05

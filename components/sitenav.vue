@@ -1,13 +1,13 @@
 <template>
   <ul class="site-nav">
     <li>
-      <nuxt-link to="/">welcome</nuxt-link>
+      <site-link to="/">welcome</site-link>
     </li>
     <li>
-      <nuxt-link to="/posts/">posts</nuxt-link>
+      <site-link to="/posts/">posts</site-link>
     </li>
     <li>
-      <nuxt-link to="/news/">news</nuxt-link>
+      <site-link to="/news/">news</site-link>
     </li>
 
     <color-mode-switch class="color-mode-switch"/>

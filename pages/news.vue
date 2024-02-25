@@ -37,21 +37,19 @@
 
     </div>
 </template>
-<script setup>
-const query = { path: '/news', sort: [{ title: -1 }] }
-const posts = queryContent('/news')
-                        .sort({ title: 1, $numeric: true })
-                        .find();
-
-useSeoMeta({
-  title: 'News',
-});
-
-onMounted(() => {
-  setTimeout  (() => {
-    window.Nutshell.start();
-  });
-});
+<script>
+export default {
+  data() {
+    return {
+      query: { path: '/news', sort: [{ title: -1 }]}
+    };
+  },
+  mounted() {
+      setTimeout(() => {
+        window.Nutshell.start();
+      });
+  }
+}
 // // group posts by category
 // const grouped = posts.reduce((acc, post) => {
 //   if (!acc[post.category]) {

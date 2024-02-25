@@ -1,9 +1,10 @@
 ---
 title: Dear Existence
 description: knowledge is pain and ignorance is bliss
-category: letters
+category: prose
 status: finished
 end: 2023-04-16
+draft: true
 ---
 
 Dear Existence,

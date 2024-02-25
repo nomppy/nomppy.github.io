@@ -1,6 +1,6 @@
 ---
 title: There is no dignified way to cry in a college dorm
-description: sometimes we all need a good cry, sometimes we can't get one
+description: false
 category: poetry
 start: 2022-11-04
 end: 2022-11-04

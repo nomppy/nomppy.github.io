@@ -14,8 +14,14 @@
       <h2 class="category-name">{{ name }}</h2>
       <ul class="category-items">
         <li v-for="post in posts" :key="post._path">
-          <nuxt-link :to="post._path">{{ post.title }}</nuxt-link>
-          <p class="preview-description">
+          <site-link :to="post._path">{{ post.title }}</site-link>
+          <Icon 
+          class="external-icon"
+          name="lucide:external-link"
+          v-if="post.external" />
+          <p 
+          v-if="post.description"
+          class="preview-description">
             {{ post.description }}
           </p>
         </li>
@@ -30,8 +36,9 @@ useSeoMeta({
 });
 
 const posts = await queryContent('/posts')
+                        .where({ draft: { $ne: true } })
                         .sort({ end: -1 })
-                        .only(['_path', 'title', 'description', 'category', 'end'])
+                        .only(['_path', 'title', 'description', 'category', 'end', 'external'])
                         .find();
 // group posts by category
 const grouped = posts.reduce((acc, post) => {
@@ -42,6 +49,16 @@ const grouped = posts.reduce((acc, post) => {
   return acc;
 }, {});
 </script>
+
+<style lang='scss' scoped>
+.external-icon {
+  position: relative;
+  left: 0.1em;
+  font-size: 0.81em;
+  color: var(--tertiary-text-color);
+}
+
+</style>
 <!-- <script>
 // const { data } = await useAsyncData('posts', () => queryContent('/posts'));
 // const { data } = await useAsyncData('home', () => queryContent('/posts'));

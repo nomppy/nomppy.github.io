@@ -1,13 +1,15 @@
 ---
 title: When Poetry meets Math and they get drunk
-category: blogs
+category: prose
 status: finished
 start: 2023-10-22
 end: 2023-12-25
 ---
+
 This is a lightly updated version from the original piece on [The Michigan Daily](https://www.michigandaily.com/michigan-in-color/when-poetry-meets-math-and-they-get-drunk/).
 
-_P(re).S: Mathematics’ name is inspired by [Maryam Mirzakhani](https://en.wikipedia.org/wiki/Maryam_Mirzakhani), a late Iranian mathematician and the first woman to receive a Fields Medal._
+_P(re).S: Mathematics’ name is inspired by [\:Maryam Mirzakhani](https://en.wikipedia.org/wiki/Maryam_Mirzakhani), a late Iranian mathematician and the first woman to receive a Fields Medal._
+
 - - - 
 
 <p style="text-align: center">
@@ -46,7 +48,7 @@ _P(re).S: Mathematics’ name is inspired by [Maryam Mirzakhani](https://en.wiki
 
 **Poe**: All of a sudden, you realize that things like grades aren’t _really_ important, but reading, writing, seeing friends — those things are. Poetry is like that. 
 
-**Maryam**:Ah, I see. 
+**Maryam**: Ah, I see. 
 
 <p style="text-align: center">
 <em>*Poe lifts a bottle of brandy from a passing waiter. It’s reasonable to assume he’s going to drink it all.*</em>

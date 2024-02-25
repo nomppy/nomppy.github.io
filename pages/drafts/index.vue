@@ -11,7 +11,7 @@
       <h2 class="category-name">{{ name }}</h2>
       <ul class="category-items">
         <li v-for="post in posts" :key="post._path">
-          <nuxt-link :to="post._path">{{ post.title }}</nuxt-link>
+          <site-link :to="post._path">{{ post.title }}</site-link>
           <p class="preview-description">
             {{ post.description }}
           </p>
@@ -25,9 +25,10 @@
 useSeoMeta({
   title: 'Drafts',
 });
-const posts = await queryContent('/drafts')
+const posts = await queryContent('/posts')
+                        .where({ draft: true })
                         .sort({ end: -1 })
-                        .only(['_path', 'title', 'description', 'category', 'end'])
+                        .only(['_path', 'title', 'description', 'category', 'end', 'external'])
                         .find();
 // group posts by category
 const grouped = posts.reduce((acc, post) => {

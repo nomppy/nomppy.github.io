@@ -29,7 +29,7 @@ We have a functioning (mostly) demo at [crowdcam.club](https://crowdcam.club/).
 
 Currently the app looks like this
 
-### TODO PUT IMG HERE
+![crowdcam's home page](/img/crowdcam.jpg)
 
 There's a couple things I want to do:
 1. Make a big, comfy desktop UI. Think Pinterest. 
