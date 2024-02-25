@@ -102,6 +102,6 @@ nolan focused on oppenheimer as if he alone carried this burden, when [:both the
 - good cast
 - A+ for historical figures accuracy and easter eggs (godel, bohr, heisenberg, fermi,...)
 
-# :x recognition
+# \:x recognition
 
 i'd cry about oppenheimer getting credited for the entire project and way too many people being unrecognized, but i guess that's historically accurate. 

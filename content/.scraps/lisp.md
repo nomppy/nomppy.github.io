@@ -89,11 +89,11 @@ In the same vein, if I ever started liking finance and economics, it would not b
 
 
 
-# :x sexy
+# \:x sexy
 
 The distinction between hot and sexy are often blurred, so I’ll clear it up. Hot is when you write a complex program to do something and it works, _sexy_ is when this program only does exactly what it needs to, with elegance, grace, and all the things that makes code not just readable, but a piece of literature.
 
-# :x citation needed
+# \:x citation needed
 
 _Citation needed._
 
@@ -107,15 +107,15 @@ Here are some essays to read for you CS nerds:
 - [Paul Graham, On Lisp](http://www.paulgraham.com/onlisp.html)
 - [Paul Graham, Beating the Averages](http://www.paulgraham.com/avg.html)
 
-# :x first world
+# \:x first world
 
 is it just me, or has anyone else noticed that "first world" and "third world" countries sounds an awful lot like the first, second, and third estates of the French revolution?
 
-# :x whatever
+# \:x whatever
 
 a subject, a job, a person. a place, even.
 
-# :x still do
+# \:x still do
 
 Alright, I still do, but it's not because I think they're fake or dishonest, but because I think they would be more effective if they did what they liked,
 just because of increased enthusiasm. 

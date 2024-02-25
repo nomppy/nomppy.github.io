@@ -22,40 +22,69 @@
         </form>
 
         <br>
-
-        <nuxt-content 
-        class="full-post"
-        style="padding-bottom: 0"
-        v-for="n in posts" :key="n.slug"
-        :document="n" />
+        <!-- <pre>
+          {{  posts }}
+        </pre> -->
+        <ContentList 
+        :query="query"
+        v-slot="{ list }">
+          <div v-for="article in list" :key="article._path">
+            <ContentDoc 
+            :path="article._path" />
+          </div>
+        </ContentList>
 
     </div>
 </template>
+<!-- <script src="nutshell.js"></script> -->
+<script setup>
+// let nutshell_ready = false;
+const query = { path: '/news', sort: [{ title: -1 }] }
+const posts = queryContent('/news')
+                        .sort({ title: 1, $numeric: true })
+                        // .only(['_path', 'title', 'description', 'category', 'end'])
+                        .find();
 
-<script>
+useHead({
+  title: 'Newsletters | Kenneth Sun',
+  meta: [
+    { hid: 'og:title', property: 'og:title', content: 'Newsletters' },
+  ],
+  script: [
+    {src: '/js/nutshell.js'},
+  ],
+});
+
+onMounted(() => {
+  window.Nutshell.start();
+  // nutshell_ready = true;
+});
+// // group posts by category
+// const grouped = posts.reduce((acc, post) => {
+//   if (!acc[post.category]) {
+//     acc[post.category] = [];
+//   }
+//   acc[post.category].push(post);
+//   return acc;
+// }, {});
+</script>
+<!-- <script>
 export default {
   async asyncData({ $content }) {
-    let posts = await $content('newsletters')
+    let posts = await $content('')
       .sortBy('slug', 'desc')
       .fetch();
 
     return { posts };
   },
-  head() {
-    return {
-      title: 'Newsletters | Kenneth Sun',
-      meta: [
-        { hid: 'og:title', property: 'og:title', content: 'Newsletters' },
-      ],
-    };
-  },
+
   mounted() {
     setTimeout(() => {
       window.Nutshell.start();
     });
   },
 };
-</script>
+</script> -->
 
 <style lang="scss" scoped>
 .form {

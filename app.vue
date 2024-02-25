@@ -30,7 +30,7 @@ useHead({
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Average&family=Libre+Baskerville&family=Montserrat&family=Roboto&family=Source+Sans+Pro&family=Zilla+Slab&display=swap' }
     ],
     script: [
-      {src: '/js/nutshell.js'},
+      // {src: '/js/nutshell.js'},
     ],
     htmlAttrs: {
       lang: 'en'
