@@ -1,0 +1,67 @@
+{
+  "bio": [
+  ],
+  "hobbies": [
+    {
+      "name": "programming",
+      "desc": ["I like learning about new languages and tools. I've done a bit of web development and computer networking,",
+               "and I'm currently trying to learn Lisp for writing software."]
+      
+    },
+    {
+      "name": "writing",
+      "desc": ["I find writing really useful in clarifying my thinking, and for recording them to my future self.",
+               "I write reflectively in my private journal, but I make some writings public on my <a class='link' href='/writings'>writings</a> page."]
+    }
+  ],
+  "experience": [
+    {
+      "name": "Google",
+      "image": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "date": "Jan 2030 - Apr 2031",
+      "description": "Pretty chill place to work"
+    },
+    {
+      "name": "Your mum, Inc.",
+      "image": "",
+      "date": "Jan 2030 - Apr 2031",
+      "description": "Pretty chill place to work"
+    },
+    {
+      "name": "Amazon",
+      "image": "./public/amazon.png",
+      "date": "Jun 2037 - Apr 2040",
+      "description": "Pretty chill place to work"
+    }
+  ],
+  "education": [
+    {
+      "name": "MIT",
+      "image": "https://web.mit.edu/img/mitlogo.gif",
+      "date": "Jan 2030 - Apr 2031",
+      "description": "Pretty chill place to study"
+    },
+    {
+      "name": "Your mum, edu",
+      "image": "",
+      "date": "Jan 2030 - Apr 2031",
+      "description": "Pretty chill place to work"
+    },
+    {
+      "name": "Cambridge",
+      "image": "./public/amazon.png",
+      "date": "Jun 2037 - Apr 2040",
+      "description": "Urgh, brits"
+    }
+  ],
+  "skills": [
+
+  ],
+  "achievements": [
+
+  ],
+  "resume": {
+    "link": "",
+    "cover": ""
+  }
+}
