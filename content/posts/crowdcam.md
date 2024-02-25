@@ -7,8 +7,6 @@ start: 2024-01-28
 end: 2024-01-28
 ---
 
-Heya!
-
 This is a super quick blog post about [SpartaHack9](https://spartahack.com/), which I just came back from. 
 I wanted to do a superquick writeup of my team's project, because I think it's interesting and also because I kind of want to keep working on it. 
 

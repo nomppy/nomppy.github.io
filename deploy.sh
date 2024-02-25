@@ -1,5 +1,5 @@
 yarn generate
-cd generate/
+cd .output/public/
 git init
 git add .
 git commit -m "deploy"

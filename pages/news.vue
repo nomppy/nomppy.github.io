@@ -30,29 +30,21 @@
         v-slot="{ list }">
           <div v-for="article in list" :key="article._path">
             <ContentDoc 
+            :head="false"
             :path="article._path" />
           </div>
         </ContentList>
 
     </div>
 </template>
-<!-- <script src="nutshell.js"></script> -->
 <script setup>
-// let nutshell_ready = false;
 const query = { path: '/news', sort: [{ title: -1 }] }
 const posts = queryContent('/news')
                         .sort({ title: 1, $numeric: true })
-                        // .only(['_path', 'title', 'description', 'category', 'end'])
                         .find();
 
-useHead({
-  title: 'Newsletters | Kenneth Sun',
-  meta: [
-    { hid: 'og:title', property: 'og:title', content: 'Newsletters' },
-  ],
-  script: [
-    {src: '/js/nutshell.js'},
-  ],
+useSeoMeta({
+  title: 'News',
 });
 
 onMounted(() => {

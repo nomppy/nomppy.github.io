@@ -25,6 +25,10 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Posts',
+});
+
 const posts = await queryContent('/posts')
                         .sort({ end: -1 })
                         .only(['_path', 'title', 'description', 'category', 'end'])

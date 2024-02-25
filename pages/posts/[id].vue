@@ -1,6 +1,8 @@
 <template>
   <main class="center-container">
-    <ContentDoc class="center-container">
+    <ContentDoc 
+    :head="false"
+    class="center-container">
       <template #not-found>
         <not-found />
       </template>
@@ -50,9 +52,62 @@
   </main>
 </template>
 
+<script setup>
+const { path } = useRoute(); 
+const cleanPath = path.replace(/\/+$/, ''); 
+let post = await queryContent('/posts')
+                        .where({ _path: cleanPath })
+                        .only(['title', 'excerpt', 'body'])
+                        .find();
+
+if(post.length == 0) {
+  navigateTo('/404');
+}
+post = post[0];
+
+const renderToText = (node) => {
+  if (node.type === "text") {
+    return node.value;
+  }
+
+  if (!node.children?.length) {
+    return '';
+  }
+
+  return `${
+    node.children?.map(renderToText).join("") || ""
+  }`;
+};
+
+let desc = post['excerpt'] ? renderToText(post['excerpt']) : renderToText(post['body'])
+desc = desc.replace(/<\/?[^>]+(>|$)/g, "");
+
+useSeoMeta({
+  title: post['title'],
+  description: desc,
+  'og:description': desc,
+  'twitter:description': desc,
+  'og:url': 'https://kennethsun.net' + cleanPath,
+});
+
+useHead({
+  title: post['title'],
+  description: desc,
+});
+
+</script>
+
 <script>
 import $ from 'jquery';
 
+// const { data } = await useAsyncData(`content-${cleanPath}`, async () => {
+//     // Remove a trailing slash in case the browser adds it, it might break the routing   
+//     // fetch document where the document path matches with the cuurent route    
+//   let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();    
+//   // get the surround information,    
+//   // which is an array of documeents that come before and after the current document    
+//   return {        data: post,        };
+// });
 export default {
   data() {
     return {
