@@ -56,8 +56,9 @@
 const { path } = useRoute(); 
 const cleanPath = path.replace(/\/+$/, ''); 
 const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
-  // Remove a trailing slash in case the browser adds it, it might break the routing   
-  // fetch document where the document path matches with the cuurent route    
+
+    // Remove a trailing slash in case the browser adds it, it might break the routing   
+    // fetch document where the document path matches with the cuurent route    
   let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();    
   // get the surround information,    
   // which is an array of documeents that come before and after the current document    
@@ -68,6 +69,9 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 
 if (data.value) {
   useContentHead(data.value.post);
+}
+else {
+  navigateTo('/404');
 }
 
 </script>

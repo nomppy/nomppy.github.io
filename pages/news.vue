@@ -56,8 +56,9 @@ useHead({
 });
 
 onMounted(() => {
-  window.Nutshell.start();
-  // nutshell_ready = true;
+  setTimeout  (() => {
+    window.Nutshell.start();
+  });
 });
 // // group posts by category
 // const grouped = posts.reduce((acc, post) => {

@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site: {
+    url: 'https://kennethsun.net',
+    name: 'Kenneth Sun',
+  },
+
   devtools: {
     enabled: true,
 
@@ -48,5 +53,5 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/sitemap.xml'],
     }
-  }
+  },
 })
