@@ -23,6 +23,9 @@ useHead({
       // { name: 'apple-mobile-web-app-title', content: 'Kenneth Sun' },
       // { property: 'og:site_name', content: 'kennethsun.net' },
     ],
+    script: [
+      {src: '/js/nutshell.js'},
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

@@ -47,133 +47,71 @@
   </main>
 </template>
 
-<script setup lang="ts">
-// import $ from 'jquery';
-// const { data } = await useAsyncData('posts', () => queryContent('/posts')
-//   .where({ id: route.params.id })
-//   .findOne()) 
+<script>
+import $ from 'jquery';
 
-const { path } = useRoute(); 
-const cleanPath = path.replace(/\/+$/, ''); 
-const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
-  // Remove a trailing slash in case the browser adds it, it might break the routing   
-  // fetch document where the document path matches with the cuurent route    
-  let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();    
-  // get the surround information,    
-  // which is an array of documeents that come before and after the current document    
-  return {        
-    post: post,        
-  };
-});
-
-if (data.value) {
-  useContentHead(data.value.post);
-}
-
-</script>
-
-// onMounted(() => {
+export default {
+  data() {
+    return {
+      footnotes: {},
+      currentFootnoteId: null,
+      showingFootnote: false
+    };
+  },
+  computed: {
+    currentFootnote() {
+      if (this.currentFootnoteId > -1 && this.footnotes[this.currentFootnoteId] != undefined) {
+        return this.footnotes[this.currentFootnoteId];
+      } else {
+        return '';
+      }
+    }
+  },
+  mounted() {
     // Find all footnote references and attach hover events
-    // $('sup[id^="fnref"]').on('mouseenter', this.showFootnote.bind(this));
-    // window.addEventListener('scroll', this.hideFootnote);
-    // $('sup[id^="fnref"]').on('mouseleave', this.hideFootnote.bind(this));
+    $('a[id^="user-content-fnref"]').on('mouseenter', this.showFootnote.bind(this));
+    // $('sup[id^="fnref"]').on('mouseenter', showFootnote.bind(this));
+    window.addEventListener('scroll', this.hideFootnote);
 
     // Extract footnotes from content and add to footnotes object
-    // const footnoteElements = $('.footnotes li');
-    // footnoteElements.each((index, element) => {
-    //   const id = $(element).attr('id');
-    //   const content = $(element).html();
-    //   this.footnotes[id] = content;
-    // }); 
+    const footnoteElements = $('.footnotes li');
+    // footnoteElements.on('mouseenter', this.showFootnote.bind(this));
+    footnoteElements.each((index, element) => {
+      console.log('adding fn to object: ' + index);
+      const id = $(element).attr('id').split('-').pop();
+      const content = $(element).html();
+      this.footnotes[id] = content;
+    }); 
     
-    // setTimeout(() => {
-    //   window.Nutshell.start(
-    //     document.getElementsByClassName('nuxt-content')[0],
-    //   );
-    // });
-// });
+    setTimeout(() => {
+      window.Nutshell.start(
+        document.getElementsByClassName('nuxt-content')[0],
+      );
+    });
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.hideFootnote);
+  },
+  methods: {
+    showFootnote(event) {
+      const footnoteId = $(event.target).attr('id').split('-').pop();
 
-// export default {
-//   async asyncData({ $content, params, error }) {
+      console.log(footnoteId);
+      console.log(this.footnotes[footnoteId])
+      if (!this.footnotes[footnoteId]) {
+        return;
+      }
 
-//     const data = await $content('datas', params.id)
-//       .fetch()
-//       .catch(() => {
-//         error({ statusCode: 404 });
-//       });
-
-//     return { data };
-//   },
-//   head() {
-//     return {
-//       title: this.doc.title,
-//       meta: [
-//         { hid: 'description', name: 'description', content: this.doc.description },
-//         // Open Graph
-//         { hid: 'og:title', property: 'og:title', content: this.doc.title },
-//         { hid: 'og:description', property: 'og:description', content: this.doc.description },
-//         // Twitter Card
-//         { hid: 'twitter:title', name: 'twitter:title', content: this.doc.title },
-//         { hid: 'twitter:description', name: 'twitter:description', content: this.doc.description }
-//       ],
-//     };
-//   },
-//   data() {
-//     return {
-//       footnotes: {},
-//       currentFootnoteId: null,
-//       showingFootnote: false
-//     };
-//   },
-//   computed: {
-//     currentFootnote() {
-//       if (this.currentFootnoteId && this.footnotes[this.currentFootnoteId]) {
-//         return this.footnotes[this.currentFootnoteId];
-//       } else {
-//         return '';
-//       }
-//     }
-//   },
-//   mounted() {
-//     // Find all footnote references and attach hover events
-//     $('sup[id^="fnref"]').on('mouseenter', this.showFootnote.bind(this));
-//     window.addEventListener('scroll', this.hideFootnote);
-//     // $('sup[id^="fnref"]').on('mouseleave', this.hideFootnote.bind(this));
-
-//     // Extract footnotes from content and add to footnotes object
-//     const footnoteElements = $('.footnotes li');
-//     footnoteElements.each((index, element) => {
-//       const id = $(element).attr('id');
-//       const content = $(element).html();
-//       this.footnotes[id] = content;
-//     }); 
-    
-//     setTimeout(() => {
-//       window.Nutshell.start(
-//         document.getElementsByClassName('nuxt-content')[0],
-//       );
-//     });
-//   },
-//   beforeDestroy () {
-//     window.removeEventListener('scroll', this.hideFootnote);
-//   },
-//   methods: {
-//     showFootnote(event) {
-//       const footnoteId = $(event.target).attr('href').substring(1);
-
-//       if (!this.footnotes[footnoteId]) {
-//         return;
-//       }
-
-//       this.currentFootnoteId = footnoteId;
-//       this.showingFootnote = true;
-//     },
-//     hideFootnote() {
-//       this.currentFootnoteId = null;
-//       this.showingFootnote = false;
-//     }
-//   },
-// };
+      this.currentFootnoteId = footnoteId;
+      this.showingFootnote = true;
+    },
+    hideFootnote() {
+      this.currentFootnoteId = null;
+      this.showingFootnote = false;
+    }
+  },
+};
+</script>
 
 <style lang='scss' scoped>
 .meta-block {

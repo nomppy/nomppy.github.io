@@ -1,6 +1,9 @@
 <template>
   <main class="center-container">
     <ContentDoc class="center-container">
+      <template #not-found>
+        <not-found />
+      </template>
       
       <template v-slot="{ doc }">
           <div class="meta-block">
@@ -51,23 +54,6 @@
 import $ from 'jquery';
 
 export default {
-  async asyncData({ $content, params, error }) {
-
-    const post = await $content('posts', params.id)
-      .fetch()
-      .catch(() => {
-        error({ statusCode: 404 });
-      });
-
-    return { post };
-  },
-  head() {
-    return {
-      script: [
-        {src: '/js/nutshell.js'},
-      ],
-    };
-  },
   data() {
     return {
       footnotes: {},

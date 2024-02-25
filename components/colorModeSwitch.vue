@@ -23,9 +23,9 @@
 .icon {
   display: inline-block;
   position: relative;
-  width: 1.5em;
-  height: 1.5em;
-  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  font-size: 1.5em;
   fill: var(--primary-text-color);
   color: var(--primary-text-color);
 

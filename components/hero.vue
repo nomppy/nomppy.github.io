@@ -215,6 +215,7 @@
   text-transform: uppercase;
   color: var(--secondary-text-color);
 
+  margin: 0.11em;
   width: 1em;
   font-size: 1em;
   line-height: 1em;
