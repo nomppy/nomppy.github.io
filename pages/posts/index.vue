@@ -13,8 +13,8 @@
     v-for="(posts, name) in grouped" :key="name">
       <h2 class="category-name">{{ name }}</h2>
       <ul class="category-items">
-        <li v-for="post in posts" :key="post.slug">
-          <nuxt-link :to="'/posts/' + post.slug">{{ post.title }}</nuxt-link>
+        <li v-for="post in posts" :key="post._path">
+          <nuxt-link :to="post._path">{{ post.title }}</nuxt-link>
           <p class="preview-description">
             {{ post.description }}
           </p>
@@ -25,8 +25,45 @@
 </template>
 
 <script setup>
-const { data } = await useAsyncData('home', () => queryContent('/').findOne());
+const posts = await queryContent('/posts')
+                        .sort({ end: -1 })
+                        .only(['_path', 'title', 'description', 'category', 'end'])
+                        .find();
+// group posts by category
+const grouped = posts.reduce((acc, post) => {
+  if (!acc[post.category]) {
+    acc[post.category] = [];
+  }
+  acc[post.category].push(post);
+  return acc;
+}, {});
 </script>
+<!-- <script>
+// const { data } = await useAsyncData('posts', () => queryContent('/posts'));
+// const { data } = await useAsyncData('home', () => queryContent('/posts'));
+
+export default defineComponent({
+  async setup() {
+    const posts = await queryContent('/posts')
+                            .sort({ end: -1 })
+                            .only(['_path', 'title', 'description', 'category', 'end'])
+                            .find();
+    // group posts by category
+    const grouped = posts.reduce((acc, post) => {
+      if (!acc[post.category]) {
+        acc[post.category] = [];
+      }
+      acc[post.category].push(post);
+      return acc;
+    }, {});
+
+    return {
+      grouped,
+    }
+  }
+});
+
+</script> -->
 
 <!-- <script>
 export default {

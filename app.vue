@@ -12,14 +12,14 @@ const desc = "Personal website of Kenneth Sun"
  
 useHead({
     titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} - ${title}` : title;
+      return titleChunk ? `${titleChunk} | ${title}` : title;
     },
     // titleTemplate: '%s | Kenneth Sun',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: 'Personal website of Kenneth Sun' },
-      { property: 'og:description', content: 'Personal website of Kenneth Sun' },
+      // { name: 'description', content: 'Personal website of Kenneth Sun' },
+      // { property: 'og:description', content: 'Personal website of Kenneth Sun' },
       // { name: 'apple-mobile-web-app-title', content: 'Kenneth Sun' },
       // { property: 'og:site_name', content: 'kennethsun.net' },
     ],
@@ -31,14 +31,24 @@ useHead({
     ],
     script: [
       {src: '/js/nutshell.js'},
-    ]
+    ],
+    htmlAttrs: {
+      lang: 'en'
+    },
 })
-
+// useSeoMeta({
+//   ogImage: '[og:image]',
+//   ogUrl: '[og:url]',
+//   twitterImage: '[twitter:image]',
+// })
 useSeoMeta({
   title: title,
   ogTitle: title,
+  twitterTitle: title,
   description: desc,
   ogDescription: desc,
+  twitterDescription: desc,
+  ogUrl: 'https://kennethsun.net',
   // ogImage: 'https://example.com/image.png',
   // twitterCard: 'summary_large_image',
 })

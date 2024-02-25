@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
+  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/color-mode',
@@ -16,6 +22,9 @@ export default defineNuxtConfig({
         // 'remark-gfm': ,
         // 'remark-footnotes'; ,
       }
+    },
+    navigation: {
+      fields: ['start', 'end', 'category'],
     }
   },
 
