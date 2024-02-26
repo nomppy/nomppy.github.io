@@ -39,6 +39,12 @@
 </template>
 <script>
 export default {
+  setup() {
+    useSeoMeta({
+      title: 'News',
+      description: 'Past newsletters',
+    });
+  },
   data() {
     return {
       query: { path: '/news', sort: [{ title: -1 }]}
@@ -50,14 +56,7 @@ export default {
       });
   }
 }
-// // group posts by category
-// const grouped = posts.reduce((acc, post) => {
-//   if (!acc[post.category]) {
-//     acc[post.category] = [];
-//   }
-//   acc[post.category].push(post);
-//   return acc;
-// }, {});
+
 </script>
 <!-- <script>
 export default {

@@ -1,5 +1,6 @@
 yarn generate
 cd .output/public/
+touch .nojekyll
 git init
 git add .
 git commit -m "deploy"
