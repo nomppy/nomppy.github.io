@@ -17,11 +17,22 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/content',
+    "@nuxt/image",
     '@nuxtjs/color-mode',
     '@nuxtjs/sitemap',
+    'nuxt-feedme',
     'nuxt-icon',
-    "@nuxt/image"
   ],
+
+  feed: {
+    sources: [
+      {
+        path: "/feed.xml",
+        type: "rss2",
+        cacheTime: 60 * 15,
+      }
+    ]
+  },
 
   content: {
     markdown: {

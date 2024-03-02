@@ -58,23 +58,6 @@ export default {
 }
 
 </script>
-<!-- <script>
-export default {
-  async asyncData({ $content }) {
-    let posts = await $content('')
-      .sortBy('slug', 'desc')
-      .fetch();
-
-    return { posts };
-  },
-
-  mounted() {
-    setTimeout(() => {
-      window.Nutshell.start();
-    });
-  },
-};
-</script> -->
 
 <style lang="scss" scoped>
 .form {

@@ -13,6 +13,7 @@
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/sitemap": "^5.0.5",
     "nuxt": "^3.9.3",
+    "nuxt-feedme": "^1.0.0",
     "nuxt-icon": "^0.6.8",
     "nuxt-site-config": "^2.2.9",
     "nuxt-site-config-kit": "^2.2.9",
