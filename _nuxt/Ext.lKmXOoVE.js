@@ -1,0 +1,1 @@
+import{l as t,o as s,c,a as o}from"./entry.379RuqcD.js";import{_ as a}from"./_plugin-vue_export-helper.x3n3nnut.js";const r=["src"],n=t({__name:"Ext",props:["src"],setup(e){return(_,l)=>(s(),c("div",null,[o("iframe",{class:"external-content",src:e.src},null,8,r)]))}}),d=a(n,[["__scopeId","data-v-1263568d"]]);export{d as default};

@@ -1,0 +1,1 @@
+import{_ as t}from"./_plugin-vue_export-helper.x3n3nnut.js";import{o as e,c as s,a as o}from"./entry.379RuqcD.js";const c={},n={class:"center-container"},_=o("h1",{class:"title"},":(((",-1),r=o("div",{class:"nuxt-content"},[o("p",null," Sorry... looks like this link broke. ")],-1),a=[_,r];function i(l,d){return e(),s("div",n,a)}const p=t(c,[["render",i]]);export{p as _};
