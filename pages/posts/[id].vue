@@ -1,6 +1,6 @@
 <template>
   <main class="center-container">
-    <ContentDoc 
+    <ContentDoc
     :head="false"
     class="center-container">
       <template #not-found>
@@ -10,13 +10,13 @@
       <template #empty>
         Uh oh,, there's nothing there!
       </template>
-      
+
       <template v-slot="{ doc }">
           <div class="meta-block">
             <h1 class="title">
               {{ doc.title || '' }}
             </h1>
-    
+
             <div class="meta-tags-block">
               <span class="meta-tags">
                 {{ doc.category }}
@@ -24,12 +24,12 @@
               <span v-for="tag in doc.tags" :key="tag" class="meta-tags">
                 {{ tag }}
               </span>
-              <span 
+              <span
               title="When this data was created, followed by when it was last updated."
               class="meta-tags">
                 {{ (doc.start || "Unknown").slice(0, 10) }}&ndash;{{ (doc.end || "Unknown").slice(0, 10) }}
               </span>
-              <span 
+              <span
               v-if="doc.status"
               title="Completion status. Ranges 'notes', 'draft', 'in-progress', 'finished'."
               class="meta-tags">
@@ -43,13 +43,13 @@
                 {{ doc.confidence }}
               </span>
             </div>
-    
+
             <div v-if="doc.description" class="description">
               {{ doc.description }}
             </div>
           </div>
-    
-          <ContentRenderer class="nuxt-content" :value="doc" /> 
+
+          <ContentRenderer class="nuxt-content" :value="doc" />
           <div class="hover-footnote" v-html="currentFootnote" v-show="showingFootnote" />
       </template>
     </ContentDoc>
@@ -57,8 +57,8 @@
 </template>
 
 <script setup>
-const { path } = useRoute(); 
-const cleanPath = path.replace(/\/+$/, ''); 
+const { path } = useRoute();
+const cleanPath = path.replace(/\/+$/, '');
 let post = await queryContent('/posts')
                         .where({ _path: cleanPath })
                         .only(['title', 'excerpt', 'body'])
@@ -105,11 +105,11 @@ useHead({
 import $ from 'jquery';
 
 // const { data } = await useAsyncData(`content-${cleanPath}`, async () => {
-//     // Remove a trailing slash in case the browser adds it, it might break the routing   
-//     // fetch document where the document path matches with the cuurent route    
-//   let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();    
-//   // get the surround information,    
-//   // which is an array of documeents that come before and after the current document    
+//     // Remove a trailing slash in case the browser adds it, it might break the routing
+//     // fetch document where the document path matches with the cuurent route
+//   let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();
+//   // get the surround information,
+//   // which is an array of documeents that come before and after the current document
 //   return {        data: post,        };
 // });
 export default {
@@ -143,8 +143,8 @@ export default {
       const id = $(element).attr('id').split('-').pop();
       const content = $(element).html();
       this.footnotes[id] = content;
-    }); 
-    
+    });
+
     setTimeout(() => {
       window.Nutshell.start(
         document.getElementsByClassName('nuxt-content')[0],
@@ -174,19 +174,19 @@ export default {
   },
 };
 </script>
-<!-- 
+<!--
 <script setup>
 import $ from 'jquery';
 import { ref } from 'vue';
 
-const { path } = useRoute(); 
-const cleanPath = path.replace(/\/+$/, ''); 
+const { path } = useRoute();
+const cleanPath = path.replace(/\/+$/, '');
 const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
-    // Remove a trailing slash in case the browser adds it, it might break the routing   
-    // fetch document where the document path matches with the cuurent route    
-  let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();    
-  // get the surround information,    
-  // which is an array of documeents that come before and after the current document    
+    // Remove a trailing slash in case the browser adds it, it might break the routing
+    // fetch document where the document path matches with the cuurent route
+  let post = await queryContent('/posts').where({ _path: cleanPath }).findOne();
+  // get the surround information,
+  // which is an array of documeents that come before and after the current document
   return {        post: post,        };
 });
 
@@ -216,8 +216,8 @@ onMounted(() => {
       const id = $(element).attr('id');
       const content = $(element).html();
       this.footnotes[id] = content;
-    }); 
-    
+    });
+
     setTimeout(() => {
       window.Nutshell.start(
         document.getElementsByClassName('nuxt-content')[0],

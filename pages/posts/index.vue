@@ -1,13 +1,14 @@
 <template>
   <div class="center-container post-categories nuxt-content">
-    <p 
+    <p
     style="grid-column: span 2; font-size: 0.8em;">
       If you're not sure which to read, try
-      <a href='/posts/c-sharp-minor'> C sharp minor</a>, or
-      <a href='/posts/parent'> To Mom and Dad</a>.
+      <site-link to="/posts/pm"> When Poetry meets Math and they get drunk </site-link>
+      or
+      <site-link to="/posts/the-rocks-we-carry"> the rocks we carry </site-link>
     </p>
     <!-- create a section for each category-->
-    <section 
+    <section
     :style="'grid-row: span ' + (1+posts.length)"
     class="post-category"
     v-for="(posts, name) in grouped" :key="name">
@@ -15,11 +16,11 @@
       <ul class="category-items">
         <li v-for="post in posts" :key="post._path">
           <site-link :to="post._path">{{ post.title }}</site-link>
-          <Icon 
+          <Icon
           class="external-icon"
           name="lucide:external-link"
           v-if="post.external" />
-          <p 
+          <p
           v-if="post.description"
           class="preview-description">
             {{ post.description }}
@@ -93,7 +94,7 @@ export default {
     let posts = await $content('posts')
       .only(['title', 'description', 'slug', 'category', 'updatedAt', 'end'])
       .fetch();
- 
+
     // sort posts in place in descending order by updatedAt, placing posts with no end at the front
 
 
@@ -149,7 +150,7 @@ export default {
     font-variant: small-caps;
     text-transform: capitalize;
   }
-  
+
   .preview-description {
     font-size: 0.75em;
     line-height: 1em;
@@ -182,7 +183,7 @@ a {
     .post-categories {
       grid-template-columns: 1fr;
     }
-  
+
     .post-category > ul {
       column-count: 2;
       column-gap: 3em;

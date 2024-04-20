@@ -4,7 +4,7 @@
       Drafts, not public yet. Thank you for reading them and your feedback will be appreciated :)
     </p>
     <!-- create a section for each category-->
-    <section 
+    <section
     :style="'grid-row: span ' + (1+posts.length)"
     class="post-category"
     v-for="(posts, name) in grouped" :key="name">
@@ -12,7 +12,13 @@
       <ul class="category-items">
         <li v-for="post in posts" :key="post._path">
           <site-link :to="post._path">{{ post.title }}</site-link>
-          <p class="preview-description">
+          <Icon
+          class="external-icon"
+          name="lucide:external-link"
+          v-if="post.external" />
+          <p
+          v-if="post.description"
+          class="preview-description">
             {{ post.description }}
           </p>
         </li>
@@ -73,7 +79,7 @@ export default {
     let posts = await $content('posts')
       .only(['title', 'description', 'slug', 'category', 'updatedAt', 'end'])
       .fetch();
- 
+
     // sort posts in place in descending order by updatedAt, placing posts with no end at the front
 
 
@@ -129,7 +135,7 @@ export default {
     font-variant: small-caps;
     text-transform: capitalize;
   }
-  
+
   .preview-description {
     font-size: 0.75em;
     line-height: 1em;
@@ -162,7 +168,7 @@ a {
     .post-categories {
       grid-template-columns: 1fr;
     }
-  
+
     .post-category > ul {
       column-count: 2;
       column-gap: 3em;

@@ -10,7 +10,7 @@
 :root {
   --serif-font-stack: "Zilla Slab", "Average", "Libre Baskerville", "Times New Roman", serif;
   --sans-serif-font-stack: "Montserrat", "Source Sans Pro", "Roboto", "Helvetica", sans-serif;
-  
+
   --white: white;
   --black: black;
   --faded-gray: rgba(255, 255, 255, 0.25);
@@ -54,7 +54,7 @@
 }
 
 * {
-  margin: 0;	
+  margin: 0;
 }
 
 html {
@@ -137,13 +137,10 @@ button:active {
   margin-bottom: 20px;
 }
 
-.nuxt-content-container {
+.nuxt-content {
     padding-bottom: 4em;
     z-index: 2;
     position: relative;
-}
-
-.nuxt-content {
     color: var(--primary-text-color);
     font-family: var(--serif-font-stack);
     -webkit-font-smoothing: antialiased;
@@ -191,12 +188,12 @@ button:active {
     //     padding-left: 3.0em;
     //     position: relative;
     // }
-    // ol li:before { 
-    //     counter-increment: level-1; 
+    // ol li:before {
+    //     counter-increment: level-1;
     //     content: counter(level-1) '. ';
     //     position: absolute;
     //     left: 0;
-    // } 
+    // }
 
     p {
       color: var(--secondary-text-color);
@@ -322,7 +319,7 @@ button:active {
     width: 70%;
     max-width: 600px;
     margin: 0.5em auto 2.5em auto;
-    
+
     > li {
       font-weight: bold;
     }
@@ -348,7 +345,7 @@ button:active {
     padding: 0 1px;
   }
 }
-  
+
 .hover-footnote {
   position: fixed;
   bottom: 1em;
@@ -412,7 +409,7 @@ button:active {
     font-variant: small-caps;
     text-transform: capitalize;
   }
-  
+
   .preview-description {
     font-size: 0.75em;
     line-height: 1em;
