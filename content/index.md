@@ -3,9 +3,9 @@
 
 ### Me
 Hello and welcome to my website.
-I'm a second-year student at UMich, majoring in physics and math with minors in CS and creative writing.
+I'm a second-year student at UMich studying physics and math. I write and code for fun.
 
-I love poetry, cats, board games/puzzles, pretty shapes, rain, music ([my Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066)). I have some writings at [/posts](/posts), and these days, I also write frequently for [The Michigan Daily](https://www.michigandaily.com/author/sunken/).
+I like poetry, cats, board games/puzzles, pretty shapes, rain, music ([my Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066)). I have some writings at [/posts](/posts), and these days, I also write frequently for [The Michigan Daily](https://www.michigandaily.com/author/sunken/).
 
 ### Contact
 I offer writing services and tutoring in math, physics, and computer science.
@@ -18,6 +18,6 @@ Other profiles:
 [Github](https://github.com/nomppy).
 
 ### Site
-This site is written using [Nuxt.js](https://nuxtjs.org/), and is statically hosted with [Github Pages](https://pages.github.com/).
+This site is written in [Nuxt.js](https://nuxtjs.org/), and is statically hosted with [Github Pages](https://pages.github.com/).
 Source code for the site can be found on Github ([repo link](https://github.com/nomppy/nomppy.github.io)).
 
