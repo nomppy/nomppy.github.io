@@ -1,6 +1,6 @@
 ---
 title: Half Past Midnight In My Holding Cell
-description: Whose holding cell?
+description: false
 category: poetry
 status: finished
 start: 2022-09-04
