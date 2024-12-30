@@ -1,23 +1,30 @@
 <!-- Welcome to my website! I'm Kenneth. I like to learn about how the world works. My favorite fruit is strawberry and my favorite color is #1998DB (the lighter blue color on this page). -->
 
-
 ### Me
 Hello and welcome to my website.
-I'm a second-year student at UMich studying physics and math. I write and code for fun.
+I'm a third-year undergrad at UMich studying physics, math, and CS.
+I do research with Prof. [JJ Park](<a href="https://jjparkcv.github.io/">), and currently I'm interested in (though have no particular expertise in):
 
-I like poetry, cats, board games/puzzles, pretty shapes, rain, music ([my Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066)). I have some writings at [/posts](/posts), and these days, I also write frequently for [The Michigan Daily](https://www.michigandaily.com/author/sunken/).
+1. Creating AI systems that can help accelerate development in natural sciences
+2. Models that can be tailored to, and continuously learn from, individual data
 
-### Contact
-I offer writing services and tutoring in math, physics, and computer science.
-Feel free to get in touch through email: <a href="mailto:hi@kennethsun.net">hi@kennethsun.net</a>.
-I'm usually happy to talk about anything and I will try to get back to you as soon as possible.
+My current pastimes include reading poetry/literature, [writing](/posts), finding new [music](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066), photography, petting cats, playing board games, and skating.
 
-Other profiles:
-[LinkedIn](https://www.linkedin.com/in/kennethh-sun/),
-[LibraryThing](https://www.librarything.com/profile/kennethsibyl),
-[Github](https://github.com/nomppy).
+Feel free to get in touch via email: <a href="mailto:hi@kennethsun.net">hi@kennethsun.net</a> or <a href="mailto:sunken@umich.edu">sunken@umich.edu</a>
+I would love to meet you :)
+
+Also found at:
+
+- [Curius](https://curius.app/kenneth-sun)
+- [LinkedIn](https://www.linkedin.com/in/kennethh-sun/)
+- [LibraryThing](https://www.librarything.com/profile/kennethsibyl)
+- [Github](https://github.com/nomppy)
+- [Twitter](https://x.com/sunkht)
+
+Friends <3:
+
+- [Aidan](https://aidanjs.com)
 
 ### Site
 This site is written in [Nuxt.js](https://nuxtjs.org/), and is statically hosted with [Github Pages](https://pages.github.com/).
-Source code for the site can be found on Github ([repo link](https://github.com/nomppy/nomppy.github.io)).
-
+Source code for the site can be found at this ([Github repo](https://github.com/nomppy/nomppy.github.io)).
