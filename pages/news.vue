@@ -2,6 +2,7 @@
     <div class="center-container">
       <EmailSub class='sub-action'>
       <h1>get emails from me!</h1><br>
+      <p> this mailing list is defunct as of 2025 </p>
       <p>(you can unadd yourself anytime by returning to the form) </p>
       <p> see past emails below.</p>
       </EmailSub>

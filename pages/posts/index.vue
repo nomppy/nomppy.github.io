@@ -2,10 +2,11 @@
   <div class="center-container post-categories nuxt-content">
     <p
     style="grid-column: span 2; font-size: 0.8em;">
-      If you're not sure which to read, try
+      As of 2025, I've moved to [Substack](https://sunkht.substack.com/) for new posts. 
+      <!-- If you're not sure which to read, try
       <site-link to="/posts/pm"> When Poetry meets Math and they get drunk </site-link>
       or
-      <site-link to="/posts/the-rocks-we-carry"> the rocks we carry </site-link>
+      <site-link to="/posts/the-rocks-we-carry"> the rocks we carry </site-link> -->
     </p>
     <!-- create a section for each category-->
     <section

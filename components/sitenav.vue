@@ -6,9 +6,9 @@
     <li>
       <site-link to="/posts/">posts</site-link>
     </li>
-    <li>
+    <!-- <li>
       <site-link to="/news/">news</site-link>
-    </li>
+    </li> -->
 
     <color-mode-switch class="color-mode-switch"/>
   </ul>

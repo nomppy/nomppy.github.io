@@ -13,17 +13,20 @@ My current pastimes include reading poetry/literature, [writing](/posts), findin
 Feel free to get in touch via email: <a href="mailto:hi@kennethsun.net">hi@kennethsun.net</a> or <a href="mailto:sunken@umich.edu">sunken@umich.edu</a>
 I would love to meet you :)
 
-Also found at:
+You can also find me at:
 
 - [Curius](https://curius.app/kenneth-sun)
 - [LinkedIn](https://www.linkedin.com/in/kennethh-sun/)
-- [LibraryThing](https://www.librarything.com/profile/kennethsibyl)
+- [Goodreads](https://www.goodreads.com/user/show/140748369-kenneth)
 - [Github](https://github.com/nomppy)
 - [Twitter](https://x.com/sunkht)
+- [Substack](https://substack.com/@sunkht)
 
-Friends <3:
+Also check out these Very Cool Friends:
 
 - [Aidan](https://aidanjs.com)
+- [Justin](https://sites.gatech.edu/justinliumath/)
+- [Peter](https://peteryang.xyz/)
 
 ### Site
 This site is written in [Nuxt.js](https://nuxtjs.org/), and is statically hosted with [Github Pages](https://pages.github.com/).
