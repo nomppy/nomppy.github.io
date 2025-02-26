@@ -2,7 +2,9 @@
   <div class="center-container post-categories nuxt-content">
     <p
     style="grid-column: span 2; font-size: 0.8em;">
-      As of 2025, I've moved to [Substack](https://sunkht.substack.com/) for new posts. 
+      As of 2025, I've moved to 
+      <a href="https://sunkht.substack.com">Substack</a>
+      for new posts. 
       <!-- If you're not sure which to read, try
       <site-link to="/posts/pm"> When Poetry meets Math and they get drunk </site-link>
       or

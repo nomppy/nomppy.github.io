@@ -27,6 +27,7 @@ Also check out these Very Cool Friends:
 - [Aidan](https://aidanjs.com)
 - [Justin](https://sites.gatech.edu/justinliumath/)
 - [Peter](https://peteryang.xyz/)
+- [Rohan](https://rohanraju.info/)
 
 ### Site
 This site is written in [Nuxt.js](https://nuxtjs.org/), and is statically hosted with [Github Pages](https://pages.github.com/).
