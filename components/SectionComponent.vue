@@ -33,6 +33,10 @@ defineProps({
       margin-bottom: 0.5rem;
       padding-left: 0.8em;
       
+      :deep(p) {
+        margin-bottom: 0.25em;
+      }
+      
       :deep(ul) {
         margin: 0;
         padding-left: 0;
