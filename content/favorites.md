@@ -66,4 +66,5 @@ genres: jazz, romantic era classical, electronic (techno, hypertechno, trance), 
 
 # smelling
 
-- 
+- sandalwood
+- thai tea

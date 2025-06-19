@@ -50,7 +50,8 @@
           title: child.children[0].value,
           level: level,
           subsections: [],
-          content: ''
+          content: '',
+          indent: Math.max(0, level - 1) // Calculate indent based on level
         }
         
         // Pop sections from stack until we find the correct parent level
@@ -135,4 +136,5 @@
   .headings-inline-list {
     text-align: center;
   }
+
   </style>

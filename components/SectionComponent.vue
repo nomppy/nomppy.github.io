@@ -29,10 +29,23 @@ defineProps({
   }
   
   .section-content {
-    padding-left: 1rem;
-    
     .content {
       margin-bottom: 0.5rem;
+      padding-left: 0.8em;
+      
+      :deep(ul) {
+        margin: 0;
+        padding-left: 0;
+        list-style-position: outside;
+      }
+      
+      :deep(li) {
+        margin-left: 1em;
+      }
+    }
+    
+    .section-details {
+      margin-left: 1em;
     }
   }
 }
