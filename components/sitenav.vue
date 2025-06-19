@@ -4,7 +4,10 @@
       <site-link to="/">welcome</site-link>
     </li>
     <li>
-      <site-link to="/posts/">posts</site-link>
+      <site-link to="/favorites/">favorites</site-link>
+    </li>
+    <li>
+      <site-link to="/writing/">writing</site-link>
     </li>
     <!-- <li>
       <site-link to="/news/">news</site-link>
