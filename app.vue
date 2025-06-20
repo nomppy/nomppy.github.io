@@ -48,7 +48,7 @@ useSeoMeta({
   description: desc,
   ogDescription: desc,
   twitterDescription: desc,
-  ogUrl: 'https://kennethsun.net',
+  ogUrl: 'https://sunkht.xyz',
   // ogImage: 'https://example.com/image.png',
   // twitterCard: 'summary_large_image',
 })

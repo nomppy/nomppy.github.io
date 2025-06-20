@@ -130,7 +130,7 @@ A few more, for my sake:
 
 # Music
 
-I grew up [playing piano](https://www.kennethsun.net/posts/c-sharp-minor), but never really listening to music, and then not interacting with many people meant my music library was stagnant for the longest time.
+I grew up [playing piano](https://www.sunkht.xyz/posts/c-sharp-minor), but never really listening to music, and then not interacting with many people meant my music library was stagnant for the longest time.
 Now it's loosely linked to my identity and holds significance in my life.
 
 Plugs (my playlists that you should go like and also follow me on spotify because i need clout):

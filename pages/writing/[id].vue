@@ -91,7 +91,7 @@ useSeoMeta({
   description: desc,
   'og:description': desc,
   'twitter:description': desc,
-  'og:url': 'https://kennethsun.net' + cleanPath,
+  'og:url': 'https://sunkht.xyz' + cleanPath,
 });
 
 useHead({
