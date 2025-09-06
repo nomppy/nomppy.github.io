@@ -28,6 +28,7 @@
 - [Everything I Haven't Done](https://www.theparisreview.org/fiction/8326/everything-i-havent-done-morgan-thomas) (Morgan Thomas)
 - [Pet Milk](https://www.newyorker.com/magazine/1984/08/13/pet-milk) (Dybek)
 - [A Temporary Matter](https://www.newyorker.com/magazine/1998/04/20/a-temporary-matter) (Lahiri)
+- [Folding Beijing](https://www.uncannymagazine.com/article/folding-beijing-2/?curius=5241) (Hao JingFang)
 - [The Paper Menagerie](https://jerrywbrown.com/wp-content/uploads/2020/02/The-Paper-Menagerie-Liu-Ken.pdf) (Ken Liu)
 - Exhalation (Ted Chiang) (a collection of his stories). Particularly:
   - Anxiety Is the Dizziness of Freedom
@@ -38,7 +39,9 @@
 ## essays
 
 - [To Speak Is to Blunder](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.newyorker.com/magazine/2017/01/02/to-speak-is-to-blunder&ved=2ahUKEwiwieiQxv6NAxXscvUHHT8DBSIQFnoECB0QAgQ&usg=AOvVaw1_kRyj4_eiFQhdCnrmsWpC) (Li Yiyun)
+- [Eight Limes, No More: The Accidental Poetry of Found Lists](https://longreads.com/2025/07/15/eight-limes-no-more-found-lists-poetry/)
 - [The Crane Wife](https://www.theparisreview.org/blog/2019/07/16/the-crane-wife/) (CJ Hauser)
+- [Thank You for Finding Me](https://longreads.com/2025/07/24/thank-you-for-finding-me/)
 
 ## blogs
 
@@ -86,6 +89,7 @@ I find the genre finder and playlist analytics tools especially helpful.
 - Game Changer (2019)
 - Black Mirror (2011)
 - My Mister (2018)
+- Arcane (2021)
 
 ## movies
 
@@ -97,3 +101,8 @@ I find the genre finder and playlist analytics tools especially helpful.
 
 - sandalwood
 - thai tea
+
+# other fun things
+
+- [playingcards.io](https://playingcards.io) - a website for playing card games online, supports custom decks
+- [a collection of chinese board games](https://game.hullqin.cn)
