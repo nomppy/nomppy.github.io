@@ -7,7 +7,7 @@
       Since I always ask people what their favorite XXX is and blank when they return the question
       </p>
 
-      <p>(updated 2025.06.20)</p>
+      <p>(updated 2025.09.24)</p>
     </div>
 
     <div v-if="sections.length" class="favorites-content">

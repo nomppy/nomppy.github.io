@@ -14,6 +14,7 @@
 - Animal Farm (Orwell)
 - The Old Man and the Sea (Hemingway)
 - Zami: A New Spelling of My Name (Audre Lorde)
+- Giovanni's Room (James Baldwin)
 
 ## plays & poems
 
