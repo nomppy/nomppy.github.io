@@ -19,6 +19,9 @@ Also check out these Very Cool Friends:
 ### Other places you can find me
 
 - [Substack](https://substack.com/@sunkht)
+- [Goodreads](https://www.goodreads.com/user/show/140748369-kenneth)
+- [Spotify](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066)
+- [Letterboxd](https://www.goodreads.com/user/show/140748369-kenneth)
 - [Instagram](https://www.instagram.com/sunkht/)
 - [Curius](https://curius.app/kenneth-sun)
 - [Github](https://github.com/nomppy)
