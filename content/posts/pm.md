@@ -7,14 +7,14 @@ start: 2023-10-22
 end: 2023-12-25
 ---
 
-This is a lightly updated version from the original piece on [The Michigan Daily](https://www.michigandaily.com/michigan-in-color/when-poetry-meets-math-and-they-get-drunk/).
+This is a lightly updated version from the original piece on [The Michigan Daily](https://www.michigandaily.com/michigan-in-color/when-poetry-meets-math-and-they-get-drunk/). Last updated 2025.09.28
 
 _P(re).S: Mathematics’ name is inspired by [\:Maryam Mirzakhani](https://en.wikipedia.org/wiki/Maryam_Mirzakhani), a late Iranian mathematician and the first woman to receive a Fields Medal._
 
 - - -
 
 <p style="text-align: center">
-<em>*Poetry and mathematics find themselves chatting at a dinner party.* </em>
+<em>*Poetry and mathematics find themselves chatting at a dinner party somewhere above the Earth.* </em>
 </p>
 
 **Poe**: Hey, are you Mathematics?
@@ -41,7 +41,11 @@ _P(re).S: Mathematics’ name is inspired by [\:Maryam Mirzakhani](https://en.wi
 
 **Maryam**: So uh… what do you do?
 
-**Poe**: You know that Netflix show, “The Midnight Gospel”?
+**Poe**: You know, just write and stuff.
+
+**Maryam**: Please elaborate.
+
+**Poe**: Well, you know that Netflix show, “The Midnight Gospel”?
 
 **Maryam**: To be honest… no. I don’t really watch TV, or have one.
 
@@ -106,11 +110,15 @@ There is no other version of this story.
 
 **Maryam**: I do see that, yes.
 
-**Poe**: See, exactly. I try to break them out of their dreadful, banal realities and remind them what being human should _mean._ It’s universal human experiences that we use to try and take people out of their bubbles. And it’s hard because you can’t just get those at Trader Joe’s.
+**Poe**: See, exactly. I try to break them out of their dreadful, banal realities and remind them what being human should _mean._ It’s universal human experiences that we use to try and take people out of their bubbles. 
+
+**Poe**: And it’s hard, because you can’t just get those at Trader Joe’s.
+
+**Poe**: ...
 
 **Poe**: But not many people care so we don’t get paid much, hence my taking advantage of the free booze.
 
-**Poe**(burps): Excuse me. I’ve been acting a little drunk. Anyway, it’s nice to see that some STEM people appreciate poetry.
+**Poe** (burps): Excuse me. I’ve been acting a little drunk. Anyway, it’s nice to see that some STEM people appreciate poetry.
 
 <p style='text-align: center'>
 <em>
@@ -122,7 +130,7 @@ There is no other version of this story.
 
 **Poe**: Oh shit, for real?
 
-**Maryam**(sipping her wine): Yes! Like what you said about breaking people out of their world, pure math is very much about constructing a world through reason inspired by, but ultimately separate from, the “real” world.
+**Maryam** (sipping her wine): Yes! Like what you said about breaking people out of their world, pure math is very much about constructing a world through reason inspired by, but ultimately separate from, the “real” world.
 
 **Maryam**: What is true in this mathematical world is true universally — across time, space, nationality, religion, race, and whatever else people divide themselves by. Like, even if everything turns out to be a simulation, everything we know about a vector space would still be just as true in the “real” world.
 
@@ -174,9 +182,9 @@ There is no other version of this story.
 
 **Maryam**: Applied math is useful, and there’s a lot of it in certain industries like finance. Pure math, though — people say it’s “impractical.”
 
-**Maryam**(sips): People don’t see me like they see you. At least they treat you like art. Math is only incidentally “useful,” which is not good enough for them. It’s not entirely their fault, though, but a failure of the education system.
+**Maryam** (sips): People don’t see me like they see you. At least they treat you like art. Math is only incidentally “useful,” which is not good enough for them. It’s not entirely their fault, though, but a failure of the education system.
 
-**Poe**(swig): Barely an art anymore. When was the last time you saw someone holding a book of poems? People think we’ve lost our minds and the “old ways”. The way they teach poetry to children is tedious, too, “This is poetry and this is what it means!” Then they get mad when adults lack media literacy. It’s a wonder anyone still stumbles into it.
+**Poe** (swig): I'm barely an art anymore. When was the last time you saw someone holding a book of poems? People think we’ve lost our minds and the “old ways”. The way they teach poetry to children is tedious, too, “This is poetry and this is what it means!” Then they get mad when adults lack media literacy. It’s a wonder anyone still stumbles into it.
 
 **Poe**: I think you can relate to this well, the way most other subjects question why you should exist, or why anyone should care. It’s very de-subjectilizing.
 
@@ -190,17 +198,17 @@ There is no other version of this story.
 
 **Maryam**: Both, incidentally. Cool guy.
 
-**Poe**: Yeah.
+**Poe**: Cool guy.
 
 **Poe**: Actually, I think both of us are lumped into the category of things which are “almost useful”: stuff that don’t intrinsically hold utility, but which help make people’s existence as human beings meaningful. You know? That’s what they say, isn’t it, that math is _almost useful_.
 
-**Maryam**(nodding): Yeah, it’s meant to be an insult. But I think what’s really insulting is “almost useless”, like report cards, diamonds, wars. They achieve a very specific purpose, but I’m not sure what else they’re good for besides that.
+**Maryam** (nodding): Yeah, it’s meant to be an insult. But I think what’s really insulting is “almost useless”, like report cards, diamonds, wars. They achieve a very specific purpose, but I’m not sure what else they’re good for besides that.
 
-**Poe**(sighs): Why have they got it backwards?
+**Poe** (sighs): Why have they got it backwards?
 
 **Maryam**: Who knows what they’re doing down there.
 
-**Maryam**(sighs): Anyway, do you want to see a cool trick? Brighten up the mood?
+**Maryam** (sighs): Anyway, do you want to see a cool trick? Brighten up the mood?
 
 **Poe**: Sure.
 
@@ -234,7 +242,7 @@ There is no other version of this story.
 
 **Poe**: That… does kind of make sense, actually. It’s cool that these two very different concepts now have that one thing in common.
 
-**Maryam**(giddy): Right?
+**Maryam** (giddy): Right?
 
 **Poe**: How do you come up with this stuff?
 
@@ -282,6 +290,13 @@ There is no other version of this story.
 
 **Poe**: …It looks like the party is ending… Let’s go sit on the roof? I can carry the alcohol.
 
+
+<p style='text-align: center'>
+<em>
+*Poe and Maryam head up to the roof, liquor in tow.*
+</em>
+</p>
+
 …
 
 **Poe:** It’s hard sometimes, right? I’ve probably said this before, when I was drunk, but it’s not easy to write poetry, and it’s certainly not easy to do math.
@@ -290,7 +305,7 @@ There is no other version of this story.
 
 **Poe**: How do you overcome it? I mean, how do you keep going when the work gets grueling, and the rest of the world doesn’t seem to care about what you’re doing?
 
-**Maryam**: Well, _I _know it’s important, for one. Even if the other people don’t see that — first of all, I do have important applications, they are just hundreds or thousands of years away! But also, there is so much beauty intrinsic to the subject and _so much_ to know that it’s hard to just walk away. Yes, the math students get tons of homework that they sometimes can’t finish, but that is how you learn. Even the process of doing homework with other people is an enriching experience that builds community.
+**Maryam**: Well, _I_  know it’s important, for one. Even if the other people don’t see that — first of all, I do have important applications, they are just hundreds or thousands of years away! But also, there is so much beauty intrinsic to the subject and _so much_ to know that it’s hard to just walk away. Yes, the math students get tons of homework that they sometimes can’t finish, but that is how you learn. Even the process of doing homework with other people is an enriching experience that builds community.
 
 **Poe**: I believe the term you are looking for is “trauma-bonding”.
 
@@ -306,7 +321,7 @@ There is no other version of this story.
 
 **Maryam**: And what about you? What do poets do to… cope? I know you said writing poetry isn’t easy.
 
-**Poe**: It almost never is. This isn’t just me, but writers tend to drink a lot. It loosens the subconscious from the rigidity that society often asks of us. Other drugs, too. “The Midnight Gospel” spends some time talking about psychedelics and alternate forms of consciousness.
+**Poe**: It almost never is. This isn’t just me, but writers tend to drink a lot. It loosens the subconscious from the rigidity that society often asks of us. Other drugs, too. “The Midnight Gospel”, for instance, spends some time talking about psychedelics and alternate forms of consciousness.
 
 **Maryam** (laughing): Our biggest commonality: looking at sacred geometry on a Friday night.
 
@@ -314,9 +329,11 @@ There is no other version of this story.
 
 **Poe**: Anyhow, seriously, it’s awfully hard to come up with something new to say, in a way that hasn’t already been said to death. I can experiment with different forms and constraints to see where the words lead me, but it’s still a heavy task to write about things which you barely understand. You do learn about them more in the grueling process of writing, though, so I guess that’s a motivation to keep going.
 
-**Maryam**: So you are trauma-bonding with yourself.
+**Maryam**: You mean trauma-bonding with yourself.
 
 **Poe**: Could you save it for the end? I’m having a moment here.
+
+**Maryam**: Sorry.
 
 **Poe**: As I was _about_ to say, I guess for me, personally, I think of the people who I’d want these poems to reach. There are so many of them, and their world is so big. I think even if just one person can feel the intimacy and familiarity that I sometimes feel when I read a poem, then all the struggle would have been worth it, you know?  It’s like you said, _I_ know it’s important.
 
@@ -371,15 +388,6 @@ Glad he withdrew!
 </em>
 </p>
 
-**Poe**: You really should watch “The Midnight Gospel.” I think you’ll like it.
-
-**Maryam**: I’ll add it to my list.
-
-**Poe**: I’m serious. Don’t forget.
-
-**Maryam**: I promise I will watch it. Unlike the people on earth who study math, I have a lot of time on my hands.
-
-**Poe**: Good. You should have fun sometimes.
 
 ---
 :EmailSub
