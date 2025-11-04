@@ -4,10 +4,10 @@
      <h1>favorites!</h1><br>
 
       <p>
-      Since I always ask people what their favorite XXX is and blank when they return the question
+      Since I always ask people what their favorite XXX is and then blank on my own
       </p>
 
-      <p>(updated 2025.09.24)</p>
+      <p>(last updated 2025.11.04)</p>
     </div>
 
     <div v-if="sections.length" class="favorites-content">

@@ -46,6 +46,7 @@
 
 ## blogs
 
+- [A True (Non-Hierarchical, Shared) Love](https://longreads.com/2018/05/14/a-true-non-hierarchical-shared-love/)
 - [finding the right people](https://nicoles.substack.com/p/finding-the-right-people) (Nix)
 - [Becoming a magician](https://autotranslucence.wordpress.com/2018/03/30/becoming-a-magician/) (Autotranslucence)
 - [Life is Short](http://paulgraham.com/vb.html) (Paul Graham)
@@ -63,6 +64,7 @@ I find the genre finder and playlist analytics tools especially helpful.
 
 - Victoria Monét (contemp R&B)
 - Rachmaninoff piano concertos
+- Shostakovich symphonies
 - Red Velvet (literally the only K-pop songs I have saved)
 - Chappell Roan 🏳️‍🌈
 - _EVERYTHING_, The Black Skirts
@@ -85,25 +87,33 @@ I find the genre finder and playlist analytics tools especially helpful.
 ## tv shows
 
 - BoJack Horseman (2018)
+- Arcane (2021)
 - Alice in Borderland (2020)
 - Severance (2022)
 - Game Changer (2019)
-- Black Mirror (2011)
-- My Mister (2018)
-- Arcane (2021)
+- The Midnight Gospel (2020)
 
 ## movies
 
-- How To Make Millions Before Grandma Dies (2024)
 - Everything Everywhere All at Once (2022)
+- Poetry (2010)
+- Spider-Man: Across the Spider-Verse (2023)
 - V for Vendetta (2005)
+- How To Make Millions Before Grandma Dies (2024)
 
 # smelling
 
 - sandalwood
 - thai tea
+- new orleans crawfish boil
+- osmanthus, magnolia, pomelo
+
+# software
+- [Countdown timer on mac](https://sites.google.com/view/countdown-timer-pro/credits?authuser=0)
 
 # other fun things
 
+- [onelook.com](https://www.onelook.com) - AMAZING website for english words
 - [playingcards.io](https://playingcards.io) - a website for playing card games online, supports custom decks
 - [a collection of chinese board games](https://game.hullqin.cn)
+- [spotify playlist analyzer](https://www.chosic.com/spotify-playlist-analyzer/)
