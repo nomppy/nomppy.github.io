@@ -1,6 +1,6 @@
 ### Me
 Hello!--and welcome to my website :)
-I'm a third-year undergrad at UMich majoring in math, creative writing, and physics.
+I'm a fourth-year undergrad at UMich majoring in math, creative writing, and physics.
 
 As for interests and hobbies, I'm a bit all over the place.
 My current hobbies include [reading](https://www.goodreads.com/user/show/140748369-kenneth), [writing](/posts), finding new [music](https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1?si=6a456a77516f4066), [photography](https://instagram.com/sunk.photos), petting cats, learning languages, board games, and rollerblading.
