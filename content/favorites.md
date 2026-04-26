@@ -109,7 +109,10 @@ I find the genre finder and playlist analytics tools especially helpful.
 - osmanthus, magnolia, pomelo
 
 # software
-- [Countdown timer on mac](https://sites.google.com/view/countdown-timer-pro/credits?authuser=0)
+- [Countdown timer on mac](https://sites.google.com/view/countdown-timer-pro/credits?authuser=1)
+- [Beeper](https://beeper.com)--~~all~~ (most) of your messaging platforms in one
+- [Raycast](https://raycast.com)--drop-in Spotlight replacement for Mac, basically an extensible command bar; infinite uses
+- [Shortkeys (chromium extension)](https://www.shortkeys.app/welcome/)
 
 # other fun things
 
