@@ -48,7 +48,7 @@ useSeoMeta({
   description: desc,
   ogDescription: desc,
   twitterDescription: desc,
-  ogUrl: 'https://sunkht.xyz',
+  ogUrl: 'https://sunken.fyi',
   // ogImage: 'https://example.com/image.png',
   // twitterCard: 'summary_large_image',
 })
