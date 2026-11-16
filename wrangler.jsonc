@@ -1,5 +1,6 @@
 {
-  // Cloudflare Worker that serves the generated Nuxt site and the short links.
+  // Cloudflare Worker that serves the generated Nuxt site, the short links
+  // and the photo queue.
   "name": "sunken-site",
   "main": "worker/index.js",
   "compatibility_date": "2026-11-16",
@@ -8,5 +9,20 @@
     "binding": "ASSETS",
     "run_worker_first": true,
     "not_found_handling": "404-page"
+  },
+  // Photo files and the queue. Created automatically on first deploy.
+  "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "sunken-photos" }],
+  "d1_databases": [{ "binding": "DB", "database_name": "sunken-photos" }],
+  // Checks once a day (17:07 UTC, 9:07 Pacific) whether a photo is due.
+  "triggers": { "crons": ["7 17 * * *"] },
+  "vars": {
+    "SITE_URL": "https://sunken.fyi",
+    "PUBLISH_EVERY_DAYS": "2",
+    "IG_USER_ID": "17841475574208034",
+    "IG_PAD_COLOR": "white",
+    "GRAPH_VERSION": "v25.0"
   }
+  // Secrets, set in the Cloudflare dashboard (not in this file):
+  //   IG_TOKEN    Instagram system-user token
+  //   UPLOAD_KEY  password the Apple Shortcut sends when uploading
 }

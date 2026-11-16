@@ -1,6 +1,8 @@
-// Short links: sunken.fyi/<name> redirects to the URL listed in links.json.
-// Anything that is not a short link is served from the static site.
+// Short links: <site>/<name> redirects to the URL listed in links.json.
+// Photo queue: /photo-api/* and /photos/img/* (see photos.js).
+// Anything else is served from the static site.
 import links from "../links.json";
+import { handlePhotos, scheduled } from "./photos.js";
 
 const table = new Map(
   Object.entries(links).map(([name, url]) => [name.toLowerCase(), url]),
@@ -23,8 +25,14 @@ export function resolveLink(pathname) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const photos = await handlePhotos(request, env);
+    if (photos) return photos;
     const target = resolveLink(url.pathname);
     if (target) return Response.redirect(target, 302);
     return env.ASSETS.fetch(request);
+  },
+
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(scheduled(env));
   },
 };

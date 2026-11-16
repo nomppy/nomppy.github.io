@@ -9,6 +9,9 @@
     <li>
       <site-link to="/posts/">writing</site-link>
     </li>
+    <li>
+      <site-link to="/photos/">photos</site-link>
+    </li>
     <!-- <li>
       <site-link to="/news/">news</site-link>
     </li> -->
