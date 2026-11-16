@@ -1,4 +1,4 @@
-// Short links: sunken.site/<name> redirects to the URL listed in links.json.
+// Short links: sunken.fyi/<name> redirects to the URL listed in links.json.
 // Anything that is not a short link is served from the static site.
 import links from "../links.json";
 

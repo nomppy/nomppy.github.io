@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   site: {
-    url: 'https://sunken.site',
+    url: 'https://sunken.fyi',
     name: 'Kenneth Sun',
     trailingSlash: true,
   },

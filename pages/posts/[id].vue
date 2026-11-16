@@ -91,7 +91,7 @@ useSeoMeta({
   description: desc,
   'og:description': desc,
   'twitter:description': desc,
-  'og:url': 'https://sunken.site' + cleanPath,
+  'og:url': 'https://sunken.fyi' + cleanPath,
 });
 
 useHead({
