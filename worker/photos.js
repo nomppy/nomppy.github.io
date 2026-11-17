@@ -36,7 +36,7 @@ const json = (data, status = 200) =>
     headers: { "content-type": "application/json; charset=utf-8" },
   });
 
-async function authorized(request, env) {
+export async function authorized(request, env) {
   if (!env.UPLOAD_KEY) return false;
   const header = request.headers.get("authorization") || "";
   const given = header.startsWith("Bearer ") ? header.slice(7) : "";

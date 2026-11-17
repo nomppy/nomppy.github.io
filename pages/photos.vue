@@ -45,7 +45,7 @@
             :srcset="srcset(photo.url, [1200, 2400, 3600])"
             sizes="100vw"
             :alt="photo.caption || 'Photo'"
-            :style="{ aspectRatio: `${photo.width} / ${photo.height}` }"
+            :style="viewerSize(photo)"
             @error="fallback($event, photo.url)"
           />
           <figcaption>
@@ -82,6 +82,12 @@ const fallback = (event, url) => {
   img.src = url
 }
 
+// Fit the photo to the screen (upscaling small ones) rather than its own pixel size.
+const viewerSize = (p) => ({
+  '--r': ratio(p),
+  aspectRatio: `${ratio(p)}`,
+  width: `min(calc(100vw - 7rem), calc((100vh - 6rem) * ${ratio(p)}))`,
+})
 const ratio = (p) => (p.width && p.height ? p.width / p.height : 1.5)
 const tileStyle = (p) => ({ flexGrow: ratio(p), flexBasis: `calc(var(--row) * ${ratio(p)})`, aspectRatio: `${ratio(p)}` })
 
@@ -203,7 +209,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
   margin: 0;
   padding: 0;
   border: 0;
-  background: rgba(0, 0, 0, 0.94);
+  background: rgba(0, 0, 0, 0.97);
   color: #e8e8e8;
 
   &[open] {
@@ -229,7 +235,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
     display: block;
     max-width: calc(100vw - 7rem);
     max-height: calc(100vh - 6rem);
-    width: auto;
     height: auto;
     object-fit: contain;
   }
@@ -301,6 +306,10 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
     figure,
     img {
       max-width: 100vw;
+    }
+
+    img {
+      width: min(100vw, calc((100vh - 6rem) * var(--r, 1))) !important;
     }
 
     .nav {

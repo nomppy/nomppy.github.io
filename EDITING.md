@@ -1,36 +1,21 @@
 # Editing the site
 
-Every change below goes live by itself about 2 minutes after you commit it:
-Cloudflare rebuilds the site from the `nuxt3` branch.
+Short links and friends are edited on the site itself. Everything else lives in
+this repo, and goes live by itself about 2 minutes after a commit to `nuxt3`.
 
-## Short links (`sunken.fyi/<name>`)
+## Short links and friends: sunken.fyi/admin
 
-Edit [`links.json`](https://github.com/nomppy/nomppy.github.io/edit/nuxt3/links.json)
-on GitHub, then **Commit changes**. Each line is `"name": "where it goes"`:
+Open **https://sunken.fyi/admin** on your phone or computer and enter the same
+password your photo Shortcut uses (`UPLOAD_KEY`). From there you can add or
+delete short links (`sunken.fyi/cv` → any address) and the friends the home
+page button picks from. Changes are live within a minute.
 
-```json
-{
-  "cv": "https://example.com/my-cv.pdf",
-  "ig": "https://www.instagram.com/sunk.photos"
-}
-```
-
-- Names are case-insensitive: `sunken.fyi/CV` works too.
-- Don't reuse a page name: `favorites`, `photos`, `posts`, `news`, `drafts`,
-  `friend`.
-- Remember the comma between lines, and none after the last one. If the JSON is
-  broken the build fails and the live site simply stays as it was.
-
-## Friends (`sunken.fyi/friend`)
-
-Edit [`friends.json`](https://github.com/nomppy/nomppy.github.io/edit/nuxt3/friends.json)
-and add a line in the same shape as the others:
-
-```json
-  { "name": "Name", "url": "https://their-site.com" }
-```
-
-The home page button sends visitors to one of these at random.
+- Link names can use letters, numbers, dashes and underscores; capitals don't
+  matter (`sunken.fyi/CV` works too).
+- Names already used by the site (`photos`, `favorites`, `friend`, `admin`, …)
+  are refused.
+- `links.json` and `friends.json` in the repo were only the starting lists;
+  editing them now changes nothing.
 
 ## Home page text
 
@@ -41,8 +26,10 @@ move it or delete it to change that.
 ## Feeds that update themselves
 
 Every 3 hours the site refreshes Letterboxd (films rated 4+ or hearted), Goodreads
-(currently reading and recently finished), Spotify (the playlist you most recently
-added to) and Substack (latest post). Nothing to do. The usernames are in
+(currently reading, from the public profile: Goodreads only shows finished
+books to signed-in visitors), Spotify (the playlist you most recently added to)
+and Substack (latest post). A feed that fails is retried about every 10 minutes
+and the last good version stays up meanwhile. Nothing to do. The usernames are in
 `wrangler.jsonc` under `vars`.
 
 Photos: see `PHOTOS.md`.
