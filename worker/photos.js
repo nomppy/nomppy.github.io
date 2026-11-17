@@ -3,6 +3,7 @@
 import { jpegSize, fitsInstagram, scrubJpeg, displaySize } from "./jpeg.js";
 import { shouldPublish } from "./schedule.js";
 import { postImage, listMedia, imagesFromMedia } from "./instagram.js";
+import { dateFromCaption, parseDateInput } from "./dates.js";
 
 const MAX_UPLOAD_BYTES = 60 * 1024 * 1024;
 const IMPORT_BATCH = 15;
@@ -27,13 +28,32 @@ async function ensureSchema(env) {
       ig_error TEXT
     )`,
   ).run();
-  // Added later: capture date from the photo's camera data.
-  try {
-    await env.DB.prepare("ALTER TABLE photos ADD COLUMN taken_at INTEGER").run();
-  } catch {
-    // column already exists
+  // Added later: when the photo was taken, and where that date came from
+  // (manual, shortcut, camera or caption; see dates.js).
+  for (const col of ["taken_at INTEGER", "date_source TEXT"]) {
+    try {
+      await env.DB.prepare(`ALTER TABLE photos ADD COLUMN ${col}`).run();
+    } catch {
+      // column already exists
+    }
   }
   schemaReady = true;
+}
+
+// Fills in dates written in captions for photos that have none yet.
+export async function backfillDates(env) {
+  await ensureSchema(env);
+  const { results } = await env.DB.prepare("SELECT id, caption FROM photos WHERE taken_at IS NULL AND caption != ''").all();
+  let filled = 0;
+  for (const r of results) {
+    const found = dateFromCaption(r.caption);
+    if (!found) continue;
+    await env.DB.prepare("UPDATE photos SET taken_at = ?, date_source = 'caption' WHERE id = ? AND taken_at IS NULL")
+      .bind(found.takenAt, r.id)
+      .run();
+    filled++;
+  }
+  return filled;
 }
 
 const json = (data, status = 200) =>
@@ -41,6 +61,8 @@ const json = (data, status = 200) =>
     status,
     headers: { "content-type": "application/json; charset=utf-8" },
   });
+
+export { ensureSchema };
 
 export async function authorized(request, env) {
   if (!env.UPLOAD_KEY) return false;
@@ -65,6 +87,19 @@ function publicRow(r) {
     caption: r.caption,
     publishedAt: r.published_at,
     takenAt: r.taken_at ?? null,
+  };
+}
+
+// Everything the admin panel shows about a photo.
+export function adminRow(r) {
+  return {
+    ...publicRow(r),
+    status: r.status,
+    source: r.source,
+    createdAt: r.created_at,
+    dateSource: r.date_source ?? null,
+    igStatus: r.ig_status ?? null,
+    igError: r.ig_error ?? null,
   };
 }
 
@@ -105,7 +140,7 @@ async function publishToInstagram(env, row) {
 }
 
 // Releases the oldest queued photo if enough time has passed (or if forced).
-async function publishNext(env, { force = false } = {}) {
+export async function publishNext(env, { force = false } = {}) {
   await ensureSchema(env);
   const last = await env.DB.prepare("SELECT MAX(published_at) AS t FROM photos WHERE status = 'published'").first();
   const next = await env.DB.prepare(
@@ -142,12 +177,13 @@ export async function scheduled(env) {
 // Pulls in posts made directly on Instagram (posts from the queue are skipped,
 // since they are already recorded). Runs on the feeds schedule.
 export async function syncInstagram(env) {
-  if (!env.IG_TOKEN || !env.IG_USER_ID) return null;
   await ensureSchema(env);
-  return importInstagram(env);
+  const result = env.IG_TOKEN && env.IG_USER_ID ? await importInstagram(env) : null;
+  await backfillDates(env);
+  return result;
 }
 
-async function importInstagram(env) {
+export async function importInstagram(env) {
   const images = imagesFromMedia(await listMedia(env));
   const known = new Set(
     (await env.DB.prepare("SELECT ig_media_id FROM photos WHERE ig_media_id IS NOT NULL").all()).results.map(
@@ -166,13 +202,17 @@ async function importInstagram(env) {
       const size = jpegSize(bytes) || {};
       const id = crypto.randomUUID();
       await env.PHOTOS.put(objectKey(id), bytes, { httpMetadata: { contentType: "image/jpeg" } });
-      const takenAt = Date.parse(img.takenAt) || Date.now();
+      const postedAt = Date.parse(img.takenAt) || Date.now();
+      const captionDate = dateFromCaption(img.caption);
       await env.DB.prepare(
         `INSERT OR IGNORE INTO photos
-           (id, caption, width, height, status, source, created_at, published_at, ig_media_id, ig_status)
-         VALUES (?, ?, ?, ?, 'published', 'instagram', ?, ?, ?, 'done')`,
+           (id, caption, width, height, status, source, created_at, published_at, ig_media_id, ig_status, taken_at, date_source)
+         VALUES (?, ?, ?, ?, 'published', 'instagram', ?, ?, ?, 'done', ?, ?)`,
       )
-        .bind(id, img.caption, size.width ?? null, size.height ?? null, takenAt, takenAt, img.igId)
+        .bind(
+          id, img.caption, size.width ?? null, size.height ?? null, postedAt, postedAt, img.igId,
+          captionDate?.takenAt ?? null, captionDate ? "caption" : null,
+        )
         .run();
       imported++;
     } catch (err) {
@@ -220,20 +260,30 @@ export async function handlePhotos(request, env) {
     const raw = new Uint8Array(await request.arrayBuffer());
     if (!raw.byteLength) return json({ error: "empty body" }, 400);
     if (raw.byteLength > MAX_UPLOAD_BYTES) return json({ error: "file too large" }, 413);
-    const { bytes, orientation, takenAt } = scrubJpeg(raw);
+    const { bytes, orientation, takenAt: cameraDate } = scrubJpeg(raw);
     const size = displaySize(jpegSize(bytes), orientation);
     if (!size) return json({ error: "send a JPEG image" }, 415);
     const caption = (url.searchParams.get("caption") || request.headers.get("x-caption") || "").slice(0, 2200);
+    // Date: the Shortcut's (or admin's) value, else the camera's, else the caption's.
+    const given = parseDateInput(url.searchParams.get("taken") || request.headers.get("x-taken-at"));
+    const fromCaption = dateFromCaption(caption);
+    const [takenAt, dateSource] = given
+      ? [given, url.searchParams.get("source") === "admin" ? "manual" : "shortcut"]
+      : cameraDate
+        ? [cameraDate, "camera"]
+        : fromCaption
+          ? [fromCaption.takenAt, "caption"]
+          : [null, null];
     const id = crypto.randomUUID();
     await env.PHOTOS.put(objectKey(id), bytes, { httpMetadata: { contentType: "image/jpeg" } });
     await env.DB.prepare(
-      `INSERT INTO photos (id, caption, width, height, status, source, created_at, taken_at)
-       VALUES (?, ?, ?, ?, 'queued', 'upload', ?, ?)`,
+      `INSERT INTO photos (id, caption, width, height, status, source, created_at, taken_at, date_source)
+       VALUES (?, ?, ?, ?, 'queued', 'upload', ?, ?, ?)`,
     )
-      .bind(id, caption, size.width, size.height, Date.now(), takenAt)
+      .bind(id, caption, size.width, size.height, Date.now(), takenAt, dateSource)
       .run();
     const q = await env.DB.prepare("SELECT COUNT(*) AS n FROM photos WHERE status = 'queued'").first();
-    return json({ id, queued: q.n, fitsInstagram: fitsInstagram(size.width, size.height) }, 201);
+    return json({ id, queued: q.n, takenAt, dateSource, fitsInstagram: fitsInstagram(size.width, size.height) }, 201);
   }
 
   if (route === "GET /photo-api/queue") {
