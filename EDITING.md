@@ -19,15 +19,14 @@ page button picks from. Changes are live within a minute.
 
 ## Home page text
 
-Edit [`content/index.md`](https://github.com/nomppy/nomppy.github.io/edit/nuxt3/content/index.md).
-The `::lately` line is where the films, books, playlist and latest post appear;
-move it or delete it to change that.
+Edit [`content/index.md`](https://github.com/nomppy/nomppy.github.io/edit/nuxt3/content/index.md)
+for the introduction. The short list of links beside it (Twitter, Curius, …)
+is the `elsewhere` list near the top of `pages/index.vue`.
 
 ## Feeds that update themselves
 
 Every 3 hours the site refreshes Letterboxd (films rated 4+ or hearted), Goodreads
-(currently reading, from the public profile: Goodreads only shows finished
-books to signed-in visitors), Spotify (the playlist you most recently added to)
+(currently reading and recently finished, through its public shelf widgets), Spotify (the playlist you most recently added to)
 and Substack (latest post). A feed that fails is retried about every 10 minutes
 and the last good version stays up meanwhile. Nothing to do. The usernames are in
 `wrangler.jsonc` under `vars`.

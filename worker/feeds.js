@@ -78,35 +78,39 @@ export function pickFilms(films, n = 5) {
   return [...good, ...rest].slice(0, n);
 }
 
-// Goodreads no longer serves shelf RSS, and shelf pages need a sign-in, so this
-// reads the "Currently Reading" block of the public profile page.
-const stripTags = (h) => decode(h.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
-
-export function parseGoodreadsProfile(html) {
-  const start = html.search(/Currently Reading/i);
-  if (start < 0) return [];
-  const rest = html.slice(start);
-  const end = rest.slice(20).search(/<h2[\s>]/);
-  const block = end > 0 ? rest.slice(0, end + 20) : rest.slice(0, 20000);
-  return block
-    .split(/class="Updates/)
+// Goodreads has no public API or RSS any more, and shelf pages need a sign-in.
+// Its embeddable shelf widgets are public: they return JavaScript that writes
+// HTML, which is parsed here.
+export function parseGoodreadsWidget(js) {
+  const html = js.replace(/\\n/g, " ").replace(/\\"/g, '"').replace(/\\\//g, "/").replace(/\\'/g, "'");
+  return html
+    .split(/class="gr_custom_each_container[^"]*"/)
     .slice(1)
-    .map((chunk) => {
-      const title = chunk.match(/<a[^>]*class="bookTitle"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/);
-      if (!title) return null;
-      const author = chunk.match(/<a[^>]*class="authorName"[^>]*>([\s\S]*?)<\/a>/);
-      const img = chunk.match(/<img[^>]*src="(https:\/\/i\.gr-assets\.com\/[^"]+)"/);
-      const href = title[1].split("?")[0];
+    .map((c) => {
+      const t = c.match(/class="gr_custom_title[^"]*"[^>]*>\s*<a[^>]*href="([^"]+)"[^>]*>([^<]*)<\/a>/);
+      if (!t) return null;
+      const a = c.match(/class="gr_custom_author[^"]*"[^>]*>[\s\S]*?<a[^>]*>([^<]*)<\/a>/);
+      const img = c.match(/<img[^>]*src="(https:\/\/i\.gr-assets\.com\/[^"]+)"/);
       return {
-        title: stripTags(title[2]),
-        author: author ? stripTags(author[1]) : "",
-        url: href.startsWith("http") ? href : `https://www.goodreads.com${href}`,
-        // Ask for a larger cover than the 98px thumbnail on the profile.
+        title: decode(t[2]),
+        author: a ? decode(a[1]) : "",
+        url: t[1].split("?")[0],
+        // Ask for a larger cover than the widget's thumbnail.
         cover: img ? img[1].replace(/\._S[XY]\d+_/, "._SY475_") : null,
       };
     })
-    .filter(Boolean)
-    .slice(0, 3);
+    .filter(Boolean);
+}
+
+async function goodreadsShelf(env, shelf, sort, widgetId) {
+  // Goodreads caches widget output per widget_id, so each shelf needs its own.
+  const q = new URLSearchParams({
+    num_books: "6", shelf, sort, order: "d", show_cover: "1", show_author: "1", show_title: "1",
+    cover_size: "medium", widget_id: widgetId,
+  });
+  const js = await getText(`https://www.goodreads.com/review/custom_widget/${env.GOODREADS_USER_ID}.sunken?${q}`, { browser: true });
+  if (!/gr_custom/.test(js)) throw new Error("Goodreads widget returned no shelf");
+  return parseGoodreadsWidget(js);
 }
 
 export function parseSubstack(xml) {
@@ -139,8 +143,10 @@ export function parseSubstackApi(data) {
 const SOURCES = {
   films: async (env) => pickFilms(parseLetterboxd(await getText(`https://letterboxd.com/${env.LETTERBOXD_USER}/rss/`))),
   books: async (env) => {
-    const html = await getText(`https://www.goodreads.com/user/show/${env.GOODREADS_USER_ID}`, { browser: true });
-    return { reading: parseGoodreadsProfile(html), read: [] };
+    const reading = await goodreadsShelf(env, "currently-reading", "date_added", "1794800001");
+    const read = await goodreadsShelf(env, "read", "date_read", "1794800002");
+    const current = new Set(reading.map((b) => b.url));
+    return { reading: reading.slice(0, 4), read: read.filter((b) => !current.has(b.url)).slice(0, 5) };
   },
   post: async (env) => {
     try {
@@ -196,9 +202,9 @@ export async function handleFeeds(request, env, ctx) {
   const cached = await kvGet(env, "lately");
   if (!cached) {
     const fresh = (await maybeRefresh(env, null)) || {};
-    return json(fresh, { "cache-control": "public, max-age=300" });
+    return json(fresh, { "cache-control": "no-store" });
   }
   const hadErrors = Object.keys(cached.value?.errors || {}).length > 0;
   if (hadErrors || Date.now() - cached.updatedAt > STALE_AFTER_MS) ctx.waitUntil(maybeRefresh(env, cached));
-  return json(cached.value, { "cache-control": "public, max-age=300" });
+  return json(cached.value, { "cache-control": "no-store" });
 }
