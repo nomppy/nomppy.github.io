@@ -4,6 +4,8 @@
 import { playlistNow } from "./spotify.js";
 import { kvGet, kvPut } from "./kv.js";
 
+// Bump when the shape of the feed data changes, so a deploy refreshes it at once.
+const FEEDS_VERSION = 4;
 const STALE_AFTER_MS = 3 * 60 * 60 * 1000; // refresh at most every 3 hours on read
 const RETRY_GAP_MS = 10 * 60 * 1000; // don't start another refresh within 10 minutes
 const UA = "sunken.fyi feed reader (+https://sunken.fyi)";
@@ -189,6 +191,7 @@ export async function refreshFeeds(env) {
     }),
   );
   next.refreshedAt = Date.now();
+  next.version = FEEDS_VERSION;
   await kvPut(env, "lately", next);
   return next;
 }
@@ -209,8 +212,8 @@ export async function handleFeeds(request, env, ctx) {
   const url = new URL(request.url);
   if (url.pathname !== "/feed-api/lately") return null;
   const cached = await kvGet(env, "lately");
-  if (!cached) {
-    const fresh = (await maybeRefresh(env, null)) || {};
+  if (!cached || cached.value?.version !== FEEDS_VERSION) {
+    const fresh = (await maybeRefresh(env, null)) || cached?.value || {};
     return json(fresh, { "cache-control": "no-store" });
   }
   const hadErrors = Object.keys(cached.value?.errors || {}).length > 0;

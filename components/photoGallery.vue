@@ -76,7 +76,9 @@ const state = ref('loading')
 const current = ref(-1)
 const viewer = ref(null)
 
-const when = (p) => p.takenAt || p.publishedAt || 0
+// The photos page orders by when a photo was taken; "Recent photos" on the
+// home page by when it was posted, so new posts always show up there.
+const when = (p) => (props.bySeason ? p.takenAt || p.publishedAt : p.publishedAt || p.takenAt) || 0
 const sorted = computed(() => [...photos.value].sort((a, b) => when(b) - when(a)))
 const shown = computed(() => (props.limit ? sorted.value.slice(0, props.limit) : sorted.value))
 const photo = computed(() => shown.value[current.value])

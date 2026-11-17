@@ -2,10 +2,11 @@
 //   /photo-api/*, /photos/img/*   photo queue (photos.js)
 //   /feed-api/lately              home page "lately" feeds (feeds.js)
 //   /spotify/*                    one-time Spotify connection (spotify.js)
-//   /admin, /admin-api/*          editing page for short links and friends (admin.js)
+//   /admin, /admin-api/*          editing page (admin.js)
+//   /bg/img-*.jpg                 background photos (backgrounds.js)
 //   /friend                       a random friend's website
 //   /<name>                       short links
-//   anything else                 the static site
+//   anything else                 the static site, with a random background
 // Short links and friends live in D1 (lists.js); links.json and friends.json
 // are only the starting values.
 import { handlePhotos, scheduled as photoSchedule, syncInstagram } from "./photos.js";
@@ -13,6 +14,7 @@ import { handleFeeds, refreshFeeds } from "./feeds.js";
 import { handleSpotify } from "./spotify.js";
 import { handleAdmin } from "./admin.js";
 import { getLists } from "./lists.js";
+import { serveBackground, withBackground } from "./backgrounds.js";
 
 const PHOTO_CRON = "7 17 * * *"; // 9:07 Pacific: release a queued photo if one is due
 
@@ -69,7 +71,8 @@ export default {
       (await handlePhotos(request, env)) ||
       (await handleFeeds(request, env, ctx)) ||
       (await handleSpotify(request, env)) ||
-      (await handleAdmin(request, env));
+      (await handleAdmin(request, env)) ||
+      (await serveBackground(request, env));
     if (handled) return handled;
 
     // Only single-segment paths can be short links or /friend; skip the
@@ -90,7 +93,7 @@ export default {
       const target = resolveLink(url.pathname, links);
       if (target) return new Response(null, { status: 302, headers: { location: target, "cache-control": "no-store" } });
     }
-    return env.ASSETS.fetch(request);
+    return withBackground(await env.ASSETS.fetch(request), env);
   },
 
   async scheduled(controller, env, ctx) {

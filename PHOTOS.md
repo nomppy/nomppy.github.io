@@ -34,11 +34,39 @@ Build it once on the Mac; it syncs to the iPhone through iCloud.
 Optional caption: before *Get Contents of URL*, add **Ask for Input** (text),
 then **URL Encode** it and append `?caption=<Encoded Text>` to the URL.
 
+Optional date (recommended): before *Get Contents of URL*, add **Get Details
+of Images** → *Date Taken* of *Repeat Item*, then **Format Date** → *ISO 8601*.
+In *Get Contents of URL* add a header `X-Taken-At` = *Formatted Date*. Without
+it the site still reads the date the camera wrote into the photo, so this only
+matters for screenshots and photos saved from other apps.
+
+## Dates
+
+The photos page groups by season of the date a photo was **taken**. The site
+picks the first date it has, in this order:
+
+1. A date you set in the admin page ("Date set by you").
+2. The Shortcut's `X-Taken-At` header ("Date from your Photos app").
+3. The camera's own date inside the photo ("Date from the camera").
+4. A date in the caption ("Date read from the caption"): `25.05.14`,
+   `2025-05-14`, or a season like `fall '25` (counted as the middle of it).
+
+Photos with none of these are grouped by the day they were posted, and the
+admin page lists them under *Only photos without a date*. Instagram posts made
+in the app carry no taken date, so they use the caption or need one set.
+
+## Admin page: sunken.fyi/admin → Photos
+
+Everything below can also be done there without the command line: add photos
+(any format; the browser converts them to JPEG) with a caption and date, edit
+the caption or date of any photo, set one date on several photos at once,
+delete, release the next queued photo, and check Instagram for new posts.
+
 The Worker removes GPS location (EXIF, XMP and IPTC) on upload and keeps
 everything else, so photos stay full resolution and upright. Instagram gets a
 resized copy, since it caps images at 8 MB.
 
-## Day-to-day commands
+## Day-to-day commands (optional)
 
 Replace `KEY` with your `UPLOAD_KEY`.
 

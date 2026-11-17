@@ -139,50 +139,80 @@ async function ownedPlaylists(env, at) {
     owned.push(...(list.items || []).filter((p) => p && (!me || p.owner?.id === me)));
     next = list.next;
   }
-  return owned; // library order: newest first unless the library is re-sorted
+  return owned;
 }
 
-// When a playlist was started: the date its first song was added.
+// When a playlist was started: the earliest "added" date among its first 50
+// songs. Spotify has no creation date, and the library order is not reliable.
 async function startedAt(p, at) {
-  if (!totalOf(p)) return null;
-  const page = await api(`/playlists/${p.id}/items?limit=1&offset=0&fields=items(added_at)`, at);
-  const d = page.items?.[0]?.added_at;
-  return d ? Date.parse(d) : null;
+  const page = await api(`/playlists/${p.id}/items?limit=50&offset=0&fields=items(added_at)`, at);
+  const times = (page.items || []).map((e) => Date.parse(e.added_at || "")).filter(Number.isFinite);
+  return times.length ? Math.min(...times) : null;
 }
 
-// The playlist most recently created. Spotify doesn't expose a creation date,
-// so among the newest few in the library this picks the one whose first song
-// was added most recently. "number" is how many playlists you own.
+const STARTS_KEY = "spotify-starts";
+const STARTS_PER_RUN = 20; // keeps each refresh well under Cloudflare's subrequest limit
+const RECENT_MS = 21 * 86_400_000; // "currently building" = started in the last 3 weeks
+const MAX_SHOWN = 3;
+
+// Start dates are remembered per playlist, so each refresh only looks up
+// playlists it hasn't seen before (or that went from empty to non-empty).
+async function knownStarts(env, owned, at) {
+  const saved = (await kvGet(env, STARTS_KEY))?.value || {};
+  const starts = {};
+  const todo = [];
+  for (const p of owned) {
+    const prev = saved[p.id];
+    if (prev && (prev.startedAt !== null || totalOf(p) === 0)) starts[p.id] = prev;
+    else if (totalOf(p) > 0) todo.push(p);
+    else starts[p.id] = { startedAt: null };
+  }
+  for (const p of todo.slice(0, STARTS_PER_RUN)) {
+    try {
+      starts[p.id] = { startedAt: await startedAt(p, at) };
+    } catch {
+      // try again next refresh
+    }
+  }
+  await kvPut(env, STARTS_KEY, starts);
+  return { starts, complete: todo.length <= STARTS_PER_RUN };
+}
+
+export function choosePlaylists(owned, starts, now = Date.now()) {
+  const dated = owned
+    .filter((p) => starts[p.id]?.startedAt)
+    .map((p) => ({ p, startedAt: starts[p.id].startedAt }))
+    .sort((a, b) => a.startedAt - b.startedAt);
+  // Number = position in the order you started them (first playlist = #1).
+  dated.forEach((d, i) => (d.number = i + 1));
+  const newestFirst = [...dated].reverse();
+  const recent = newestFirst.filter((d) => now - d.startedAt <= RECENT_MS).slice(0, MAX_SHOWN);
+  if (recent.length) return { mode: "building", picks: recent.reverse() };
+  return { mode: "latest", picks: newestFirst.slice(0, 2).reverse() };
+}
+
 export async function playlistNow(env) {
   if (!env.SPOTIFY_CLIENT_ID) return undefined;
   const at = await accessToken(env);
   if (!at) return undefined; // not connected yet: leave this section out
   const owned = await ownedPlaylists(env, at);
   if (!owned.length) return null;
-  const candidates = owned.slice(0, 8);
-  const starts = await Promise.all(candidates.map((p) => startedAt(p, at).catch(() => null)));
-  // A brand-new empty playlist at the top of the library counts as newest.
-  let pick = candidates[0];
-  if (totalOf(pick) > 0) {
-    let best = -1;
-    candidates.forEach((p, i) => {
-      if (starts[i] !== null && starts[i] > best) {
-        best = starts[i];
-        pick = p;
-      }
+  const { starts, complete } = await knownStarts(env, owned, at);
+  const { mode, picks } = choosePlaylists(owned, starts);
+  const playlists = [];
+  for (const { p, number, startedAt: started } of picks) {
+    const tracks = await recentItems(p.id, totalOf(p), at);
+    tracks.sort((a, b) => Date.parse(b.addedAt || 0) - Date.parse(a.addedAt || 0));
+    playlists.push({
+      name: p.name,
+      url: p.external_urls?.spotify || null,
+      cover: p.images?.[0]?.url || null,
+      total: totalOf(p),
+      number,
+      startedAt: new Date(started).toISOString(),
+      lastAdded: tracks[0]?.addedAt || null,
+      tracks: tracks.slice(0, 3),
     });
   }
-  const tracks = totalOf(pick) ? await recentItems(pick.id, totalOf(pick), at) : [];
-  tracks.sort((a, b) => Date.parse(b.addedAt || 0) - Date.parse(a.addedAt || 0));
-  const i = candidates.indexOf(pick);
-  return {
-    name: pick.name,
-    url: pick.external_urls?.spotify || null,
-    cover: pick.images?.[0]?.url || null,
-    total: totalOf(pick),
-    number: owned.length,
-    startedAt: starts[i] ? new Date(starts[i]).toISOString() : null,
-    lastAdded: tracks[0]?.addedAt || null,
-    tracks: tracks.slice(0, 4),
-  };
+  return { mode, playlists, complete };
 }
