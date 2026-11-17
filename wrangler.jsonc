@@ -27,7 +27,7 @@
     "GOODREADS_USER_ID": "140748369",
     "SUBSTACK_HOST": "sunkht.substack.com",
     "SPOTIFY_USER_ID": "tbkwdf650gvc7vlikkdmoj1k1",
-    "SPOTIFY_CLIENT_ID": ""
+    "SPOTIFY_CLIENT_ID": "cf937ec842af4df4885063410f6ac6f6"
   },
   // Secrets, set in the Cloudflare dashboard (not in this file):
   //   IG_TOKEN    Instagram system-user token
