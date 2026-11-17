@@ -11,11 +11,9 @@ When one is due it appears on `/photos/` and is posted to Instagram as
    - `IG_TOKEN`: the Instagram system-user token from the Meta app.
    - `UPLOAD_KEY`: any long random password. Generate one in your password
      manager; the Shortcut sends it with every upload.
-2. **Image transformations** (on the `sunken.fyi` zone → Images →
-   Transformations → enable). Needed only for photos taller than 4:5, such as
-   uncropped iPhone portraits: Instagram rejects those, so the Worker sends it
-   a padded version. Without this, those photos still appear on the site but
-   their Instagram post fails and is listed in the queue view.
+2. **Image transformations** (Images → Transformations → `sunken.fyi` →
+   Enable). Already on. The gallery and Instagram use resized copies made this
+   way; turning it off breaks both.
 
 ## Apple Shortcut: "Queue for site"
 
@@ -24,20 +22,21 @@ Build it once on the Mac; it syncs to the iPhone through iCloud.
 1. New Shortcut, named **Queue for site**. In its details, turn on
    **Show in Share Sheet** and accept **Images** only.
 2. **Repeat with Each** item in *Shortcut Input*:
-   1. **Resize Image**: width 2048 (height automatic). This also makes the
-      rotation permanent.
-   2. **Convert Image** to **JPEG**, quality about 90%, *Preserve Metadata*
-      off.
-   3. **Get Contents of URL**: `https://sunken.fyi/photo-api/upload`
+   1. **Convert Image** to **JPEG**, quality 100%, *Preserve Metadata* **on**.
+      No resizing: the original resolution is kept. Keeping metadata keeps the
+      photo's orientation; the site removes location data itself.
+   2. **Get Contents of URL**: `https://sunken.fyi/photo-api/upload`
       - Method **POST**
       - Header `Authorization` = `Bearer <your UPLOAD_KEY>`
       - Request Body **File** → *Converted Image*
-3. **Show Notification**: "Queued" (optionally include *Contents of URL*).
+3. **Show Notification**: "Queued".
 
 Optional caption: before *Get Contents of URL*, add **Ask for Input** (text),
 then **URL Encode** it and append `?caption=<Encoded Text>` to the URL.
 
-The Worker also strips EXIF/GPS data on upload, as a safety net.
+The Worker removes GPS location (EXIF, XMP and IPTC) on upload and keeps
+everything else, so photos stay full resolution and upright. Instagram gets a
+resized copy, since it caps images at 8 MB.
 
 ## Day-to-day commands
 
@@ -54,10 +53,11 @@ curl -X POST -H "Authorization: Bearer KEY" https://sunken.fyi/photo-api/publish
 curl -X DELETE -H "Authorization: Bearer KEY" https://sunken.fyi/photo-api/photos/<id>
 ```
 
-## One-time import of existing Instagram posts
+## Instagram posts made directly in the app
 
-Imports up to 15 images per call (carousels count each image). Repeat until
-`remaining` is 0. Videos are skipped.
+Every 3 hours the site picks up new posts from `sunk.photos` (up to 15 images
+per run; videos are skipped), so posting straight to Instagram also works.
+To pull them in immediately:
 
 ```sh
 while true; do

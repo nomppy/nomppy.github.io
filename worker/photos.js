@@ -1,10 +1,10 @@
 // Photo queue: uploads go into a queue, a scheduled job releases them one at a
 // time to the site's /photos page and to Instagram.
-import { jpegSize, fitsInstagram, stripMetadata } from "./jpeg.js";
+import { jpegSize, fitsInstagram, scrubJpeg, displaySize } from "./jpeg.js";
 import { shouldPublish } from "./schedule.js";
 import { postImage, listMedia, imagesFromMedia } from "./instagram.js";
 
-const MAX_UPLOAD_BYTES = 25 * 1024 * 1024;
+const MAX_UPLOAD_BYTES = 60 * 1024 * 1024;
 const IMPORT_BATCH = 15;
 const MAX_IG_ATTEMPTS = 3;
 
@@ -61,16 +61,19 @@ function publicRow(r) {
   };
 }
 
-// The URL Instagram fetches. Photos outside 4:5..1.91:1 are padded to fit
-// using Cloudflare image transformations on the site's own domain.
+// The URL Instagram fetches. Originals are full resolution, so Instagram always
+// gets a resized JPEG (it caps images at 8 MB and 1440 px wide). Photos outside
+// its 4:5..1.91:1 range are padded to fit rather than cropped.
 export function instagramImageUrl(env, row) {
   const site = env.SITE_URL.replace(/\/$/, "");
   const src = imagePath(row.id);
-  if (fitsInstagram(row.width, row.height)) return site + src;
-  const tall = row.width / row.height < 0.8;
-  const [w, h] = tall ? [1080, 1350] : [1080, 566];
   const bg = env.IG_PAD_COLOR || "white";
-  return `${site}/cdn-cgi/image/width=${w},height=${h},fit=pad,background=${bg},format=jpeg${src}`;
+  let opts = "width=1440,fit=scale-down";
+  if (!fitsInstagram(row.width, row.height)) {
+    const tall = row.width / row.height < 0.8;
+    opts = tall ? `width=1080,height=1350,fit=pad,background=${bg}` : `width=1440,height=754,fit=pad,background=${bg}`;
+  }
+  return `${site}/cdn-cgi/image/${opts},quality=90,format=jpeg${src}`;
 }
 
 async function publishToInstagram(env, row) {
@@ -127,6 +130,14 @@ export async function scheduled(env) {
     .first();
   if (retry) await publishToInstagram(env, retry);
   return publishNext(env);
+}
+
+// Pulls in posts made directly on Instagram (posts from the queue are skipped,
+// since they are already recorded). Runs on the feeds schedule.
+export async function syncInstagram(env) {
+  if (!env.IG_TOKEN || !env.IG_USER_ID) return null;
+  await ensureSchema(env);
+  return importInstagram(env);
 }
 
 async function importInstagram(env) {
@@ -199,10 +210,11 @@ export async function handlePhotos(request, env) {
   if (!(await authorized(request, env))) return json({ error: "unauthorized" }, 401);
 
   if (route === "POST /photo-api/upload") {
-    const bytes = stripMetadata(new Uint8Array(await request.arrayBuffer()));
-    if (!bytes.byteLength) return json({ error: "empty body" }, 400);
-    if (bytes.byteLength > MAX_UPLOAD_BYTES) return json({ error: "file too large" }, 413);
-    const size = jpegSize(bytes);
+    const raw = new Uint8Array(await request.arrayBuffer());
+    if (!raw.byteLength) return json({ error: "empty body" }, 400);
+    if (raw.byteLength > MAX_UPLOAD_BYTES) return json({ error: "file too large" }, 413);
+    const { bytes, orientation } = scrubJpeg(raw);
+    const size = displaySize(jpegSize(bytes), orientation);
     if (!size) return json({ error: "send a JPEG image" }, 415);
     const caption = (url.searchParams.get("caption") || request.headers.get("x-caption") || "").slice(0, 2200);
     const id = crypto.randomUUID();

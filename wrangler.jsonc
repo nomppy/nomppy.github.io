@@ -13,14 +13,21 @@
   // Photo files and the queue. Created automatically on first deploy.
   "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "sunken-photos" }],
   "d1_databases": [{ "binding": "DB", "database_name": "sunken-photos" }],
-  // Checks once a day (17:07 UTC, 9:07 Pacific) whether a photo is due.
-  "triggers": { "crons": ["7 17 * * *"] },
+  // 17:07 UTC (9:07 Pacific): release a queued photo if one is due.
+  // Every 3 hours: refresh Letterboxd, Goodreads, Spotify, Substack and pull
+  // in any posts made directly on Instagram.
+  "triggers": { "crons": ["7 17 * * *", "23 */3 * * *"] },
   "vars": {
     "SITE_URL": "https://sunken.fyi",
     "PUBLISH_EVERY_DAYS": "2",
     "IG_USER_ID": "17841475574208034",
     "IG_PAD_COLOR": "white",
-    "GRAPH_VERSION": "v25.0"
+    "GRAPH_VERSION": "v25.0",
+    "LETTERBOXD_USER": "sunkht",
+    "GOODREADS_USER_ID": "140748369",
+    "SUBSTACK_HOST": "sunkht.substack.com",
+    "SPOTIFY_USER_ID": "tbkwdf650gvc7vlikkdmoj1k1",
+    "SPOTIFY_CLIENT_ID": ""
   }
   // Secrets, set in the Cloudflare dashboard (not in this file):
   //   IG_TOKEN    Instagram system-user token

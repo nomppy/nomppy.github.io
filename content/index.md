@@ -6,13 +6,11 @@ Here are some other [favorites](/favorites), or you can checkout my social links
 
 Feel free to get in touch via email (<a href="mailto:sunken@umich.edu">sunken@umich.edu</a>) or however you find me, I'd love to chat about anything!
 
-### Friends
-Also check out these Very Cool Friends:
+::lately
+::
 
-- [Aidan](https://aidanjs.com)
-- [Justin](https://sites.gatech.edu/justinliumath/)
-- [Peter](https://peteryang.xyz/)
-- [Rohan](https://rohanraju.info/)
+### Friends
+Some Very Cool Friends have websites too. <a href="https://sunken.fyi/friend" class="friend-roulette">Take me to a random friend's website</a>
 
 ### Other places you can find me
 
