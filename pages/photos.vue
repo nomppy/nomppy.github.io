@@ -4,7 +4,7 @@
       <h1>photos</h1>
       <p>just the ones i like, and only if i took them</p>
     </header>
-    <photo-gallery />
+    <photo-gallery by-season />
   </div>
 </template>
 
@@ -16,9 +16,23 @@ useSeoMeta({ title: 'Photos', description: 'photos I took and like' })
 
 <style lang="scss" scoped>
 .photos-page {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 12px;
+  max-width: 1180px;
+  margin: 0 auto 4em;
+  padding: 0 1.5em;
+}
+
+// Leave room for the side navigation, which is fixed on wide screens.
+@media (min-width: 1070px) {
+  .photos-page {
+    padding-left: 190px;
+    padding-right: 2.5em;
+  }
+}
+
+@media (max-width: 380px) {
+  .photos-page {
+    padding: 0 0.75em;
+  }
 }
 
 .intro {

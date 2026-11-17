@@ -30,9 +30,36 @@ export function resolveLink(pathname, links) {
   return Object.prototype.hasOwnProperty.call(links, name) ? links[name] : null;
 }
 
-export function randomFriend(list, rand = Math.random) {
-  const usable = list.filter((f) => f && /^https?:\/\//.test(f.url));
-  return usable.length ? usable[Math.floor(rand() * usable.length)].url : null;
+// Picks a friend the visitor hasn't been sent to yet. `seen` holds the URLs
+// already visited (from a cookie); once everyone has been seen the cycle
+// starts again, never repeating the friend they just visited.
+export function nextFriend(list, seen = [], rand = Math.random) {
+  const usable = list.filter((f) => f && /^https?:\/\//.test(f.url)).map((f) => f.url);
+  if (!usable.length) return { url: null, seen: [] };
+  if (usable.length === 1) return { url: usable[0], seen: [usable[0]] };
+  const seenSet = new Set(seen.filter((u) => usable.includes(u)));
+  let pool = usable.filter((u) => !seenSet.has(u));
+  let history = [...seenSet];
+  if (!pool.length) {
+    const last = seen[seen.length - 1];
+    pool = usable.filter((u) => u !== last);
+    history = [];
+  }
+  const url = pool[Math.floor(rand() * pool.length)];
+  return { url, seen: [...history, url] };
+}
+
+const FRIEND_COOKIE = "friends_seen";
+
+function readSeen(request) {
+  const m = (request.headers.get("cookie") || "").match(new RegExp(`(?:^|;\\s*)${FRIEND_COOKIE}=([^;]+)`));
+  if (!m) return [];
+  try {
+    const v = JSON.parse(decodeURIComponent(m[1]));
+    return Array.isArray(v) ? v.filter((u) => typeof u === "string") : [];
+  } catch {
+    return [];
+  }
 }
 
 export default {
@@ -50,8 +77,15 @@ export default {
     if (/^\/[^/]+\/?$/.test(url.pathname) && !/\.[a-z0-9]+$/i.test(url.pathname)) {
       const { links, friends } = await getLists(env);
       if (/^\/friend\/?$/.test(url.pathname)) {
-        const to = randomFriend(friends);
-        if (to) return new Response(null, { status: 302, headers: { location: to, "cache-control": "no-store" } });
+        const { url: to, seen } = nextFriend(friends, readSeen(request));
+        if (to) {
+          const headers = new Headers({ location: to, "cache-control": "no-store" });
+          headers.append(
+            "set-cookie",
+            `${FRIEND_COOKIE}=${encodeURIComponent(JSON.stringify(seen))}; Path=/friend; Max-Age=31536000; Secure; HttpOnly; SameSite=Lax`,
+          );
+          return new Response(null, { status: 302, headers });
+        }
       }
       const target = resolveLink(url.pathname, links);
       if (target) return new Response(null, { status: 302, headers: { location: target, "cache-control": "no-store" } });

@@ -27,6 +27,12 @@ async function ensureSchema(env) {
       ig_error TEXT
     )`,
   ).run();
+  // Added later: capture date from the photo's camera data.
+  try {
+    await env.DB.prepare("ALTER TABLE photos ADD COLUMN taken_at INTEGER").run();
+  } catch {
+    // column already exists
+  }
   schemaReady = true;
 }
 
@@ -58,6 +64,7 @@ function publicRow(r) {
     height: r.height,
     caption: r.caption,
     publishedAt: r.published_at,
+    takenAt: r.taken_at ?? null,
   };
 }
 
@@ -213,17 +220,17 @@ export async function handlePhotos(request, env) {
     const raw = new Uint8Array(await request.arrayBuffer());
     if (!raw.byteLength) return json({ error: "empty body" }, 400);
     if (raw.byteLength > MAX_UPLOAD_BYTES) return json({ error: "file too large" }, 413);
-    const { bytes, orientation } = scrubJpeg(raw);
+    const { bytes, orientation, takenAt } = scrubJpeg(raw);
     const size = displaySize(jpegSize(bytes), orientation);
     if (!size) return json({ error: "send a JPEG image" }, 415);
     const caption = (url.searchParams.get("caption") || request.headers.get("x-caption") || "").slice(0, 2200);
     const id = crypto.randomUUID();
     await env.PHOTOS.put(objectKey(id), bytes, { httpMetadata: { contentType: "image/jpeg" } });
     await env.DB.prepare(
-      `INSERT INTO photos (id, caption, width, height, status, source, created_at)
-       VALUES (?, ?, ?, ?, 'queued', 'upload', ?)`,
+      `INSERT INTO photos (id, caption, width, height, status, source, created_at, taken_at)
+       VALUES (?, ?, ?, ?, 'queued', 'upload', ?, ?)`,
     )
-      .bind(id, caption, size.width, size.height, Date.now())
+      .bind(id, caption, size.width, size.height, Date.now(), takenAt)
       .run();
     const q = await env.DB.prepare("SELECT COUNT(*) AS n FROM photos WHERE status = 'queued'").first();
     return json({ id, queued: q.n, fitsInstagram: fitsInstagram(size.width, size.height) }, 201);

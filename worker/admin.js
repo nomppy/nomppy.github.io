@@ -71,10 +71,7 @@ const PAGE = /* html */ `<!doctype html>
   :root {
     --bg: #ececec; --panel: #f7f7f5; --text: #111; --muted: #684135; --line: #d3d0c8;
     --accent: #1998db; --link: #0785ac; --danger: #b3261e;
-    color-scheme: light dark;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #171717; --panel: #202122; --text: #eee; --muted: #cdc5ad; --line: #3a3a3a; --link: #3ebee9; --danger: #ff8a80; }
+    color-scheme: light;
   }
   * { box-sizing: border-box; }
   body {

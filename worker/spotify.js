@@ -130,29 +130,59 @@ async function recentItems(id, total, at) {
     }));
 }
 
-// The owned playlist with the most recent addition among the newest few.
+async function ownedPlaylists(env, at) {
+  const me = env.SPOTIFY_USER_ID;
+  const owned = [];
+  let next = "/me/playlists?limit=50";
+  for (let page = 0; next && page < 10; page++) {
+    const list = await api(next, at);
+    owned.push(...(list.items || []).filter((p) => p && (!me || p.owner?.id === me)));
+    next = list.next;
+  }
+  return owned; // library order: newest first unless the library is re-sorted
+}
+
+// When a playlist was started: the date its first song was added.
+async function startedAt(p, at) {
+  if (!totalOf(p)) return null;
+  const page = await api(`/playlists/${p.id}/items?limit=1&offset=0&fields=items(added_at)`, at);
+  const d = page.items?.[0]?.added_at;
+  return d ? Date.parse(d) : null;
+}
+
+// The playlist most recently created. Spotify doesn't expose a creation date,
+// so among the newest few in the library this picks the one whose first song
+// was added most recently. "number" is how many playlists you own.
 export async function playlistNow(env) {
   if (!env.SPOTIFY_CLIENT_ID) return undefined;
   const at = await accessToken(env);
   if (!at) return undefined; // not connected yet: leave this section out
-  const me = env.SPOTIFY_USER_ID;
-  const list = await api("/me/playlists?limit=50", at);
-  const owned = (list.items || []).filter((p) => p && (!me || p.owner?.id === me) && totalOf(p) > 0).slice(0, 6);
-  let best = null;
-  for (const p of owned) {
-    const tracks = await recentItems(p.id, totalOf(p), at);
-    tracks.sort((a, b) => Date.parse(b.addedAt || 0) - Date.parse(a.addedAt || 0));
-    const last = Date.parse(tracks[0]?.addedAt || 0);
-    if (!best || last > best.last) best = { p, tracks, last };
+  const owned = await ownedPlaylists(env, at);
+  if (!owned.length) return null;
+  const candidates = owned.slice(0, 8);
+  const starts = await Promise.all(candidates.map((p) => startedAt(p, at).catch(() => null)));
+  // A brand-new empty playlist at the top of the library counts as newest.
+  let pick = candidates[0];
+  if (totalOf(pick) > 0) {
+    let best = -1;
+    candidates.forEach((p, i) => {
+      if (starts[i] !== null && starts[i] > best) {
+        best = starts[i];
+        pick = p;
+      }
+    });
   }
-  if (!best) return null;
-  const { p, tracks, last } = best;
+  const tracks = totalOf(pick) ? await recentItems(pick.id, totalOf(pick), at) : [];
+  tracks.sort((a, b) => Date.parse(b.addedAt || 0) - Date.parse(a.addedAt || 0));
+  const i = candidates.indexOf(pick);
   return {
-    name: p.name,
-    url: p.external_urls?.spotify || null,
-    cover: p.images?.[0]?.url || null,
-    total: totalOf(p),
-    lastAdded: last ? new Date(last).toISOString() : null,
+    name: pick.name,
+    url: pick.external_urls?.spotify || null,
+    cover: pick.images?.[0]?.url || null,
+    total: totalOf(pick),
+    number: owned.length,
+    startedAt: starts[i] ? new Date(starts[i]).toISOString() : null,
+    lastAdded: tracks[0]?.addedAt || null,
     tracks: tracks.slice(0, 4),
   };
 }

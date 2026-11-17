@@ -6,22 +6,16 @@
     <li>
       <site-link to="/favorites/">favorites</site-link>
     </li>
+    <li>
+      <site-link to="/photos/">photos</site-link>
+    </li>
     <!-- <li>
       <site-link to="/news/">news</site-link>
     </li> -->
-
-    <color-mode-switch class="color-mode-switch"/>
   </ul>
 </template>
 
 <style lang="scss" scoped>
-.color-mode-switch {
-  position: fixed;
-  z-index: 100;
-  right: 1em;
-  top: 1em;
-}
-
 .site-nav {
   font-size: 1.5em;
   font-weight: bolder;
@@ -53,6 +47,20 @@
 
     a.router-link-exact-active {
       color: var(--accent-text-color) !important; // overrides above
+    }
+  }
+}
+
+// Top bar on phones: smaller, and wraps instead of running off the screen.
+@media (max-width: 480px) {
+  .site-nav {
+    font-size: 1.15em;
+    padding: 14px 8px;
+    flex-wrap: wrap;
+    gap: 0.2em 0;
+
+    li {
+      margin: 0 10px;
     }
   }
 }

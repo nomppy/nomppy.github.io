@@ -6,7 +6,7 @@
     <div class="top">
       <div class="intro">
         <ContentDoc :head="false" class="nuxt-content" />
-        <a href="/friend" class="friend-roulette">Take me to a random friend's website</a>
+        <p class="friend-line"><a href="/friend">Click here</a> to go to the website of someone who I like.</p>
       </div>
 
       <nav class="elsewhere" aria-label="Elsewhere">
@@ -16,9 +16,13 @@
 
     <lately />
 
-    <section class="photos" aria-label="Photos">
-      <a class="label" href="https://www.instagram.com/sunk.photos">photos</a>
-      <photo-gallery />
+    <section class="photos" aria-labelledby="recent-photos">
+      <p id="recent-photos" class="lead">Recent photos</p>
+      <photo-gallery :limit="8">
+        <template #after="{ total, shown }">
+          <a v-if="total > shown" href="/photos/" class="see-more">See all {{ total }} photos</a>
+        </template>
+      </photo-gallery>
     </section>
   </div>
 </template>
@@ -68,21 +72,8 @@ const elsewhere = [
   }
 }
 
-.friend-roulette {
-  display: inline-block;
-  padding: 0.25em 0.9em;
-  border: 2px solid var(--accent-text-color);
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9em;
-  color: var(--primary-text-color);
-
-  &:hover,
-  &:focus-visible {
-    background: var(--accent-text-color);
-    color: var(--white);
-  }
+.friend-line {
+  margin: 0;
 }
 
 .elsewhere {
@@ -109,20 +100,29 @@ const elsewhere = [
 }
 
 .photos {
-  margin-top: 3em;
+  margin: 3.5em 0 4em;
 }
 
-.label {
-  display: inline-block;
-  margin-bottom: 0.55em;
-  font-variant: small-caps;
-  font-weight: bold;
-  letter-spacing: 0.04em;
-  color: var(--tertiary-text-color);
-  text-decoration: none;
+// Section intros read as ordinary sentences, slightly emphasised.
+.lead {
+  margin: 0 0 0.7em;
+  font-size: 1.05em;
+}
 
-  &:hover {
-    color: var(--link-hover-color);
+.see-more {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.35em 1em;
+  border: 2px solid var(--accent-text-color);
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-text-color);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--accent-text-color);
+    color: var(--white);
   }
 }
 
