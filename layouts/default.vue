@@ -301,6 +301,23 @@ button:active {
       color: var(--secondary-text-color);
     }
 
+    .friend-roulette {
+      display: inline-block;
+      margin-top: 0.4em;
+      padding: 0.25em 0.8em;
+      border: 2px solid var(--accent-text-color);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--primary-text-color);
+
+      &:hover,
+      &:focus-visible {
+        background: var(--accent-text-color);
+        color: var(--white);
+      }
+    }
+
     .footnotes {
       font-size: 0.8em;
       color: var(--secondary-text-color);

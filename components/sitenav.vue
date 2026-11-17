@@ -7,9 +7,6 @@
       <site-link to="/favorites/">favorites</site-link>
     </li>
     <li>
-      <site-link to="/posts/">writing</site-link>
-    </li>
-    <li>
       <site-link to="/photos/">photos</site-link>
     </li>
     <!-- <li>
