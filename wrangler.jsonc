@@ -12,7 +12,7 @@
   },
   // Photo files and the queue. Created automatically on first deploy.
   "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "sunken-photos" }],
-  "d1_databases": [{ "binding": "DB", "database_name": "sunken-photos" }],
+  "d1_databases": [{ "binding": "DB", "database_name": "sunken-photos", "database_id": "b8f1df59-3365-435e-af1b-b3a5d220f01a" }],
   // 17:07 UTC (9:07 Pacific): release a queued photo if one is due.
   // Every 3 hours: refresh Letterboxd, Goodreads, Spotify, Substack and pull
   // in any posts made directly on Instagram.
@@ -28,8 +28,28 @@
     "SUBSTACK_HOST": "sunkht.substack.com",
     "SPOTIFY_USER_ID": "tbkwdf650gvc7vlikkdmoj1k1",
     "SPOTIFY_CLIENT_ID": ""
-  }
+  },
   // Secrets, set in the Cloudflare dashboard (not in this file):
   //   IG_TOKEN    Instagram system-user token
   //   UPLOAD_KEY  password the Apple Shortcut sends when uploading
+
+  // Pull-request previews get their own empty storage, so they can never
+  // change the live photos. No Instagram token or Spotify app is set for
+  // previews, so they never post anywhere.
+  "previews": {
+    "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "sunken-photos-preview" }],
+    "d1_databases": [{ "binding": "DB", "database_name": "sunken-photos-preview", "database_id": "78934a4c-766e-434b-9899-4448d46854a1" }],
+    "vars": {
+      "SITE_URL": "https://sunken.fyi",
+      "PUBLISH_EVERY_DAYS": "2",
+      "IG_USER_ID": "",
+      "IG_PAD_COLOR": "white",
+      "GRAPH_VERSION": "v25.0",
+      "LETTERBOXD_USER": "sunkht",
+      "GOODREADS_USER_ID": "140748369",
+      "SUBSTACK_HOST": "sunkht.substack.com",
+      "SPOTIFY_USER_ID": "tbkwdf650gvc7vlikkdmoj1k1",
+      "SPOTIFY_CLIENT_ID": ""
+    }
+  }
 }
