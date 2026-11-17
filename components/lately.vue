@@ -2,7 +2,7 @@
   <section v-if="hasAny" class="lately" aria-label="Lately">
     <!-- Films: a strip of posters -->
     <div v-if="films.length" class="tile films">
-      <a class="label" href="https://letterboxd.com/sunkht/">recently watched</a>
+      <p class="lead">Here are the movies <a href="https://letterboxd.com/sunkht/">I've liked recently</a></p>
       <ul class="posters">
         <li v-for="f in films" :key="f.url">
           <a :href="f.url" :title="`${f.title} (${f.year})`">
@@ -19,7 +19,7 @@
 
     <!-- Spotify: the playlist in progress -->
     <div v-if="playlist" class="tile playlist">
-      <a class="label" :href="playlist.url">currently building…</a>
+      <p class="lead">I'm currently making <a :href="playlist.url">{{ playlist.number ? `playlist #${playlist.number}` : 'a playlist' }}</a></p>
       <div class="playlist-body">
         <a :href="playlist.url" class="cover">
           <img v-if="playlist.cover" :src="playlist.cover" :alt="`Cover of ${playlist.name}`" loading="lazy" />
@@ -41,7 +41,7 @@
 
     <!-- Goodreads: covers of what's open now, then what was just finished -->
     <div v-if="books.reading.length || books.read.length" class="tile books">
-      <a class="label" href="https://www.goodreads.com/user/show/140748369-kenneth">reading</a>
+      <p class="lead">Here's what <a href="https://www.goodreads.com/user/show/140748369-kenneth">I'm reading</a></p>
       <ul class="covers">
         <li v-for="b in books.reading" :key="b.url">
           <a :href="b.url" :title="`${b.title} by ${b.author}`">
@@ -51,7 +51,7 @@
         </li>
       </ul>
       <template v-if="books.read.length">
-        <p class="aside finished-label">finished lately</p>
+        <p class="lead finished-label">and what I finished lately</p>
         <ul class="covers small">
           <li v-for="b in books.read" :key="b.url">
             <a :href="b.url" :title="`${b.title} by ${b.author}`">
@@ -65,13 +65,14 @@
 
     <!-- Substack: latest post as a compact card -->
     <div v-if="post" class="tile post">
-      <a class="label" href="https://sunkht.substack.com">latest post</a>
+      <p class="lead">I also write on <a href="https://sunkht.substack.com">Substack</a>, here's the latest post</p>
       <a :href="post.url" class="post-card">
         <img v-if="post.image" :src="post.image" alt="" loading="lazy" />
         <span class="post-text">
           <span class="post-title">{{ post.title }}</span>
           <span v-if="post.subtitle" class="post-sub">{{ post.subtitle }}</span>
-          <span class="aside">{{ day(post.date) }} on Substack</span>
+          <span v-if="post.excerpt" class="post-excerpt">{{ post.excerpt }}</span>
+          <span class="aside">{{ day(post.date) }}</span>
         </span>
       </a>
     </div>
@@ -137,18 +138,11 @@ const day = (d) =>
   min-width: 0;
 }
 
-.label {
-  display: inline-block;
-  margin-bottom: 0.55em;
-  font-variant: small-caps;
-  font-weight: bold;
-  letter-spacing: 0.04em;
-  color: var(--tertiary-text-color);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--link-hover-color);
-  }
+// Each block opens with a plain sentence in the body font.
+.lead {
+  margin: 0 0 0.7em;
+  font-size: 1.05em;
+  line-height: 1.4;
 }
 
 a {
@@ -323,7 +317,8 @@ a:focus-visible {
 }
 
 .finished-label {
-  margin: 0.9em 0 0.4em;
+  margin: 1em 0 0.5em;
+  font-size: 0.95em;
 }
 
 // Substack card
@@ -375,6 +370,17 @@ a:focus-visible {
   color: var(--secondary-text-color);
   font-size: 0.9em;
   line-height: 1.35;
+  font-style: italic;
+}
+
+.post-excerpt {
+  font-size: 0.85em;
+  line-height: 1.45;
+  color: var(--primary-text-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media (max-width: 900px) {

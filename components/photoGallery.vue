@@ -5,30 +5,36 @@
     <p v-else-if="state === 'error'" class="status">Photos didn't load. Refresh the page to try again.</p>
     <p v-else-if="!photos.length" class="status">No photos yet.</p>
 
-    <!-- Justified rows: every photo keeps its own shape; rows share a height. -->
-    <div v-else class="gallery">
-      <a
-        v-for="(photo, i) in photos"
-        :key="photo.id"
-        :href="photo.url"
-        class="tile"
-        :style="tileStyle(photo)"
-        @click.prevent="open(i)"
-      >
-        <img
-          :src="sized(photo.url, 800)"
-          :srcset="srcset(photo.url, [400, 800, 1200])"
-          sizes="(max-width: 600px) 50vw, 33vw"
-          :alt="photo.caption || 'Photo'"
-          :width="photo.width"
-          :height="photo.height"
-          loading="lazy"
-          decoding="async"
-          @error="fallback($event, photo.url)"
-        />
-      </a>
-      <span class="filler" aria-hidden="true"></span>
-    </div>
+    <template v-else>
+      <section v-for="group in groups" :key="group.label || 'all'" class="group">
+        <h2 v-if="group.label" class="group-label">{{ group.label }}</h2>
+        <!-- Justified rows: every photo keeps its own shape; rows share a height. -->
+        <div class="gallery">
+          <a
+            v-for="{ photo: p, index } in group.items"
+            :key="p.id"
+            :href="p.url"
+            class="tile"
+            :style="tileStyle(p)"
+            @click.prevent="open(index)"
+          >
+            <img
+              :src="sized(p.url, 800)"
+              :srcset="srcset(p.url, [400, 800, 1200])"
+              sizes="(max-width: 600px) 50vw, 33vw"
+              :alt="p.caption || 'Photo'"
+              :width="p.width"
+              :height="p.height"
+              loading="lazy"
+              decoding="async"
+              @error="fallback($event, p.url)"
+            />
+          </a>
+          <span class="filler" aria-hidden="true"></span>
+        </div>
+      </section>
+      <slot name="after" :total="photos.length" :shown="shown.length" />
+    </template>
 
     <dialog ref="viewer" class="viewer" aria-label="Photo viewer" @click.self="close" @close="current = -1">
       <template v-if="photo">
@@ -49,7 +55,7 @@
             <a :href="photo.url" target="_blank" rel="noopener">Full size</a>
           </figcaption>
         </figure>
-        <button class="nav next" type="button" aria-label="Next photo" :disabled="current === photos.length - 1" @click="step(1)">›</button>
+        <button class="nav next" type="button" aria-label="Next photo" :disabled="current === shown.length - 1" @click="step(1)">›</button>
       </template>
     </dialog>
   </div>
@@ -58,11 +64,40 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
+const props = defineProps({
+  // Show only the newest N photos (0 = all).
+  limit: { type: Number, default: 0 },
+  // Group photos by season and year, e.g. "Fall 2026".
+  bySeason: { type: Boolean, default: false },
+})
+
 const photos = ref([])
 const state = ref('loading')
 const current = ref(-1)
 const viewer = ref(null)
-const photo = computed(() => photos.value[current.value])
+
+const when = (p) => p.takenAt || p.publishedAt || 0
+const sorted = computed(() => [...photos.value].sort((a, b) => when(b) - when(a)))
+const shown = computed(() => (props.limit ? sorted.value.slice(0, props.limit) : sorted.value))
+const photo = computed(() => shown.value[current.value])
+
+// Calendar quarters, named by season.
+const SEASONS = ['Winter', 'Spring', 'Summer', 'Fall']
+const seasonOf = (t) => {
+  const d = new Date(t)
+  return `${SEASONS[Math.floor(d.getMonth() / 3)]} ${d.getFullYear()}`
+}
+const groups = computed(() => {
+  const items = shown.value.map((photo, index) => ({ photo, index }))
+  if (!props.bySeason) return [{ label: null, items }]
+  const out = []
+  for (const item of items) {
+    const label = when(item.photo) ? seasonOf(when(item.photo)) : 'Undated'
+    if (!out.length || out[out.length - 1].label !== label) out.push({ label, items: [] })
+    out[out.length - 1].items.push(item)
+  }
+  return out
+})
 
 // Resized copies come from Cloudflare image transformations on this domain.
 const sized = (url, width) => `/cdn-cgi/image/width=${width},fit=scale-down,quality=85,format=auto${url}`
@@ -93,7 +128,7 @@ function close() {
 }
 function step(d) {
   const next = current.value + d
-  if (next >= 0 && next < photos.value.length) current.value = next
+  if (next >= 0 && next < shown.value.length) current.value = next
 }
 
 function onKey(e) {
@@ -126,6 +161,16 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 </script>
 
 <style lang="scss" scoped>
+.group + .group {
+  margin-top: 2.2em;
+}
+
+.group-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+}
+
 .status {
   text-align: center;
   color: var(--tertiary-text-color);
@@ -136,7 +181,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 0 0 4em;
+  margin: 0;
 }
 
 .tile {

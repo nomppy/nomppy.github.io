@@ -60,7 +60,10 @@ export default defineNuxtConfig({
   // color mode configuration
   // https://color-mode.nuxtjs.org/
   colorMode: {
-    preference: 'system',
+    preference: 'light',
+    fallback: 'light',
+    // New key so visitors who once picked dark mode don't keep it.
+    storageKey: 'sunken-color-mode-light',
   },
 
   nitro: {

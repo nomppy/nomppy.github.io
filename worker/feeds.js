@@ -70,12 +70,9 @@ export function parseLetterboxd(xml) {
     });
 }
 
-// Films worth showing: hearted or rated 4+, newest first; topped up with other
-// recent watches if there are fewer than `n`.
+// Films liked recently: hearted or rated 4+, newest first.
 export function pickFilms(films, n = 5) {
-  const good = films.filter((f) => f.liked || (f.rating ?? 0) >= 4);
-  const rest = films.filter((f) => !good.includes(f));
-  return [...good, ...rest].slice(0, n);
+  return films.filter((f) => f.liked || (f.rating ?? 0) >= 4).slice(0, n);
 }
 
 // Goodreads has no public API or RSS any more, and shelf pages need a sign-in.
@@ -113,13 +110,24 @@ async function goodreadsShelf(env, shelf, sort, widgetId) {
   return parseGoodreadsWidget(js);
 }
 
+// The opening of a post, as plain text, cut at a word boundary.
+export function excerpt(html, max = 320) {
+  const paras = [...(html || "").matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => stripHtml(m[1])).filter((t) => t.length > 1);
+  let text = (paras.length ? paras.join(" ") : stripHtml(html || "")).trim();
+  if (text.length <= max) return text;
+  text = text.slice(0, max);
+  return text.slice(0, Math.max(text.lastIndexOf(" "), max - 40)).replace(/[\s,;:.—-]+$/, "") + "…";
+}
+
 export function parseSubstack(xml) {
   const it = items(xml)[0];
   if (!it) return null;
   const image = (it.match(/<enclosure[^>]+url="([^"]+)"/) || [])[1] || null;
+  const body = (it.match(/<content:encoded>([\s\S]*?)<\/content:encoded>/) || [])[1] || "";
   return {
     title: tag(it, "title"),
     subtitle: stripHtml(tag(it, "description")).slice(0, 280),
+    excerpt: excerpt(decode(body)),
     url: tag(it, "link"),
     date: tag(it, "pubDate") || null,
     image,
@@ -132,6 +140,7 @@ export function parseSubstackApi(data) {
   return {
     title: (p.title || "").trim(),
     subtitle: (p.subtitle || p.description || "").trim().slice(0, 280),
+    excerpt: excerpt(p.body_html || p.truncated_body_text || ""),
     url: p.canonical_url,
     date: p.post_date || null,
     image: p.cover_image || null,

@@ -43,15 +43,17 @@ export function fitsInstagram(width, height) {
 //   date and colour information are kept, so photos stay upright.
 // - XMP (other APP1) and IPTC (APP13) segments, which can repeat the location,
 //   are dropped. If the EXIF block cannot be parsed safely it is dropped too.
-// Returns { bytes, orientation } where orientation is the EXIF value (1-8).
+// Returns { bytes, orientation, takenAt } where orientation is the EXIF value
+// (1-8) and takenAt is the capture date in epoch ms, or null.
 export function scrubJpeg(input) {
   const b = input instanceof Uint8Array ? input : new Uint8Array(input);
-  if (b.length < 4 || b[0] !== 0xff || b[1] !== 0xd8) return { bytes: b, orientation: 1 };
+  if (b.length < 4 || b[0] !== 0xff || b[1] !== 0xd8) return { bytes: b, orientation: 1, takenAt: null };
   const parts = [b.subarray(0, 2)];
   let orientation = 1;
+  let takenAt = null;
   let i = 2;
   while (i + 4 <= b.length) {
-    if (b[i] !== 0xff) return { bytes: b, orientation: 1 }; // unexpected layout: leave untouched
+    if (b[i] !== 0xff) return { bytes: b, orientation: 1, takenAt: null }; // unexpected layout: leave untouched
     const marker = b[i + 1];
     if (marker === 0xda) {
       parts.push(b.subarray(i)); // start of scan: copy the rest verbatim
@@ -59,13 +61,14 @@ export function scrubJpeg(input) {
     }
     const len = (b[i + 2] << 8) | b[i + 3];
     const end = i + 2 + len;
-    if (end > b.length) return { bytes: b, orientation: 1 };
+    if (end > b.length) return { bytes: b, orientation: 1, takenAt: null };
     const seg = b.subarray(i, end);
     if (marker === 0xe1 && isExif(seg)) {
       const copy = new Uint8Array(seg); // never mutate the caller's buffer
       const result = wipeGps(copy);
       if (result) {
         orientation = result.orientation;
+        takenAt = result.takenAt;
         parts.push(copy);
       }
     } else if (marker !== 0xe1 && marker !== 0xed) {
@@ -79,7 +82,7 @@ export function scrubJpeg(input) {
     out.set(p, o);
     o += p.length;
   }
-  return { bytes: out, orientation };
+  return { bytes: out, orientation, takenAt };
 }
 
 function isExif(seg) {
@@ -111,11 +114,31 @@ function wipeGps(seg) {
   if (!ok(ifd0 + 2, count0 * 12)) return null;
   let orientation = 1;
   let gps = null;
+  let exifIfd = null;
   for (let k = 0; k < count0; k++) {
     const e = ifd0 + 2 + k * 12;
     const tag = u16(e);
     if (tag === 0x0112) orientation = u16(e + 8) || 1;
     if (tag === 0x8825) gps = u32(e + 8);
+    if (tag === 0x8769) exifIfd = u32(e + 8);
+  }
+  // DateTimeOriginal (when the photo was taken), "YYYY:MM:DD HH:MM:SS".
+  let takenAt = null;
+  if (exifIfd && ok(exifIfd, 2)) {
+    const count = u16(exifIfd);
+    if (ok(exifIfd + 2, count * 12)) {
+      for (let k = 0; k < count; k++) {
+        const e = exifIfd + 2 + k * 12;
+        if (u16(e) !== 0x9003 || u32(e + 4) < 19) continue;
+        const at = u32(e + 8);
+        if (!ok(at, 19)) break;
+        const str = String.fromCharCode(...seg.subarray(t + at, t + at + 19));
+        const m = str.match(/^(\d{4}):(\d{2}):(\d{2}) (\d{2}):(\d{2}):(\d{2})$/);
+        // Camera clocks have no time zone; noon UTC of that day is close enough for grouping.
+        if (m && m[1] !== "0000") takenAt = Date.UTC(+m[1], +m[2] - 1, +m[3], 12);
+        break;
+      }
+    }
   }
   if (gps !== null && gps !== 0) {
     if (!ok(gps, 2)) return null;
@@ -132,7 +155,7 @@ function wipeGps(seg) {
     }
     zero(gps, 2 + count * 12); // entry count becomes 0 and every entry is blanked
   }
-  return { orientation: orientation >= 1 && orientation <= 8 ? orientation : 1 };
+  return { orientation: orientation >= 1 && orientation <= 8 ? orientation : 1, takenAt };
 }
 
 // Display size after applying EXIF orientation (5-8 rotate by 90 degrees).

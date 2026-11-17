@@ -1,5 +1,5 @@
 <template>
-  <details class="section-details">
+  <details class="section-details" open>
     <summary class="section-summary">{{ section.title }}</summary>
     <div class="section-content">
       <div v-if="section.content" class="content" v-html="section.content"></div>
