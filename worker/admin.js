@@ -3,7 +3,7 @@
 import { authorized, adminRow, ensureSchema, publishNext, importInstagram, backfillDates } from "./photos.js";
 import { getLists, saveLists, validateLinks, validateFriends } from "./lists.js";
 import {
-  getBackgrounds, saveBackgrounds, validateBackgrounds, storeBackgroundImage, deleteBackgroundImage,
+  getBackgroundSettings, saveBackgroundSettings, validateBackgrounds, validateModes, storeBackgroundImage, deleteBackgroundImage,
 } from "./backgrounds.js";
 import { refreshFeeds } from "./feeds.js";
 import { kvGet } from "./kv.js";
@@ -92,6 +92,11 @@ export async function handleAdmin(request, env) {
           .run();
       }
     }
+    if ("background" in b) {
+      for (const id of ids) {
+        await env.DB.prepare("UPDATE photos SET bg_use = ? WHERE id = ?").bind(b.background ? 1 : 0, id).run();
+      }
+    }
     if ("caption" in b) {
       if (ids.length !== 1) return json({ error: "Edit captions one photo at a time." }, 400);
       await env.DB.prepare("UPDATE photos SET caption = ? WHERE id = ?").bind(String(b.caption).slice(0, 2200), ids[0]).run();
@@ -116,22 +121,37 @@ export async function handleAdmin(request, env) {
   }
 
   // --- backgrounds
-  if (route === "GET /admin-api/backgrounds") return json({ backgrounds: await getBackgrounds(env, { fresh: true }) });
+  const bgView = async (v) => {
+    await ensureSchema(env);
+    const n = await env.DB.prepare("SELECT COUNT(*) AS n FROM photos WHERE status = 'published' AND bg_use != 0").first();
+    return { backgrounds: v.items, modes: v.modes, photoCount: n?.n ?? 0 };
+  };
+  if (route === "GET /admin-api/backgrounds") return json(await bgView(await getBackgroundSettings(env, { fresh: true })));
   if (route === "PUT /admin-api/backgrounds") {
     const b = await body(request);
-    const v = validateBackgrounds(b?.backgrounds);
-    if (!v.ok) return json({ error: v.error }, 400);
-    const before = await getBackgrounds(env, { fresh: true });
-    const kept = new Set(v.value.map((x) => x.id));
-    for (const old of before) if (old.kind === "image" && !kept.has(old.id)) await deleteBackgroundImage(env, old.id);
-    await saveBackgrounds(env, v.value);
-    return json({ backgrounds: v.value });
+    const before = await getBackgroundSettings(env, { fresh: true });
+    const next = { ...before };
+    if ("backgrounds" in (b || {})) {
+      const v = validateBackgrounds(b.backgrounds);
+      if (!v.ok) return json({ error: v.error }, 400);
+      const kept = new Set(v.value.map((x) => x.id));
+      for (const old of before.items) if (old.kind === "image" && !kept.has(old.id)) await deleteBackgroundImage(env, old.id);
+      next.items = v.value;
+    }
+    if ("modes" in (b || {})) {
+      const v = validateModes(b.modes);
+      if (!v.ok) return json({ error: v.error }, 400);
+      next.modes = v.value;
+    }
+    await saveBackgroundSettings(env, { items: next.items, modes: next.modes });
+    return json(await bgView(next));
   }
   if (route === "POST /admin-api/backgrounds/image") {
     const bytes = new Uint8Array(await request.arrayBuffer());
     if (!jpegSize(bytes)) return json({ error: "Send a JPEG image." }, 415);
     if (bytes.byteLength > 30 * 1024 * 1024) return json({ error: "That image is too large (30 MB max)." }, 413);
-    return json({ id: await storeBackgroundImage(env, bytes) }, 201);
+    const size = jpegSize(bytes);
+    return json({ id: await storeBackgroundImage(env, bytes), w: size.width, h: size.height }, 201);
   }
 
   // --- feeds
