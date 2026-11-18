@@ -157,9 +157,11 @@ export async function pageData(env, rand = Math.random) {
 const PANELS = "#home>*,.center-container,.photos-page>*";
 const P = "html[data-bg=photo]";
 const FROST = [
-  "background:color-mix(in srgb,var(--bg-tint) 72%,transparent)",
-  "-webkit-backdrop-filter:blur(28px) saturate(1.5)",
-  "backdrop-filter:blur(28px) saturate(1.5)",
+  // --frost is set per photo by the picker: thin over light photos, thicker
+  // over dark ones, always enough for the black text.
+  "background:color-mix(in srgb,var(--bg-tint) var(--frost,50%),transparent)",
+  "-webkit-backdrop-filter:blur(16px) saturate(1.4)",
+  "backdrop-filter:blur(16px) saturate(1.4)",
   // A faint light edge and a soft shadow, like glass, rather than a hard box.
   "box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 1px 0 rgba(255,255,255,.35),0 10px 40px -12px color-mix(in srgb,var(--bg-tint) 40%,black)",
   "border-radius:18px",
@@ -167,17 +169,12 @@ const FROST = [
 export const STATIC_CSS = [
   `${P}{background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 80%,white)!important;--tertiary-bg-color:color-mix(in srgb,var(--bg-tint) 70%,white)!important}`,
   `${P} :is(body,#__nuxt,#__nuxt>div,#__nuxt>div>div){background:transparent!important}`,
-  // Dial-up loading: a tiny, blocky copy of the photo shows at once; when the
-  // full photo has arrived it paints in from the top in uneven bands, like an
-  // image coming down a modem. Only when the photo actually had to download;
-  // a cached photo, or a visitor who asks for reduced motion, gets it at once.
-  `${P}::before,${P}::after{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg-tint) var(--bg-low) center/cover no-repeat;image-rendering:pixelated}`,
-  `${P}::after{background:var(--bg-img) center/cover no-repeat;image-rendering:auto;clip-path:inset(0 0 100% 0)}`,
-  `html[data-bg-ready][data-bg=photo]::after{animation:bg-dial 3.4s forwards}`,
-  `@keyframes bg-dial{0%{clip-path:inset(0 0 100% 0);animation-timing-function:steps(9)}22%{clip-path:inset(0 0 74% 0);animation-timing-function:steps(1)}34%{clip-path:inset(0 0 70% 0);animation-timing-function:steps(14)}66%{clip-path:inset(0 0 32% 0);animation-timing-function:steps(2)}76%{clip-path:inset(0 0 29% 0);animation-timing-function:steps(12)}100%{clip-path:inset(0 0 0 0)}}`,
-  // Already in the browser's cache: show it straight away, no animation.
-  `html[data-bg-cached][data-bg=photo]::after{animation:none;clip-path:none}`,
-  `@media(prefers-reduced-motion:reduce){html[data-bg-ready][data-bg=photo]::after{animation:none;clip-path:none}}`,
+  // Dial-up loading: four layers (.bg-layer, added by the picker) at rising
+  // resolutions, each painted in from the top one row of its own pixels at a
+  // time. The lower three are drawn as hard blocks.
+  `.bg-layer{position:fixed;inset:0;pointer-events:none;background:center/cover no-repeat;clip-path:inset(0 0 100% 0)}`,
+  `.bg-layer.blocky{image-rendering:pixelated}`,
+  `html:not([data-bg=photo]) .bg-layer{display:none}`,
   `${P} :is(${PANELS}){${FROST};padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
   `${P} #home>:first-child{padding-left:0!important;padding-right:0!important}`,
   `@media(max-width:600px){${P} :is(${PANELS}){padding:.9rem .8rem!important}}`,
@@ -203,13 +200,53 @@ bg.apply=function(mode){
  if(mode==="photo")p.photo=photo();
  bg.pick=p;R.setAttribute("data-bg",mode);
  V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
-  :":root{--bg-tint:"+p.color+";--bg-low:"+url(p.photo.u,"width=48,quality=50")+";--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
- if(mode==="photo"){
-  var i=new Image(),f=src(p.photo.u,"width=2000,quality=82"),go=function(){R.setAttribute("data-bg-ready","")},
-  now=function(){R.setAttribute("data-bg-cached","")};
-  i.onload=function(){var e=performance.getEntriesByName(i.src)[0];if(e&&e.transferSize===0&&e.decodedBodySize>0)now();go()};
-  i.onerror=go;i.src=f;if(i.complete)now();setTimeout(go,15000)}
+  :":root{--bg-tint:"+p.color+"}";
+ if(mode==="photo")dial(p.photo,p.color);
 };
+// Widths of the four layers; the last is the full photo.
+var LV=[16,64,256,2000],MS=[70,22,7];
+function dial(ph,tint){
+ var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,level=0,t0=0;
+ var layers=LV.map(function(w,i){
+  var d=document.createElement("div"),im=new Image(),u=src(ph.u,"width="+w+",quality="+(i<3?60:82));
+  d.className="bg-layer"+(i<3?" blocky":"");d.style.zIndex=i-5;d.style.backgroundImage='url("'+u+'")';
+  R.appendChild(d);im.src=u;return{el:d,im:im,rows:Math.round(Math.min(w,ph.w)*ph.h/ph.w)}});
+ var full=layers[3].im;
+ var clip=function(k,px){layers[k].el.style.clipPath="inset(0 0 "+px+" 0)"};
+ var all=function(){for(var k=0;k<4;k++)clip(k,"0px");level=4};
+ // A photo already in the browser's cache shows at once.
+ if(full.complete&&full.naturalWidth)return all();
+ full.addEventListener("load",function(){var e=performance.getEntriesByName(full.src)[0];if(e&&e.transferSize===0&&e.decodedBodySize>0)all()});
+ // Frost thickness from the darker quarter of the smallest layer, so the
+ // panels stay readable (about 7:1 for black text).
+ layers[0].im.addEventListener("load",function(){try{
+  var c=document.createElement("canvas"),x=c.getContext("2d"),im=layers[0].im;c.width=im.naturalWidth;c.height=im.naturalHeight;x.drawImage(im,0,0);
+  var px=x.getImageData(0,0,c.width,c.height).data,P=[],lin=function(v){v/=255;return v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4)},
+  lum=function(r,g,b){return .2126*lin(r)+.7152*lin(g)+.0722*lin(b)};
+  for(var j=0;j<px.length;j+=4)P.push([px[j],px[j+1],px[j+2]]);
+  P.sort(function(a,b){return lum(a[0],a[1],a[2])-lum(b[0],b[1],b[2])});
+  var B=P[Math.floor(P.length/4)],t=parseInt(tint.slice(1),16),T=[t>>16,t>>8&255,t&255],a=.3;
+  // color-mix in srgb mixes the encoded values, so test the mix the same way.
+  while(a<.85&&lum(a*T[0]+(1-a)*B[0],a*T[1]+(1-a)*B[1],a*T[2]+(1-a)*B[2])<.4)a+=.05;
+  R.style.setProperty("--frost",Math.round(a*100)+"%")}catch(e){}});
+ if(reduce){layers.forEach(function(l,k){l.im.addEventListener("load",function(){clip(k,"0px")})});return}
+ function step(now){
+  if(level>3)return;
+  var l=layers[level];
+  if(!l.im.complete){l.im.addEventListener("load",function(){requestAnimationFrame(step)},{once:true});l.im.addEventListener("error",function(){level++;requestAnimationFrame(step)},{once:true});return}
+  if(!l.im.naturalWidth){level++;return requestAnimationFrame(step)}
+  if(!t0)t0=now;
+  var W=innerWidth,H=innerHeight,sc=Math.max(W/ph.w,H/ph.h),ih=ph.h*sc,top=(H-ih)/2,rh=ih/l.rows;
+  var first=Math.max(0,Math.floor(-top/rh)),n=Math.max(1,Math.min(l.rows,Math.ceil((H-top)/rh))-first);
+  var dur=level<3?n*MS[level]:1200,f=Math.min(1,(now-t0)/dur);
+  // Lower layers: whole rows of their own pixels. The full photo: a smooth sweep.
+  var y=level<3?top+(first+Math.min(n,Math.floor(f*n)+1))*rh:f*H;
+  clip(level,Math.max(0,Math.round(H-y))+"px");
+  if(f>=1){clip(level,"0px");level++;t0=0}
+  requestAnimationFrame(step);
+ }
+ requestAnimationFrame(step);
+}
 var on=D.modes.filter(ok);
 bg.apply(on.length?any(on):"color");
 window.__bg=bg;
