@@ -1,11 +1,10 @@
 // Page backgrounds. Every HTML page gets a small inline script that picks a
 // mode at random before the first paint, plus /bg.js (public/bg.js) which
-// draws the rain and adds the switcher in the corner. Modes:
+// tints the frosted panels to match the photo. Modes:
 //   color   one of the colours below
 //   photo   one of Kenneth's photos (published photos, minus any switched
-//           off in admin, plus extra images uploaded on the Backgrounds tab)
-//   rain    rain falling behind the page
-//   window  a photo seen through a rainy window (by Claude, Nov 2026)
+//           off in admin, plus extra images uploaded on the Backgrounds tab),
+//           with the text on frosted glass panels
 // Settings in kv "backgrounds": { items: [colours and extra images], modes }.
 //   { kind: "color", color: "#e2ebe6" }
 //   { kind: "image", id, w, h }  stored in R2 at bg/<id>.jpg
@@ -23,8 +22,8 @@ export const DEFAULT_BACKGROUNDS = [
   { id: "c-blush", kind: "color", color: "#f2e4e1", enabled: true },
 ];
 
-export const MODES = ["color", "photo", "rain", "window"];
-export const DEFAULT_MODES = { color: true, photo: true, rain: true, window: true };
+export const MODES = ["color", "photo"];
+export const DEFAULT_MODES = { color: true, photo: true };
 
 let cache = { at: 0, value: null };
 
@@ -34,10 +33,12 @@ export async function getBackgroundSettings(env, { fresh = false } = {}) {
   const saved = (await kvGet(env, KEY))?.value;
   const value = Array.isArray(saved)
     ? { items: saved, modes: DEFAULT_MODES }
-    : { items: saved?.items ?? DEFAULT_BACKGROUNDS, modes: { ...DEFAULT_MODES, ...(saved?.modes || {}) } };
+    : { items: saved?.items ?? DEFAULT_BACKGROUNDS, modes: pickModes(saved?.modes) };
   cache = { at: Date.now(), value };
   return value;
 }
+// Older settings also held rain and window modes; keep only current ones.
+const pickModes = (m) => Object.fromEntries(MODES.map((k) => [k, m?.[k] !== false]));
 export const getBackgrounds = async (env, opts) => (await getBackgroundSettings(env, opts)).items;
 
 export function validateModes(input) {
@@ -150,30 +151,40 @@ export async function pageData(env, rand = Math.random) {
 }
 
 // Styles for every mode; the inline script sets html[data-bg] and the
-// variables. Text panels: #home (home), .center-container (favorites),
-// .photos-page (photos), plus the side nav.
+// variables. In photo mode the text sits on frosted glass: the photo shows
+// through blurred, tinted with the photo's own colour (--bg-tint, worked out
+// by bg.js). Text panels: #home (home), .center-container (favorites),
+// .photos-page (photos), plus the side nav as one pane.
 const PANELS = "#home>*,.center-container,.photos-page>*";
+const P = "html[data-bg=photo]";
+const FROST = [
+  "background:color-mix(in srgb,var(--bg-tint) var(--bg-frost,65%),transparent)",
+  "-webkit-backdrop-filter:blur(28px) saturate(1.5)",
+  "backdrop-filter:blur(28px) saturate(1.5)",
+  // A faint light edge and a soft shadow, like glass, rather than a hard box.
+  "box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 1px 0 rgba(255,255,255,.35),0 10px 40px -12px color-mix(in srgb,var(--bg-tint) 40%,black)",
+  "border-radius:18px",
+  "transition:background-color .6s ease",
+].join(";");
 export const STATIC_CSS = [
-  `html[data-bg]:not([data-bg=color]){background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 92%,black)!important;--bg-panel:color-mix(in srgb,var(--bg-tint) 90%,transparent)}`,
-  `html[data-bg]:not([data-bg=color]) :is(body,#__nuxt,#__nuxt>div,#__nuxt>div>div){background:transparent!important}`,
-  `html:is([data-bg=photo],[data-bg=window])::before{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg-tint) var(--bg-img) center/cover no-repeat}`,
-  // Window: the blurred photo plus a white haze, so wiped lines read as clear glass.
-  `html[data-bg=window]::before{background:linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.2)),var(--bg-img) center/cover no-repeat,var(--bg-tint)}`,
-  `html[data-bg=window]{--bg-panel:color-mix(in srgb,var(--bg-tint) 84%,transparent)}`,
-  `html:is([data-bg=photo],[data-bg=window]) :is(${PANELS}){background:var(--bg-panel);border-radius:14px;padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
-  `html:is([data-bg=photo],[data-bg=window]) #home>:first-child{padding-left:0!important;padding-right:0!important}`,
-  `@media(max-width:600px){html:is([data-bg=photo],[data-bg=window]) :is(${PANELS}){padding:.9rem .8rem!important}}`,
-  `html:is([data-bg=photo],[data-bg=window]) .site-nav li{background:var(--bg-panel);border-radius:10px;padding:0 .6rem;width:fit-content}`,
-  `#bg-canvas{position:fixed;left:0;top:0;width:100vw;height:100lvh;z-index:-1;pointer-events:none}`,
+  `${P}{background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 80%,white)!important;--tertiary-bg-color:color-mix(in srgb,var(--bg-tint) 70%,white)!important}`,
+  `${P} :is(body,#__nuxt,#__nuxt>div,#__nuxt>div>div){background:transparent!important}`,
+  `${P}::before{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg-tint) var(--bg-img) center/cover no-repeat}`,
+  `${P} :is(${PANELS}){${FROST};padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
+  `${P} #home>:first-child{padding-left:0!important;padding-right:0!important}`,
+  `@media(max-width:600px){${P} :is(${PANELS}){padding:.9rem .8rem!important}}`,
+  // The nav: one pane around all the links.
+  `${P} .site-nav{${FROST};width:fit-content;margin:14px auto!important;padding:.55rem .4rem!important;box-sizing:border-box}`,
+  `@media(min-width:1070px){${P} .site-nav{height:auto!important;margin:18px!important;padding:.8rem .2rem!important}${P} .site-nav li{margin:.15rem 15px}}`,
+  `@media(max-width:480px){${P} .site-nav{margin:10px auto!important;padding:.4rem .2rem!important;max-width:calc(100% - 20px)}}`,
 ].join("");
 
 // Runs in <head> before the page paints. Kept small; bg.js does the rest.
-// window.__bg.apply(mode, keepPick) is also used by the switcher.
+// window.__bg.apply(mode, keepPick) is used by bg.js to repaint the tint.
 export const PICKER_JS = `(()=>{try{
 var D=JSON.parse(document.getElementById("bg-data").textContent),R=document.documentElement,V=document.getElementById("bg-vars");
-var RAIN=["#d9dfe4","#dde2df","#dcdce5"];
 var any=function(a){return a[Math.floor(Math.random()*a.length)]};
-var ok=function(m){return m==="color"||m==="rain"||D.photos.length>0};
+var ok=function(m){return m==="color"||(m==="photo"&&D.photos.length>0)};
 var photo=function(){var tall=matchMedia("(orientation: portrait)").matches,f=D.photos.filter(function(p){return(p.h>p.w)===tall});return any(f.length?f:D.photos)};
 var url=function(u,o){return 'url("/cdn-cgi/image/'+o+',fit=scale-down,format=auto'+u+'")'};
 var bg={data:D,pick:{}};
@@ -181,16 +192,14 @@ bg.apply=function(mode,keep){
  if(!ok(mode))mode="color";
  var p=keep&&bg.pick.mode===mode?bg.pick:{mode:mode};
  if(mode==="color")p.color=p.color||any(D.colors);
- if(mode==="rain")p.color=p.color||any(RAIN);
- if(mode==="photo"||mode==="window")p.photo=p.photo||photo();
+ else p.photo=p.photo||photo();
  bg.pick=p;R.setAttribute("data-bg",mode);
- var c=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
-  :":root{--bg-tint:"+(p.tint||p.color||"#eeeeec")+";"+(p.photo?"--bg-img:"+(mode==="window"?url(p.photo.u,"width=900,blur=40,quality=70"):url(p.photo.u,"width=2000,quality=82")):"")+"}";
- V.textContent=c;if(bg.onchange)bg.onchange(p);
+ V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
+  :":root{--bg-tint:"+(p.tint||"#eeeeec")+";--bg-frost:"+(p.frost||65)+"%;--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
+ if(bg.onchange)bg.onchange(p);
 };
-var saved;try{saved=sessionStorage.getItem("bg-mode")}catch(e){}
 var on=D.modes.filter(ok);
-bg.apply(saved&&ok(saved)?saved:on.length?any(on):"color");
+bg.apply(on.length?any(on):"color");
 window.__bg=bg;
 }catch(e){}})();`;
 

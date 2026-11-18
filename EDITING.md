@@ -11,14 +11,11 @@ password your photo Shortcut uses (`UPLOAD_KEY`). The tabs:
 - **Photos**: add, caption, date, delete; see `PHOTOS.md`.
 - **Short links**: `sunken.fyi/cv` → any address.
 - **Friends**: the websites "Click here" on the home page picks from.
-- **Backgrounds**: which modes a new visitor can land on (Colour, Photo,
-  Rain, Window), the colours, and extra photos used only as backgrounds.
-  Every posted photo is a background too unless you untick "Use as a
-  background" on it in the Photos tab. Visitors can switch with the
-  Background button in the bottom-right corner of the site; their choice
-  lasts until they close the tab. Rain and Window run at 20 to 25 frames a
-  second, stop while the tab is hidden, and stay still for people who turn
-  on reduced motion.
+- **Backgrounds**: which modes a visit can land on (Colour or Photo, picked
+  at random each visit), the colours, and extra photos used only as
+  backgrounds. Every posted photo is a background too unless you untick "Use
+  as a background" on it in the Photos tab. On a photo, the text sits on
+  frosted glass tinted with the photo's own colour.
 - **Feeds**: see what Letterboxd, Goodreads, Spotify and Substack last
   returned, refresh now, or reconnect Spotify.
 
