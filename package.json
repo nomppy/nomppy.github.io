@@ -6,9 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "dev:worker": "nuxt generate && npx wrangler dev worker/dev.js --local --port 8787",
-    "dev:seed": "scripts/dev-seed.sh"
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxt/content": "^2.11.0",

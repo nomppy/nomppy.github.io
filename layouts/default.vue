@@ -398,6 +398,7 @@ button:active {
   .site-nav {
     position: fixed;
     flex-flow: column nowrap;
+    justify-content: center;
     height: 100%;
     margin: 0 18;
   }

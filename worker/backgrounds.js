@@ -1,10 +1,9 @@
 // Page backgrounds. Every HTML page gets a small inline script that picks a
-// mode at random before the first paint, plus /bg.js (public/bg.js) which
-// tints the frosted panels to match the photo. Modes:
+// mode at random before the first paint. Modes:
 //   color   one of the colours below
 //   photo   one of Kenneth's photos (published photos, minus any switched
 //           off in admin, plus extra images uploaded on the Backgrounds tab),
-//           with the text on frosted glass panels
+//           with the text on frosted glass tinted one of the colours
 // Settings in kv "backgrounds": { items: [colours and extra images], modes }.
 //   { kind: "color", color: "#e2ebe6" }
 //   { kind: "image", id, w, h }  stored in R2 at bg/<id>.jpg
@@ -152,19 +151,18 @@ export async function pageData(env, rand = Math.random) {
 
 // Styles for every mode; the inline script sets html[data-bg] and the
 // variables. In photo mode the text sits on frosted glass: the photo shows
-// through blurred, tinted with the photo's own colour (--bg-tint, worked out
-// by bg.js). Text panels: #home (home), .center-container (favorites),
+// through blurred, tinted with one of the background colours (--bg-tint).
+// Text panels: #home (home), .center-container (favorites),
 // .photos-page (photos), plus the side nav as one pane.
 const PANELS = "#home>*,.center-container,.photos-page>*";
 const P = "html[data-bg=photo]";
 const FROST = [
-  "background:color-mix(in srgb,var(--bg-tint) var(--bg-frost,65%),transparent)",
+  "background:color-mix(in srgb,var(--bg-tint) 72%,transparent)",
   "-webkit-backdrop-filter:blur(28px) saturate(1.5)",
   "backdrop-filter:blur(28px) saturate(1.5)",
   // A faint light edge and a soft shadow, like glass, rather than a hard box.
   "box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 1px 0 rgba(255,255,255,.35),0 10px 40px -12px color-mix(in srgb,var(--bg-tint) 40%,black)",
   "border-radius:18px",
-  "transition:background-color .6s ease",
 ].join(";");
 export const STATIC_CSS = [
   `${P}{background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 80%,white)!important;--tertiary-bg-color:color-mix(in srgb,var(--bg-tint) 70%,white)!important}`,
@@ -175,12 +173,12 @@ export const STATIC_CSS = [
   `@media(max-width:600px){${P} :is(${PANELS}){padding:.9rem .8rem!important}}`,
   // The nav: one pane around all the links.
   `${P} .site-nav{${FROST};width:fit-content;margin:14px auto!important;padding:.55rem .4rem!important;box-sizing:border-box}`,
-  `@media(min-width:1070px){${P} .site-nav{height:auto!important;margin:18px!important;padding:.8rem .2rem!important}${P} .site-nav li{margin:.15rem 15px}}`,
+  `@media(min-width:1070px){${P} .site-nav{height:auto!important;top:50%;transform:translateY(-50%);margin:0 18px!important;padding:.8rem .2rem!important}${P} .site-nav li{margin:.15rem 15px}}`,
   `@media(max-width:480px){${P} .site-nav{margin:10px auto!important;padding:.4rem .2rem!important;max-width:calc(100% - 20px)}}`,
 ].join("");
 
-// Runs in <head> before the page paints. Kept small; bg.js does the rest.
-// window.__bg.apply(mode, keepPick) is used by bg.js to repaint the tint.
+// Runs in <head> before the page paints.
+
 export const PICKER_JS = `(()=>{try{
 var D=JSON.parse(document.getElementById("bg-data").textContent),R=document.documentElement,V=document.getElementById("bg-vars");
 var any=function(a){return a[Math.floor(Math.random()*a.length)]};
@@ -188,15 +186,13 @@ var ok=function(m){return m==="color"||(m==="photo"&&D.photos.length>0)};
 var photo=function(){var tall=matchMedia("(orientation: portrait)").matches,f=D.photos.filter(function(p){return(p.h>p.w)===tall});return any(f.length?f:D.photos)};
 var url=function(u,o){return 'url("/cdn-cgi/image/'+o+',fit=scale-down,format=auto'+u+'")'};
 var bg={data:D,pick:{}};
-bg.apply=function(mode,keep){
+bg.apply=function(mode){
  if(!ok(mode))mode="color";
- var p=keep&&bg.pick.mode===mode?bg.pick:{mode:mode};
- if(mode==="color")p.color=p.color||any(D.colors);
- else p.photo=p.photo||photo();
+ var p={mode:mode,color:any(D.colors)};
+ if(mode==="photo")p.photo=photo();
  bg.pick=p;R.setAttribute("data-bg",mode);
  V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
-  :":root{--bg-tint:"+(p.tint||"#eeeeec")+";--bg-frost:"+(p.frost||65)+"%;--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
- if(bg.onchange)bg.onchange(p);
+  :":root{--bg-tint:"+p.color+";--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
 };
 var on=D.modes.filter(ok);
 bg.apply(on.length?any(on):"color");
@@ -213,7 +209,7 @@ export async function withBackground(response, env) {
   const head =
     `<script id="bg-data" type="application/json">${escapeJson(data)}</script>` +
     `<style id="bg-static">${STATIC_CSS}</style><style id="bg-vars"></style>` +
-    `<script>${PICKER_JS}</script><script src="/bg.js" defer></script>`;
+    `<script>${PICKER_JS}</script>`;
   const rewritten = new HTMLRewriter()
     .on("head", { element: (el) => el.append(head, { html: true }) })
     .transform(response);
