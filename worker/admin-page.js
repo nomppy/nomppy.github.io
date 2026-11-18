@@ -189,12 +189,10 @@ export const PAGE = /* html */ `<!doctype html>
     <!-- BACKGROUNDS -->
     <section data-panel="backgrounds" hidden>
       <h2>modes</h2>
-      <p class="hint">A new visitor lands on one of the switched-on modes at random. Anyone can change it with the Background button in the bottom corner of the site.</p>
+      <p class="hint">Each visit lands on one of the switched-on modes at random.</p>
       <div class="modes" id="modes">
         <label><input type="checkbox" data-mode="color"> <span><strong>Colour</strong> One of the colours below.</span></label>
-        <label><input type="checkbox" data-mode="photo"> <span><strong>Photo</strong> One of your photos, with the text on light panels.</span></label>
-        <label><input type="checkbox" data-mode="rain"> <span><strong>Rain</strong> Rain falling behind the page.</span></label>
-        <label><input type="checkbox" data-mode="window"> <span><strong>Window</strong> One of your photos through a rainy window: fogged glass, drops that slide down and wipe it clear. Made by Claude, 17 November 2026.</span></label>
+        <label><input type="checkbox" data-mode="photo"> <span><strong>Photo</strong> One of your photos, with the text on frosted glass tinted to match it.</span></label>
       </div>
 
       <h2>photos</h2>
