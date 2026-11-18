@@ -30,7 +30,8 @@ async function ensureSchema(env) {
   ).run();
   // Added later: when the photo was taken, and where that date came from
   // (manual, shortcut, camera or caption; see dates.js).
-  for (const col of ["taken_at INTEGER", "date_source TEXT"]) {
+  // bg_use: 0 keeps a photo out of the page backgrounds.
+  for (const col of ["taken_at INTEGER", "date_source TEXT", "bg_use INTEGER NOT NULL DEFAULT 1"]) {
     try {
       await env.DB.prepare(`ALTER TABLE photos ADD COLUMN ${col}`).run();
     } catch {
@@ -43,12 +44,18 @@ async function ensureSchema(env) {
 // Fills in dates written in captions for photos that have none yet.
 export async function backfillDates(env) {
   await ensureSchema(env);
-  const { results } = await env.DB.prepare("SELECT id, caption FROM photos WHERE taken_at IS NULL AND caption != ''").all();
+  // Also re-reads caption dates, so a change to how captions are read applies
+  // to photos already dated that way.
+  const { results } = await env.DB.prepare(
+    "SELECT id, caption, taken_at FROM photos WHERE (taken_at IS NULL OR date_source = 'caption') AND caption != ''",
+  ).all();
   let filled = 0;
   for (const r of results) {
     const found = dateFromCaption(r.caption);
-    if (!found) continue;
-    await env.DB.prepare("UPDATE photos SET taken_at = ?, date_source = 'caption' WHERE id = ? AND taken_at IS NULL")
+    if (!found || found.takenAt === r.taken_at) continue;
+    await env.DB.prepare(
+      "UPDATE photos SET taken_at = ?, date_source = 'caption' WHERE id = ? AND (taken_at IS NULL OR date_source = 'caption')",
+    )
       .bind(found.takenAt, r.id)
       .run();
     filled++;
@@ -95,6 +102,7 @@ export function adminRow(r) {
   return {
     ...publicRow(r),
     status: r.status,
+    background: r.bg_use !== 0,
     source: r.source,
     createdAt: r.created_at,
     dateSource: r.date_source ?? null,

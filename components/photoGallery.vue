@@ -83,11 +83,14 @@ const sorted = computed(() => [...photos.value].sort((a, b) => when(b) - when(a)
 const shown = computed(() => (props.limit ? sorted.value.slice(0, props.limit) : sorted.value))
 const photo = computed(() => shown.value[current.value])
 
-// Calendar quarters, named by season.
-const SEASONS = ['Winter', 'Spring', 'Summer', 'Fall']
+// Spring = Mar-May, Summer = Jun-Aug, Fall = Sep-Nov, Winter = Dec-Feb.
+// Winter is named by the year it starts in: Jan 2027 is Winter 2026.
+const SEASONS = ['Spring', 'Summer', 'Fall', 'Winter']
 const seasonOf = (t) => {
   const d = new Date(t)
-  return `${SEASONS[Math.floor(d.getMonth() / 3)]} ${d.getFullYear()}`
+  const m = d.getMonth()
+  const year = m < 2 ? d.getFullYear() - 1 : d.getFullYear()
+  return `${SEASONS[Math.floor(((m + 10) % 12) / 3)]} ${year}`
 }
 const groups = computed(() => {
   const items = shown.value.map((photo, index) => ({ photo, index }))

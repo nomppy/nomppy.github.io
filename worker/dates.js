@@ -16,9 +16,11 @@ function valid(y, m, d) {
   return t.getUTCMonth() === m - 1; // rejects 31 Feb and similar
 }
 
-// Seasons follow the photos page: Winter = Jan-Mar, Spring = Apr-Jun,
-// Summer = Jul-Sep, Fall = Oct-Dec. A caption season maps to mid-quarter.
-const SEASON_MONTH = { winter: 2, spring: 5, summer: 8, fall: 11, autumn: 11 };
+// Seasons follow the photos page: Spring = Mar-May, Summer = Jun-Aug,
+// Fall = Sep-Nov, Winter = Dec to Feb, named by the year it starts in
+// (Winter 2026 = Dec 2026 - Feb 2027). A caption season maps to its middle
+// month: [years to add, month].
+const SEASON_MID = { spring: [0, 4], summer: [0, 7], fall: [0, 10], autumn: [0, 10], winter: [1, 1] };
 
 // Returns { takenAt, precision: "day" | "season" } or null.
 export function dateFromCaption(caption) {
@@ -34,7 +36,10 @@ export function dateFromCaption(caption) {
   const season = text.match(/\b(spring|summer|fall|autumn|winter)\b[\s,]*['‘’]?\s*(\d{4}|\d{2})(?!\d)/i);
   if (season) {
     const y = fullYear(+season[2]);
-    if (y >= 1990 && y <= 2100) return { takenAt: noon(y, SEASON_MONTH[season[1].toLowerCase()], 15), precision: "season" };
+    if (y >= 1990 && y <= 2100) {
+      const [dy, m] = SEASON_MID[season[1].toLowerCase()];
+      return { takenAt: noon(y + dy, m, 15), precision: "season" };
+    }
   }
   return null;
 }

@@ -26,38 +26,26 @@
           >{{ joiner(i, playlists.length) }}</template
         >
       </p>
-      <div v-if="playlists.length === 1" class="playlist-body">
-        <a :href="playlists[0].url" class="cover">
-          <img v-if="playlists[0].cover" :src="playlists[0].cover" :alt="`Cover of ${playlists[0].name}`" loading="lazy" />
+      <div v-for="p in playlists" :key="p.url" class="playlist-body">
+        <a :href="p.url" class="cover">
+          <img v-if="p.cover" :src="p.cover" :alt="`Cover of ${p.name}`" loading="lazy" />
         </a>
         <div class="playlist-text">
-          <a :href="playlists[0].url" class="playlist-name">{{ playlists[0].name }}</a>
-          <p class="aside">{{ songs(playlists[0]) }}</p>
+          <a :href="p.url" class="playlist-name">{{ p.name }}</a>
+          <p class="aside">{{ songs(p) }}</p>
           <ol class="tracks">
-            <li v-for="t in playlists[0].tracks" :key="t.url || t.name">
+            <li v-for="t in p.tracks" :key="t.url || t.name">
               <a :href="t.url">{{ t.name }}</a>
               <span class="byline">{{ t.artists }}</span>
             </li>
           </ol>
         </div>
       </div>
-      <ul v-else class="playlist-row">
-        <li v-for="p in playlists" :key="p.url">
-          <a :href="p.url" class="cover">
-            <img v-if="p.cover" :src="p.cover" :alt="`Cover of ${p.name}`" loading="lazy" />
-          </a>
-          <a :href="p.url" class="playlist-name">{{ p.name }}</a>
-          <p class="aside">{{ songs(p) }}</p>
-          <p v-if="p.tracks && p.tracks[0]" class="byline newest">
-            Newest: <a :href="p.tracks[0].url">{{ p.tracks[0].name }}</a>
-          </p>
-        </li>
-      </ul>
     </div>
 
     <!-- Goodreads: covers of what's open now, then what was just finished -->
     <div v-if="books.reading.length || books.read.length" class="tile books">
-      <p class="lead">Here's what <a href="https://www.goodreads.com/user/show/140748369-kenneth">I'm reading</a></p>
+      <p class="lead">I'm <a href="https://www.goodreads.com/user/show/140748369-kenneth">currently reading</a></p>
       <ul class="covers">
         <li v-for="b in books.reading" :key="b.url">
           <a :href="b.url" :title="`${b.title} by ${b.author}`">
@@ -67,7 +55,7 @@
         </li>
       </ul>
       <template v-if="books.read.length">
-        <p class="lead finished-label">and what I finished lately</p>
+        <p class="lead finished-label">Recently read</p>
         <ul class="covers small">
           <li v-for="b in books.read" :key="b.url">
             <a :href="b.url" :title="`${b.title} by ${b.author}`">
@@ -249,50 +237,9 @@ a:focus-visible {
 }
 
 // Playlist
-.playlist-row {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  // Always three columns so covers stay small even with two playlists.
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9em;
-
-  li {
-    display: grid;
-    gap: 0.3em;
-    align-content: start;
-  }
-
-  .playlist-name {
-    font-size: 0.95em;
-    overflow-wrap: anywhere;
-  }
-
-  .aside,
-  .newest {
-    margin: 0;
-    font-size: 0.8em;
-  }
-
-  // Phones: one playlist per line, small cover on the left.
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-
-    li {
-      grid-template-columns: 4.5em minmax(0, 1fr);
-      column-gap: 0.8em;
-      row-gap: 0.1em;
-    }
-
-    .cover {
-      grid-row: 1 / span 3;
-    }
-  }
-}
-
 .playlist-body {
   display: grid;
+  margin-bottom: 1.2em;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 1em;
   align-items: start;

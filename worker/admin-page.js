@@ -84,6 +84,12 @@ export const PAGE = /* html */ `<!doctype html>
   .bg .meta label { display: inline-flex; gap: .3rem; align-items: center; color: var(--text); margin: 0; font-size: .85rem; }
   .bg .meta input { width: auto; }
   .bg.off { opacity: .5; }
+  .modes { display: grid; gap: .5rem; }
+  .modes label { display: flex; gap: .6rem; align-items: baseline; font-size: .95rem; color: var(--text); margin: 0; }
+  .modes input { width: auto; }
+  .modes strong { margin-right: .3rem; }
+  .bgcheck { display: inline-flex; gap: .35rem; align-items: center; font-size: .82rem; color: var(--text); margin: 0; }
+  .bgcheck input { width: auto; }
   .addbg { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .8rem; display: grid; gap: .5rem; align-content: start; }
   input[type=color] { width: 5rem; height: 2.6rem; padding: .2rem; cursor: pointer; }
@@ -142,6 +148,8 @@ export const PAGE = /* html */ `<!doctype html>
       <div class="toolbar" id="bulk">
         <div><label for="bulk-date">Set the date of selected photos</label><input id="bulk-date" type="date"></div>
         <button type="button" id="bulk-apply" disabled>Set date</button>
+        <button type="button" class="ghost" id="bulk-bg-on" disabled>Use as backgrounds</button>
+        <button type="button" class="ghost" id="bulk-bg-off" disabled>Don't use as backgrounds</button>
         <button type="button" class="ghost" id="bulk-clear" disabled>Clear selection</button>
         <span class="status" id="bulk-status"></span>
         <span style="flex:1"></span>
@@ -180,24 +188,32 @@ export const PAGE = /* html */ `<!doctype html>
 
     <!-- BACKGROUNDS -->
     <section data-panel="backgrounds" hidden>
-      <h2>backgrounds</h2>
-      <p class="hint">Each visit gets one of the switched-on backgrounds at random. Over a photo, the page sits on a frosted panel in the photo's tint colour so text stays readable.</p>
-      <div class="bgs" id="bgs"></div>
-      <div class="addbg">
-        <form class="card" id="add-color">
-          <strong>Add a colour</strong>
-          <input type="color" id="new-color" value="#e8eef0">
-          <span class="src" id="color-check"></span>
-          <button type="submit">Add colour</button>
-        </form>
-        <form class="card" id="add-image">
-          <strong>Add a photo</strong>
-          <input type="file" id="bg-file" accept="image/*" required>
-          <div><label for="bg-tint">Panel tint (a light colour from the photo)</label><input type="color" id="bg-tint" value="#ececec"></div>
-          <span class="src" id="tint-check"></span>
-          <button type="submit">Add photo</button>
-        </form>
+      <h2>modes</h2>
+      <p class="hint">A new visitor lands on one of the switched-on modes at random. Anyone can change it with the Background button in the bottom corner of the site.</p>
+      <div class="modes" id="modes">
+        <label><input type="checkbox" data-mode="color"> <span><strong>Colour</strong> One of the colours below.</span></label>
+        <label><input type="checkbox" data-mode="photo"> <span><strong>Photo</strong> One of your photos, with the text on light panels.</span></label>
+        <label><input type="checkbox" data-mode="rain"> <span><strong>Rain</strong> Rain falling behind the page.</span></label>
+        <label><input type="checkbox" data-mode="window"> <span><strong>Window</strong> One of your photos through a rainy window: fogged glass, drops that slide down and wipe it clear. Made by Claude, 17 November 2026.</span></label>
       </div>
+
+      <h2>photos</h2>
+      <p class="hint" id="bg-photo-count"></p>
+      <div class="bgs" id="bg-images"></div>
+      <form class="card" id="add-image" style="max-width:26rem">
+        <strong>Add a photo that's only a background</strong>
+        <input type="file" id="bg-file" accept="image/*" required>
+        <button type="submit">Add photo</button>
+      </form>
+
+      <h2>colours</h2>
+      <div class="bgs" id="bgs"></div>
+      <form class="card" id="add-color" style="max-width:26rem">
+        <strong>Add a colour</strong>
+        <input type="color" id="new-color" value="#e8eef0">
+        <span class="src" id="color-check"></span>
+        <button type="submit">Add colour</button>
+      </form>
       <p class="status" id="bg-status" role="status"></p>
     </section>
 
@@ -303,6 +319,9 @@ export const PAGE = /* html */ `<!doctype html>
       className: "src" + (p.takenAt ? "" : " none"),
       textContent: p.takenAt ? SOURCE[p.dateSource] || "Date set" : "No date: grouped by when it was posted",
     });
+    const useBg = el("input", { type: "checkbox", checked: p.background !== false });
+    useBg.addEventListener("change", () => patch([p.id], { background: useBg.checked }, saving));
+    const bgLabel = el("label", { className: "bgcheck" }, useBg, "Use as a background");
     const del = el("button", { className: "quiet", type: "button", textContent: "Delete" });
     del.addEventListener("click", async () => {
       if (!confirm("Delete this photo from the site? It stays on Instagram.")) return;
@@ -311,7 +330,7 @@ export const PAGE = /* html */ `<!doctype html>
     });
     const posted = p.publishedAt ? "Posted " + new Date(p.publishedAt).toLocaleDateString() : "Not posted yet";
     const foot = el("div", { className: "foot" }, el("span", { textContent: posted + (p.igStatus === "failed" ? " · Instagram failed" : "") }), del);
-    card.append(t, el("div", { className: "body" }, cap, date, src, saving, foot));
+    card.append(t, el("div", { className: "body" }, cap, date, src, bgLabel, saving, foot));
     return card;
   }
 
@@ -330,6 +349,7 @@ export const PAGE = /* html */ `<!doctype html>
     const n = state.selected.size;
     $("bulk-apply").disabled = !n || !$("bulk-date").value;
     $("bulk-clear").disabled = !n;
+    $("bulk-bg-on").disabled = $("bulk-bg-off").disabled = !n;
     $("bulk-apply").textContent = n ? "Set date for " + n + " photo" + (n > 1 ? "s" : "") : "Set date";
   }
   $("bulk-date").addEventListener("input", updateBulk);
@@ -338,6 +358,12 @@ export const PAGE = /* html */ `<!doctype html>
     const ids = [...state.selected];
     if (await patch(ids, { takenAt: $("bulk-date").value })) { status("bulk-status", "Updated " + ids.length + ".", "ok"); state.selected.clear(); renderPhotos(); }
   });
+  for (const [id, use] of [["bulk-bg-on", true], ["bulk-bg-off", false]]) {
+    $(id).addEventListener("click", async () => {
+      const ids = [...state.selected];
+      if (await patch(ids, { background: use })) { status("bulk-status", (use ? "Using " : "Stopped using ") + ids.length + " as backgrounds.", "ok"); state.selected.clear(); renderPhotos(); }
+    });
+  }
   $("f-undated").addEventListener("change", renderPhotos);
   $("f-queued").addEventListener("change", renderPhotos);
   $("publish-next").addEventListener("click", async () => {
@@ -421,52 +447,53 @@ export const PAGE = /* html */ `<!doctype html>
     const c = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4));
     return (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] + 0.05) / 0.05;
   }
-  async function loadBgs() { try { state.bgs = (await api("GET", "/admin-api/backgrounds")).backgrounds; renderBgs(); } catch (e) { fail("bg-status")(e); } }
+  async function loadBgs() {
+    try { const r = await api("GET", "/admin-api/backgrounds"); state.bgs = r.backgrounds; state.modes = r.modes; state.photoCount = r.photoCount; renderBgs(); }
+    catch (e) { fail("bg-status")(e); }
+  }
+  function bgTile(b, i) {
+    const sw = el("div", { className: "sw" });
+    if (b.kind === "color") sw.style.background = b.color;
+    else sw.style.backgroundImage = "url(/cdn-cgi/image/width=400,fit=scale-down,format=auto/bg/" + b.id + ".jpg)";
+    const on = el("input", { type: "checkbox", checked: b.enabled !== false });
+    on.addEventListener("change", () => saveBgs({ backgrounds: state.bgs.map((x, j) => (j === i ? { ...x, enabled: on.checked } : x)) }, on.checked ? "Switched on." : "Switched off."));
+    const del = el("button", { className: "quiet", type: "button", textContent: "Delete" });
+    del.addEventListener("click", () => { if (confirm("Delete this background?")) saveBgs({ backgrounds: state.bgs.filter((_, j) => j !== i) }, "Deleted."); });
+    const label = el("label", {}, on, b.kind === "color" ? b.color : "Use");
+    return el("div", { className: "bg" + (b.enabled === false ? " off" : "") }, sw, el("div", { className: "meta" }, label, del));
+  }
   function renderBgs() {
-    const box = $("bgs"); box.replaceChildren();
-    if (!state.bgs.length) box.append(el("p", { className: "hint", textContent: "No backgrounds: the site uses plain grey." }));
-    state.bgs.forEach((b, i) => {
-      const sw = el("div", { className: "sw" });
-      if (b.kind === "color") sw.style.background = b.color;
-      else sw.style.backgroundImage = "url(/cdn-cgi/image/width=400,fit=scale-down,format=auto/bg/" + b.id + ".jpg)";
-      const sample = el("span", { className: "sample", textContent: "Sample text" });
-      sample.style.background = b.kind === "image" ? b.tint + "dd" : "transparent";
-      sw.append(sample);
-      const on = el("input", { type: "checkbox", checked: b.enabled !== false });
-      on.addEventListener("change", () => saveBgs(state.bgs.map((x, j) => (j === i ? { ...x, enabled: on.checked } : x)), on.checked ? "Switched on." : "Switched off."));
-      const del = el("button", { className: "quiet", type: "button", textContent: "Delete" });
-      del.addEventListener("click", () => { if (confirm("Delete this background?")) saveBgs(state.bgs.filter((_, j) => j !== i), "Deleted."); });
-      const label = el("label", {}, on, b.kind === "color" ? b.color : "Photo");
-      box.append(el("div", { className: "bg" + (b.enabled === false ? " off" : "") }, sw, el("div", { className: "meta" }, label, del)));
-    });
+    document.querySelectorAll("#modes input").forEach((i) => (i.checked = state.modes[i.dataset.mode] !== false));
+    const n = state.photoCount;
+    $("bg-photo-count").textContent = "All your posted photos are used as backgrounds unless you switch one off on the Photos tab (" + n + " in use now). Photos added here are used as well, without appearing on the photos page.";
+    const colors = $("bgs"), images = $("bg-images"); colors.replaceChildren(); images.replaceChildren();
+    state.bgs.forEach((b, i) => (b.kind === "color" ? colors : images).append(bgTile(b, i)));
   }
-  async function saveBgs(next, msg) {
-    try { state.bgs = (await api("PUT", "/admin-api/backgrounds", { backgrounds: next })).backgrounds; renderBgs(); status("bg-status", msg, "ok"); return true; }
-    catch (e) { fail("bg-status")(e); return false; }
+  async function saveBgs(change, msg) {
+    try { const r = await api("PUT", "/admin-api/backgrounds", change); state.bgs = r.backgrounds; state.modes = r.modes; state.photoCount = r.photoCount; renderBgs(); status("bg-status", msg, "ok"); return true; }
+    catch (e) { fail("bg-status")(e); renderBgs(); return false; }
   }
+  document.querySelectorAll("#modes input").forEach((i) => i.addEventListener("change", () => {
+    const modes = {}; document.querySelectorAll("#modes input").forEach((x) => (modes[x.dataset.mode] = x.checked));
+    saveBgs({ modes }, "Saved.");
+  }));
   function checkColor() {
     const c = contrast($("new-color").value);
     $("color-check").textContent = c >= 7 ? "Text will be easy to read." : "Too dark for the black text; pick something lighter.";
     $("color-check").className = "src" + (c >= 7 ? "" : " none");
   }
   $("new-color").addEventListener("input", checkColor); checkColor();
-  function checkTint() {
-    const ok = contrast($("bg-tint").value) >= 7;
-    $("tint-check").textContent = ok ? "" : "Too dark for the black text; pick something lighter.";
-    $("tint-check").className = "src" + (ok ? "" : " none");
-  }
-  $("bg-tint").addEventListener("input", checkTint);
   $("add-color").addEventListener("submit", (e) => {
     e.preventDefault();
-    saveBgs([...state.bgs, { id: "c-" + Math.random().toString(36).slice(2, 8), kind: "color", color: $("new-color").value, enabled: true }], "Added colour.");
+    saveBgs({ backgrounds: [...state.bgs, { id: "c-" + Math.random().toString(36).slice(2, 8), kind: "color", color: $("new-color").value, enabled: true }] }, "Added colour.");
   });
   $("add-image").addEventListener("submit", async (e) => {
     e.preventDefault();
     const f = $("bg-file").files[0]; if (!f) return;
     status("bg-status", "Uploading…");
     try {
-      const { id } = await api("POST", "/admin-api/backgrounds/image", await asJpeg(f), true);
-      if (await saveBgs([...state.bgs, { id, kind: "image", tint: $("bg-tint").value, enabled: true }], "Added photo.")) $("add-image").reset();
+      const { id, w, h } = await api("POST", "/admin-api/backgrounds/image", await asJpeg(f), true);
+      if (await saveBgs({ backgrounds: [...state.bgs, { id, kind: "image", w, h, enabled: true }] }, "Added photo.")) $("add-image").reset();
     } catch (err) { fail("bg-status")(err); }
   });
 
