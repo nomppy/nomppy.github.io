@@ -167,7 +167,14 @@ const FROST = [
 export const STATIC_CSS = [
   `${P}{background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 80%,white)!important;--tertiary-bg-color:color-mix(in srgb,var(--bg-tint) 70%,white)!important}`,
   `${P} :is(body,#__nuxt,#__nuxt>div,#__nuxt>div>div){background:transparent!important}`,
-  `${P}::before{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg-tint) var(--bg-img) center/cover no-repeat}`,
+  // Dial-up loading: a tiny, blocky copy of the photo shows at once; when the
+  // full photo has arrived it paints in from the top in uneven bands, like an
+  // image coming down a modem. Reduced-motion visitors get it all at once.
+  `${P}::before,${P}::after{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg-tint) var(--bg-low) center/cover no-repeat;image-rendering:pixelated}`,
+  `${P}::after{background:var(--bg-img) center/cover no-repeat;image-rendering:auto;clip-path:inset(0 0 100% 0)}`,
+  `html[data-bg-ready][data-bg=photo]::after{animation:bg-dial 3.4s forwards}`,
+  `@keyframes bg-dial{0%{clip-path:inset(0 0 100% 0);animation-timing-function:steps(9)}22%{clip-path:inset(0 0 74% 0);animation-timing-function:steps(1)}34%{clip-path:inset(0 0 70% 0);animation-timing-function:steps(14)}66%{clip-path:inset(0 0 32% 0);animation-timing-function:steps(2)}76%{clip-path:inset(0 0 29% 0);animation-timing-function:steps(12)}100%{clip-path:inset(0 0 0 0)}}`,
+  `@media(prefers-reduced-motion:reduce){html[data-bg-ready][data-bg=photo]::after{animation:none;clip-path:none}}`,
   `${P} :is(${PANELS}){${FROST};padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
   `${P} #home>:first-child{padding-left:0!important;padding-right:0!important}`,
   `@media(max-width:600px){${P} :is(${PANELS}){padding:.9rem .8rem!important}}`,
@@ -184,7 +191,8 @@ var D=JSON.parse(document.getElementById("bg-data").textContent),R=document.docu
 var any=function(a){return a[Math.floor(Math.random()*a.length)]};
 var ok=function(m){return m==="color"||(m==="photo"&&D.photos.length>0)};
 var photo=function(){var tall=matchMedia("(orientation: portrait)").matches,f=D.photos.filter(function(p){return(p.h>p.w)===tall});return any(f.length?f:D.photos)};
-var url=function(u,o){return 'url("/cdn-cgi/image/'+o+',fit=scale-down,format=auto'+u+'")'};
+var src=function(u,o){return "/cdn-cgi/image/"+o+",fit=scale-down,format=auto"+u};
+var url=function(u,o){return 'url("'+src(u,o)+'")'};
 var bg={data:D,pick:{}};
 bg.apply=function(mode){
  if(!ok(mode))mode="color";
@@ -192,7 +200,8 @@ bg.apply=function(mode){
  if(mode==="photo")p.photo=photo();
  bg.pick=p;R.setAttribute("data-bg",mode);
  V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
-  :":root{--bg-tint:"+p.color+";--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
+  :":root{--bg-tint:"+p.color+";--bg-low:"+url(p.photo.u,"width=48,quality=50")+";--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
+ if(mode==="photo"){var i=new Image(),go=function(){R.setAttribute("data-bg-ready","")};i.onload=i.onerror=go;i.src=src(p.photo.u,"width=2000,quality=82");setTimeout(go,15000)}
 };
 var on=D.modes.filter(ok);
 bg.apply(on.length?any(on):"color");
