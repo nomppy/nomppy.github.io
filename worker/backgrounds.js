@@ -169,11 +169,14 @@ export const STATIC_CSS = [
   `${P} :is(body,#__nuxt,#__nuxt>div,#__nuxt>div>div){background:transparent!important}`,
   // Dial-up loading: a tiny, blocky copy of the photo shows at once; when the
   // full photo has arrived it paints in from the top in uneven bands, like an
-  // image coming down a modem. Reduced-motion visitors get it all at once.
+  // image coming down a modem. Only when the photo actually had to download;
+  // a cached photo, or a visitor who asks for reduced motion, gets it at once.
   `${P}::before,${P}::after{content:"";position:fixed;inset:0;z-index:-2;background:var(--bg-tint) var(--bg-low) center/cover no-repeat;image-rendering:pixelated}`,
   `${P}::after{background:var(--bg-img) center/cover no-repeat;image-rendering:auto;clip-path:inset(0 0 100% 0)}`,
   `html[data-bg-ready][data-bg=photo]::after{animation:bg-dial 3.4s forwards}`,
   `@keyframes bg-dial{0%{clip-path:inset(0 0 100% 0);animation-timing-function:steps(9)}22%{clip-path:inset(0 0 74% 0);animation-timing-function:steps(1)}34%{clip-path:inset(0 0 70% 0);animation-timing-function:steps(14)}66%{clip-path:inset(0 0 32% 0);animation-timing-function:steps(2)}76%{clip-path:inset(0 0 29% 0);animation-timing-function:steps(12)}100%{clip-path:inset(0 0 0 0)}}`,
+  // Already in the browser's cache: show it straight away, no animation.
+  `html[data-bg-cached][data-bg=photo]::after{animation:none;clip-path:none}`,
   `@media(prefers-reduced-motion:reduce){html[data-bg-ready][data-bg=photo]::after{animation:none;clip-path:none}}`,
   `${P} :is(${PANELS}){${FROST};padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
   `${P} #home>:first-child{padding-left:0!important;padding-right:0!important}`,
@@ -201,7 +204,11 @@ bg.apply=function(mode){
  bg.pick=p;R.setAttribute("data-bg",mode);
  V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
   :":root{--bg-tint:"+p.color+";--bg-low:"+url(p.photo.u,"width=48,quality=50")+";--bg-img:"+url(p.photo.u,"width=2000,quality=82")+"}";
- if(mode==="photo"){var i=new Image(),go=function(){R.setAttribute("data-bg-ready","")};i.onload=i.onerror=go;i.src=src(p.photo.u,"width=2000,quality=82");setTimeout(go,15000)}
+ if(mode==="photo"){
+  var i=new Image(),f=src(p.photo.u,"width=2000,quality=82"),go=function(){R.setAttribute("data-bg-ready","")},
+  now=function(){R.setAttribute("data-bg-cached","")};
+  i.onload=function(){var e=performance.getEntriesByName(i.src)[0];if(e&&e.transferSize===0&&e.decodedBodySize>0)now();go()};
+  i.onerror=go;i.src=f;if(i.complete)now();setTimeout(go,15000)}
 };
 var on=D.modes.filter(ok);
 bg.apply(on.length?any(on):"color");
