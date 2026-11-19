@@ -135,7 +135,7 @@ const sample = (list, n, rand) => {
   return a.slice(0, n);
 };
 
-// What the page needs to choose a background: colours, a sample of photos,
+// What the page needs to choose a background: colours, every photo,
 // and which modes a new visitor may land on.
 export async function pageData(env, rand = Math.random) {
   const { items, modes } = await getBackgroundSettings(env);
@@ -144,7 +144,7 @@ export async function pageData(env, rand = Math.random) {
   const colors = on.filter((b) => b.kind === "color").map((b) => b.color);
   return {
     colors: colors.length ? colors : ["#ececec"],
-    photos: sample([...(await backgroundPhotos(env)), ...extra], 40, rand),
+    photos: sample([...(await backgroundPhotos(env)), ...extra], 1000, rand), // all of them, so an unseen one is always available
     modes: MODES.filter((m) => modes[m]),
   };
 }
@@ -196,11 +196,16 @@ var ok=function(m){return m==="color"||(m==="photo"&&D.photos.length>0)};
 var photo=function(){var tall=matchMedia("(orientation: portrait)").matches,f=D.photos.filter(function(p){return(p.h>p.w)===tall});return any(f.length?f:D.photos)};
 var src=function(u,o){return "/cdn-cgi/image/"+o+",fit=scale-down,format=auto"+u};
 var url=function(u,o){return 'url("'+src(u,o)+'")'};
+// Backgrounds this browser has been shown (colours and photo URLs).
+var SEEN=[];try{SEEN=JSON.parse(localStorage.getItem("bg-seen")||"[]")||[]}catch(e){}
+var seen=function(k){if(SEEN.indexOf(k)<0)SEEN.push(k);try{localStorage.setItem("bg-seen",JSON.stringify(SEEN.slice(-1000)))}catch(e){}};
 var bg={data:D,pick:{}};
-bg.apply=function(mode){
+// item: a specific colour (mode "color") or photo (mode "photo") to show.
+bg.apply=function(mode,item){
  if(!ok(mode))mode="color";
- var p={mode:mode,color:any(D.colors)};
- if(mode==="photo")p.photo=photo();
+ var p={mode:mode,color:mode==="color"&&item?item:any(D.colors)};
+ if(mode==="photo")p.photo=item||photo();
+ seen(mode==="photo"?p.photo.u:p.color);
  bg.pick=p;R.setAttribute("data-bg",mode);
  V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
   :":root{--bg-tint:"+p.color+"}";
@@ -251,8 +256,14 @@ function dial(ph,tint){
  }
  requestAnimationFrame(step);
 }
-var on=D.modes.filter(ok);
-bg.apply(on.length?any(on):"color");
+// Each visit shows a colour or photo this browser hasn't been shown yet, if
+// there is one; once every background has been seen, any of them again.
+var on=D.modes.filter(ok),tall=matchMedia("(orientation: portrait)").matches,fresh=function(k){return SEEN.indexOf(k)<0};
+var cs=on.indexOf("color")>=0?D.colors.filter(fresh).map(function(c){return["color",c]}):[];
+var ps=on.indexOf("photo")>=0?D.photos.filter(function(p){return fresh(p.u)}):[];
+var fit=ps.filter(function(p){return(p.h>p.w)===tall});
+var pool=cs.concat((fit.length?fit:ps).map(function(p){return["photo",p]}));
+if(pool.length){var c=any(pool);bg.apply(c[0],c[1])}else bg.apply(on.length?any(on):"color");
 window.__bg=bg;
 }catch(e){}})();`;
 
