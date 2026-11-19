@@ -3,7 +3,7 @@
     <header class="center-container intro">
       <h1>photos</h1>
       <p>just the ones i like, and only if i took them</p>
-      <p class="ig">also on instagram: <a href="https://www.instagram.com/sunk.photos/">@sunk.photos</a></p>
+      <p>also on instagram: <a href="https://www.instagram.com/sunk.photos/">@sunk.photos</a></p>
     </header>
     <photo-gallery by-season />
   </div>
@@ -48,11 +48,6 @@ useSeoMeta({ title: 'Photos', description: 'photos I took and like' })
 
   p {
     color: var(--tertiary-text-color);
-  }
-
-  .ig {
-    font-size: 0.85em;
-    margin-top: 0.2em;
   }
 }
 </style>
