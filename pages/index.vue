@@ -6,7 +6,7 @@
     <div class="top">
       <div class="intro">
         <ContentDoc :head="false" class="nuxt-content" />
-        <p class="friend-line"><a href="/friend">Click here</a> to go to the website of someone who I like.</p>
+        <p class="friend-line"><a href="/friend">Click here</a> to go to the website of someone who I like. Scroll down for other things I like.</p>
       </div>
 
       <nav class="elsewhere" aria-label="Elsewhere">
@@ -17,7 +17,7 @@
     <lately />
 
     <section class="photos" aria-labelledby="recent-photos">
-      <p id="recent-photos" class="lead">Recent photos <span class="ig">· also on <a href="https://www.instagram.com/sunk.photos/">instagram</a></span></p>
+      <p id="recent-photos" class="lead">Recent photos · also on <a href="https://www.instagram.com/sunk.photos/">instagram</a></p>
       <photo-gallery :limit="8">
         <template #after="{ total, shown }">
           <a v-if="total > shown" href="/photos/" class="see-more">See all {{ total }} photos</a>
@@ -107,11 +107,6 @@ const elsewhere = [
 .lead {
   margin: 0 0 0.7em;
   font-size: 1.05em;
-}
-
-.lead .ig {
-  font-size: 0.85em;
-  color: var(--tertiary-text-color);
 }
 
 .see-more {
