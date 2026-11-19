@@ -52,7 +52,7 @@
           />
           <figcaption>
             <span v-if="photo.caption" class="caption">{{ photo.caption }}</span>
-            <a :href="photo.url" target="_blank" rel="noopener">Full size</a>
+            <a :href="photo.url">Full size</a>
           </figcaption>
         </figure>
         <button class="nav next" type="button" aria-label="Next photo" :disabled="current === shown.length - 1" @click="step(1)">›</button>
