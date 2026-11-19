@@ -177,6 +177,9 @@ export const STATIC_CSS = [
   `html:not([data-bg=photo]) .bg-layer{display:none}`,
   `${P} :is(${PANELS}){${FROST};padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
   `${P} #home>:first-child{padding-left:0!important;padding-right:0!important}`,
+  // A window of bare photo between the intro and the feeds: scroll past the
+  // intro and the background shows through on its own for a moment.
+  `${P} #home>.top{margin-bottom:70vh!important;margin-bottom:70svh!important}`,
   `@media(max-width:600px){${P} :is(${PANELS}){padding:.9rem .8rem!important}}`,
   // The nav: one pane around all the links.
   `${P} .site-nav{${FROST};width:fit-content;margin:14px auto!important;padding:.55rem .4rem!important;box-sizing:border-box}`,
@@ -204,7 +207,8 @@ bg.apply=function(mode){
  if(mode==="photo")dial(p.photo,p.color);
 };
 // Widths of the four layers; the last is the full photo.
-var LV=[16,64,256,2000],MS=[70,22,7];
+// Milliseconds per row for the three blocky layers (a quarter of the first speed).
+var LV=[16,64,256,2000],MS=[280,88,28];
 function dial(ph,tint){
  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,level=0,t0=0;
  var layers=LV.map(function(w,i){
@@ -238,7 +242,7 @@ function dial(ph,tint){
   if(!t0)t0=now;
   var W=innerWidth,H=innerHeight,sc=Math.max(W/ph.w,H/ph.h),ih=ph.h*sc,top=(H-ih)/2,rh=ih/l.rows;
   var first=Math.max(0,Math.floor(-top/rh)),n=Math.max(1,Math.min(l.rows,Math.ceil((H-top)/rh))-first);
-  var dur=level<3?n*MS[level]:1200,f=Math.min(1,(now-t0)/dur);
+  var dur=level<3?n*MS[level]:4800,f=Math.min(1,(now-t0)/dur);
   // Lower layers: whole rows of their own pixels. The full photo: a smooth sweep.
   var y=level<3?top+(first+Math.min(n,Math.floor(f*n)+1))*rh:f*H;
   clip(level,Math.max(0,Math.round(H-y))+"px");

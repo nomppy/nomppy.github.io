@@ -261,6 +261,8 @@ a:focus-visible {
 }
 
 .playlist-name {
+  display: block;
+  overflow-wrap: anywhere; // long one-word names wrap instead of running out of the panel
   font-weight: bold;
   font-size: 1.15em;
   line-height: 1.2;
@@ -374,6 +376,7 @@ a:focus-visible {
 }
 
 .post-title {
+  overflow-wrap: anywhere;
   font-size: 1.2em;
   font-weight: bold;
   line-height: 1.2;
@@ -433,6 +436,12 @@ a:focus-visible {
       flex: 0 0 30%;
       scroll-snap-align: start;
     }
+  }
+
+  // A smaller cover leaves the track list room to breathe on a phone.
+  .playlist-body {
+    grid-template-columns: minmax(0, 5.5em) minmax(0, 1fr);
+    gap: 0.8em;
   }
 
   .covers {
