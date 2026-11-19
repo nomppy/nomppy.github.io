@@ -13,8 +13,8 @@
     <div class="top">
       <div class="intro">
         <ContentDoc :head="false" class="nuxt-content" />
+        <p class="friend-line"><a href="/friend">Click here</a> to see a person that I like. Scroll down for not-people things.</p>
         <p class="admonymous-line">Feel free to share any thoughts (for this website or for me) in my <a href="https://www.admonymous.co/sunk">Admonymous</a>.</p>
-        <p class="friend-line"><a href="/friend">Click here</a> to go to the website of someone who I like. Scroll down for other things I like.</p>
       </div>
     </div>
 
@@ -74,11 +74,11 @@ const elsewhere = [
   }
 }
 
-.admonymous-line {
+.friend-line {
   margin: 0 0 1em;
 }
 
-.friend-line {
+.admonymous-line {
   margin: 0;
 }
 
