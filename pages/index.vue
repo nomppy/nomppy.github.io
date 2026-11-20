@@ -5,7 +5,7 @@
       <hero id="hero" />
       <nav class="elsewhere" aria-label="Elsewhere">
         <a v-for="link in elsewhere" :key="link.url" :href="link.url" :title="link.name" :aria-label="link.name">
-          <img :src="logoSrc(link.logo)" alt="" width="48" height="48" loading="eager" @error="logoFallback($event, link.logo)" />
+          <img :src="logoSrc(link)" alt="" width="48" height="48" loading="eager" @error="logoFallback($event.target as HTMLImageElement)" />
         </a>
       </nav>
     </header>
@@ -41,9 +41,9 @@ useHead({
 // (an .ico, say) the original is used. Admonymous has a line in the intro.
 const elsewhere = [
   { name: 'Twitter', url: 'https://x.com/sunkht', logo: 'x' },
-  { name: 'Curius', url: 'https://curius.app/kenneth-sun', logo: 'curius' },
+  { name: 'Curius', url: 'https://curius.app/kenneth-sun', logo: 'curius', raw: true },
   { name: 'GitHub', url: 'https://github.com/nomppy', logo: 'github' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sunkht/', logo: 'linkedin' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sunkht/', logo: 'linkedin', raw: true },
   { name: 'Substack', url: 'https://sunkht.substack.com/', logo: 'substack' },
   { name: 'Instagram', url: 'https://www.instagram.com/sunk.photos/', logo: 'instagram' },
   { name: 'Goodreads', url: 'https://www.goodreads.com/user/show/140748369-kenneth', logo: 'goodreads' },
@@ -51,11 +51,20 @@ const elsewhere = [
   { name: 'Spotify', url: 'https://open.spotify.com/user/tbkwdf650gvc7vlikkdmoj1k1', logo: 'spotify' },
 ];
 
-const logoSrc = (name: string) => `/cdn-cgi/image/width=96,format=auto/logos/${name}`;
-function logoFallback(e: Event, name: string) {
-  const img = e.target as HTMLImageElement;
-  if (img.src.includes('/cdn-cgi/')) img.src = `/logos/${name}`; // only once
+// Curius and LinkedIn only offer .ico files, which the resizer can't read, so
+// they load as they are.
+const logoSrc = (link: { logo: string; raw?: boolean }) =>
+  link.raw ? `/logos/${link.logo}` : `/cdn-cgi/image/width=96,format=auto/logos/${link.logo}`;
+function logoFallback(img: HTMLImageElement) {
+  const m = img.src.match(/\/cdn-cgi\/image\/[^/]+(\/logos\/[a-z]+)$/);
+  if (m) img.src = m[1]; // the original, once
 }
+// An image that failed before the page came alive never fired @error: check.
+onMounted(() => {
+  document.querySelectorAll<HTMLImageElement>('.elsewhere img').forEach((img) => {
+    if (img.complete && !img.naturalWidth) logoFallback(img);
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -75,7 +84,6 @@ function logoFallback(e: Event, name: string) {
 }
 
 .intro {
-  max-width: 34em;
   font-size: 1.1em;
 
   :deep(.nuxt-content) {
@@ -96,7 +104,7 @@ function logoFallback(e: Event, name: string) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.3em 1.1em;
+  gap: 0.3em 0.45em;
   margin: 0.3em 0 0.2em;
 
   a {
@@ -165,7 +173,7 @@ function logoFallback(e: Event, name: string) {
 @media (max-width: 700px) {
   // Nine logos fit on one line on a phone.
   .elsewhere {
-    gap: 0.3em 0.35em;
+    gap: 0.3em 0.2em;
 
     a {
       padding: 0.15em;
