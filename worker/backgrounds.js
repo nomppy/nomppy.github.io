@@ -223,7 +223,9 @@ bg.apply=function(mode,item){
 var cap=null;
 function caption(text){
  if(cap){cap.remove();cap=null}
- text=(text||"").trim();if(!text)return;
+ // Captions imported from Instagram can be hashtags: show "#chongqing #photos"
+ // as "chongqing" (generic tags dropped, "#" removed, lines joined).
+ text=(text||"").replace(/#(photos?|photography|photooftheday)(?![\\w-])/gi,"").replace(/#/g,"").replace(/\\s+/g," ").trim();if(!/[\\p{L}\\p{N}]/u.test(text))return;
  cap=document.createElement("p");cap.className="bg-caption";cap.textContent=text;R.appendChild(cap);
  var FAINT=.45,SMALL=.6,queued=false;
  var lerp=function(a,b,f){return a+(b-a)*f},clamp=function(f){return f<0?0:f>1?1:f};
