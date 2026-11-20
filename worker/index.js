@@ -1,4 +1,5 @@
 // Routes, in order:
+//   /logos/<name>                 logos for the icon row (logos.js)
 //   /photo-api/*, /photos/img/*   photo queue (photos.js)
 //   /feed-api/lately              home page "lately" feeds (feeds.js)
 //   /spotify/*                    one-time Spotify connection (spotify.js)
@@ -9,6 +10,7 @@
 //   anything else                 the static site, with a random background
 // Short links and friends live in D1 (lists.js); links.json and friends.json
 // are only the starting values.
+import { handleLogos } from "./logos.js";
 import { handlePhotos, scheduled as photoSchedule, syncInstagram } from "./photos.js";
 import { handleFeeds, refreshFeeds } from "./feeds.js";
 import { handleSpotify } from "./spotify.js";
@@ -68,6 +70,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const handled =
+      (await handleLogos(request, env)) ||
       (await handlePhotos(request, env)) ||
       (await handleFeeds(request, env, ctx)) ||
       (await handleSpotify(request, env)) ||
