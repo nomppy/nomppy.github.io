@@ -174,6 +174,10 @@ export const STATIC_CSS = [
   // time. The lower three are drawn as hard blocks.
   `.bg-layer{position:fixed;inset:0;pointer-events:none;background:center/cover no-repeat;clip-path:inset(0 0 100% 0)}`,
   `.bg-layer.blocky{image-rendering:pixelated}`,
+  // The photo's caption: plain text, no glass, in front of everything but
+  // click-through. The picker moves, scales and fades it.
+  `.bg-caption{position:fixed;left:50%;top:100%;transform:translate(-50%,-50%);transform-origin:50% 50%;z-index:3;pointer-events:none;margin:0;color:#fff;font-family:var(--serif-font-stack,serif);font-style:italic;font-size:clamp(1.3rem,4.5vw,2.2rem);line-height:1.25;letter-spacing:.02em;text-align:center;width:max-content;max-width:min(80vw,28em);text-shadow:0 1px 2px rgba(0,0,0,.4),0 0 28px rgba(0,0,0,.35);opacity:0;will-change:top,transform,opacity}`,
+  `html:not([data-bg=photo]) .bg-caption{display:none}`,
   `html:not([data-bg=photo]) .bg-layer{display:none}`,
   `${P} :is(${PANELS}){${FROST};padding:1rem 1.25rem!important;margin-bottom:1.25rem!important;box-sizing:border-box}`,
   `${P} #home>:first-child{padding-left:0!important;padding-right:0!important}`,
@@ -209,8 +213,37 @@ bg.apply=function(mode,item){
  bg.pick=p;R.setAttribute("data-bg",mode);
  V.textContent=mode==="color"?":root,html.light-mode{--primary-bg-color:"+p.color+"!important;--secondary-bg-color:color-mix(in srgb,"+p.color+" 93%,black)!important}"
   :":root{--bg-tint:"+p.color+"}";
- if(mode==="photo")dial(p.photo,p.color);
+ if(mode==="photo"){dial(p.photo,p.color);caption(p.photo.c)}
 };
+// The caption, tied to the window of bare photo on the home page (the gap
+// under #home>.top). With the gap below the screen it rests small and faint
+// at the bottom edge; as the gap scrolls up to the middle it rises to the
+// centre, grows to full size and shows fully; as the gap scrolls on past it
+// fades out. Off the home page it stays hidden.
+var cap=null;
+function caption(text){
+ if(cap){cap.remove();cap=null}
+ // Captions imported from Instagram can be hashtags: show "#chongqing #photos"
+ // as "chongqing" (generic tags dropped, "#" removed, lines joined).
+ text=(text||"").replace(/#(photos?|photography|photooftheday)(?![\\w-])/gi,"").replace(/#/g,"").replace(/\\s+/g," ").trim();if(!/[\\p{L}\\p{N}]/u.test(text))return;
+ cap=document.createElement("p");cap.className="bg-caption";cap.textContent=text;R.appendChild(cap);
+ var FAINT=.45,SMALL=.6,queued=false;
+ var lerp=function(a,b,f){return a+(b-a)*f},clamp=function(f){return f<0?0:f>1?1:f};
+ function place(){
+  queued=false;if(!cap)return;
+  var top=document.querySelector("#home>.top"),H=innerHeight;
+  if(!top){cap.style.opacity=0;return}
+  var a=top.getBoundingClientRect().bottom,next=top.nextElementSibling,b=next?next.getBoundingClientRect().top:a+H*.7,c=(a+b)/2;
+  // Resting spot: the small caption's centre, just above the bottom edge.
+  var rest=H-cap.offsetHeight*SMALL/2-10,f=c>=H?0:clamp((H-c)/(H/2)),y=lerp(rest,H/2,f),k=lerp(SMALL,1,f);
+  var o=c>=H/2?lerp(FAINT,1,f):1-clamp((H/2-c)/(H/2));
+  cap.style.top=Math.round(y)+"px";cap.style.transform="translate(-50%,-50%) scale("+k.toFixed(3)+")";cap.style.opacity=o.toFixed(3);
+ }
+ var later=function(){if(!queued){queued=true;requestAnimationFrame(place)}};
+ addEventListener("scroll",later,{passive:true,capture:true});addEventListener("resize",later);
+ // Catches page changes inside the site, and the home page finishing loading.
+ setInterval(later,400);later();
+}
 // Widths of the four layers; the last is the full photo.
 // Milliseconds per row for the three blocky layers (a quarter of the first speed).
 var LV=[16,64,256,2000],MS=[280,88,28];
