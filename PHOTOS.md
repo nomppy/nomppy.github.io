@@ -98,5 +98,5 @@ done
 ## Settings (wrangler.jsonc → vars)
 
 - `PUBLISH_EVERY_DAYS`: days between releases (default 2).
-- `IG_PAD_COLOR`: border colour for padded tall photos (default white).
+- Photos outside 4:5 to 1.91:1 (the Instagram API's range) are not posted automatically: they get `ig_status = manual` and show "post to Instagram by hand" in the admin panel. When the hand-made post shows up in the Instagram import with the same caption, it is linked to the photo instead of imported again.
 - The daily check runs at 17:07 UTC (9:07 Pacific): `triggers.crons`.
