@@ -16,10 +16,10 @@ function valid(y, m, d) {
   return t.getUTCMonth() === m - 1; // rejects 31 Feb and similar
 }
 
-// Seasons follow the photos page: Spring = Mar-May, Summer = Jun-Aug,
-// Fall = Sep-Nov, Winter = Dec to Feb, named by the year it starts in
-// (Winter 2026 = Dec 2026 - Feb 2027). A caption season maps to its middle
-// month: [years to add, month].
+// Seasons follow the photos page: Spring = Feb-May, Summer = Jun-Aug,
+// Fall = Sep-Nov, Winter = Dec-Jan, named by the year it starts in
+// (Winter 2026 = Dec 2026 - Jan 2027). A caption season maps to a month
+// inside it: [years to add, month].
 const SEASON_MID = { spring: [0, 4], summer: [0, 7], fall: [0, 10], autumn: [0, 10], winter: [1, 1] };
 
 // Returns { takenAt, precision: "day" | "season" } or null.
