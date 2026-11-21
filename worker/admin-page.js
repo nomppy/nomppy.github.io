@@ -327,7 +327,7 @@ export const PAGE = /* html */ `<!doctype html>
       catch (e) { fail("photos-status")(e); }
     });
     const posted = p.publishedAt ? "Posted " + new Date(p.publishedAt).toLocaleDateString() : "Not posted yet";
-    const foot = el("div", { className: "foot" }, el("span", { textContent: posted + (p.igStatus === "failed" ? " · Instagram failed" : "") }), del);
+    const foot = el("div", { className: "foot" }, el("span", { textContent: posted + (p.igStatus === "failed" ? " · Instagram failed" : p.igStatus === "manual" || p.igStatus === "manual_notified" ? " · post to Instagram by hand" : "") }), del);
     card.append(t, el("div", { className: "body" }, cap, date, src, bgLabel, saving, foot));
     return card;
   }

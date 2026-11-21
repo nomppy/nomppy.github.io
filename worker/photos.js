@@ -112,23 +112,31 @@ export function adminRow(r) {
 }
 
 // The URL Instagram fetches. Originals are full resolution, so Instagram always
-// gets a resized JPEG (it caps images at 8 MB and 1440 px wide). Photos outside
-// its 4:5..1.91:1 range are padded to fit rather than cropped.
+// gets a resized JPEG (it caps images at 8 MB and 1440 px wide). Only photos
+// inside its 4:5..1.91:1 range get here; others are held for posting by hand.
 export function instagramImageUrl(env, row) {
   const site = env.SITE_URL.replace(/\/$/, "");
-  const src = imagePath(row.id);
-  const bg = env.IG_PAD_COLOR || "white";
-  let opts = "width=1440,fit=scale-down";
-  if (!fitsInstagram(row.width, row.height)) {
-    const tall = row.width / row.height < 0.8;
-    opts = tall ? `width=1080,height=1350,fit=pad,background=${bg}` : `width=1440,height=754,fit=pad,background=${bg}`;
-  }
-  return `${site}/cdn-cgi/image/${opts},quality=90,format=jpeg${src}`;
+  return `${site}/cdn-cgi/image/width=1440,fit=scale-down,quality=90,format=jpeg${imagePath(row.id)}`;
 }
+
+// Instagram's publishing API only takes 4:5 to 1.91:1, though the app takes
+// taller photos. Rather than crop or pad, such photos are left for Kenneth to
+// post from his phone: ig_status 'manual' (a daily check tells him, and marks
+// it 'manual_notified'). When the post shows up in the Instagram import with
+// the same caption, it is linked to this photo instead of imported again.
+const HELD = ["manual", "manual_notified"];
 
 async function publishToInstagram(env, row) {
   if (!env.IG_TOKEN || !env.IG_USER_ID) {
     await env.DB.prepare("UPDATE photos SET ig_status = 'skipped', ig_error = 'Instagram not configured' WHERE id = ?")
+      .bind(row.id)
+      .run();
+    return;
+  }
+  if (!fitsInstagram(row.width, row.height)) {
+    await env.DB.prepare(
+      "UPDATE photos SET ig_status = 'manual', ig_error = 'Outside the 4:5 to 1.91:1 range the Instagram API takes: post it from the app.' WHERE id = ?",
+    )
       .bind(row.id)
       .run();
     return;
@@ -201,9 +209,24 @@ export async function importInstagram(env) {
   const fresh = images.filter((i) => !known.has(i.igId));
   const batch = fresh.slice(0, IMPORT_BATCH);
   let imported = 0;
+  let linked = 0;
   const errors = [];
   for (const img of batch) {
     try {
+      // A photo held for posting by hand, now posted: link it, don't import a copy.
+      const held = await env.DB.prepare(
+        `SELECT id FROM photos WHERE ig_status IN (${HELD.map(() => "?").join(",")}) AND trim(caption) = trim(?)
+         ORDER BY published_at LIMIT 1`,
+      )
+        .bind(...HELD, img.caption || "")
+        .first();
+      if (held) {
+        await env.DB.prepare("UPDATE photos SET ig_status = 'done', ig_media_id = ?, ig_error = NULL WHERE id = ?")
+          .bind(img.igId, held.id)
+          .run();
+        linked++;
+        continue;
+      }
       const res = await fetch(img.url);
       if (!res.ok) throw new Error(`download HTTP ${res.status}`);
       const bytes = new Uint8Array(await res.arrayBuffer());
@@ -227,7 +250,7 @@ export async function importInstagram(env) {
       errors.push({ igId: img.igId, error: String(err.message || err) });
     }
   }
-  return { imported, remaining: fresh.length - imported - errors.length, errors };
+  return { imported, linked, remaining: fresh.length - imported - linked - errors.length, errors };
 }
 
 // Returns a Response for /photo-api/* and /photos/img/* paths, or null.
