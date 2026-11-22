@@ -85,6 +85,8 @@ curl -X DELETE -H "Authorization: Bearer KEY" https://sunken.fyi/photo-api/photo
 
 Every 3 hours the site picks up new posts from `sunk.photos` (up to 15 images
 per run; videos are skipped), so posting straight to Instagram also works.
+A photo deleted on the site stays deleted: the import remembers its post
+(in the `deleted_ig` table) and skips it, even though it's still on Instagram.
 To pull them in immediately:
 
 ```sh

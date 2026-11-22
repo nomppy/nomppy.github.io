@@ -1,6 +1,6 @@
 // /admin: photos, short links, friends, backgrounds and feeds.
 // Unlocked with the same password the photo Shortcut uses (UPLOAD_KEY).
-import { authorized, adminRow, ensureSchema, publishNext, importInstagram, backfillDates } from "./photos.js";
+import { authorized, adminRow, ensureSchema, publishNext, importInstagram, backfillDates, deletePhoto } from "./photos.js";
 import { getLists, saveLists, validateLinks, validateFriends } from "./lists.js";
 import {
   getBackgroundSettings, saveBackgroundSettings, validateBackgrounds, validateModes, storeBackgroundImage, deleteBackgroundImage,
@@ -107,8 +107,7 @@ export async function handleAdmin(request, env) {
   }
   const del = route.match(/^DELETE \/admin-api\/photos\/([0-9a-f-]{36})$/);
   if (del) {
-    await env.PHOTOS.delete(`photos/${del[1]}.jpg`);
-    await env.DB.prepare("DELETE FROM photos WHERE id = ?").bind(del[1]).run();
+    await deletePhoto(env, del[1]);
     return json({ deleted: del[1] });
   }
   if (route === "POST /admin-api/photos/publish-next") return json(await publishNext(env, { force: true }));
