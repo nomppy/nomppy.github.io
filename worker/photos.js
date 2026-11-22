@@ -38,7 +38,26 @@ async function ensureSchema(env) {
       // column already exists
     }
   }
+  // Instagram posts whose photo was deleted on the site, so the import
+  // doesn't bring them back.
+  await env.DB.prepare(
+    "CREATE TABLE IF NOT EXISTS deleted_ig (ig_media_id TEXT PRIMARY KEY, deleted_at INTEGER NOT NULL)",
+  ).run();
   schemaReady = true;
+}
+
+// Deletes a photo from the site. If it came from (or went to) Instagram, its
+// post id is remembered so the Instagram import skips it from then on.
+export async function deletePhoto(env, id) {
+  await ensureSchema(env);
+  const row = await env.DB.prepare("SELECT ig_media_id FROM photos WHERE id = ?").bind(id).first();
+  if (row?.ig_media_id) {
+    await env.DB.prepare("INSERT OR IGNORE INTO deleted_ig (ig_media_id, deleted_at) VALUES (?, ?)")
+      .bind(row.ig_media_id, Date.now())
+      .run();
+  }
+  await env.PHOTOS.delete(objectKey(id));
+  await env.DB.prepare("DELETE FROM photos WHERE id = ?").bind(id).run();
 }
 
 // Fills in dates written in captions for photos that have none yet.
@@ -200,11 +219,15 @@ export async function syncInstagram(env) {
 }
 
 export async function importInstagram(env) {
+  await ensureSchema(env);
   const images = imagesFromMedia(await listMedia(env));
+  // Skip posts already on the site and posts whose photo was deleted here.
   const known = new Set(
-    (await env.DB.prepare("SELECT ig_media_id FROM photos WHERE ig_media_id IS NOT NULL").all()).results.map(
-      (r) => r.ig_media_id,
-    ),
+    (
+      await env.DB.prepare(
+        "SELECT ig_media_id FROM photos WHERE ig_media_id IS NOT NULL UNION SELECT ig_media_id FROM deleted_ig",
+      ).all()
+    ).results.map((r) => r.ig_media_id),
   );
   const fresh = images.filter((i) => !known.has(i.igId));
   const batch = fresh.slice(0, IMPORT_BATCH);
@@ -281,7 +304,7 @@ export async function handlePhotos(request, env) {
       "SELECT * FROM photos WHERE status = 'published' ORDER BY published_at DESC",
     ).all();
     return new Response(JSON.stringify(results.map(publicRow)), {
-      headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=300" },
+      headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=60" },
     });
   }
 
@@ -329,8 +352,7 @@ export async function handlePhotos(request, env) {
 
   const del = route.match(/^DELETE \/photo-api\/photos\/([0-9a-f-]{36})$/);
   if (del) {
-    await env.PHOTOS.delete(objectKey(del[1]));
-    await env.DB.prepare("DELETE FROM photos WHERE id = ?").bind(del[1]).run();
+    await deletePhoto(env, del[1]);
     return json({ deleted: del[1] });
   }
 
