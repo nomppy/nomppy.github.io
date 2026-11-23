@@ -150,21 +150,20 @@ export async function pageData(env, rand = Math.random) {
 }
 
 // Styles for every mode; the inline script sets html[data-bg] and the
-// variables. In photo mode the text sits on frosted glass: the photo shows
-// through blurred, tinted with one of the background colours (--bg-tint).
+// variables. In photo mode the text sits on panes of the background colour:
+// one of the background colours (--bg-tint), slightly see-through.
 // Text panels: #home (home), .center-container (favorites),
 // .photos-page (photos), plus the side nav as one pane.
 const PANELS = "#home>*,.center-container,.photos-page>*";
 const P = "html[data-bg=photo]";
 const MONO = `ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace`;
 const FROST = [
-  // --frost is set per photo by the picker: thin over light photos, thicker
-  // over dark ones, always enough for the black text.
-  "background:color-mix(in srgb,var(--bg-tint) var(--frost,50%),transparent)",
-  "-webkit-backdrop-filter:blur(16px) saturate(1.4)",
-  "backdrop-filter:blur(16px) saturate(1.4)",
-  // Industrial rather than glossy: square corners, a hard dark rule and a flat
-  // offset shadow, like a print block or an old window.
+  // Solid panes in the background colour (--bg-tint), no blur, a little see-
+  // through so the photo is still there. --frost (set per photo by the
+  // picker) only thickens them over dark photos; they never drop below 82%.
+  // Hovering a pane fades it to 25% to look at the photo; leaving brings it back.
+  "background-color:color-mix(in srgb,var(--bg-tint) max(82%,var(--frost,50%)),transparent)",
+  "transition:background-color .35s ease",
   "border-radius:0",
 ].join(";");
 export const STATIC_CSS = [
@@ -193,6 +192,8 @@ export const STATIC_CSS = [
   `${P} .photos-page h2{font-family:${MONO};text-transform:uppercase;letter-spacing:.14em;font-size:1rem}`,
   `${P} .bg-caption{font-family:${MONO};font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.3em;font-size:clamp(.9rem,3vw,1.45rem)}`,
   `@media(max-width:600px){${P} :is(${PANELS},.site-nav){border-top-width:7px;box-shadow:5px 5px 0 #111}}`,
+  `@media(hover:hover){${P} :is(${PANELS},.site-nav):hover{background-color:color-mix(in srgb,var(--bg-tint) 25%,transparent)}}`,
+  `@media(prefers-reduced-motion:reduce){${P} :is(${PANELS},.site-nav){transition:none}}`,
   // The nav: one pane around all the links.
   `${P} .site-nav{${FROST};width:fit-content;margin:14px auto!important;padding:.55rem .4rem!important;box-sizing:border-box}`,
   `@media(min-width:1070px){${P} .site-nav{height:auto!important;top:50%;transform:translateY(-50%);margin:0 18px!important;padding:.8rem .2rem!important}${P} .site-nav li{margin:.15rem 15px}}`,
