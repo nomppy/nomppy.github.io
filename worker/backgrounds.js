@@ -156,6 +156,7 @@ export async function pageData(env, rand = Math.random) {
 // .photos-page (photos), plus the side nav as one pane.
 const PANELS = "#home>*,.center-container,.photos-page>*";
 const P = "html[data-bg=photo]";
+const MONO = `ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace`;
 const FROST = [
   // --frost is set per photo by the picker: thin over light photos, thicker
   // over dark ones, always enough for the black text.
@@ -164,9 +165,7 @@ const FROST = [
   "backdrop-filter:blur(16px) saturate(1.4)",
   // Industrial rather than glossy: square corners, a hard dark rule and a flat
   // offset shadow, like a print block or an old window.
-  "border:1.5px solid #141414",
   "border-radius:0",
-  "box-shadow:5px 5px 0 rgba(20,20,20,.85)",
 ].join(";");
 export const STATIC_CSS = [
   `${P}{background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 80%,white)!important;--tertiary-bg-color:color-mix(in srgb,var(--bg-tint) 70%,white)!important}`,
@@ -187,6 +186,13 @@ export const STATIC_CSS = [
   // intro and the background shows through on its own for a moment.
   `${P} #home>.top{margin-bottom:70vh!important;margin-bottom:70svh!important}`,
   `@media(max-width:600px){${P} :is(${PANELS}){padding:.9rem .8rem!important}}`,
+  // Industrial, not glossy: square panes with a heavy black frame, a thick
+  // band across the top and a hard offset shadow. Season headings and the
+  // photo caption are set in monospace capitals.
+  `${P} :is(${PANELS},.site-nav){border:2.5px solid #111;border-top-width:9px;box-shadow:8px 8px 0 #111}`,
+  `${P} .photos-page h2{font-family:${MONO};text-transform:uppercase;letter-spacing:.14em;font-size:1rem}`,
+  `${P} .bg-caption{font-family:${MONO};font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.3em;font-size:clamp(.9rem,3vw,1.45rem)}`,
+  `@media(max-width:600px){${P} :is(${PANELS},.site-nav){border-top-width:7px;box-shadow:5px 5px 0 #111}}`,
   // The nav: one pane around all the links.
   `${P} .site-nav{${FROST};width:fit-content;margin:14px auto!important;padding:.55rem .4rem!important;box-sizing:border-box}`,
   `@media(min-width:1070px){${P} .site-nav{height:auto!important;top:50%;transform:translateY(-50%);margin:0 18px!important;padding:.8rem .2rem!important}${P} .site-nav li{margin:.15rem 15px}}`,
