@@ -16,7 +16,7 @@ function valid(y, m, d) {
   return t.getUTCMonth() === m - 1; // rejects 31 Feb and similar
 }
 
-// Seasons follow the photos page: Spring = Feb-May, Summer = Jun-Aug,
+// Seasons follow the photos page: Spring = Feb-Apr, Summer = May-Aug,
 // Fall = Sep-Nov, Winter = Dec-Jan, named by the year it starts in
 // (Winter 2026 = Dec 2026 - Jan 2027). A caption season maps to a month
 // inside it: [years to add, month].

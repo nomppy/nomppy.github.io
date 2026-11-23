@@ -83,14 +83,14 @@ const sorted = computed(() => [...photos.value].sort((a, b) => when(b) - when(a)
 const shown = computed(() => (props.limit ? sorted.value.slice(0, props.limit) : sorted.value))
 const photo = computed(() => shown.value[current.value])
 
-// Spring = Feb-May (February counts as spring), Summer = Jun-Aug,
-// Fall = Sep-Nov, Winter = Dec-Jan. Winter is named by the year it starts
+// Spring = Feb-Apr, Summer = May-Aug, Fall = Sep-Nov, Winter = Dec-Jan
+// (Kenneth's seasons: February is spring, May is summer). Winter is named by the year it starts
 // in: Jan 2027 is Winter 2026.
 const seasonOf = (t) => {
   const d = new Date(t)
   const m = d.getMonth() // 0 = January
   const year = m === 0 ? d.getFullYear() - 1 : d.getFullYear()
-  const season = m >= 1 && m <= 4 ? 'Spring' : m <= 7 && m >= 5 ? 'Summer' : m >= 8 && m <= 10 ? 'Fall' : 'Winter'
+  const season = m >= 1 && m <= 3 ? 'Spring' : m >= 4 && m <= 7 ? 'Summer' : m >= 8 && m <= 10 ? 'Fall' : 'Winter'
   return `${season} ${year}`
 }
 const groups = computed(() => {
