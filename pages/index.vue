@@ -130,7 +130,7 @@ onMounted(() => {
     width: 1.08em;
     height: 1.08em;
     display: block;
-    border-radius: 22%; // app-icon corners
+    border-radius: 2px; // square, to match the panels
     object-fit: contain;
   }
 }

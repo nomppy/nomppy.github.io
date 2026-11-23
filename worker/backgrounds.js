@@ -162,9 +162,11 @@ const FROST = [
   "background:color-mix(in srgb,var(--bg-tint) var(--frost,50%),transparent)",
   "-webkit-backdrop-filter:blur(16px) saturate(1.4)",
   "backdrop-filter:blur(16px) saturate(1.4)",
-  // A faint light edge and a soft shadow, like glass, rather than a hard box.
-  "box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 1px 0 rgba(255,255,255,.35),0 10px 40px -12px color-mix(in srgb,var(--bg-tint) 40%,black)",
-  "border-radius:18px",
+  // Industrial rather than glossy: square corners, a hard dark rule and a flat
+  // offset shadow, like a print block or an old window.
+  "border:1.5px solid #141414",
+  "border-radius:0",
+  "box-shadow:5px 5px 0 rgba(20,20,20,.85)",
 ].join(";");
 export const STATIC_CSS = [
   `${P}{background:var(--bg-tint)!important;--primary-bg-color:var(--bg-tint)!important;--secondary-bg-color:color-mix(in srgb,var(--bg-tint) 80%,white)!important;--tertiary-bg-color:color-mix(in srgb,var(--bg-tint) 70%,white)!important}`,
